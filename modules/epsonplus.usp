@@ -1,0 +1,74 @@
+/*
+ * Epson Projector Control
+ * Targeted towards Epson laser projectors
+ *
+ * TCNJ
+ * Author: Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ */
+
+#CATEGORY "24" // TV/Video Projector
+#ENABLE_TRACE
+
+// IO
+Digital_Input	_skip_,
+				_skip_,
+				Power_On,
+				Power_Off,
+				_skip_,
+				_skip_,
+				_skip_,
+				Input_RGB,
+				Input_HDMI,
+				Input_HDBT,
+				_skip_,
+				AV_Mute_On,
+				AV_Mute_Off,
+				AV_Mute_Toggle,
+				_skip_,
+				Enable_Polling;
+
+Buffer_Input	From_Projector[48];
+
+Digital_Output	Status_Fb,
+				_skip_,
+				Power_On_Fb,
+				Power_Off_Fb,
+				Power_Warming_Fb,
+				Power_Cooling_Fb,
+				_skip_,
+				Input_RGB_Fb,
+				Input_HDMI_Fb,
+				Input_HDBT_Fb,
+				_skip_,
+				AV_Mute_On_Fb,
+				AV_Mute_Off_Fb,
+				_skip_;
+
+Analog_Output	Lamp_Hours;
+
+String_Output	_skip_,
+				To_Projector;
+
+// Variables
+Integer			Power_State,
+				AV_Mute_State,
+				Current_Input,
+				Projector_Ready;
+
+// Functions
+
+// Signals
+
+Function main()
+{
+	WaitForInitializationComplete();
+	
+	// Initialize all variables
+	Power_State = 0;
+	AV_Mute_State = 0;
+	Current_Input = 0;
+	Projector_Ready = 0;
+}
+		
