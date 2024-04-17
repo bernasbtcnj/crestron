@@ -61,6 +61,42 @@ Integer			Power_State,
 
 // Signals
 
+Push Power_On
+{
+}
+
+Push Power_Off
+{
+}
+
+Push Input_RGB
+{
+}
+
+Push Input_HDMI
+{
+}
+
+Push Input_HDBT
+{
+}
+
+Push AV_Mute_On
+{
+}
+
+Push AV_Mute_Off
+{
+}
+
+Push AV_Mute_Toggle
+{
+}
+
+Push Enable_Polling
+{
+}
+
 Function main()
 {
 	WaitForInitializationComplete();
