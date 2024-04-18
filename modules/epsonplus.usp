@@ -53,54 +53,231 @@ String_Output	_skip_,
 
 // Variables
 Integer			Power_State,
-				AV_Mute_State,
 				Current_Input,
-				Projector_Ready;
+				Projector_Ready,
+				Last_Cmd;
 
 // Functions
+Function Poll_Status()
+{
+	if (Projector_Ready) {
+		
+	}
+}
+
+Function Run_Poll_Loop(Long_Integer interval)
+{
+	While (Enable_Polling) {
+		Wait(interval, PollingMain) {
+			Poll_Status();
+		}
+	}
+}
+
+Function Set_Power_State_off()
+{
+	// Clear all of the variables to the off state
+	Power_Off_Fb = 1;
+	Power_On_Fb = 0;
+	Power_Warming_Fb = 0;
+	Power_Cooling_Fb = 0;
+	AV_Mute_On_Fb = 0;
+	AV_Mute_Off_Fb = 0;
+	Input_RGB_Fb = 0;
+	Input_HDMI_Fb = 0;
+	Input_HDBT_Fb = 0;
+	Power_State = 0;
+	Current_Input = 0;
+	
+	// Projector is ready for the next command
+	Projector_Ready = 1;
+}
 
 // Signals
 
 Push Power_On
 {
-	if (Projector_Ready & Power_State = 0) {
+	if (Projector_Ready && (Power_State = 0)) {
 		To_Projector = "PWR ON\x0D";
+		Power_On_Fb = 1;
+		Power_Warming_Fb = 1;
 	}
 }
 
 Push Power_Off
 {
-	if (Projector_Ready & Power_State = 1) {
+	if (Projector_Ready && (Power_State = 1)) {
 		To_Projector = "PWR OFF\x0D";
+		Power_Off_Fb = 0;
+		Power_Cooling_Fb = 1;
 	}
 }
 
 Push Input_RGB
 {
+	if (Projector_Ready && (Power_State = 1)) {
+		To_Projector = "SOURCE 11\x0D";
+		Input_RGB_Fb = 1;
+		Input_HDMI_Fb = 0;
+		Input_HDBT_Fb = 0;
+		Current_Input = 1;
+	}
 }
 
 Push Input_HDMI
 {
+	if (Projector_Ready && (Power_State = 1)) {
+		To_Projector = "SOURCE 30\x0D";
+		Input_RGB_Fb = 0;
+		Input_HDMI_Fb = 1;
+		Input_HDBT_Fb = 0;
+		Current_Input = 2;
+	}
 }
 
 Push Input_HDBT
 {
+	if (Projector_Ready && (Power_State = 1)) {
+		To_Projector = "SOURCE 80\x0D";
+		Input_RGB_Fb = 0;
+		Input_HDMI_Fb = 0;
+		Input_HDBT_Fb = 1;
+		Current_Input = 3;
+	}
 }
 
 Push AV_Mute_On
 {
+	if (Projector_Ready && (Power_State = 1)) {
+		To_Projector = "MUTE ON\x0D";
+		AV_Mute_On_Fb = 1;
+		AV_Mute_Off_Fb = 0;
+	}
 }
 
 Push AV_Mute_Off
 {
+	if (Projector_Ready && (Power_State = 1)) {
+		To_Projector = "MUTE OFF\x0D";
+		AV_Mute_On_Fb = 0;
+		AV_Mute_Off_Fb = 1;
+	}
 }
 
 Push AV_Mute_Toggle
 {
+	if (Projector_Ready && (Power_State = 1)) {
+		if (AV_Mute_Off_fb) {
+			To_Projector = "MUTE ON\x0D";
+			AV_Mute_On_Fb = 1;
+			AV_Mute_Off_Fb = 0;
+		}
+		if (AV_Mute_On_Fb) {
+			To_projector = "MUTE OFF\x0D";
+			AV_Mute_Off_Fb = 1;
+			AV_Mute_On_Fb = 0;
+		}
+	}
+}
+	
+Change From_Projector
+{
+	// Process responses from the projector
+
+	// Local variable to indicate a valid response
+	Integer success;
+	
+	success = 0;
+
+	// process the responses from the projector
+	if (From_Projector = ":\x0D") {
+		// Basic response. Indicates the projector has finished processing the last request
+		Last_Cmd = 0;
+		success = 1;
+	} else if (left(From_Projector, 5) = "LAMP=") {
+		// recalculate lamp hours
+		Lamp_Hours = atoi(From_Projector);
+		success = 1;
+	} else if (From_Projector = "PWR=00\x0D:") {
+		// power status is off
+		Set_Power_State_Off();
+		success = 1;
+	} else if (From_Projector = "PWR=01\x0D:") {
+		// power status is on
+		Power_On_Fb = 1;
+		Power_Off_Fb = 0;
+		Power_Warming_Fb = 0;
+		Power_Cooling_Fb = 0;
+		Power_State = 1;
+		Projector_Ready = 1;
+		success = 1;
+	} else if (From_Projector = "PWR=02\x0D:") {
+		// power is warming
+		Power_On_Fb = 1;
+		Power_Warming_Fb = 1;
+		Power_Off_Fb = 0;
+		Power_Cooling_Fb = 0;
+		Power_State = 2;
+		Projector_Ready = 0;
+		success = 1;
+	} else if (From_Projector = "PWR=03\x0D:") {
+		// power is cooling
+		Power_Off_Fb = 1;
+		Power_Cooling_Fb = 1;
+		Power_On_Fb = 0;
+		Power_Warming_Fb = 0;
+		Power_State = 3;
+		Projector_Ready = 0;
+		success = 1;
+	} else if (From_Projector = "PWR=04\x0D:") {
+		// power is off with lan enabled
+		Set_Power_State_Off();
+		success = 1;
+	} else if (From_Projector = "PWR=09\x0D:") {
+		// power is off with hdbt control enabled
+		Set_Power_State_Off();
+		success = 1;
+	} else if (From_Projector = "SOURCE=11\x0D:") {
+		// input is RGB / VGA
+		Current_Input = 1;
+		Input_RGB_Fb = 1;
+		Input_HDMI_Fb = 0;
+		Input_HDBT_Fb = 0;
+		success = 0;
+	} else if (From_Projector = "SOURCE=30\x0D:") {
+		// input is HDMI
+		Current_Input = 2;
+		Input_HDMI_Fb = 1;
+		Input_RGB_Fb = 0;
+		Input_HDBT_Fb = 0;
+		success = 1;
+	} else if (From_Projector = "SOURCE=80\x0D:") {
+		// input is HDBT
+		Current_Input = 3;
+		Input_HDBT_Fb = 1;
+		Input_RGB_Fb = 0;
+		Input_HDMI_Fb = 0;
+		success = 1;
+	} else if (From_Projector = "MUTE=ON\x0D:") {
+		AV_Mute_On_Fb = 1;
+		AV_Mute_Off_Fb = 0;
+		success = 1;
+	} else if (From_Projector = "MUTE=OFF\x0D:") {
+		AV_Mute_Off_Fb = 1;
+		AV_Mute_On_Fb = 0;
+		success = 1;
+	}
+    
+	// After a valid command has been received, clear the buffer
+	if (success) {
+		ClearBuffer(From_Projector);
+		Status_Fb = 1;
+	}		
 }
 
 Push Enable_Polling
 {
+	Run_Poll_Loop();
 }
 
 Function main()
@@ -109,8 +286,10 @@ Function main()
 	
 	// Initialize all variables
 	Power_State = 0;
-	AV_Mute_State = 0;
 	Current_Input = 0;
 	Projector_Ready = 0;
+	Last_Cmd = 0;
+	Status_Fb = 0;
+
 }
 		
