@@ -63,10 +63,16 @@ Integer			Power_State,
 
 Push Power_On
 {
+	if (Projector_Ready & Power_State = 0) {
+		To_Projector = "PWR ON\x0D";
+	}
 }
 
 Push Power_Off
 {
+	if (Projector_Ready & Power_State = 1) {
+		To_Projector = "PWR OFF\x0D";
+	}
 }
 
 Push Input_RGB
