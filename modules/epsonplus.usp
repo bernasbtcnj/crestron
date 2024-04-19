@@ -61,13 +61,39 @@ Integer			Power_State,
 Function Poll_Status()
 {
 	if (Projector_Ready) {
-		
+		switch (Last_Cmd) {
+			case (1):
+			{
+				To_Projector = "PWR?\x0D";
+			}
+			case (2):
+			{
+				To_Projector = "SOURCE?\x0D";
+			}
+			case (3):
+			{
+				To_Projector = "MUTE?\x0D";
+			}
+			case (4):
+			{
+				To_Projector = "LAMP?\x0D";
+			}
+		}
+
+		Last_Cmd = Last_Cmd - 1; // Move to the next Command
+	} else {
+		To_Projector = "PWR?\x0D";
+		Last_Cmd = 4;
 	}
 }
 
 Function Run_Poll_Loop(Long_Integer interval)
 {
 	While (Enable_Polling) {
+		// Reset the last command counter
+		if (Last_Cmd = 0) {
+			Last_Cmd = 4;
+		}
 		Wait(interval, PollingMain) {
 			Poll_Status();
 		}
@@ -167,7 +193,7 @@ Push AV_Mute_Off
 Push AV_Mute_Toggle
 {
 	if (Projector_Ready && (Power_State = 1)) {
-		if (AV_Mute_Off_fb) {
+		if (AV_Mute_Off_Fb) {
 			To_Projector = "MUTE ON\x0D";
 			AV_Mute_On_Fb = 1;
 			AV_Mute_Off_Fb = 0;
@@ -243,7 +269,7 @@ Change From_Projector
 		Input_RGB_Fb = 1;
 		Input_HDMI_Fb = 0;
 		Input_HDBT_Fb = 0;
-		success = 0;
+		success = 1;
 	} else if (From_Projector = "SOURCE=30\x0D:") {
 		// input is HDMI
 		Current_Input = 2;
@@ -277,7 +303,7 @@ Change From_Projector
 
 Push Enable_Polling
 {
-	Run_Poll_Loop();
+	Run_Poll_Loop(30000);
 }
 
 Function main()
