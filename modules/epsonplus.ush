@@ -21,6 +21,7 @@
   SmplCName=epsonplus.usp
   Code=1
   SysRev5=3.090
+  SMWRev=2.02.00
   InputCue1=[~UNUSED~]
   InputSigType1=Digital
   InputCue2=[~UNUSED~]

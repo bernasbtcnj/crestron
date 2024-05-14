@@ -104,6 +104,30 @@ Function Run_Poll_Loop(Long_Integer interval)
 	}
 }
 
+Integer_Function Send_Command(Integer command)
+{
+	/* Commands are as follows:
+	 * 0 : None
+	 * 1 : PWR?
+	 * 2 : LAMP?
+	 * 3 : MUTE?
+	 * 4 : SOURCE?
+	 * 10 : PWR OFF
+	 * 11 : PWR ON
+	 * 20 : MUTE OFF
+	 * 21 : MUTE ON
+	 * 31 : SOURCE 11 (VGA)
+	 * 32 : SOURCE 30 (HDMI)
+	 * 33 : SOURCE 80 (HDBT)
+	 */
+
+	if (Projector_Ready) {
+		switch(command) {
+
+			case
+
+}
+
 Function Confirm_Power()
 {
 	// Stop the main Polling Loop
