@@ -1,0 +1,202 @@
+/*
+ * User log for TCNJ classroom standard program
+ * TCNJ
+ * Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ */
+
+#CATEGORY "46" "TCNJ" // Custom
+#ENABLE_TRACE
+
+#DEFINE_CONSTANT	TRUE		1
+#DEFINE_CONSTANT	FALSE		0
+#DEFINE_CONSTANT	MAXLENGTH	4096
+
+#DEFINE_CONSTANT	DEBUG		0
+
+// IO
+Digital_Input		Clear_Log,			// Clear the log on disk
+					Reload_Log, 		// Reload the log from disk
+					Save_Log,			// Save the log file to disk
+					Refresh_Log,		// Transmit the last ~750 lines from the log back to the main program. Sent on Log Text Out
+					_skip_;
+
+Analog_Input		Num_Log_Events;		// Number of log events to push on a refresh
+
+String_Input		Log_Event[96];		// Text for a new log event
+
+Digital_Output		Unsaved_Changes,	// Indicates there are new log entries that have not been saved.
+					_skip_;
+
+String_output		Last_Event_Text,	// Text string for the most recent event
+					Log_Text_Out;		//
+
+String_Parameter	_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					Log_Filename[48];	// File to store the log
+
+// Variables
+String				Full_Log[MAXLENGTH];
+Integer				New_Event;                      
+
+// Functions
+String_Function datetime()
+{
+	String dt[21]; // Store date and time
+
+	Makestring(dt, "%s-%s", Date(4), Time());
+
+	return(dt);
+}
+
+Function Load_Log_File()
+{
+	Signed_Integer nFileHandle;
+
+	StartFileOperations();
+    
+	nFileHandle = FileOpen(Log_Filename, _O_RDONLY | _O_TEXT);
+
+	if (DEBUG) {
+		trace("File Handle: %d", nFileHandle);
+	}
+
+	// Check if the file exists
+	if (nFileHandle >= 0) {
+		ClearBuffer(Full_Log); // Clear out any existing log
+		FileRead(nFileHandle, Full_Log, MAXLENGTH); // Load the text into the log
+        
+		// Attempt to close the file
+		if (FileClose(nFileHandle) <> 0) {
+			trace("Error closing log file.");
+		}
+	} else {
+		trace("File error: %d", nFileHandle);
+	}
+
+	EndFileOperations();
+    
+	// Indicate there are no unsaved changes
+	New_Event = FALSE;
+}
+
+Function Save_Log_File()
+{
+	Signed_Integer nFileHandle;
+
+	StartFileOperations();
+
+	// Open the file for writing in text mode
+	nFileHandle = FileOpen(Log_Filename, _O_WRONLY | _O_CREAT | _O_TEXT);
+
+	// If file opened successfully...
+	if (nFileHandle >= 0) {
+		// Write the data to the file
+		if (FileWrite(nFileHandle, Full_Log, MAXLENGTH) > 0) {
+			trace("Log written.");
+		}
+		
+		// Attempt to close the file
+		if (FileClose(nFileHandle) <> 0) {
+			trace("Error closing log file.");
+		} else { New_Event = FALSE; }
+	}
+
+	EndFileOperations();
+	
+	if (DEBUG) {
+		trace("File saved.");
+	}
+}
+
+Push Clear_Log
+{
+	ClearBuffer(Full_Log);
+	New_Event = TRUE;
+}
+
+Push Reload_Log
+{
+	Load_Log_File();
+	New_Event = FALSE;
+}
+
+Push Refresh_Log
+{
+	// Variables to track current position in the for loop and the string
+	Integer i, pos, fpos;
+	Integer loglen; // Length of the full log text
+
+	loglen = Len(Full_Log); // Total length of the current log
+
+	pos = 1; // Starting position for the text
+
+	Log_Text_Out = "................\x0D"; // Basic indicator for when the log refresh started
+    
+	// Split out the log events line by line for the number of lines requested
+	for (i = 1 to Num_Log_Events) {
+		// Find the next line break
+		fpos = Find("\x0D", Full_Log, pos);
+        
+		// Send the text for the current event
+		Log_Text_Out = Mid(Full_Log, pos, (fpos-pos+1));
+		pos = fpos + 1;
+
+		// If our current position in the string is past the end, we have reached the last event
+		// set i to the end count so the loop exits
+		if (pos >= loglen) {
+			i = Num_Log_Events;
+		}
+
+	}
+}
+
+Change Log_Event
+{	
+	String new_log[MAXLENGTH];
+	String dt[21];
+	Integer catsize;
+
+	// Get the current date/time string
+	dt = datetime();
+
+	// If the log is maxed out, remove data from the log to make room for the new text
+	// 100 characters should do it
+    catsize = MAXLENGTH - 96;
+
+	if (Len(Full_Log) > catsize) {
+		Full_Log = Left(Full_Log, (MAXLENGTH-100));
+	}
+
+	// Create the log strings
+	// The new log includes all text
+	// The Last_Event_Text is returned to indicate whats written
+	Makestring(new_log, "%s  %s\x0D%s", dt, Log_Event, Full_Log);
+	Makestring(Last_Event_Text, "%s  %s\x0D", dt, Log_Event);
+
+	// Copy the new log to the full_log
+	Full_Log = new_log;
+
+	// Indicate there is a new unsaved event
+	New_Event = TRUE;
+}
+
+Push Save_Log
+{
+	Save_Log_File();
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
+	Full_Log = "\x0D";
+	New_Event = FALSE;
+	Last_Event_Text = "System Ready";
+	Load_Log_File();	
+}
