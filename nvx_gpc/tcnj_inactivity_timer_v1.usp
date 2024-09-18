@@ -1,0 +1,229 @@
+/*
+ * Custom Inactivity Timer with Variable Times
+ * Also converts time analog values to strings and time strings to analog values
+ * TCNJ
+ * Author: Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ */
+
+#CATEGORY "46" "TCNJ" // Custom
+#ENABLE_TRACE
+
+#DEFINE_CONSTANT	MinWait 1800	// Minimum wait of 1800 seconds /  30 minutes
+
+// IO
+Digital_Input 	Trig,			// Start the timer
+				Restart,		// Restart the timer
+				Cancel,
+				_skip_;			// Cancel the timer
+
+Analog_Input	Hours,			// Hours to run the timer. Converted to string output
+				Minutes,		// Minutes to run the timer. Converted to string output
+				Warning_Time,
+				_skip_;	// Display a warning N seconds before he end of the timer
+
+String_Input	TimeString[6];	// Timer hours input in HH:MM format. Converts to analog output
+
+Digital_Output	Warning,		// Warning time has ellapsed. Latched high while warning is active
+				Timer_Finished,	// Timer has finished. Pulsed when timer finished.
+				_skip_;
+
+Analog_Output	Progress,		// Progress of timer. Counts backwards by seconds
+				_skip_,
+				Analog_Hours,	// Timer hours parsed from input string
+				Analog_Minutes,
+				_skip_;			// Timer minutes parsed from input string.
+
+String_Output	TimeStringOut;	// Timer in HH:MM format created from analog hours and minutes inputs
+
+// Variables
+Integer			DEBUG;			// Enable debugging messages
+Integer			ckHours;		// Bounds checked hours
+Integer			ckMinutes;		// Bounds checked minutes
+Integer			TimerRunning;	// Timer is actively running
+Integer 		WaitTime;		// Total time to run the timer in 100ths of a second
+Integer			ticks;			// Ellapsed time for the current timer.
+
+// Functions
+Function CalculateWaitTime()
+{
+	// Use local variables
+	ckHours = Hours;
+	ckMinutes = Minutes;
+
+	// Check Value Bounds
+	// Max Hours is 17
+	if (ckHours > 17) {
+		ckHours = 17;
+	}
+    
+	// Max minutes is 59
+	if (ckMinutes > 59) {
+		ckMinutes = 59;
+	}
+	
+	/* Multiply hours by 60 to convert to minutes,
+     * add minutes to get total minutes
+     * multiply minutes by 60 to get total seconds
+	*/
+
+	// Maximum time is 17 hours 59 minutes so as not to exceed the size of an Integer
+	WaitTime = (((ckHours * 60) + ckMinutes) * 60);
+    
+	// Make sure our wait time isn't too short
+	if (WaitTime < MinWait) {
+		WaitTime = MinWait;
+	}
+
+	if (DEBUG) {
+		Trace("Wait Time: %u", WaitTime);
+	}
+}
+
+Function MakeTimeString()
+{
+	if ((ckHours < 18) && (ckMinutes < 60)) {
+		MakeString(TimeStringOut, "%02d:%02d", ckHours, ckMinutes);
+	}
+}
+
+Function RunInactivityTimer()
+{
+	Integer WarningEnabled;
+	Integer WarningWait;
+
+	if (Warning_Time) {
+		WarningEnabled = 1;
+		WarningWait = WaitTime - Warning_Time; // After how many ticks should the warning start
+	} else {
+		WarningEnabled = 0;
+	}
+    
+	ticks = 0; // Current timer count is 0
+	Progress = WaitTime; // Current progress countdown in seconds
+	Timer_Finished = 0;
+	TimerRunning = 1; // Timer has started.
+	
+	While (TimerRunning) {
+
+		Wait(100, Inactivity_Timer) {
+			ticks = ticks + 1; // Increase ticks by 1 for every second.
+			Progress = Progress - 1; // Decrease Progress by one second for every tick.
+
+			if (DEBUG) {
+				Trace("Tick: %u", ticks);
+			}
+		}
+        
+		if (WarningEnabled) {
+			if (ticks >= WarningWait) {
+				Warning = 1;
+			}
+		}
+
+		if (ticks >= WaitTime) {
+			Pulse (10, Timer_Finished);
+			TimerRunning = 0;			
+		}
+
+	}
+
+	Warning = 0; // Warning signal goes low
+	ticks = 0;	// Reset ticks to 0
+}
+
+Change Hours
+{
+	CalculateWaitTime();
+	MakeTimeString();
+}
+
+Change Minutes
+{
+	CalculateWaitTime();
+	MakeTimeString();
+}
+
+Change TimeString
+{
+	// Time string needs to be formatted HH:MM
+	// 2 chars for hour and 2 chars for minute
+	// Otherwise this may break.
+	Integer hrs, mins;
+	Integer loc;
+	
+	loc = Find(":", TimeString);
+
+	// If the : is in the right spot assume all is well
+	if (loc = 3) {
+		hrs = atoi(Left(TimeString, 2));
+		mins = atoi(Right(TimeString, 3));			
+	}
+	
+	// Check bounds
+	if (hrs) {
+		if (hrs < 0) {
+			hrs = 0;
+		} else if (hrs > 17) {
+			hrs = 17;
+		}
+	}
+
+	if (mins) {
+		if (mins < 0) {
+			mins = 0;
+		} else if (mins > 59) {
+			mins = 59;
+		}
+	}
+
+	// Transfer values to analog outputs
+	Analog_Hours = hrs;
+	Analog_Minutes = mins;		
+}
+
+Push Trig
+{
+	// Only start timer if cancel is low
+	if (Cancel = 0) {
+		RunInactivityTimer();
+	}
+}
+
+Push Restart
+{
+	CancelWait(Inactivity_Timer);
+	Timer_Finished = 0;
+	Warning = 0;
+	Progress = 0;
+	TimerRunning = 0;
+
+	RunInactivityTimer();
+}
+
+Push Cancel
+{
+	if (DEBUG) {
+		Trace("Timer Cancelled");
+	}
+
+	CancelWait(Inactivity_Timer);
+	Timer_Finished = 0;
+	Warning = 0;
+	Progress = 0;
+	TimerRunning = 0;
+	
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
+
+	// Reset all variables	
+	Warning = 0;
+	Timer_Finished = 0;
+	WaitTime = 0;
+	Progress = 0;
+	DEBUG = 0; // Debug is disabled by default
+}
