@@ -1,0 +1,45 @@
+/*
+ * TCNJ NVX Switching Module
+ * Routes up to 16 inputs to one output for NVX video with NAX audio breakaway
+ *
+ * Because analog values are easier to work with than serials / strings
+ * 
+ *
+ * Programmer: Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ *
+ */
+
+#DEFINE_CONSTANT SOURCES 16 // Number of input sources
+
+#CATEGORY "46" "TCNJ"
+
+#DEFAULT_VOLATILE
+
+ANALOG_INPUT VideoRoute, AudioRoute;
+
+STRING_INPUT _skip_, NVXEncStreamLocation[SOURCES][50];
+STRING_INPUT _skip_, NAXMulticastAddress[SOURCES][50];
+
+STRING_OUTPUT _skip_, _skip_, _skip_, NVXDecStreamLocation;
+STRING_OUTPUT _skip_, NAXDecRXMulticast;
+
+Change VideoRoute
+{
+	if (VideoRoute = 0) {
+		NVXDecStreamLocation = ""; // Clear if 0
+	} else {
+		// Set the stream location
+		NVXDecStreamLocation = NVXEncStreamLocation[VideoRoute];
+	}
+}
+
+Change AudioRoute
+{
+	if (AudioRoute = 0) {
+		NAXDecRXMulticast = "";
+	} else {
+		NAXDecRXMulticast = NAXMulticastAddress[AudioRoute];
+	}
+}
