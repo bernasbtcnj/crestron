@@ -3268,14 +3268,14 @@ ObjTp=Bw
 H=1
 Lx=0
 Ly=0
-Rx=1031
+Rx=1034
 Ry=915
 Xm=-1
 Ym=-1
-SH=406
+SH=615
 Z=100
 Ht=1
-Hi=12
+Hi=1
 ]
 [
 ObjTp=Et
@@ -4247,7 +4247,7 @@ I81=822
 I82=902
 I83=904
 I90=852
-I91=305
+I91=74
 I92=681
 I93=278
 I94=910
@@ -4303,7 +4303,6 @@ I195=715
 I198=309
 I202=266
 I203=785
-I207=74
 I208=113
 I211=773
 I212=774
@@ -4492,7 +4491,7 @@ I1=49
 I2=85
 mO=2
 tO=2
-O1=959
+O1=10
 mP=1
 P1=1d
 ]
@@ -4509,12 +4508,28 @@ n1I=1
 n1O=1
 Cmn1=Set Display Volume to 0\\
 mI=1
-I1=959
+I1=13
 mO=1
 tO=1
 O1=956
 mP=1
 P1=0d
+]
+[
+ObjTp=Sm
+H=49
+SmC=156
+Nm=SUBSYSTEM
+ObjVer=1
+SmVr=1210
+PrH=92
+CF=2
+Cmn1=Image Blank
+mC=4
+C1=609
+C2=610
+C3=611
+C4=406
 ]
 [
 ObjTp=Sm
@@ -5703,7 +5718,7 @@ SmVr=1210
 PrH=4
 CF=2
 Cmn1=Switching
-mC=33
+mC=34
 C1=132
 C2=133
 C3=569
@@ -5737,6 +5752,7 @@ C30=570
 C31=546
 C32=571
 C33=548
+C34=49
 ]
 [
 ObjTp=Sm
@@ -5771,38 +5787,40 @@ SmVr=1210
 PrH=4
 CF=2
 Cmn1=Displays\\
-mC=31
-C1=406
-C2=402
-C3=104
-C4=105
-C5=175
-C6=174
-C7=106
-C8=173
-C9=170
-C10=171
-C11=172
-C12=119
-C13=199
-C14=200
-C15=201
-C16=212
-C17=410
-C18=404
-C19=395
-C20=412
-C21=411
-C22=214
-C23=414
-C24=413
-C25=415
-C26=416
-C27=531
-C28=561
-C29=48
-C30=47
-C31=603
+mC=33
+C1=402
+C2=104
+C3=105
+C4=175
+C5=174
+C6=106
+C7=173
+C8=170
+C9=171
+C10=172
+C11=119
+C12=212
+C13=410
+C14=404
+C15=395
+C16=412
+C17=411
+C18=214
+C19=414
+C20=413
+C21=415
+C22=416
+C23=531
+C24=561
+C25=48
+C26=47
+C27=615
+C28=612
+C29=199
+C30=201
+C31=614
+C32=613
+C33=603
 ]
 [
 ObjTp=Sm
@@ -5922,7 +5940,7 @@ O10=167
 O11=168
 O12=169
 O13=747
-O14=287
+O14=49
 O15=944
 O16=387
 O17=279
@@ -8461,65 +8479,66 @@ P1=3t
 [
 ObjTp=Sm
 H=199
-SmC=28
-Nm=Truth Table
+SmC=98
+Nm=Stepper
 ObjVer=1
 SmVr=1210
 PrH=94
 CF=2
-n1I=3
-n1O=2
-Cmn1=Projector Input Select\\
-mI=3
-I1=283
-I2=15
-I3=287
-mO=2
-tO=2
-O1=288
-O2=289
-mP=5
-P1=L,H,L,X
-P2=L,L,H,X
-P3=L,H,H,L
-P4=L,H,L,L
-P5=L,L,H,L
+n1I=1
+n1O=3
+Cmn1=Display Initialize\\
+mI=1
+I1=10
+mO=3
+tO=3
+O1=49
+O2=959
+O3=13
+mP=4
+P1=0s
+P2=3t
+P3=2s
+P4=3t
 ]
 [
 ObjTp=Sm
 H=200
-SmC=3
-Nm=OR
+SmC=50
+Nm=Debounce
 ObjVer=1
 SmVr=1210
-PrH=94
+PrH=489
 CF=2
 n1I=1
 n1O=1
-Cmn1=Main Projector HDBaseT\\
+Cmn1=Hopefully this fixes the display/projector online log spamming\\
 mI=1
-I1=288
+I1=911
 mO=1
 tO=1
 O1=76
+mP=1
+P1=1s
 ]
 [
 ObjTp=Sm
 H=201
-SmC=3
-Nm=OR
+SmC=12
+Nm=Set/Reset Latch
 ObjVer=1
 SmVr=1210
 PrH=94
 CF=2
-n1I=1
-n1O=1
-Cmn1=Main projector HDMI\\
-mI=1
-I1=289
-mO=1
-tO=1
-O1=83
+n1I=2
+n1O=2
+Cmn1=Display Status\\
+mI=2
+I1=305
+I2=287
+mO=2
+tO=2
+O1=74
 ]
 [
 ObjTp=Sm
@@ -12512,7 +12531,7 @@ n1I=2
 n1O=1
 Cmn1=DMPS Source\\
 mI=2
-I1=2
+I1=264
 I2=30
 mO=1
 tO=1
@@ -13374,39 +13393,21 @@ O1=688
 [
 ObjTp=Sm
 H=406
-SmC=155
-Nm=Epson Basic Laser2.umc
+SmC=20
+Nm=Buffer
 ObjVer=1
-PrH=94
+SmVr=1210
+PrH=49
 CF=2
-n1I=18
-n1O=18
-Cmn1=Main Projector\\
-mI=18
-I3=79
-I4=81
-I8=49
-I9=83
-I10=76
-I12=263
-I13=264
-I14=49
-I16=2
-I18=13
-mO=18
-tO=18
-O1=305
-O3=77
-O4=78
-O5=85
-O6=86
-O8=49
-O9=84
-O10=82
-O12=752
-O13=49
-O15=74
-O18=10
+n1I=2
+n1O=1
+Cmn1="Projector" Image Blank State\\
+mI=2
+I1=388
+I2=263
+mO=1
+tO=1
+O1=752
 ]
 [
 ObjTp=Sm
@@ -14161,12 +14162,12 @@ n1O=2
 Cmn1=Projector is on Local Com Port\\
 mI=3
 I1=727
-I2=10
+I2=87
 I3=730
 mO=2
 tO=2
 O1=729
-O2=13
+O2=87
 ]
 [
 ObjTp=Sm
@@ -15206,18 +15207,19 @@ SmVr=1210
 PrH=4
 CF=2
 Cmn1=System Log
-mC=11
+mC=12
 C1=572
 C2=547
-C3=491
-C4=492
-C5=490
-C6=493
-C7=495
-C8=549
-C9=494
-C10=496
-C11=550
+C3=200
+C4=491
+C5=492
+C6=490
+C7=493
+C8=495
+C9=549
+C10=494
+C11=496
+C12=550
 ]
 [
 ObjTp=Sm
@@ -15271,7 +15273,7 @@ I18=55
 I19=56
 I20=492
 I21=267
-I22=911
+I22=76
 I23=681
 I24=278
 I25=11
@@ -15299,9 +15301,9 @@ mP=42
 P1=
 P2="Processor Booted"
 P3="System power on complete"
-P4="System Startup - Main Projector"
+P4="System Startup - Main Display"
 P5="System Startup - SmartBoard Projector"
-P6="System Startup - Both Projectors"
+P6="System Startup - Display and SmartBoard"
 P7="User touched screen for normal system startup..."
 P8="User Powered Off System Manually"
 P9="System Powered Off From Inactivity"
@@ -15316,7 +15318,7 @@ P17="Source Changed to Apple TV"
 P18="Source Changed to BYOD Device"
 P19="Source Changed to Aux HDMI"
 P20="Image Blank Button Pressed"
-P21="Projector Online"
+P21="Display Online"
 P22="SmartBoard Projector Online"
 P23="Touch Panel Online"
 P24="Touch Panel Offline"
@@ -15331,8 +15333,8 @@ P32="DM-RX Receiver Online"
 P33="HD-MD6x2 SubSwitch Online"
 P34="HD-MD6x2 SubSwitch Offline"
 P35="Attempting Reboot of DM-TX Transmitter"
-P36="User manually powered on projector"
-P37="User manually powered off projector"
+P36="User manually powered on display"
+P37="User manually powered off display"
 P38="User manually powered on SmartBoard projector"
 P39="User manually powered off SmartBoard projector"
 P40="User manually raised the projector screen"
@@ -16794,7 +16796,7 @@ n1I=2
 n1O=2
 Cmn1=Projector Online Status\\
 mI=2
-I1=305
+I1=74
 I2=949
 mO=2
 tO=2
@@ -17356,7 +17358,7 @@ n1I=1
 n1O=1
 Cmn1=Projector NOT Online\\
 mI=1
-I1=305
+I1=74
 mO=1
 tO=1
 O1=949
@@ -18304,6 +18306,150 @@ CF=2
 Cmn1=C2I-DMRMC100-IR2
 ]
 [
+ObjTp=Sm
+H=609
+SmC=32
+Nm=Analog Initialize
+ObjVer=1
+SmVr=1210
+PrH=49
+CF=2
+n1I=1
+n1O=1
+Cmn1=Clear the DMPS route on Image Blank\\
+mI=1
+I1=263
+mO=1
+tO=1
+O1=607
+mP=1
+P1=0d
+]
+[
+ObjTp=Sm
+H=610
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1210
+PrH=49
+CF=2
+n1I=2
+n1O=1
+Cmn1=Re route source on image blank off\\
+mI=2
+I1=961
+I2=30
+mO=1
+tO=1
+O1=607
+]
+[
+ObjTp=Sm
+H=611
+SmC=409
+Nm=Logic Wave Pulse
+ObjVer=1
+SmVr=1210
+PrH=49
+CF=2
+n1I=3
+n1O=2
+Cmn1=Image Blank Off Pulse\\
+mI=3
+I1=264
+mO=2
+tO=2
+O1=961
+mP=1
+P1=3d
+]
+[
+ObjTp=Sm
+H=612
+SmC=72
+Nm=Serial/Analog One-Shot
+ObjVer=1
+SmVr=1210
+PrH=94
+CF=2
+n1I=1
+n1O=2
+Cmn1=Response from the Display\\
+mI=1
+I1=958
+mO=2
+tO=2
+O1=289
+mP=1
+P1=3t
+]
+[
+ObjTp=Sm
+H=613
+SmC=8
+Nm=Oscillator
+ObjVer=1
+SmVr=1210
+PrH=94
+CF=2
+n1I=1
+n1O=1
+Cmn1=Get Samsung Power State\\
+mI=1
+I1=388
+mO=1
+tO=1
+O1=288
+mP=2
+P1=3t
+P2=50s
+]
+[
+ObjTp=Sm
+H=614
+SmC=101
+Nm=Serial I/O
+ObjVer=1
+SmVr=1210
+PrH=94
+CF=2
+n1I=3
+n1O=2
+Cmn1=Get Display Power Status\\
+mI=3
+I1=958
+I3=288
+mO=2
+tO=2
+O1=957
+mP=3
+P1=\x0D
+P2=\xAA\x11\x01\x00\x12
+P3=
+]
+[
+ObjTp=Sm
+H=615
+SmC=10
+Nm=Retriggerable One Shot
+ObjVer=1
+SmVr=1210
+PrH=94
+CF=2
+n1I=3
+n1O=2
+Cmn1=Signal stays high as long as 1 out the past 3 are valid\\
+mI=3
+I1=289
+mO=2
+tO=2
+O1=305
+O2=287
+mP=1
+P1=180s
+]
+[
 ObjTp=CED
 H=1
 SmH=296
@@ -18933,8 +19079,7 @@ Nm=HD-MD.AutoMode.Off
 [
 ObjTp=Sg
 H=10
-Nm=Projector.TX$
-SgTp=4
+Nm=Display.Init.Stepper
 ]
 [
 ObjTp=Sg
@@ -18949,8 +19094,7 @@ Nm=SmartBoard.Disconnect
 [
 ObjTp=Sg
 H=13
-Nm=Projector.RX$
-SgTp=4
+Nm=Display.Init.Volume
 ]
 [
 ObjTp=Sg
@@ -19266,8 +19410,7 @@ Nm=Config.Audio.DocCam.BreakAway
 [
 ObjTp=Sg
 H=74
-Nm=Projector.LampHours.Fb
-SgTp=2
+Nm=Display.Status.Fb
 ]
 [
 ObjTp=Sg
@@ -19277,7 +19420,7 @@ Nm=Projector.Power.On.Btn
 [
 ObjTp=Sg
 H=76
-Nm=Projector.Input.HDBT
+Nm=Projector.Status.Online.Fb.Msg
 ]
 [
 ObjTp=Sg
@@ -19308,11 +19451,6 @@ Nm=Projector.Power.Off.OR
 ObjTp=Sg
 H=82
 Nm=Projector.Input.HDBT.Fb
-]
-[
-ObjTp=Sg
-H=83
-Nm=Projector.Input.HDMI
 ]
 [
 ObjTp=Sg
@@ -20356,17 +20494,17 @@ Nm=SmartBoard.Disconnect.ROS
 [
 ObjTp=Sg
 H=287
-Nm=Projector.Input.Step
+Nm=Display.Status.None
 ]
 [
 ObjTp=Sg
 H=288
-Nm=Projector.Input.HDBT.TT
+Nm=Display.Status.Get
 ]
 [
 ObjTp=Sg
 H=289
-Nm=Projector.Input.HDMI.TT
+Nm=Display.Response
 ]
 [
 ObjTp=Sg
@@ -20447,7 +20585,7 @@ Nm=Source.Aux.Component.Sync.Fb
 [
 ObjTp=Sg
 H=305
-Nm=Projector.Status.Fb
+Nm=Display.Status.ROS
 ]
 [
 ObjTp=Sg
@@ -23835,4 +23973,9 @@ SgTp=4
 ObjTp=Sg
 H=959
 Nm=Display.Input.HDMI
+]
+[
+ObjTp=Sg
+H=961
+Nm=Projector.AV.Mute.Off.Pulse
 ]
