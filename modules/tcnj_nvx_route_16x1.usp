@@ -1,6 +1,7 @@
 /*
- * TCNJ NVX Switching Module
+ * TCNJ NVX Switching Module with Custom Order
  * Routes up to 16 inputs to one output for NVX video with NAX audio breakaway
+ * Inputs can be in a custom order
  *
  * Because analog values are easier to work with than serials / strings
  * 
@@ -18,12 +19,20 @@
 #DEFAULT_VOLATILE
 
 ANALOG_INPUT VideoRoute, AudioRoute;
+STRING_INPUT InputOrder[50];
+
+ANALOG_INPUT _skip_, InputIcon[SOURCES];
 
 STRING_INPUT _skip_, NVXEncStreamLocation[SOURCES][50];
 STRING_INPUT _skip_, NAXMulticastAddress[SOURCES][50];
 
+STRING_INPUT _skip_, InputName[SOURCES][24];
+
 STRING_OUTPUT _skip_, _skip_, _skip_, NVXDecStreamLocation;
 STRING_OUTPUT _skip_, NAXDecRXMulticast;
+
+ANALOG_OUTPUT _skip_, OrderedInputIcon[SOURCES];
+STRING_OUTPUT OrderedInputName[SOURCES];
 
 Change VideoRoute
 {
