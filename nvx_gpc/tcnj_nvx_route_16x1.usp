@@ -4,6 +4,7 @@
  * Inputs can be in a custom order
  *
  * Because analog values are easier to work with than serials / strings
+ * and managing input order and multicast addresses is a headache
  * 
  *
  * Programmer: Brian Bernas
@@ -18,10 +19,21 @@
 
 #DEFAULT_VOLATILE
 
-ANALOG_INPUT VideoRoute, AudioRoute;
-STRING_INPUT _skip_, InputOrder[50];
+// This is needed to keep data together
+Structure NVXDevice
+{
+	String Name[24];
+	Integer Icon;
+	Integer Enabled;
+	String Stream[50];
+	String Multicast[50];
+};
 
-DIGITAL_INPUT InputEnable[SOURCES], _skip_;
+// IO
+ANALOG_INPUT VideoRoute, AudioRoute;
+STRING_INPUT _skip_, InputOrder[64];
+
+DIGITAL_INPUT InputEnabled[SOURCES], _skip_;
 
 ANALOG_INPUT _skip_, _skip_, _skip_, InputIcon[SOURCES];
 
@@ -32,9 +44,97 @@ STRING_INPUT _skip_, NAXMulticastAddress[SOURCES][50];
 ANALOG_OUTPUT VideoRoute_Fb, AudioRoute_Fb;
 STRING_OUTPUT _skip_, _skip_, NVXDecStreamLocation, NAXDecRXMulticast;
 
-DIGITAL_OUTPUT OrderedInputEnable[SOURCES], _skip_;
+DIGITAL_OUTPUT OrderedInputEnabled[SOURCES], _skip_;
 ANALOG_OUTPUT _skip_, OrderedInputIcon[SOURCES];
 STRING_OUTPUT _skip_, OrderedInputName[SOURCES];
+
+// Create these as a global variable so multiple functions can access them
+NVXDevice devices[SOURCES];
+
+// Functions
+
+// Sets the attributes of a device index
+Function SetDevice(Integer index, Integer insert)
+{
+	devices[index].Name		 = InputName[insert];
+	devices[index].Icon		 = InputIcon[insert];
+	devices[index].Enabled	 = InputEnabled[insert];
+	devices[index].Stream	 = NVXEncStreamLocation[insert];
+	devices[index].Multicast = NAXMulticastAddress[insert];
+}
+
+// Set output attributes
+Function EvaluateOutputs()
+{
+	Integer i;
+
+	For (i = 1 to SOURCES) {
+		OrderedInputEnabled[i] = devices[i].Enabled;
+		OrderedInputIcon[i] = devices[i].Icon;
+		OrderedInputName[i] = devices[i].Name;
+	}
+}
+
+// Calculates the order of devices
+Function CalculateOrder()
+{
+	String tmporder[64];
+	Integer loc, cur;
+	Integer length;
+	Integer index, insert;
+
+	loc = 0;
+	cur= 1;
+	index = 1;
+	insert = 1;
+
+	// Check the length of the InputOrder string
+	// Should be longer than 1
+	length = len(InputOrder);
+	if (length < 2) {
+		// Create a default order
+		tmporder = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16";
+		length = len(tmporder);
+	} else {
+		tmporder = InputOrder;
+	}
+
+	// Otherwise continue
+	While (cur <= length) {
+		loc = Find(",", tmporder, cur);
+		
+		if (loc > cur) {
+			insert = atoi(Mid(tmporder, cur, loc - 1)); // Get the number and convert to integer
+
+			// Assign the device to the correct order
+			if (insert > 0 && insert <= SOURCES) {
+				SetDevice(index, insert);
+			}
+
+			cur = loc + 1; // Set the cursor to the end of the location
+			index = index + 1; // Increment the index by one
+		}
+	}
+
+	// Set the outputs
+	EvaluateOutputs();
+}
+
+Change InputEnabled
+{
+	CalculateOrder();
+}
+
+Change InputName
+{
+	// Recalculate everything if an input name changes
+	CalculateOrder();
+}
+
+Change InputIcon
+{
+	CalculateOrder();
+}
 
 Change VideoRoute
 {
@@ -42,7 +142,7 @@ Change VideoRoute
 		NVXDecStreamLocation = ""; // Clear if 0
 	} else {
 		// Set the stream location
-		NVXDecStreamLocation = NVXEncStreamLocation[VideoRoute];
+		NVXDecStreamLocation = devices[VideoRoute].Stream;
 	}
 }
 
@@ -51,12 +151,12 @@ Change AudioRoute
 	if (AudioRoute = 0) {
 		NAXDecRXMulticast = "";
 	} else {
-		NAXDecRXMulticast = NAXMulticastAddress[AudioRoute];
+		NAXDecRXMulticast = devices[AudioRoute].Multicast;
 	}
 }
 
 Change InputOrder
 {
 	// Figure out the new input order
-	
+	CalculateOrder();	
 }
