@@ -20,7 +20,7 @@
   Name=tcnj_nvx_route_16x1
   SmplCName=tcnj_nvx_route_16x1.usp
   Code=1
-  SysRev5=1.014
+  SysRev5=3.090
   SMWRev=2.02.00
   InputCue1=InputEnabled[1]
   InputSigType1=Digital

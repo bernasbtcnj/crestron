@@ -160,3 +160,20 @@ Change InputOrder
 	// Figure out the new input order
 	CalculateOrder();	
 }
+
+Function main()
+{
+	Integer i;
+
+	WaitForInitializationComplete();
+
+	// Initialize device list
+
+	for (i = 1 to SOURCES) {
+		devices[i].Name = "[None]";
+		devices[i].Icon = 1;
+		devices[i].Enabled = 0;
+		devices[i].Stream = "";
+		devices[i].Multicast = "";
+	}	
+}
