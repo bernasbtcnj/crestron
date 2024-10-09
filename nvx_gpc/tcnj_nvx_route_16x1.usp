@@ -85,7 +85,6 @@ Function CalculateOrder()
 
 	loc = 0;
 	cur= 1;
-	index = 1;
 	insert = 1;
 
 	// Check the length of the InputOrder string
@@ -100,11 +99,11 @@ Function CalculateOrder()
 	}
 
 	// Otherwise continue
-	While (cur <= length) {
+	for (index = 1 to SOURCES - 1) {
 		loc = Find(",", tmporder, cur);
 		
 		if (loc > cur) {
-			insert = atoi(Mid(tmporder, cur, loc - 1)); // Get the number and convert to integer
+			insert = atoi(Mid(tmporder, cur, loc - cur)); // Get the number and convert to integer
 
 			// Assign the device to the correct order
 			if (insert > 0 && insert <= SOURCES) {
@@ -112,7 +111,6 @@ Function CalculateOrder()
 			}
 
 			cur = loc + 1; // Set the cursor to the end of the location
-			index = index + 1; // Increment the index by one
 		}
 	}
 
