@@ -14591,57 +14591,15 @@ Mx1=0
 ObjTp=Bw
 H=1
 Lx=0
-Ly=457
-Rx=517
-Ry=914
-Xm=-1
-Ym=-1
-SH=102
-Z=100
-Ht=1
-Hi=3
-]
-[
-ObjTp=Bw
-H=1
-Lx=0
 Ly=0
-Rx=517
-Ry=457
+Rx=1058
+Ry=915
 Xm=-1
 Ym=-1
-SH=129
+SH=113
 Z=100
-Ht=1
-Hi=2
-]
-[
-ObjTp=Bw
-H=1
-Lx=517
-Ly=0
-Rx=1034
-Ry=457
-Xm=-1
-Ym=-1
-SH=348
-Z=100
-Ht=1
+Ht=4
 Hi=7
-]
-[
-ObjTp=Bw
-H=1
-Lx=517
-Ly=457
-Rx=1034
-Ry=914
-Xm=-1
-Ym=-1
-SH=103
-Z=100
-Ht=1
-Hi=1
 ]
 [
 ObjTp=Et
@@ -16911,18 +16869,16 @@ SmVr=1210
 PrH=4
 CF=2
 Cmn1=Switching
-mC=11
+mC=9
 C1=107
 C2=108
 C3=109
-C4=110
-C5=112
-C6=113
-C7=114
-C8=115
-C9=121
-C10=131
-C11=132
+C4=112
+C5=110
+C6=115
+C7=121
+C8=131
+C9=132
 ]
 [
 ObjTp=Sm
@@ -16934,7 +16890,7 @@ SmVr=1210
 PrH=4
 CF=2
 Cmn1=Inputs
-mC=28
+mC=32
 C1=98
 C2=99
 C3=133
@@ -16963,6 +16919,10 @@ C25=127
 C26=130
 C27=140
 C28=106
+C29=113
+C30=114
+C31=119
+C32=120
 ]
 [
 ObjTp=Sm
@@ -17041,7 +17001,7 @@ CF=2
 n1I=43
 n2I=42
 n1O=43
-Cmn1=Edit Controls\\
+Cmn1=Input Edit Controls\\
 mI=129
 I12=1017
 I54=947
@@ -17051,10 +17011,10 @@ tO=128
 O12=1017
 O54=947
 O97=910
-O101=913
-O102=914
-O103=539
-O104=307
+O98=539
+O100=913
+O101=914
+O102=307
 mP=1
 P1=301d
 ]
@@ -17081,6 +17041,7 @@ I100=993
 I101=1020
 I102=1021
 I103=1022
+I105=57
 mO=85
 tO=128
 O54=1019
@@ -17139,14 +17100,14 @@ Cmn1=Set Control ID\\
 mI=3
 I1=1111
 I2=146
-I3=1112
+I3=58
 mO=1
 tO=1
 O1=1024
 mP=3
 P1=301d
 P2=301d
-P3=310d
+P3=201d
 ]
 [
 ObjTp=Sm
@@ -17157,10 +17118,10 @@ ObjVer=1
 SmVr=1210
 PrH=96
 CF=2
-n1I=15
+n1I=30
 n1O=1
 Cmn1=Selected Input\\
-mI=15
+mI=30
 I1=817
 I2=805
 I3=825
@@ -17176,10 +17137,25 @@ I12=839
 I13=840
 I14=841
 I15=842
+I16=27
+I17=30
+I18=34
+I19=304
+I20=308
+I21=310
+I22=438
+I23=439
+I24=440
+I25=441
+I26=442
+I27=443
+I28=444
+I29=445
+I30=446
 mO=1
 tO=1
 O1=1025
-mP=15
+mP=30
 P1=101d
 P2=102d
 P3=103d
@@ -17195,6 +17171,21 @@ P12=112d
 P13=113d
 P14=114d
 P15=115d
+P16=101d
+P17=102d
+P18=103d
+P19=104d
+P20=105d
+P21=106d
+P22=107d
+P23=108d
+P24=109d
+P25=110d
+P26=111d
+P27=112d
+P28=113d
+P29=114d
+P30=115d
 ]
 [
 ObjTp=Sm
@@ -17409,7 +17400,7 @@ n1O=1
 Cmn1=DocCam should have PC Audio and DocCam is selected\\
 mI=2
 I1=170
-I2=62
+I2=38
 mO=1
 tO=1
 O1=370
@@ -17424,12 +17415,12 @@ SmVr=1210
 PrH=746
 CF=2
 n1I=1
-n1O=7
+n1O=15
 Cmn1=Default Encoder Names\\
 mI=1
-I1=199
-mO=7
-tO=7
+I1=314
+mO=15
+tO=15
 O1=991
 O2=1010
 O3=1013
@@ -17437,7 +17428,15 @@ O4=1015
 O5=9
 O6=23
 O7=24
-mP=7
+O8=25
+O9=28
+O10=29
+O11=41
+O12=43
+O13=180
+O14=184
+O15=187
+mP=15
 P1=Computer
 P2=Laptop HDMI
 P3=Blu-ray
@@ -17445,71 +17444,102 @@ P4=Apple TV
 P5=Wireless Share
 P6=Doc Camera
 P7=Aux HDMI
+P8=Encoder 8
+P9=Encoder 9
+P10=Encoder 10
+P11=Encoder 11
+P12=Encoder 12
+P13=Encoder 13
+P14=Encoder 14
+P15=Encoder 15
 ]
 [
 ObjTp=Sm
 H=112
-SmC=3
-Nm=OR
-ObjVer=1
-SmVr=1210
-PrH=95
-CF=2
-n1I=3
-n1O=1
-Cmn1=Source Aux\\
-mI=3
-I1=494
-I2=426
-I3=675
-mO=1
-tO=1
-O1=65
-]
-[
-ObjTp=Sm
-H=113
-SmC=3
-Nm=OR
-ObjVer=1
-SmVr=1210
-PrH=95
-CF=2
-n1I=9
-n1O=1
-Cmn1=Source Aux Clear\\
-mI=9
-I1=48
-I2=51
-I3=52
-I4=53
-I5=54
-I6=55
-I7=56
-I8=912
-I9=671
-mO=1
-tO=1
-O1=373
-]
-[
-ObjTp=Sm
-H=114
-SmC=12
-Nm=Set/Reset Latch
+SmC=20
+Nm=Buffer
 ObjVer=1
 SmVr=1210
 PrH=95
 CF=2
 n1I=2
-n1O=2
-Cmn1=Aux Source\\
+n1O=1
+Cmn1=DocCam is Encoder 5\\
 mI=2
-I1=57
-I2=373
-mO=2
-tO=2
-O1=675
+I1=2
+I2=833
+mO=1
+tO=1
+O1=38
+]
+[
+ObjTp=Sm
+H=113
+SmC=38
+Nm=Analog Equate
+ObjVer=1
+SmVr=1210
+PrH=96
+CF=2
+n1I=2
+n1O=15
+mI=2
+I1=48
+mO=15
+tO=15
+O1=51
+O2=51
+O3=52
+O4=51
+O5=51
+O6=53
+O7=51
+O8=51
+O9=51
+O10=51
+O11=51
+O12=51
+O13=51
+O14=51
+O15=51
+mP=15
+P1=1d
+P2=2d
+P3=3d
+P4=4d
+P5=5d
+P6=6d
+P7=7d
+P8=8d
+P9=9d
+P10=10d
+P11=11d
+P12=12d
+P13=13d
+P14=14d
+P15=15d
+]
+[
+ObjTp=Sm
+H=114
+SmC=447
+Nm=Control Crosspoint Routing.
+ObjVer=1
+SmVr=1210
+PrH=96
+CF=2
+n1I=43
+n2I=42
+n1O=43
+Cmn1=Main Source Switching\\
+mI=129
+mO=85
+tO=128
+O13=54
+O97=56
+O104=55
+mP=1
+P1=201d
 ]
 [
 ObjTp=Sm
@@ -17521,12 +17551,10 @@ SmVr=1210
 PrH=95
 CF=2
 Cmn1=Extron SW2 USB
-mC=5
+mC=3
 C1=116
 C2=117
 C3=118
-C4=119
-C5=120
 ]
 [
 ObjTp=Sm
@@ -17559,8 +17587,8 @@ mI=5
 I1=715
 I2=684
 I3=710
-I4=721
-I5=722
+I4=27
+I5=30
 mO=4
 tO=4
 O1=233
@@ -17593,38 +17621,79 @@ SmC=3
 Nm=OR
 ObjVer=1
 SmVr=1210
-PrH=115
+PrH=96
 CF=2
-n1I=2
+n1I=16
 n1O=1
-Cmn1=Selected Source is PC\\
-mI=2
-I1=58
-I2=48
+Cmn1=Input Selected\\
+mI=16
+I1=27
+I2=30
+I3=34
+I4=304
+I5=308
+I6=310
+I7=438
+I8=439
+I9=440
+I10=441
+I11=442
+I12=443
+I13=444
+I14=445
+I15=446
+I16=60
 mO=1
 tO=1
-O1=721
+O1=58
 ]
 [
 ObjTp=Sm
 H=120
-SmC=3
-Nm=OR
+SmC=1477
+Nm=Multiple Serial Send
 ObjVer=1
 SmVr=1210
-PrH=115
+PrH=96
 CF=2
-n1I=4
-n1O=1
-Cmn1=Selected Source is Laptop\\
-mI=4
-I1=59
-I2=60
-I3=51
-I4=52
-mO=1
-tO=1
-O1=722
+n1I=1
+n1O=15
+Cmn1=Source Messages\\
+mI=1
+I1=199
+mO=15
+tO=15
+O1=57
+O2=59
+O3=61
+O4=62
+O5=65
+O6=114
+O7=298
+O8=373
+O9=671
+O10=675
+O11=721
+O12=722
+O13=816
+O14=870
+O15=871
+mP=15
+P1="This is encoder 1"
+P2="This is encoder 2"
+P3="This is encoder 3"
+P4="This is encoder 4"
+P5="This is encoder 5"
+P6="This is encoder 6"
+P7="This is encoder 7"
+P8="This is encoder 8"
+P9="This is encoder 9"
+P10="This is encoder 10"
+P11="This is encoder 11"
+P12="This is encoder 12"
+P13="This is encoder 13"
+P14="This is encoder 14"
+P15="This is encoder 15"
 ]
 [
 ObjTp=Sm
@@ -18087,12 +18156,12 @@ SmVr=1210
 PrH=746
 CF=2
 n1I=1
-n1O=7
+n1O=15
 Cmn1=Default Icons\\
 mI=1
 I1=199
-mO=7
-tO=7
+mO=15
+tO=15
 O1=1019
 O2=273
 O3=274
@@ -18100,7 +18169,15 @@ O4=275
 O5=276
 O6=284
 O7=286
-mP=7
+O8=300
+O9=495
+O10=709
+O11=740
+O12=743
+O13=745
+O14=746
+O15=795
+mP=15
 P1=99d
 P2=41d
 P3=81d
@@ -18108,6 +18185,14 @@ P4=48d
 P5=46d
 P6=50d
 P7=49d
+P8=25d
+P9=25d
+P10=25d
+P11=25d
+P12=25d
+P13=25d
+P14=25d
+P15=25d
 ]
 [
 ObjTp=Sm
@@ -19732,47 +19817,6 @@ SmVr=1210
 PrH=4
 CF=2
 Cmn1=Blu-ray\\
-mC=2
-C1=203
-C2=204
-]
-[
-ObjTp=Sm
-H=203
-SmC=20
-Nm=Buffer
-ObjVer=1
-SmVr=1210
-PrH=202
-CF=2
-n1I=2
-n1O=1
-Cmn1=If Bluray is On, Allow system to power it off\\
-mI=2
-I1=38
-I2=49
-mO=1
-tO=1
-O1=342
-]
-[
-ObjTp=Sm
-H=204
-SmC=20
-Nm=Buffer
-ObjVer=1
-SmVr=1210
-PrH=202
-CF=2
-n1I=2
-n1O=1
-Cmn1=Turn Bluray On if no sync source detected\\
-mI=2
-I1=298
-I2=61
-mO=1
-tO=1
-O1=342
 ]
 [
 ObjTp=Sm
@@ -19849,12 +19893,12 @@ n1I=3
 n1O=2
 Cmn1=Turn DocCam On When Source is Selected\\
 mI=3
-I1=62
+I1=38
 mO=2
 tO=2
 O1=200
 mP=1
-P1=.1s
+P1=3t
 ]
 [
 ObjTp=Sm
@@ -20216,20 +20260,28 @@ ObjVer=1
 SmVr=1210
 PrH=211
 CF=2
-n1I=10
+n1I=18
 n1O=1
 Cmn1=Hide Webcam Controls\\
-mI=10
+mI=18
 I1=649
-I2=48
-I3=51
-I4=52
-I5=53
-I6=54
-I7=55
-I8=56
-I9=57
-I10=322
+I2=27
+I3=30
+I4=34
+I5=304
+I6=308
+I7=310
+I8=438
+I9=439
+I10=440
+I11=441
+I12=442
+I13=443
+I14=444
+I15=445
+I16=446
+I17=340
+I18=322
 mO=1
 tO=1
 O1=651
@@ -25421,7 +25473,7 @@ O13=1243
 O14=1244
 O15=1245
 O16=49
-O18=88
+O18=48
 O19=88
 O22=26
 O23=33
@@ -25506,9 +25558,11 @@ SmVr=1210
 PrH=746
 CF=2
 Cmn1=Outputs
-mC=2
+mC=4
 C1=440
 C2=441
+C3=445
+C4=444
 ]
 [
 ObjTp=Sm
@@ -25660,6 +25714,62 @@ P12=12d
 P13=13d
 P14=14d
 P15=15d
+]
+[
+ObjTp=Sm
+H=444
+SmC=32
+Nm=Analog Initialize
+ObjVer=1
+SmVr=1210
+PrH=439
+CF=2
+n1I=5
+n1O=1
+Cmn1=Selected Display\\
+mI=5
+I1=1043
+I2=1058
+I3=1180
+I4=1181
+I5=1182
+mO=1
+tO=1
+O1=46
+mP=5
+P1=310d
+P2=311d
+P3=312d
+P4=313d
+P5=314d
+]
+[
+ObjTp=Sm
+H=445
+SmC=38
+Nm=Analog Equate
+ObjVer=1
+SmVr=1210
+PrH=439
+CF=2
+n1I=2
+n1O=5
+Cmn1=Selected Display Feedback\\
+mI=2
+I1=46
+mO=5
+tO=5
+O1=1183
+O2=1184
+O3=1192
+O4=1197
+O5=1214
+mP=5
+P1=310d
+P2=311d
+P3=312d
+P4=313d
+P5=314d
 ]
 [
 ObjTp=Sm
@@ -26044,14 +26154,14 @@ I9=241
 I10=194
 I11=269
 I12=317
-I13=48
-I14=51
-I15=52
-I16=53
-I17=54
-I18=55
-I19=56
-I20=492
+I13=27
+I14=30
+I15=34
+I16=304
+I17=308
+I18=310
+I19=438
+I20=439
 I21=267
 I22=911
 I23=681
@@ -26080,14 +26190,14 @@ P8="User Powered Off System Manually"
 P9="System Powered Off From Inactivity"
 P10="System Powered Off From Image Blank Timeout"
 P11="System Powered Off From Sure Page Timeout"
-P12="Source Changed to Computer"
-P13="Source Changed to Laptop HDMI"
-P14="Source Changed to Laptop VGA"
-P15="Source Changed to Blu-ray"
-P16="Source Changed to Document Camera"
-P17="Source Changed to Apple TV"
-P18="Source Changed to BYOD Device"
-P19="Source Changed to Aux HDMI"
+P12="Source Changed to Encoder 1"
+P13="Source Changed to Encoder 2"
+P14="Source Changed to Encoder 3"
+P15="Source Changed to Encoder 4"
+P16="Source Changed to Encoder 5"
+P17="Source Changed to Encoder 6"
+P18="Source Changed to Encoder 7"
+P19="Source Changed to Encoder 8"
 P20="Image Blank Button Pressed"
 P21="Projector Online"
 P22="SmartBoard Projector Online"
@@ -26819,6 +26929,7 @@ I18=341
 I20=258
 I22=263
 I23=704
+I31=54
 I44=306
 I49=797
 I51=203
@@ -26838,7 +26949,9 @@ I92=681
 I93=278
 I95=6
 I119=278
-I128=65
+I121=51
+I124=52
+I125=53
 I131=865
 I136=164
 I140=258
@@ -26895,11 +27008,10 @@ I236=856
 I239=810
 I240=183
 I241=801
+I242=55
 I243=277
 I244=559
-I246=849
-I247=850
-I248=851
+I246=56
 I251=910
 I253=928
 I254=930
@@ -27336,7 +27448,7 @@ n1I=4
 n1O=4
 Cmn1=v1
 mI=4
-I2=38
+I2=21
 I4=369
 mO=4
 tO=4
@@ -27566,7 +27678,6 @@ I2014=182
 I4016=49
 I4017=49
 I4018=49
-I4031=114
 I4044=116
 mO=4032
 tO=4045
@@ -27576,27 +27687,27 @@ O4018=49
 mP=1
 P1=14d
 NGrpStI=4045
-GrpStI11=4
-GrpStI2012=6
-GrpStI2013=4
-GrpStI4014=6
-GrpStI4015=4
-GrpStI4019=6
-GrpStI4030=4
-GrpStI4032=6
-GrpStI4043=4
-GrpStI4045=6
+GrpStI11=3
+GrpStI2012=5
+GrpStI2013=3
+GrpStI4014=5
+GrpStI4015=3
+GrpStI4019=5
+GrpStI4030=3
+GrpStI4032=5
+GrpStI4043=3
+GrpStI4045=5
 NGrpStO=4045
-GrpStO11=4
-GrpStO2012=6
-GrpStO2013=4
-GrpStO4014=6
-GrpStO4015=4
-GrpStO4019=6
-GrpStO4030=4
-GrpStO4032=6
-GrpStO4043=4
-GrpStO4045=6
+GrpStO11=3
+GrpStO2012=5
+GrpStO2013=3
+GrpStO4014=5
+GrpStO4015=3
+GrpStO4019=5
+GrpStO4030=3
+GrpStO4032=5
+GrpStO4043=3
+GrpStO4045=5
 CedH=14
 ]
 [
@@ -32474,12 +32585,12 @@ SmVr=1210
 PrH=746
 CF=2
 n1I=1
-n1O=16
+n1O=31
 Cmn1=NVX Default Configuration\\
 mI=1
-I1=995
-mO=16
-tO=16
+I1=314
+mO=31
+tO=31
 O1=990
 O2=994
 O3=996
@@ -32496,7 +32607,22 @@ O13=1006
 O14=1007
 O15=1008
 O16=1009
-mP=16
+O17=1022
+O18=1116
+O19=1120
+O20=1124
+O21=1129
+O22=1134
+O23=1139
+O24=1144
+O25=1149
+O26=1154
+O27=1159
+O28=1164
+O29=1169
+O30=1174
+O31=1179
+mP=31
 P1=239.31.1.10
 P2=239.31.1.20
 P3=239.31.1.30
@@ -32513,6 +32639,21 @@ P13=239.31.1.130
 P14=239.31.1.140
 P15=239.31.1.150
 P16=239.31.1.160
+P17=E1
+P18=E2
+P19=E3
+P20=E4
+P21=E5
+P22=E6
+P23=E7
+P24=E8
+P25=E9
+P26=EA
+P27=EB
+P28=EC
+P29=ED
+P30=EE
+P31=EF
 ]
 [
 ObjTp=Sm
@@ -32523,9 +32664,9 @@ ObjVer=1
 SmVr=1210
 PrH=746
 CF=2
-n1I=16
+n1I=31
 Cmn1=NVX Default Config\\
-mI=16
+mI=31
 I1=990
 I2=994
 I3=996
@@ -32542,6 +32683,21 @@ I13=1006
 I14=1007
 I15=1008
 I16=1009
+I17=1022
+I18=1116
+I19=1120
+I20=1124
+I21=1129
+I22=1134
+I23=1139
+I24=1144
+I25=1149
+I26=1154
+I27=1159
+I28=1164
+I29=1169
+I30=1174
+I31=1179
 mP=1
 P1=20d
 ]
@@ -33075,7 +33231,7 @@ Nm=NVX.Enc6.Enable.Toggle
 [
 ObjTp=Sg
 H=38
-Nm=Source.Bluray.Sync.Fb
+Nm=Source.DocCam.Fb
 ]
 [
 ObjTp=Sg
@@ -33118,13 +33274,20 @@ SgTp=4
 ]
 [
 ObjTp=Sg
+H=46
+Nm=Config.Displays.Select
+SgTp=2
+]
+[
+ObjTp=Sg
 H=47
 Nm=JSON.Config.WriteFile
 ]
 [
 ObjTp=Sg
 H=48
-Nm=Source.Select.PC
+Nm=Route.Video.Unordered.Fb
+SgTp=2
 ]
 [
 ObjTp=Sg
@@ -33139,62 +33302,68 @@ Nm=JSON.Config.ReadFile
 [
 ObjTp=Sg
 H=51
-Nm=Source.Select.Laptop.HDMI
+Nm=Source.Uncontrolled.Fb
 ]
 [
 ObjTp=Sg
 H=52
-Nm=Source.Select.Laptop.VGA
+Nm=Source.Controls.Bluray.Fb
 ]
 [
 ObjTp=Sg
 H=53
-Nm=Source.Select.Bluray
+Nm=Source.Controls.DocCam.Fb
 ]
 [
 ObjTp=Sg
 H=54
-Nm=Source.Select.DocCam
+Nm=Source.Active.NoSync.Fb
 ]
 [
 ObjTp=Sg
 H=55
-Nm=Source.Select.AppleTV
+Nm=Source.Active.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
 H=56
-Nm=Source.Select.BYOD
+Nm=Source.Active.Name$
+SgTp=4
 ]
 [
 ObjTp=Sg
 H=57
-Nm=Source.Select.Aux
+Nm=Source.Enc1.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
 H=58
-Nm=Source.PC.Fb
+Nm=AnySource.OR
 ]
 [
 ObjTp=Sg
 H=59
-Nm=Source.Laptop.HDMI.Fb
+Nm=Source.Enc2.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
 H=60
-Nm=Source.Laptop.VGA.Fb
+Nm=Source.Show.Pulse
 ]
 [
 ObjTp=Sg
 H=61
-Nm=Source.Bluray.Fb
+Nm=Source.Enc3.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
 H=62
-Nm=Source.DocCam.Fb
+Nm=Source.Enc4.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -33209,7 +33378,8 @@ Nm=NVX.Display.Protocol2.Btn
 [
 ObjTp=Sg
 H=65
-Nm=Source.Aux.Fb
+Nm=Source.Enc5.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -33458,8 +33628,8 @@ SgTp=2
 [
 ObjTp=Sg
 H=114
-Nm=Volume.Mic.Scaled.Fb
-SgTp=2
+Nm=Source.Enc6.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -34406,7 +34576,8 @@ Nm=NVX.Display.Protocol1.Fb
 [
 ObjTp=Sg
 H=298
-Nm=Source.Bluray.Sync.NOT
+Nm=Source.Enc7.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -34790,7 +34961,8 @@ SgTp=2
 [
 ObjTp=Sg
 H=373
-Nm=Source.Aux.Clear
+Nm=Source.Enc8.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -36316,7 +36488,8 @@ Nm=Config.Auth.Pin.Clear$
 [
 ObjTp=Sg
 H=671
-Nm=Source.PC.Init
+Nm=Source.Enc9.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -36336,7 +36509,8 @@ Nm=System.Mode.Projector.Select.OR
 [
 ObjTp=Sg
 H=675
-Nm=Source.Aux.Show
+Nm=Source.Enc10.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -36570,12 +36744,14 @@ Nm=Room.Projector.Screen.Enable.Fb
 [
 ObjTp=Sg
 H=721
-Nm=Source.Select.PC.OR
+Nm=Source.Enc11.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
 H=722
-Nm=Source.Laptop.OR
+Nm=Source.Enc12.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -37069,6 +37245,12 @@ Nm=Log.System.Boot
 ]
 [
 ObjTp=Sg
+H=816
+Nm=Source.Enc13.Message$
+SgTp=4
+]
+[
+ObjTp=Sg
 H=817
 Nm=Config.Source.Enc1.Btn
 ]
@@ -37342,6 +37524,18 @@ Nm=Config.Source.11.Save
 ObjTp=Sg
 H=869
 Nm=Config.Source.12.Save
+]
+[
+ObjTp=Sg
+H=870
+Nm=Source.Enc14.Message$
+SgTp=4
+]
+[
+ObjTp=Sg
+H=871
+Nm=Source.Enc15.Message$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -37985,11 +38179,6 @@ ObjTp=Sg
 H=994
 Nm=NVX.Enc2.Multicast$
 SgTp=4
-]
-[
-ObjTp=Sg
-H=995
-Nm=NVX.NAX.Multicast.Init
 ]
 [
 ObjTp=Sg

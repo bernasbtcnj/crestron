@@ -208,9 +208,9 @@
   InputList2SigType58=Serial
   InputList2Cue59=NAXMulticastAddress[#]
   InputList2SigType59=Serial
-  OutputList2Cue1=VideoRoute_Fb
+  OutputList2Cue1=UnorderedVideoRoute_Fb
   OutputList2SigType1=Analog
-  OutputList2Cue2=AudioRoute_Fb
+  OutputList2Cue2=UnorderedAudioRoute_Fb
   OutputList2SigType2=Analog
   OutputList2Cue3=[~UNUSED~]
   OutputList2SigType3=Serial
