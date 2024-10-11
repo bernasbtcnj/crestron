@@ -1,0 +1,100 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.04.01
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+  Cmn1=FILENAME: RoomView Device Usage.usp            \\SIMPLWINDOWS NAME:
+  Cmn2=||1LastUsedDeviceUsage   \\\\VERSION: 2.1             \\\\SUMMARY:
+  Cmn3=\\\\This is a RoomView support module that is included with the\\
+  Cmn4=RoomView Device Usage SIMPL Windows module.\\\\The module will keep||1
+  Cmn5=track of the current usage time of a device. The\\module does not||1
+  Cmn6=keep track of the total usage, but rather the last\\used minutes.
+  Cmn7=||1On the Stop event, the module will output a string\\with the properly||1
+  Cmn8=formatted data.\\\\INPUT DESCRIPTIONS:\\Name                   Type||1
+  Cmn9=Description\\---------------------------------------------------
+  Cmn10=---------------------------\\Start                   D   Pulse to||1
+  Cmn11=start the timer.\\Stop                    D   Pulse to stop the||1
+  Cmn12=timer and output data.\\Clock                   D   Pulse every||1
+  Cmn13=10s for internal counter.\\\\Device_Type             S   Name of||1
+  Cmn14=device type.\\Device_Name             S   Actual name of the device.
+  Cmn15=\\\\OUTPUT DESCRIPTIONS:\\Name                           Type Description\\
+  Cmn16=----------------------------------------------------------------
+  Cmn17=--------------\\Last_Used_Miniutes              A   Last used minutes||1
+  Cmn18=(Updated after Stop is pulsed).\\To_RoomView_Usage_Log_Module||3
+  Cmn19=||1S   Data to Usage Log Module.\\
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,310,718,756,854,
+  Exclusions_CDS=5
+  Inclusions_CDS=6
+  Name=LastUsedDeviceUsage v2.1
+  SmplCName=RoomView Device Usage.usp
+  Code=1
+  SysRev5=4.006
+  SMWRev=3.00.00
+  InputCue1=Start
+  InputSigType1=Digital
+  InputCue2=Stop
+  InputSigType2=Digital
+  InputCue3=Clock
+  InputSigType3=Digital
+  InputList2Cue1=Device_Type
+  InputList2SigType1=Serial
+  InputList2Cue2=Device_Name
+  InputList2SigType2=Serial
+  OutputList2Cue1=Last_Used_Minutes
+  OutputList2SigType1=Analog
+  OutputList2Cue2=To_RoomView_Usage_Log_Module
+  OutputList2SigType2=Serial
+  ParamCue1=[Reference Name]
+  MinVariableInputs=3
+  MaxVariableInputs=3
+  MinVariableInputsList2=2
+  MaxVariableInputsList2=2
+  MinVariableOutputs=0
+  MaxVariableOutputs=0
+  MinVariableOutputsList2=2
+  MaxVariableOutputsList2=2
+  MinVariableParams=0
+  MaxVariableParams=0
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  MPp=1
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_RoomView_Device_Usage
+  SymJam=NonExclusive
+  FileName=RoomView Device Usage.ush
+  SIMPLPlusModuleEncoding=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
