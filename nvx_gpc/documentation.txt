@@ -1,0 +1,28 @@
+NVX GPC IP-ID SCHEME
+---------------------
+
+03 Touch Panel
+09 Wolfvision Document Camera
+
+D0 Decoder 0 - Local Monitor and Audio out to amplifier
+D1 Display 1
+D2 Display 2
+D3 Display 3
+D4 Display 4
+
+E1 Encoder 1 - PC
+E2 Encoder 2 - Laptop
+E3 Encoder 3 - Blu-ray (IR for Blu-ray control)
+E4 Encoder 4 - AppleTV
+E5 Encoder 5 - BYOD / Solstice Pod
+E6 Encoder 6 - Document Camera
+E7 Encoder 7 - Aux HDMI
+
+E8 Encoder 8  - Custom
+E9 Encoder 9  - Custom
+EA Encoder 10 - Custom
+EB Encoder 11 - Custom
+EC Encoder 12 - Custom
+ED Encoder 13 - Custom
+EE Encoder 14 - Custom
+EF Encoder 15 - Custom

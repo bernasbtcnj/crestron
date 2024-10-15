@@ -1,0 +1,127 @@
+#SYMBOL_NAME "LastUsedDeviceUsage v2.1"
+#DEFINE_CONSTANT MODE_DONTCOUNT 0
+#DEFINE_CONSTANT MODE_COUNT     1
+
+//#DEFINE_CONSTANT DEBUG 1
+
+//#CATEGORY "0"
+#HELP_BEGIN
+
+FILENAME: RoomView Device Usage.usp            
+SIMPLWINDOWS NAME: LastUsedDeviceUsage   
+
+VERSION: 2.1             
+
+SUMMARY:
+
+This is a RoomView support module that is included with the
+RoomView Device Usage SIMPL Windows module.
+
+The module will keep track of the current usage time of a device. The
+module does not keep track of the total usage, but rather the last
+used minutes. On the Stop event, the module will output a string
+with the properly formatted data.
+
+INPUT DESCRIPTIONS:
+Name                   Type Description
+------------------------------------------------------------------------------
+Start                   D   Pulse to start the timer.
+Stop                    D   Pulse to stop the timer and output data.
+Clock                   D   Pulse every 10s for internal counter.
+
+Device_Type             S   Name of device type.
+Device_Name             S   Actual name of the device.
+
+OUTPUT DESCRIPTIONS:
+Name                           Type Description
+------------------------------------------------------------------------------
+Last_Used_Miniutes              A   Last used minutes (Updated after Stop is pulsed).
+To_RoomView_Usage_Log_Module    S   Data to Usage Log Module.
+
+#HELP_END
+
+/*******************************************************************************************
+*** Revision History
+***
+***	Date		    Author		    Version		Description
+***	4/15/2005 	Adam Hanson	  2.0			  Modified usage string to include terminating delimiter
+*** 4/26/2005   AHS           2.1       Modified usage string to support new data field
+*******************************************************************************************/
+#DEFAULT_VOLATILE
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+*******************************************************************************************/
+DIGITAL_INPUT Start;
+DIGITAL_INPUT Stop;
+DIGITAL_INPUT Clock;
+
+STRING_INPUT Device_Type[25];
+STRING_INPUT Device_Name[50];
+
+ANALOG_OUTPUT Last_Used_Minutes;
+
+STRING_OUTPUT To_RoomView_Usage_Log_Module;
+
+/*******************************************************************************************
+  Global Variables
+*******************************************************************************************/
+INTEGER LastUsedMinutes, LastUsedSeconds, Mode;
+
+Function OutputLastUsed()
+{
+	Last_Used_Minutes = LastUsedMinutes;
+	makestring (To_RoomView_Usage_Log_Module, "USAGE||TIME||%s||%s||-||%s||-||\r",
+	 Device_Type, Device_Name, itoa(LastUsedminutes));
+}
+
+
+/*******************************************************************************************
+  Event Handlers
+*******************************************************************************************/
+
+PUSH Start
+{
+    if (Mode = MODE_DONTCOUNT)
+    {
+    	LastUsedMinutes = 0;
+    	LastUsedSeconds = 0;
+    } 
+    
+    Mode = MODE_COUNT;
+}
+
+PUSH Stop
+{
+	if (Mode = MODE_COUNT)
+	{
+    Mode = MODE_DONTCOUNT;
+    
+    if (LastUsedMinutes > 0)
+     Call OutputLastUsed();
+	}
+}
+
+PUSH Clock
+{
+  if (Mode = MODE_COUNT)
+  {
+    LastUsedSeconds = LastUsedSeconds + 10;
+    if (LastUsedSeconds > 59)
+    {
+      LastUsedMinutes = LastUsedMinutes + 1;
+      LastUsedSeconds = LastUsedSeconds - 60;
+    }
+  }
+}
+    
+
+/*******************************************************************************************
+  Main()
+*******************************************************************************************/
+
+Function Main()
+{
+	Mode = MODE_DONTCOUNT;
+}
+
+
