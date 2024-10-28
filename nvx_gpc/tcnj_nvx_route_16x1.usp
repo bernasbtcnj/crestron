@@ -13,46 +13,82 @@
  *
  */
 
-#DEFINE_CONSTANT SOURCES 16 // Number of input sources
-
 #CATEGORY "46" "TCNJ"
+
+#DEFINE_CONSTANT SOURCES 16 // Number of input sources
 
 #DEFAULT_VOLATILE
 
 // This is needed to keep data together
 Structure NVXDevice
 {
-	String Name[24];
-	Integer Icon;
-	Integer Enabled;
-	String Stream[50];
-	String Multicast[50];
-	Integer InputIndex;
+	String	Name[24];
+	Integer	Icon;
+	Integer	Enabled;
+	String	Stream[50];
+	String	Multicast[50];
+	Integer	InputIndex;
 };
 
 // IO
-ANALOG_INPUT VideoRoute, AudioRoute;
-STRING_INPUT _skip_, InputOrder[64];
+Analog_Input	VideoRoute,
+				AudioRoute;				// Set the video and audio route output
+String_Input	_skip_,
+				InputOrder[64];			// Set the sort order of the inputs
 
-DIGITAL_INPUT InputEnabled[SOURCES], _skip_;
+Digital_Input	InputEnabled[SOURCES], // Defines whether inputs are enabled
+				_skip_;
+	
+Analog_Input	_skip_,
+				_skip_,
+				_skip_,
+				InputIcon[SOURCES];	// Set Input Icons
 
-ANALOG_INPUT _skip_, _skip_, _skip_, InputIcon[SOURCES];
+String_Input	_skip_,
+				InputName[SOURCES][24];				 // Names of the Inputs (24 char max)
+String_Input	_skip_,
+				NVXEncStreamLocation[SOURCES][50]; 	// NVX Stream Address
+String_Input	_skip_,
+				NAXMulticastAddress[SOURCES][50];	// NAX Audio Multicast Address
 
-STRING_INPUT _skip_, InputName[SOURCES][24];
-STRING_INPUT _skip_, NVXEncStreamLocation[SOURCES][50];
-STRING_INPUT _skip_, NAXMulticastAddress[SOURCES][50];
+Analog_Output	UnorderedVideoRoute_Fb,
+				UnorderedAudioRoute_Fb;	// The current video and audio route, not defined by order
+String_Output	_skip_,
+				_skip_,
+				NVXDecStreamLocation, 	// NVX Route address
+				NAXDecRXMulticast;		// NAX Route Address
 
-ANALOG_OUTPUT UnorderedVideoRoute_Fb, UnorderedAudioRoute_Fb;
-STRING_OUTPUT _skip_, _skip_, NVXDecStreamLocation, NAXDecRXMulticast;
-
-DIGITAL_OUTPUT OrderedInputEnabled[SOURCES], _skip_;
-ANALOG_OUTPUT _skip_, OrderedInputIcon[SOURCES];
-STRING_OUTPUT _skip_, OrderedInputName[SOURCES];
+Digital_Output	OrderedInputEnabled[SOURCES], 		// Input Enabled in sort order
+				_skip_;
+Analog_Output	_skip_,
+				OrderedInputIcon[SOURCES];			// Input Icon in sort order
+String_Output	_skip_,
+				OrderedInputName[SOURCES];			// Input names in sort order
 
 // Create these as a global variable so multiple functions can access them
+// Array of NVX devices
 NVXDevice devices[SOURCES];
 
 // Functions
+
+// Create a default order string
+String_Function CreateOrder()
+{
+	Integer i;
+	String order[40];
+	
+	for (i = 1 to SOURCES) {
+		if (i = 1) {
+			// Start at the bginning, just the first number
+			MakeString(order, "%d", i);
+		} else {
+			// Add a comma ',' and the number
+			MakeString(order, "%s,%d", order, i);
+		}
+	}
+
+	return(order);
+}
 
 // Sets the attributes of a device index
 Function SetDevice(Integer index, Integer insert)
@@ -80,7 +116,7 @@ Function EvaluateOutputs()
 // Calculates the order of devices
 Function CalculateOrder()
 {
-	String tmporder[64];
+	String tmporder[40];
 	Integer loc, cur;
 	Integer length;
 	Integer index, insert;
@@ -94,7 +130,7 @@ Function CalculateOrder()
 	length = len(InputOrder);
 	if (length < 2) {
 		// Create a default order
-		tmporder = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16";
+		tmporder = CreateOrder();
 		length = len(tmporder);
 	} else {
 		tmporder = InputOrder;

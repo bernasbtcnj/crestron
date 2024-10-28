@@ -20,8 +20,8 @@ Digital_Input 	Trig,			// Start the timer
 
 Analog_Input	Hours,			// Hours to run the timer. Converted to string output
 				Minutes,		// Minutes to run the timer. Converted to string output
-				Warning_Time,
-				_skip_;	// Display a warning N seconds before he end of the timer
+				Warning_Time,	// Display a warning N seconds before he end of the timer
+				_skip_;
 
 String_Input	TimeString[6];	// Timer hours input in HH:MM format. Converts to analog output
 
