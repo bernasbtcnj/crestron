@@ -109,7 +109,6 @@ ed_113/tcnj_soed_113_20210629.sgd_
 ed_113/tcnj_soed_113_archive.zip
 ed_113/tcnj_soed_113_compiled.zip
 ed_113/tcnj_soed_113_r213.lpz.hash
-/nvx_gpc
 green_14/green_14.vtz
 green_14/green_14.VTZ.hash
 armstrong_136/arm136_dmps3-4k-350.lpz
@@ -121,3 +120,25 @@ armstrong_136/arm136_dmps3-4k-350_compiled.zip
 armstrong_136/tcnj_arm136_20221221_archive.zip
 /armstrong_136/tcnj_arm136_20221221_archive
 business_129/business_129_tsw760.sgd2
+nvx_gpc/rmc4_nvx_gpc.lpz
+nvx_gpc/rmc4_nvx_gpc.lpz.hash
+nvx_gpc/rmc4_nvx_gpc.sm2
+nvx_gpc/rmc4_nvx_gpc.smft
+nvx_gpc/rmc4_nvx_gpc.smw.ASV
+nvx_gpc/rmc4_nvx_gpc_archive.zip
+nvx_gpc/rmc4_nvx_gpc_compiled.zip
+nvx_gpc/rmc4_nvx_gpc_CrosspointList.txt
+nvx_gpc/rmc4_nvx_gpc_tsw760.sgd2
+nvx_gpc/rmc4_nvx_gpc_tsw760.sgd_
+nvx_gpc/rmc4_nvx_gpc_tsw760.vta
+nvx_gpc/rmc4_nvx_gpc_tsw760.vtp.ASV
+nvx_gpc/rmc4_nvx_gpc_tsw760.vtz
+nvx_gpc/rmc4_nvx_gpc_tsw760.VTZ.hash
+nvx_gpc/SPlsWork/CCI JSON AnalogRead.inf
+nvx_gpc/SPlsWork/CCI JSON AnalogWrite.inf
+nvx_gpc/SPlsWork/CCI JSON DigitalRead.inf
+nvx_gpc/SPlsWork/CCI JSON DigitalWrite.inf
+nvx_gpc/SPlsWork/CCI JSON FileProcessor.inf
+nvx_gpc/SPlsWork/CCI JSON SerialRead.inf
+nvx_gpc/SPlsWork/CCI JSON SerialWrite.inf
+/nvx_gpc/SPlsWork

@@ -1,0 +1,58 @@
+/* samsung 
+*by ember
+*/
+
+#default_volatile
+#enable_trace
+
+// variables
+digital_input power_on, power_off, _skip_,_skip_, _skip_, input_hdmi;
+
+string_input _skip_, from_display[64];
+
+digital_output power_on_fb, power_off_fb, warming_fb, cooling_fb, _skip_;
+
+string_output _skip_, _skip_, to_display;
+
+// Functions
+push power_on
+{
+	if (power_off_fb) {
+		to_display = "\x01\x30\x41\x30\x41\x30\x43\x02\x43\x32\x30\x33\x44\x36\x30\x30\x30\x31\x03\x73\x0D";
+		power_off_fb = 0;
+		power_on_fb = 1;
+		warming_fb = 1;
+		delay(500);
+		warming_fb = 0;
+	}
+}
+
+push power_off
+{
+	if (power_on_fb) {
+		to_display = "\x01\x30\x41\x30\x41\x30\x43\x02\x43\x32\x30\x33\x44\x36\x30\x30\x30\x34\x03\x76\x0D";
+		power_on_fb = 0;
+		power_off_fb = 1;
+		cooling_fb = 1;
+		delay(700);
+		cooling_fb = 0;
+	}
+}
+
+push input_hdmi
+{
+	if (power_on_fb) {
+		to_display = "\x01\x30\x41\x30\x45\x30\x41\x02\x30\x30\x36\x30\x30\x30\x31\x31\x03\x72\x0D";
+	}
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
+
+	// variable init
+	power_on_fb = 0;
+	power_off_fb = 1;
+	warming_fb = 0;
+	cooling_fb = 0;
+}
