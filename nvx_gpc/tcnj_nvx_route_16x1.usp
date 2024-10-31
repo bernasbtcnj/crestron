@@ -31,8 +31,11 @@ Structure NVXDevice
 };
 
 // IO
-Analog_Input	VideoRoute,
-				AudioRoute;				// Set the video and audio route output
+Analog_Input	OrderedVideoRoute,		// Set the video route based on the ordered list
+				OrderedAudioRoute,		// Set the audio route based on the ordered list
+				UnorderedVideoRoute,	// Set the video route based on the unordered list
+				UnorderedAudioRoute;	// Set the audio route based on the unordered list
+
 String_Input	_skip_,
 				InputOrder[64];			// Set the sort order of the inputs
 
@@ -51,7 +54,9 @@ String_Input	_skip_,
 String_Input	_skip_,
 				NAXMulticastAddress[SOURCES][50];	// NAX Audio Multicast Address
 
-Analog_Output	UnorderedVideoRoute_Fb,
+Analog_Output	OrderedVideoRoute_Fb,		// Current video and audio route in order
+				OrderedAudioRoute_Fb,
+				UnorderedVideoRoute_Fb,
 				UnorderedAudioRoute_Fb;	// The current video and audio route, not defined by order
 String_Output	_skip_,
 				_skip_,
@@ -75,15 +80,17 @@ NVXDevice devices[SOURCES];
 String_Function CreateOrder()
 {
 	Integer i;
-	String order[40];
+	String order[40], tmporder[40];
 	
 	for (i = 1 to SOURCES) {
 		if (i = 1) {
-			// Start at the bginning, just the first number
-			MakeString(order, "%d", i);
+			// Start at the beginning, just the first number
+			MakeString(order, "%u", i);
 		} else {
+			// Set the tmp order to the same as order
+			tmporder = order;
 			// Add a comma ',' and the number
-			MakeString(order, "%s,%d", order, i);
+			MakeString(order, "%s,%u", tmporder, i);
 		}
 	}
 
@@ -128,7 +135,7 @@ Function CalculateOrder()
 	// Check the length of the InputOrder string
 	// Should be longer than 1
 	length = len(InputOrder);
-	if (length < 2) {
+	if (length < 5) {
 		// Create a default order
 		tmporder = CreateOrder();
 		length = len(tmporder);
@@ -172,26 +179,72 @@ Change InputIcon
 	CalculateOrder();
 }
 
-Change VideoRoute
+Change OrderedVideoRoute
 {
-	if (VideoRoute = 0) {
+	if (OrderedVideoRoute = 0) {
 		NVXDecStreamLocation = ""; // Clear if 0
 		UnorderedVideoRoute_Fb = 0;
+		OrderedVideoRoute_Fb = 0;
 	} else {
 		// Set the stream location
-		NVXDecStreamLocation = devices[VideoRoute].Stream;
-		UnorderedVideoRoute_Fb = devices[VideoRoute].InputIndex;
+		NVXDecStreamLocation = devices[OrderedVideoRoute].Stream;
+		OrderedVideoRoute_Fb = OrderedVideoRoute;
+		UnorderedVideoRoute_Fb = devices[OrderedVideoRoute].InputIndex;
 	}
 }
 
-Change AudioRoute
+Change OrderedAudioRoute
 {
-	if (AudioRoute = 0) {
+	if (OrderedAudioRoute = 0) {
 		NAXDecRXMulticast = "";
 		UnorderedAudioRoute_Fb = 0;
+		OrderedAudioRoute_Fb = 0;
 	} else {
-		NAXDecRXMulticast = devices[AudioRoute].Multicast;
-		UnorderedAudioRoute_Fb = devices[AudioRoute].InputIndex;
+		NAXDecRXMulticast = devices[OrderedAudioRoute].Multicast;
+		OrderedAudioRoute_Fb = OrderedAudioRoute;
+		UnorderedAudioRoute_Fb = devices[OrderedAudioRoute].InputIndex;
+	}
+}
+
+Change UnorderedVideoRoute
+{
+	Integer i;
+
+	if (UnorderedVideoRoute = 0) {
+		NVXDecStreamLocation = ""; // Clear if 0
+		UnorderedVideoRoute_Fb = 0;
+		OrderedVideoRoute_Fb = 0;
+	} else {
+		// Set the stream location
+		for (i = 1 to SOURCES) {
+			if (devices[i].InputIndex = UnorderedVideoRoute) {
+				NVXDecStreamLocation = devices[i].Stream;
+				OrderedVideoRoute_Fb = i;
+				UnorderedVideoRoute_Fb = UnorderedVideoRoute;
+				break;
+			}
+		}
+	}
+}
+
+Change UnorderedAudioRoute
+{
+	Integer i;
+
+	if (UnorderedAudioRoute = 0) {
+		NAXDecRXMulticast = ""; // Clear if 0
+		UnorderedAudioRoute_Fb = 0;
+		OrderedAudioRoute_Fb = 0;
+	} else {
+		// Set the stream location
+		for (i = 1 to SOURCES) {
+			if (devices[i].InputIndex = UnorderedAudioRoute) {
+				NAXDecRXMulticast = devices[i].Multicast;
+				OrderedAudioRoute_Fb = i;
+				UnorderedAudioRoute_Fb = UnorderedAudioRoute;
+				break;
+			}
+		}
 	}
 }
 
@@ -216,5 +269,8 @@ Function main()
 		devices[i].Stream = "";
 		devices[i].Multicast = "";
 		devices[i].InputIndex = 0;
-	}	
+	}
+
+	// Calculate the initial order
+	CalculateOrder();		
 }
