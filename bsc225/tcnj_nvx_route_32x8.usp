@@ -25,11 +25,15 @@ Analog_Input	VideoRoute[DEST],
 
 String_Input	NVXStreamLocation[SOURCES][50],
 				_skip_,
-				NAXMulticastAddress[SOURCES][50];
+				NAXMulticastAddress[SOURCES][50],
+				_skip_,
+				InputName[SOURCES][24];
 
 String_Output	NVXDecStreamLocation[DEST],
 				_skip_,
-				NAXDecRXMulticast[DEST];
+				NAXDecRXMulticast[DEST],
+				_skip_,
+				DestInputName[DEST];
 
 // Functions
 Change VideoRoute
@@ -40,12 +44,14 @@ Change VideoRoute
 
 	if (VideoRoute[i] = 0) {
 		NVXDecStreamLocation[i] = "";
+		DestInputName[i] = ""; // Clear the name string
 		return;
 	}
     
 	// Bounds checking of the route
 	if (VideoRoute[i] > 0 && VideoRoute[i] <= SOURCES) {
 		NVXDecStreamLocation[i] = NVXStreamLocation[VideoRoute[i]];
+		DestInputName[i] = InputName[VideoRoute[i]]; // Set the name string
 	}
 }
 
@@ -65,4 +71,9 @@ Change AudioRoute
 		NAXDecRXMulticast[i] = NAXMulticastAddress[AudioRoute[i]];
 	}
 
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
 }
