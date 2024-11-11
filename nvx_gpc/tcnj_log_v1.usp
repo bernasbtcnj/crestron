@@ -6,7 +6,10 @@
  * brianbernas@gmail.com
  */
 
+#SYMBOL_NAME "TCNJ Log v1"
+
 #CATEGORY "46" "TCNJ" // Custom
+
 #ENABLE_TRACE
 
 #DEFINE_CONSTANT	TRUE		1
