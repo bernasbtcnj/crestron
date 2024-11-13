@@ -3,8 +3,9 @@
   (Fill in comments below)
 *******************************************************************************************/
 /*
-Dealer Name:	Control Concepts, Inc.
-Version:		v1.0.1
+Dealer Name:  Control Concepts, Inc.
+System Name:  CCI JSON Suite v2.1
+Programmer:   VNG
 */
 
 /*******************************************************************************************
@@ -12,68 +13,54 @@ Version:		v1.0.1
   (Uncomment and declare compiler directives as needed)
 *******************************************************************************************/
 #CATEGORY "0" 
-#SYMBOL_NAME "CCI JSON DigitalWrite"
+#SYMBOL_NAME "CCI JSON SerialWrite v2.1"
 #HINT "This module is intended to be used within the context of the CCI JSON suite"
 #DEFAULT_VOLATILE
 #ENABLE_STACK_CHECKING
 #ENABLE_TRACE
+
+#DEFINE_CONSTANT TRUE 1
+#DEFINE_CONSTANT FALSE 0
+#DEFINE_CONSTANT NULL ""
+#DEFINE_CONSTANT MAX_INPUTS 10
+#DEFINE_CONSTANT MAX_INPUT_SIZE 255
+#DEFINE_CONSTANT MAX_TOKEN_NAMES 10
+#DEFINE_CONSTANT MAX_TOKEN_SIZE 255
+
 /*******************************************************************************************
   Include Libraries
   (Uncomment and include additional libraries as needed)
 *******************************************************************************************/
-// #CRESTRON_LIBRARY ""
-// #USER_LIBRARY ""
-#USER_SIMPLSHARP_LIBRARY "CCI_JsonLib"
+#USER_SIMPLSHARP_LIBRARY "CCI.JsonConfig.Lib2"
+
 /*******************************************************************************************
   DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
   (Uncomment and declare inputs and outputs as needed)
 *******************************************************************************************/
- 
-Digital_Input
-Store,
-DigitalValue[10,10]; 
-// STRING_OUTPUT 
+//DIGITAL_INPUT Store;
+DIGITAL_INPUT _skip_;
+STRING_INPUT SerialValue[MAX_INPUTS][MAX_INPUT_SIZE];
 
-ComponentWriter myClass;
-/*******************************************************************************************
-  SOCKETS
-  (Uncomment and define socket definitions as needed)
-*******************************************************************************************/
-// TCP_CLIENT
-// TCP_SERVER
-// UDP_SOCKET
+JStringWriter SerialWriter;
 
 /*******************************************************************************************
   Parameters
   (Uncomment and declare parameters as needed)
 *******************************************************************************************/
-// INTEGER_PARAMETER
-// SIGNED_INTEGER_PARAMETER
-// LONG_INTEGER_PARAMETER
-// SIGNED_LONG_INTEGER_PARAMETER
-STRING_PARAMETER
-_skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,_skip_,
-Token_Name[10,10][64];
-INTEGER_PARAMETER
-ProcessorID;
+STRING_PARAMETER _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_, _skip_,
+                 Token_Name[MAX_TOKEN_NAMES][MAX_TOKEN_SIZE];
+INTEGER_PARAMETER ProcessorID;
 
 /*******************************************************************************************
   Event Handlers
   (Uncomment and declare additional event handlers as needed)
 *******************************************************************************************/
 
-
-PUSH Store
+THREADSAFE CHANGE SerialValue
 {
-    INTEGER x;
-	for(x = 1 TO 10)
-	{
-		if(Token_Name[x] != "")
-		{
-			myClass.WriteDigital(Token_Name[x], DigitalValue[x]);
-		}
-	}
-	
+  INTEGER i;
+  i = GETLASTMODIFIEDARRAYINDEX();
+  SerialWriter.UpdateValue(Token_Name[i], SerialValue[i]);
 }
 
 /*******************************************************************************************
@@ -84,13 +71,16 @@ PUSH Store
 
 Function Main()
 {
-    WaitForInitializationComplete();
-    myClass.Configure(ProcessorID);
-}	
+  INTEGER i;
+  WaitForInitializationComplete();
+  
+  FOR(i=1 TO MAX_INPUTS)
+  {
+    SerialWriter.AddJPath(Token_Name[i]);
+  }
+  
+  SerialWriter.Configure(ProcessorID);
 
-	
-	
-	    
-
+}
 
 
