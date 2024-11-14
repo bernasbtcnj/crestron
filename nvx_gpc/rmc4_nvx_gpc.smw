@@ -14670,14 +14670,14 @@ ObjTp=Bw
 H=1
 Lx=0
 Ly=0
-Rx=1030
+Rx=1058
 Ry=915
 Xm=-1
 Ym=-1
-SH=31
+SH=426
 Z=100
 Ht=3
-Hi=6
+Hi=2
 ]
 [
 ObjTp=Et
@@ -17825,6 +17825,86 @@ P15="This is encoder 15"
 ]
 [
 ObjTp=Sm
+H=121
+SmC=20
+Nm=Buffer
+ObjVer=1
+SmVr=1210
+PrH=306
+CF=2
+n1I=3
+n1O=2
+Cmn1=Power on this display on startup / mode change\\
+mI=3
+I1=16
+I2=330
+I3=255
+mO=2
+tO=2
+O1=1853
+O2=1853
+]
+[
+ObjTp=Sm
+H=122
+SmC=20
+Nm=Buffer
+ObjVer=1
+SmVr=1210
+PrH=185
+CF=2
+n1I=3
+n1O=2
+Cmn1=Power on this display on startup / mode change\\
+mI=3
+I1=16
+I2=399
+I3=255
+mO=2
+tO=2
+O1=1854
+O2=1854
+]
+[
+ObjTp=Sm
+H=123
+SmC=20
+Nm=Buffer
+ObjVer=1
+SmVr=1210
+PrH=821
+CF=2
+n1I=2
+n1O=1
+Cmn1=Power on this display on startup / mode change\\
+mI=2
+I1=16
+I2=255
+mO=1
+tO=1
+O1=1855
+]
+[
+ObjTp=Sm
+H=124
+SmC=20
+Nm=Buffer
+ObjVer=1
+SmVr=1210
+PrH=836
+CF=2
+n1I=2
+n1O=1
+Cmn1=Power on this display on startup / mode change\\
+mI=2
+I1=16
+I2=255
+mO=1
+tO=1
+O1=1856
+]
+[
+ObjTp=Sm
 H=125
 SmC=98
 Nm=Stepper
@@ -18931,7 +19011,7 @@ I10=49
 I12=185
 I13=402
 I14=49
-I16=2
+I16=484
 I18=869
 mO=18
 tO=18
@@ -19009,7 +19089,7 @@ n1O=1
 Cmn1=Any reason to turn on Display 1\\
 mI=2
 I1=81
-I2=16
+I2=1853
 mO=1
 tO=1
 O1=912
@@ -19552,7 +19632,7 @@ SmVr=1210
 PrH=157
 CF=2
 Cmn1=Display 2
-mC=14
+mC=15
 C1=187
 C2=146
 C3=188
@@ -19567,6 +19647,7 @@ C11=817
 C12=818
 C13=819
 C14=820
+C15=122
 ]
 [
 ObjTp=Sm
@@ -19609,7 +19690,7 @@ I10=49
 I12=699
 I13=700
 I14=49
-I16=2
+I16=922
 I18=701
 mO=18
 tO=18
@@ -19697,7 +19778,7 @@ PrH=306
 CF=2
 n1I=1
 n1O=1
-Cmn1=Projector Not Warming or Cooling\\
+Cmn1=Display Not Warming or Cooling\\
 mI=1
 I1=78
 mO=1
@@ -19806,7 +19887,7 @@ n1O=1
 Cmn1=Any reason to turn on Display 2\\
 mI=2
 I1=75
-I2=16
+I2=1854
 mO=1
 tO=1
 O1=864
@@ -20932,7 +21013,7 @@ mO=1
 tO=1
 O1=589
 mP=1
-P1=2s
+P1=5s
 ]
 [
 ObjTp=Sm
@@ -22151,7 +22232,7 @@ SmVr=1210
 PrH=157
 CF=2
 Cmn1=Display 1
-mC=14
+mC=15
 C1=158
 C2=33
 C3=68
@@ -22166,6 +22247,7 @@ C11=186
 C12=194
 C13=421
 C14=163
+C15=121
 ]
 [
 ObjTp=Sm
@@ -23065,7 +23147,7 @@ mO=2
 tO=2
 O1=587
 mP=1
-P1=.4s
+P1=3t
 ]
 [
 ObjTp=Sm
@@ -24934,13 +25016,13 @@ O14=490
 O15=653
 O16=654
 mP=30
-P1=0s
+P1=6t
 P2=3t
-P3=5t
+P3=3t
 P4=3t
 P5=3t
 P6=3t
-P7=5t
+P7=3t
 P8=3t
 P9=3t
 P10=3t
@@ -24974,13 +25056,14 @@ ObjVer=1
 SmVr=1210
 PrH=425
 CF=2
-n1I=3
+n1I=4
 n1O=1
 Cmn1=Initiate Display Control Protocols\\
-mI=3
+mI=4
 I1=162
 I2=613
-I3=656
+I3=587
+I4=656
 mO=1
 tO=1
 O1=655
@@ -34756,11 +34839,11 @@ O3=923
 O4=924
 O5=925
 mP=5
-P1=1d
-P2=2d
-P3=3d
-P4=4d
-P5=5d
+P1=0d
+P2=1d
+P3=2d
+P4=3d
+P5=4d
 ]
 [
 ObjTp=Sm
@@ -34819,7 +34902,7 @@ SmVr=1210
 PrH=157
 CF=2
 Cmn1=Display 3
-mC=14
+mC=15
 C1=822
 C2=175
 C3=823
@@ -34834,6 +34917,7 @@ C11=832
 C12=833
 C13=834
 C14=835
+C15=123
 ]
 [
 ObjTp=Sm
@@ -34855,7 +34939,7 @@ I10=49
 I12=933
 I13=935
 I14=49
-I16=2
+I16=1337
 I18=936
 mO=18
 tO=18
@@ -34946,7 +35030,7 @@ n1O=1
 Cmn1=Any reason to turn on Display 3\\
 mI=2
 I1=1087
-I2=16
+I2=1855
 mO=1
 tO=1
 O1=1088
@@ -35118,11 +35202,11 @@ O3=1338
 O4=1339
 O5=1340
 mP=5
-P1=2d
-P2=3d
-P3=4d
-P4=5d
-P5=6d
+P1=0d
+P2=1d
+P3=2d
+P4=3d
+P5=4d
 ]
 [
 ObjTp=Sm
@@ -35181,7 +35265,7 @@ SmVr=1210
 PrH=157
 CF=2
 Cmn1=Display 4
-mC=14
+mC=15
 C1=197
 C2=837
 C3=838
@@ -35196,6 +35280,7 @@ C11=847
 C12=848
 C13=849
 C14=850
+C15=124
 ]
 [
 ObjTp=Sm
@@ -35217,7 +35302,7 @@ I10=49
 I12=1345
 I13=1346
 I14=49
-I16=2
+I16=1374
 I18=1347
 mO=18
 tO=18
@@ -35303,12 +35388,13 @@ ObjVer=1
 SmVr=1210
 PrH=836
 CF=2
-n1I=2
+n1I=3
 n1O=1
 Cmn1=Any reason to turn on Display 4\\
-mI=2
+mI=3
 I1=1364
 I2=16
+I3=1856
 mO=1
 tO=1
 O1=1365
@@ -35482,11 +35568,11 @@ O3=1375
 O4=1376
 O5=1377
 mP=5
-P1=3d
-P2=4d
-P3=5d
-P4=6d
-P5=7d
+P1=0d
+P2=1d
+P3=2d
+P4=3d
+P5=4d
 ]
 [
 ObjTp=Sm
@@ -49950,4 +50036,24 @@ Nm=Dec4.HDCP.Auth
 ObjTp=Sg
 H=1852
 Nm=NVX.Dec4.HDCP.Disabled
+]
+[
+ObjTp=Sg
+H=1853
+Nm=Display1.Power.On.Step
+]
+[
+ObjTp=Sg
+H=1854
+Nm=Display2.Power.On.Step
+]
+[
+ObjTp=Sg
+H=1855
+Nm=Display3.Power.On.Step
+]
+[
+ObjTp=Sg
+H=1856
+Nm=Display4.Power.On.Step
 ]
