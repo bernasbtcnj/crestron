@@ -14674,10 +14674,10 @@ Rx=1058
 Ry=915
 Xm=-1
 Ym=-1
-SH=426
+SH=162
 Z=100
-Ht=3
-Hi=2
+Ht=1
+Hi=3
 ]
 [
 ObjTp=Et
@@ -15096,6 +15096,7 @@ Cmn1=System Control
 mI=55
 mO=52
 tO=55
+O1=1857
 ]
 [
 ObjTp=Sm
@@ -16098,7 +16099,7 @@ O1=164
 O2=165
 O3=88
 O4=88
-O5=635
+O5=1858
 O6=1185
 O7=259
 O8=16
@@ -16121,7 +16122,7 @@ P7=0s
 P8=3t
 P9=0s
 P10=3t
-P11=0s
+P11=2s
 P12=3t
 P13=1s
 P14=3t
@@ -16519,7 +16520,7 @@ n1I=2
 n1O=1
 Cmn1=Program 1 Start Delay (10s)\\
 mI=2
-I1=2
+I1=1857
 mO=1
 tO=1
 O1=198
@@ -19041,7 +19042,7 @@ n1I=16
 n1O=15
 Cmn1=Emulated Online\\
 mI=16
-I1=2
+I1=1
 I2=2
 I3=2
 I4=2
@@ -19127,7 +19128,7 @@ n1I=16
 n1O=15
 Cmn1=Encoders Online\\
 mI=16
-I1=1
+I1=1857
 I2=1059
 I3=1060
 I4=1061
@@ -20988,7 +20989,7 @@ n1I=3
 n1O=1
 Cmn1=Read JSON File\\
 mI=3
-I1=635
+I1=1858
 I2=314
 I3=147
 mO=1
@@ -41004,7 +41005,7 @@ Nm=Show.Config.Controls.Page
 [
 ObjTp=Sg
 H=147
-Nm=//JSON.ReadFile
+Nm=//JSON.Test.ReadFile
 ]
 [
 ObjTp=Sg
@@ -43531,11 +43532,6 @@ SgTp=4
 ObjTp=Sg
 H=634
 Nm=Config.Com.Yamaha.Bluray.Btn
-]
-[
-ObjTp=Sg
-H=635
-Nm=Startup.Config.ReadFile.Step
 ]
 [
 ObjTp=Sg
@@ -50056,4 +50052,14 @@ Nm=Display3.Power.On.Step
 ObjTp=Sg
 H=1856
 Nm=Display4.Power.On.Step
+]
+[
+ObjTp=Sg
+H=1857
+Nm=Prog1.Start.Fb
+]
+[
+ObjTp=Sg
+H=1858
+Nm=Config.ReadFile.Step
 ]
