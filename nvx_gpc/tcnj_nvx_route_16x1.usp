@@ -13,6 +13,8 @@
  *
  */
 
+#SYMBOL_NAME "TCNJ NVX Router 16 x 1"
+
 #CATEGORY "46" "TCNJ"
 
 #DEFINE_CONSTANT SOURCES 16 // Number of input sources
@@ -31,6 +33,8 @@ Structure NVXDevice
 };
 
 // IO
+Digital_Input	Refresh_Order, _skip_;			// Recalculate any order changes
+
 Analog_Input	OrderedVideoRoute,		// Set the video route based on the ordered list
 				OrderedAudioRoute,		// Set the audio route based on the ordered list
 				UnorderedVideoRoute,	// Set the video route based on the unordered list
@@ -63,10 +67,14 @@ String_Output	_skip_,
 				NVXDecStreamLocation, 	// NVX Route address
 				NAXDecRXMulticast;		// NAX Route Address
 
-Digital_Output	OrderedInputEnabled[SOURCES], 		// Input Enabled in sort order
+Digital_Output	_skip_,
+				_skip_,
+				OrderedInputEnabled[SOURCES], 		// Input Enabled in sort order
 				_skip_;
+
 Analog_Output	_skip_,
 				OrderedInputIcon[SOURCES];			// Input Icon in sort order
+
 String_Output	_skip_,
 				OrderedInputName[SOURCES];			// Input names in sort order
 
@@ -163,20 +171,22 @@ Function CalculateOrder()
 	EvaluateOutputs();
 }
 
+Push Refresh_Order
+{
+	// Figure out the new input order
+	CalculateOrder();	
+}
+
 Change InputEnabled
 {
-	CalculateOrder();
 }
 
 Change InputName
 {
-	// Recalculate everything if an input name changes
-	CalculateOrder();
 }
 
 Change InputIcon
 {
-	CalculateOrder();
 }
 
 Change OrderedVideoRoute
@@ -246,12 +256,6 @@ Change UnorderedAudioRoute
 			}
 		}
 	}
-}
-
-Change InputOrder
-{
-	// Figure out the new input order
-	CalculateOrder();	
 }
 
 Function main()
