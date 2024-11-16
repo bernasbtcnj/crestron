@@ -150,3 +150,6 @@ bsc225/bsc_225_nvx.smft
 bsc225/bsc_225_nvx_compiled.zip
 bsc225/tcnj_nvx_route_32x8.ush
 bsc225/bsc_225_nvx.sig
+nvx_gpc/tcnj_cec_display_archive.zip
+nvx_gpc/tcnj_cec_display.um2
+nvx_gpc/tcnj_cec_display.umc.ASV
