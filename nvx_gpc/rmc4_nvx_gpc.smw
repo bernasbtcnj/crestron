@@ -14710,30 +14710,15 @@ Mx1=0
 ObjTp=Bw
 H=1
 Lx=0
-Ly=457
-Rx=1042
-Ry=914
-Xm=-1
-Ym=-1
-SH=58
-Z=100
-P=296
-Ht=4
-Hi=16
-]
-[
-ObjTp=Bw
-H=1
-Lx=0
 Ly=0
-Rx=1042
-Ry=457
+Rx=1479
+Ry=907
 Xm=-1
 Ym=-1
-SH=221
+SH=613
 Z=100
 Ht=1
-Hi=4
+Hi=1
 ]
 [
 ObjTp=Et
@@ -16987,7 +16972,7 @@ O1=277
 O2=117
 O3=116
 mP=3
-P1=mtss_nvx_gpc_11.14.2024
+P1=mtss_nvx_gpc_11.19.2024
 P2=Program
 P3=Mic
 ]
@@ -17216,9 +17201,9 @@ I1=1024
 I2=1025
 I3=1026
 I4=49
-I5=49
+I5=1027
 I6=49
-I7=1027
+I7=49
 ]
 [
 ObjTp=Sm
@@ -17899,17 +17884,15 @@ ObjVer=1
 SmVr=1210
 PrH=306
 CF=2
-n1I=3
-n1O=2
+n1I=2
+n1O=1
 Cmn1=Power on this display on startup / mode change\\
-mI=3
-I1=519
+mI=2
+I1=348
 I2=16
-I3=16
-mO=2
-tO=2
+mO=1
+tO=1
 O1=1853
-O2=1853
 ]
 [
 ObjTp=Sm
@@ -17920,17 +17903,15 @@ ObjVer=1
 SmVr=1210
 PrH=185
 CF=2
-n1I=3
-n1O=2
+n1I=2
+n1O=1
 Cmn1=Power on this display on startup / mode change\\
-mI=3
-I1=16
-I2=399
-I3=255
-mO=2
-tO=2
+mI=2
+I1=584
+I2=16
+mO=1
+tO=1
 O1=1854
-O2=1854
 ]
 [
 ObjTp=Sm
@@ -18615,7 +18596,7 @@ I1=330
 I2=255
 mO=1
 tO=1
-O1=519
+O1=348
 ]
 [
 ObjTp=Sm
@@ -18637,6 +18618,44 @@ O1=521
 mP=2
 P1=3s
 P2=0d
+]
+[
+ObjTp=Sm
+H=143
+SmC=5
+Nm=Exclusive OR
+ObjVer=1
+SmVr=1210
+PrH=306
+CF=2
+n1I=2
+n1O=1
+Cmn1=Display 1 Power Feedback Visible\\
+mI=2
+I1=320
+I2=79
+mO=1
+tO=1
+O1=583
+]
+[
+ObjTp=Sm
+H=144
+SmC=3
+Nm=OR
+ObjVer=1
+SmVr=1210
+PrH=185
+CF=2
+n1I=2
+n1O=1
+Cmn1=Display 2 Will Power On at Startup\\
+mI=2
+I1=399
+I2=255
+mO=1
+tO=1
+O1=584
 ]
 [
 ObjTp=Sm
@@ -19646,7 +19665,7 @@ SmVr=1210
 PrH=157
 CF=2
 Cmn1=Display 2
-mC=17
+mC=18
 C1=187
 C2=146
 C3=188
@@ -19664,6 +19683,7 @@ C14=820
 C15=122
 C16=1003
 C17=1006
+C18=144
 ]
 [
 ObjTp=Sm
@@ -19678,7 +19698,7 @@ n1I=3
 n1O=2
 Cmn1=Display Power Feedback\\
 mI=3
-I1=79
+I1=583
 I2=850
 I3=851
 mO=2
@@ -19856,8 +19876,8 @@ mI=7
 I1=491
 I2=686
 I3=654
-I4=49
-I5=49
+I4=585
+I5=523
 I6=653
 I7=49
 ]
@@ -22749,7 +22769,7 @@ SmVr=1210
 PrH=157
 CF=2
 Cmn1=Display 1
-mC=18
+mC=19
 C1=158
 C2=33
 C3=1001
@@ -22768,6 +22788,7 @@ C15=421
 C16=163
 C17=121
 C18=141
+C19=143
 ]
 [
 ObjTp=Sm
@@ -23143,6 +23164,7 @@ O13=404
 O16=185
 O17=402
 O19=406
+O86=519
 O102=869
 mP=1
 P1=411d
@@ -26182,6 +26204,7 @@ O16=49
 O54=1318
 O55=1319
 O58=901
+O86=522
 O97=1254
 O102=69
 mP=1
@@ -30406,9 +30429,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I22=1185
 mO=183
 tO=400
 O399=993
@@ -30609,9 +30630,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I22=1185
 mO=183
 tO=400
 O399=1011
@@ -34038,7 +34057,7 @@ tO=1
 O1=1333
 mP=5
 P1=-800d
-P2=240d
+P2=100d
 P3=0d
 P4=65535d
 P5=1d
@@ -42810,6 +42829,11 @@ Nm=NVX.Display.Protocol4.Fb
 ]
 [
 ObjTp=Sg
+H=348
+Nm=Display1.Power.On.Startup
+]
+[
+ObjTp=Sg
 H=349
 Nm=Config.Auth.Success
 ]
@@ -43685,7 +43709,8 @@ Nm=Config.WebCam.Preset.Clear
 [
 ObjTp=Sg
 H=519
-Nm=Display1.Power.On.Satrtup
+Nm=Display1.CCross.Connections$
+SgTp=4
 ]
 [
 ObjTp=Sg
@@ -43697,6 +43722,17 @@ ObjTp=Sg
 H=521
 Nm=Volume.Program
 SgTp=2
+]
+[
+ObjTp=Sg
+H=522
+Nm=Display1.ECross.Connections$
+SgTp=4
+]
+[
+ObjTp=Sg
+H=523
+Nm=Displays.DiscFromC
 ]
 [
 ObjTp=Sg
@@ -44001,6 +44037,21 @@ Nm=Config.WebCam.Preset5.Set
 ObjTp=Sg
 H=582
 Nm=Config.WebCam.Preset6.Set
+]
+[
+ObjTp=Sg
+H=583
+Nm=Display1.Power.Fb.Visible
+]
+[
+ObjTp=Sg
+H=584
+Nm=Display2.Power.On.Startup
+]
+[
+ObjTp=Sg
+H=585
+Nm=Displays.DiscEC
 ]
 [
 ObjTp=Sg
