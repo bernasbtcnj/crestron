@@ -1,7 +1,18 @@
+Default Credentials
+--------------------
+Username: admin
+Password: (See internal MTSS documentation)
+
+NETWORK SWITCH
+--------------------
+Ports 1 - 18 : Crestron VLAN with DHCP (172.31.1.x IP range)
+Ports 19 - 26 : Campus data VLAN
+
 NVX GPC IP-ID SCHEME
 ---------------------
 
 03 Touch Panel
+04 HTML5 Interface & Configuration page (Under development)
 09 Wolfvision Document Camera
 
 D0 Decoder 0 - Local Monitor and Audio out to amplifier
