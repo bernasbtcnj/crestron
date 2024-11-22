@@ -189,6 +189,50 @@ Change InputIcon
 {
 }
 
+Change NVXEncStreamLocation
+{
+	// This exists for very specific scenarios
+	// When the stream is started after the route has been set
+	// Only evaluate if the stream location being changed
+	// is currently routed to the output
+	Integer i;
+
+	i = GetLastModifiedArrayIndex();
+
+	if (NVXEncStreamLocation[i] = "") {
+		// If the string is blank, don't set it
+		return;
+	}
+	
+	// Only set it if it is actively routed
+	if (devices[OrderedVideoRoute_Fb].InputIndex = i) {
+		NVXDecStreamLocation = NVXEncStreamLocation[i];
+		devices[OrderedVideoRoute_Fb].Stream = NVXEncStreamLocation[i];
+	}
+}
+
+Change NAXMulticastAddress
+{
+	// This exists for very specific scenarios
+	// When the stream is started after the route has been set
+	// Only evaluate if the stream location being changed
+	// is currently routed to the output
+	Integer i;
+
+	i = GetLastModifiedArrayIndex();
+
+	if (NAXMulticastAddress[i] = "") {
+		// If the string is blank, don't set it
+		return;
+	}
+
+	// Only set it if it is actively routed
+	if (devices[OrderedAudioRoute_Fb].InputIndex = i) {
+		NAXDecRXMulticast = NAXMulticastAddress[i];
+		devices[OrderedAudioRoute_Fb].Multicast = NAXMulticastAddress[i];
+	}
+}
+
 Change OrderedVideoRoute
 {
 	if (OrderedVideoRoute = 0) {

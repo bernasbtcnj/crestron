@@ -14728,54 +14728,12 @@ Mx1=0
 ObjTp=Bw
 H=1
 Lx=0
-Ly=0
-Rx=521
-Ry=305
+Ly=302
+Rx=1450
+Ry=604
 Xm=-1
 Ym=-1
-SH=505
-Z=100
-Ht=4
-Hi=86
-]
-[
-ObjTp=Bw
-H=1
-Lx=0
-Ly=305
-Rx=521
-Ry=610
-Xm=-1
-Ym=-1
-SH=172
-Z=100
-Ht=4
-Hi=86
-]
-[
-ObjTp=Bw
-H=1
-Lx=0
-Ly=610
-Rx=521
-Ry=915
-Xm=-1
-Ym=-1
-SH=243
-Z=100
-Ht=1
-Hi=6
-]
-[
-ObjTp=Bw
-H=1
-Lx=521
-Ly=0
-Rx=1042
-Ry=228
-Xm=-1
-Ym=-1
-SH=554
+SH=494
 Z=100
 Ht=1
 Hi=3
@@ -14783,43 +14741,29 @@ Hi=3
 [
 ObjTp=Bw
 H=1
-Lx=521
-Ly=228
-Rx=1042
-Ry=456
+Lx=0
+Ly=0
+Rx=1450
+Ry=302
 Xm=-1
 Ym=-1
-SH=555
+SH=57
 Z=100
 Ht=4
-Hi=1
+Hi=5
 ]
 [
 ObjTp=Bw
 H=1
-Lx=521
-Ly=456
-Rx=1042
-Ry=684
+Lx=0
+Ly=604
+Rx=1450
+Ry=906
 Xm=-1
 Ym=-1
-SH=556
+SH=495
 Z=100
-Ht=4
-Hi=1
-]
-[
-ObjTp=Bw
-H=1
-Lx=521
-Ly=684
-Rx=1042
-Ry=912
-Xm=-1
-Ym=-1
-SH=557
-Z=100
-Ht=4
+Ht=1
 Hi=1
 ]
 [
@@ -16247,7 +16191,7 @@ O1=164
 O2=165
 O3=88
 O4=88
-O5=520
+O5=584
 O6=1185
 O7=259
 O8=16
@@ -16391,8 +16335,8 @@ O8=232
 O9=749
 O10=189
 O11=67
-O12=909
-O13=249
+O12=249
+O13=909
 O14=919
 O15=649
 O16=652
@@ -16414,7 +16358,7 @@ P13=3s
 P14=3t
 P15=0s
 P16=3t
-P17=0s
+P17=3t
 P18=3t
 P19=0s
 P20=3t
@@ -17098,7 +17042,7 @@ O2=117
 O3=116
 O4=1985
 mP=4
-P1=mtss_nvx_gpc_11.19.2024
+P1=mtss_nvx_gpc_11.22.2024
 P2=Program
 P3=Mic
 P4=All Displays
@@ -17322,26 +17266,39 @@ SmVr=1216
 PrH=96
 CF=2
 Cmn1=Local Display Routing\\
-mC=19
+mC=32
 C1=108
-C2=109
-C3=110
-C4=111
-C5=112
-C6=113
-C7=114
-C8=115
-C9=116
-C10=117
-C11=118
-C12=119
-C13=120
-C14=121
-C15=122
-C16=123
-C17=124
-C18=125
-C19=126
+C2=578
+C3=109
+C4=110
+C5=111
+C6=112
+C7=113
+C8=114
+C9=115
+C10=116
+C11=117
+C12=118
+C13=119
+C14=120
+C15=121
+C16=122
+C17=123
+C18=124
+C19=125
+C20=126
+C21=579
+C22=580
+C23=581
+C24=587
+C25=1027
+C26=1028
+C27=1029
+C28=1030
+C29=1031
+C30=1032
+C31=1033
+C32=1034
 ]
 [
 ObjTp=Sm
@@ -17397,27 +17354,8 @@ P16=15d
 [
 ObjTp=Sm
 H=109
-SmC=46
-Nm=Analog Buffer
-ObjVer=1
-SmVr=1216
-PrH=107
-CF=2
-n1I=2
-n1O=1
-Cmn1=Decoder 0 - Encoder 1\\
-mI=2
-I1=539
-I2=992
-mO=1
-tO=1
-O1=974
-]
-[
-ObjTp=Sm
-H=110
-SmC=46
-Nm=Analog Buffer
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17426,7 +17364,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 2\\
 mI=2
-I1=637
+I1=109
 I2=530
 mO=1
 tO=1
@@ -17434,9 +17372,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=111
-SmC=46
-Nm=Analog Buffer
+H=110
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17445,7 +17383,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 3\\
 mI=2
-I1=2001
+I1=181
 I2=1117
 mO=1
 tO=1
@@ -17453,9 +17391,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=112
-SmC=46
-Nm=Analog Buffer
+H=111
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17464,7 +17402,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 4\\
 mI=2
-I1=2002
+I1=182
 I2=1121
 mO=1
 tO=1
@@ -17472,9 +17410,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=113
-SmC=46
-Nm=Analog Buffer
+H=112
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17483,7 +17421,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 5\\
 mI=2
-I1=2003
+I1=228
 I2=1125
 mO=1
 tO=1
@@ -17491,9 +17429,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=114
-SmC=46
-Nm=Analog Buffer
+H=113
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17502,7 +17440,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 6\\
 mI=2
-I1=2004
+I1=229
 I2=1130
 mO=1
 tO=1
@@ -17510,9 +17448,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=115
-SmC=46
-Nm=Analog Buffer
+H=114
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17521,7 +17459,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 7\\
 mI=2
-I1=2005
+I1=230
 I2=1135
 mO=1
 tO=1
@@ -17529,9 +17467,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=116
-SmC=46
-Nm=Analog Buffer
+H=115
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17540,7 +17478,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 8\\
 mI=2
-I1=2006
+I1=391
 I2=1140
 mO=1
 tO=1
@@ -17548,9 +17486,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=117
-SmC=46
-Nm=Analog Buffer
+H=116
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17559,7 +17497,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 9\\
 mI=2
-I1=2007
+I1=392
 I2=1145
 mO=1
 tO=1
@@ -17567,9 +17505,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=118
-SmC=46
-Nm=Analog Buffer
+H=117
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17578,7 +17516,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 10\\
 mI=2
-I1=2008
+I1=393
 I2=1150
 mO=1
 tO=1
@@ -17586,9 +17524,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=119
-SmC=46
-Nm=Analog Buffer
+H=118
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17597,7 +17535,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 11\\
 mI=2
-I1=2009
+I1=394
 I2=1155
 mO=1
 tO=1
@@ -17605,9 +17543,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=120
-SmC=46
-Nm=Analog Buffer
+H=119
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17616,7 +17554,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 12\\
 mI=2
-I1=2010
+I1=395
 I2=1160
 mO=1
 tO=1
@@ -17624,9 +17562,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=121
-SmC=46
-Nm=Analog Buffer
+H=120
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17635,7 +17573,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 13\\
 mI=2
-I1=2011
+I1=396
 I2=1165
 mO=1
 tO=1
@@ -17643,9 +17581,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=122
-SmC=46
-Nm=Analog Buffer
+H=121
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17654,7 +17592,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 14\\
 mI=2
-I1=2012
+I1=397
 I2=1170
 mO=1
 tO=1
@@ -17662,9 +17600,9 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=123
-SmC=46
-Nm=Analog Buffer
+H=122
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
@@ -17673,7 +17611,7 @@ n1I=2
 n1O=1
 Cmn1=Decoder 0 - Encoder 15\\
 mI=2
-I1=2013
+I1=398
 I2=1175
 mO=1
 tO=1
@@ -17681,18 +17619,17 @@ O1=974
 ]
 [
 ObjTp=Sm
-H=124
-SmC=20
-Nm=Buffer
+H=123
+SmC=3104
+Nm=Multiple Logic Wave Pulses
 ObjVer=1
 SmVr=1216
 PrH=107
 CF=2
 n1I=16
 n1O=15
-Cmn1=Send connect signal\\
+Cmn1=Route if the stream has already started\\
 mI=16
-I1=2016
 I2=72
 I3=109
 I4=181
@@ -17710,59 +17647,80 @@ I15=397
 I16=398
 mO=15
 tO=15
-O1=539
-O2=637
-O3=2001
-O4=2002
-O5=2003
-O6=2004
-O7=2005
-O8=2006
-O9=2007
-O10=2008
-O11=2009
-O12=2010
-O13=2011
-O14=2012
-O15=2013
-]
-[
-ObjTp=Sm
-H=125
-SmC=72
-Nm=Serial/Analog One-Shot
-ObjVer=1
-SmVr=1216
-PrH=107
-CF=2
-n1I=1
-n1O=2
-Cmn1=System On Input Changed\\
-mI=1
-I1=1316
-mO=2
-tO=2
-O1=2014
+O1=519
+O2=522
+O3=523
+O4=539
+O5=585
+O6=637
+O7=1974
+O8=1983
+O9=2001
+O10=2002
+O11=2003
+O12=2004
+O13=2005
+O14=2006
+O15=2007
 mP=1
-P1=3t
+P1=1d
 ]
 [
 ObjTp=Sm
-H=126
-SmC=1
-Nm=AND
+H=124
+SmC=46
+Nm=Analog Buffer
 ObjVer=1
 SmVr=1216
 PrH=107
 CF=2
 n1I=2
 n1O=1
+Cmn1=Decoder 0 - Encoder 1\\
 mI=2
-I1=2014
-I2=296
+I1=519
+I2=992
 mO=1
 tO=1
-O1=2017
+O1=974
+]
+[
+ObjTp=Sm
+H=125
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 2\\
+mI=2
+I1=522
+I2=530
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=126
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 3\\
+mI=2
+I1=523
+I2=1117
+mO=1
+tO=1
+O1=974
 ]
 [
 ObjTp=Sm
@@ -18603,7 +18561,7 @@ SmVr=1216
 PrH=148
 CF=2
 Cmn1=Display 1
-mC=19
+mC=18
 C1=168
 C2=169
 C3=170
@@ -18621,8 +18579,7 @@ C14=181
 C15=182
 C16=183
 C17=184
-C18=185
-C19=186
+C18=186
 ]
 [
 ObjTp=Sm
@@ -19032,30 +18989,11 @@ n1I=2
 n1O=1
 Cmn1=Power on this display on startup / mode change\\
 mI=2
-I1=348
+I1=250
 I2=16
 mO=1
 tO=1
 O1=1853
-]
-[
-ObjTp=Sm
-H=185
-SmC=3
-Nm=OR
-ObjVer=1
-SmVr=1216
-PrH=167
-CF=2
-n1I=2
-n1O=1
-Cmn1=Display 1 will power on at startup\\
-mI=2
-I1=330
-I2=255
-mO=1
-tO=1
-O1=348
 ]
 [
 ObjTp=Sm
@@ -19456,7 +19394,7 @@ n1I=2
 n1O=1
 Cmn1=Power on this display on startup / mode change\\
 mI=2
-I1=584
+I1=348
 I2=16
 mO=1
 tO=1
@@ -19535,7 +19473,7 @@ I1=399
 I2=255
 mO=1
 tO=1
-O1=584
+O1=348
 ]
 [
 ObjTp=Sm
@@ -26870,13 +26808,14 @@ ObjVer=1
 SmVr=1216
 PrH=489
 CF=2
-n1I=3
+n1I=4
 n1O=1
 Cmn1=Refresh Order\\
-mI=3
+mI=4
 I1=162
 I2=1893
 I3=1894
+I4=584
 mO=1
 tO=1
 O1=1860
@@ -27920,60 +27859,61 @@ SmVr=1216
 PrH=489
 CF=2
 Cmn1=Inputs
-mC=53
-C1=523
-C2=524
-C3=525
-C4=526
-C5=527
-C6=528
-C7=529
-C8=530
-C9=531
-C10=532
-C11=533
-C12=534
-C13=535
-C14=536
-C15=537
-C16=538
-C17=539
-C18=540
-C19=541
-C20=542
-C21=543
-C22=544
-C23=545
-C24=546
-C25=547
-C26=548
-C27=549
-C28=550
-C29=551
-C30=552
-C31=553
-C32=554
-C33=555
-C34=556
-C35=557
-C36=558
-C37=559
-C38=560
-C39=561
-C40=562
-C41=563
-C42=564
-C43=565
-C44=566
-C45=567
-C46=568
-C47=569
-C48=570
-C49=571
-C50=572
-C51=573
-C52=574
-C53=575
+mC=54
+C1=583
+C2=523
+C3=524
+C4=525
+C5=526
+C6=527
+C7=528
+C8=529
+C9=530
+C10=531
+C11=532
+C12=533
+C13=534
+C14=535
+C15=536
+C16=537
+C17=538
+C18=539
+C19=540
+C20=541
+C21=542
+C22=543
+C23=544
+C24=545
+C25=546
+C26=547
+C27=548
+C28=549
+C29=550
+C30=551
+C31=552
+C32=553
+C33=554
+C34=555
+C35=556
+C36=557
+C37=558
+C38=559
+C39=560
+C40=561
+C41=562
+C42=563
+C43=564
+C44=565
+C45=566
+C46=567
+C47=568
+C48=569
+C49=570
+C50=571
+C51=572
+C52=573
+C53=574
+C54=575
 ]
 [
 ObjTp=Sm
@@ -29551,19 +29491,12 @@ SmVr=1216
 PrH=522
 CF=2
 Cmn1=Encoders Initiating
-mC=12
+mC=5
 C1=576
 C2=577
-C3=578
-C4=579
-C5=580
-C6=581
-C7=582
-C8=583
-C9=584
-C10=585
-C11=586
-C12=587
+C3=584
+C4=585
+C5=586
 ]
 [
 ObjTp=Sm
@@ -29576,7 +29509,7 @@ PrH=575
 CF=2
 n1I=16
 n1O=15
-Cmn1=Start Encoder on boot\\
+Cmn1=Start Encoder on select\\
 mI=16
 I2=1952
 I3=1953
@@ -29665,149 +29598,108 @@ P15=15d
 [
 ObjTp=Sm
 H=578
-SmC=46
-Nm=Analog Buffer
+SmC=56
+Nm=Serial Buffer
 ObjVer=1
 SmVr=1216
-PrH=575
+PrH=107
 CF=2
 n1I=2
 n1O=1
-Cmn1=Store the routed source so we can break it later\\
+Cmn1=Decoder 0 - Encoder 1\\
 mI=2
-I1=1974
-I2=48
+I1=72
+I2=992
 mO=1
 tO=1
-O1=1975
+O1=974
 ]
 [
 ObjTp=Sm
 H=579
-SmC=72
-Nm=Serial/Analog One-Shot
+SmC=46
+Nm=Analog Buffer
 ObjVer=1
 SmVr=1216
-PrH=575
+PrH=107
 CF=2
-n1I=1
-n1O=2
-Cmn1=Unordered Video Route Changed\\
-mI=1
-I1=48
-mO=2
-tO=2
-O1=1974
-mP=1
-P1=3t
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 4\\
+mI=2
+I1=539
+I2=1121
+mO=1
+tO=1
+O1=974
 ]
 [
 ObjTp=Sm
 H=580
-SmC=38
-Nm=Analog Equate
+SmC=46
+Nm=Analog Buffer
 ObjVer=1
 SmVr=1216
-PrH=575
+PrH=107
 CF=2
 n1I=2
-n1O=15
-Cmn1=Stop the previous source\\
+n1O=1
+Cmn1=Decoder 0 - Encoder 5\\
 mI=2
-I1=1975
-I2=1983
-mO=15
-tO=15
-O1=642
-O2=643
-O3=644
-O4=646
-O5=645
-O6=1858
-O7=1891
-O8=1951
-O9=1976
-O10=1977
-O11=1978
-O12=1979
-O13=1980
-O14=1981
-O15=1982
-mP=15
-P1=1d
-P2=2d
-P3=3d
-P4=4d
-P5=5d
-P6=6d
-P7=7d
-P8=8d
-P9=9d
-P10=10d
-P11=11d
-P12=12d
-P13=13d
-P14=14d
-P15=15d
+I1=585
+I2=1125
+mO=1
+tO=1
+O1=974
 ]
 [
 ObjTp=Sm
 H=581
-SmC=409
-Nm=Logic Wave Pulse
+SmC=46
+Nm=Analog Buffer
 ObjVer=1
 SmVr=1216
-PrH=575
-CF=2
-n1I=3
-n1O=2
-Cmn1=New source sleected\\
-mI=3
-I1=58
-mO=2
-tO=2
-O1=1983
-mP=1
-P1=1d
-]
-[
-ObjTp=Sm
-H=582
-SmC=492
-Nm=Analog Comparison (Full Set)
-ObjVer=1
-SmVr=1216
-PrH=575
+PrH=107
 CF=2
 n1I=2
-n1O=6
-Cmn1=Current source is on local monitor\\
+n1O=1
+Cmn1=Decoder 0 - Encoder 6\\
 mI=2
-I1=1975
-I2=1316
-mO=6
-tO=6
-O1=1984
+I1=637
+I2=1130
+mO=1
+tO=1
+O1=974
 ]
 [
 ObjTp=Sm
 H=583
-SmC=32
-Nm=Analog Initialize
+SmC=858
+Nm=Make String Permanent
 ObjVer=1
 SmVr=1216
-PrH=575
+PrH=522
 CF=2
-n1I=1
-n1O=1
-Cmn1=Routed source is on the local display\\
-mI=1
-I1=1984
-mO=1
-tO=1
-O1=1975
+n1I=15
+Cmn1=Encoder Stream Addresses\\
+mI=15
+I1=992
+I2=530
+I3=1117
+I4=1121
+I5=1125
+I6=1130
+I7=1135
+I8=1140
+I9=1145
+I10=1150
+I11=1155
+I12=1160
+I13=1165
+I14=1170
+I15=1175
 mP=1
-P1=100d
+P1=50d
 ]
 [
 ObjTp=Sm
@@ -29952,22 +29844,21 @@ O15=1966
 [
 ObjTp=Sm
 H=587
-SmC=408
-Nm=Logic Wave Delay
+SmC=46
+Nm=Analog Buffer
 ObjVer=1
 SmVr=1216
-PrH=575
+PrH=107
 CF=2
-n1I=1
+n1I=2
 n1O=1
-Cmn1=Delay the connection\\
-mI=1
-I1=2017
+Cmn1=Decoder 0 - Encoder 7\\
+mI=2
+I1=1974
+I2=1135
 mO=1
 tO=1
-O1=2016
-mP=1
-P1=6d
+O1=974
 ]
 [
 ObjTp=Sm
@@ -36807,8 +36698,9 @@ C6=809
 C7=812
 C8=814
 mI=321
-I1=1185
 I2=909
+I13=250
+I14=909
 I218=979
 I320=1254
 mO=217
@@ -37085,8 +36977,10 @@ C6=823
 C7=826
 C8=828
 mI=321
-I1=1185
+I1=49
 I2=909
+I13=348
+I14=909
 I218=981
 I320=1270
 mO=217
@@ -37361,8 +37255,9 @@ C6=837
 C7=840
 C8=842
 mI=321
-I1=1185
 I2=909
+I13=255
+I14=909
 I218=983
 I320=1271
 mO=217
@@ -37637,8 +37532,9 @@ C6=851
 C7=854
 C8=856
 mI=321
-I1=1185
 I2=909
+I13=255
+I14=909
 I218=988
 I320=1272
 mO=217
@@ -38048,6 +37944,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
+I27=1059
 I33=636
 I38=642
 mO=183
@@ -38269,6 +38166,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
+I27=1060
 I33=638
 I38=643
 mO=183
@@ -39599,9 +39497,9 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I27=1065
+I33=1890
+I38=1891
 mO=183
 tO=400
 O399=1136
@@ -39821,9 +39719,9 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I27=1066
+I33=1892
+I38=1951
 mO=183
 tO=400
 O399=1141
@@ -41459,6 +41357,158 @@ tO=96
 O69=516
 mP=1
 P1=255d
+]
+[
+ObjTp=Sm
+H=1027
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 8\\
+mI=2
+I1=1983
+I2=1140
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1028
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 9\\
+mI=2
+I1=2001
+I2=1145
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1029
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 10\\
+mI=2
+I1=2002
+I2=1150
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1030
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 11\\
+mI=2
+I1=2003
+I2=1155
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1031
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 12\\
+mI=2
+I1=2004
+I2=1160
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1032
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 13\\
+mI=2
+I1=2005
+I2=1165
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1033
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 14\\
+mI=2
+I1=2006
+I2=1170
+mO=1
+tO=1
+O1=974
+]
+[
+ObjTp=Sm
+H=1034
+SmC=46
+Nm=Analog Buffer
+ObjVer=1
+SmVr=1216
+PrH=107
+CF=2
+n1I=2
+n1O=1
+Cmn1=Decoder 0 - Encoder 15\\
+mI=2
+I1=2007
+I2=1175
+mO=1
+tO=1
+O1=974
 ]
 [
 ObjTp=CED
@@ -43627,7 +43677,7 @@ Nm=NVX.Display.Protocol4.Fb
 [
 ObjTp=Sg
 H=348
-Nm=Display1.Power.On.Startup
+Nm=System.Mode.Display2.Enabled
 ]
 [
 ObjTp=Sg
@@ -44505,14 +44555,24 @@ Nm=Config.WebCam.Preset.Clear
 ]
 [
 ObjTp=Sg
-H=520
-Nm=//Config.ReadFile.Step
+H=519
+Nm=Route.Dec0.Enc1.Pulse
 ]
 [
 ObjTp=Sg
 H=521
 Nm=Volume.Program
 SgTp=2
+]
+[
+ObjTp=Sg
+H=522
+Nm=Route.Dec0.Enc2.Pulse
+]
+[
+ObjTp=Sg
+H=523
+Nm=Route.Dec0.Enc3.Pulse
 ]
 [
 ObjTp=Sg
@@ -44599,7 +44659,7 @@ Nm=WebCam.Preset1.OR
 [
 ObjTp=Sg
 H=539
-Nm=Route.Dec0.Enc1.Connect
+Nm=Route.Dec0.Enc4.Pulse
 ]
 [
 ObjTp=Sg
@@ -44825,7 +44885,12 @@ Nm=Display1.Power.Fb.Visible
 [
 ObjTp=Sg
 H=584
-Nm=Display2.Power.On.Startup
+Nm=Ordered.Encoder.Refresh.Step
+]
+[
+ObjTp=Sg
+H=585
+Nm=Route.Dec0.Enc5.Pulse
 ]
 [
 ObjTp=Sg
@@ -45095,7 +45160,7 @@ Nm=NVX.Enc1.Start
 [
 ObjTp=Sg
 H=637
-Nm=Route.Dec0.Enc2.Connect
+Nm=Route.Dec0.Enc6.Pulse
 ]
 [
 ObjTp=Sg
@@ -52203,13 +52268,7 @@ Nm=NVX.Enc15.Start
 [
 ObjTp=Sg
 H=1974
-Nm=Route.Video.Change.Pulse
-]
-[
-ObjTp=Sg
-H=1975
-Nm=Route.Video.Prev
-SgTp=2
+Nm=Route.Dec0.Enc7.Pulse
 ]
 [
 ObjTp=Sg
@@ -52249,12 +52308,7 @@ Nm=NVX.Enc15.Stop
 [
 ObjTp=Sg
 H=1983
-Nm=AnySource.Pulse
-]
-[
-ObjTp=Sg
-H=1984
-Nm=Route.Video.Ignore
+Nm=Route.Dec0.Enc8.Pulse
 ]
 [
 ObjTp=Sg
@@ -52340,87 +52394,42 @@ Nm=Route.Dec0.Enc15.NOT
 [
 ObjTp=Sg
 H=2001
-Nm=Route.Dec0.Enc3.Connect
+Nm=Route.Dec0.Enc9.Pulse
 ]
 [
 ObjTp=Sg
 H=2002
-Nm=Route.Dec0.Enc4.Connect
+Nm=Route.Dec0.Enc10.Pulse
 ]
 [
 ObjTp=Sg
 H=2003
-Nm=Route.Dec0.Enc5.Connect
+Nm=Route.Dec0.Enc11.Pulse
 ]
 [
 ObjTp=Sg
 H=2004
-Nm=Route.Dec0.Enc6.Connect
+Nm=Route.Dec0.Enc12.Pulse
 ]
 [
 ObjTp=Sg
 H=2005
-Nm=Route.Dec0.Enc7.Connect
+Nm=Route.Dec0.Enc13.Pulse
 ]
 [
 ObjTp=Sg
 H=2006
-Nm=Route.Dec0.Enc8.Connect
+Nm=Route.Dec0.Enc14.Pulse
 ]
 [
 ObjTp=Sg
 H=2007
-Nm=Route.Dec0.Enc9.Connect
-]
-[
-ObjTp=Sg
-H=2008
-Nm=Route.Dec0.Enc10.Connect
-]
-[
-ObjTp=Sg
-H=2009
-Nm=Route.Dec0.Enc11.Connect
-]
-[
-ObjTp=Sg
-H=2010
-Nm=Route.Dec0.Enc12.Connect
-]
-[
-ObjTp=Sg
-H=2011
-Nm=Route.Dec0.Enc13.Connect
-]
-[
-ObjTp=Sg
-H=2012
-Nm=Route.Dec0.Enc14.Connect
-]
-[
-ObjTp=Sg
-H=2013
-Nm=Route.Dec0.Enc15.Connect
-]
-[
-ObjTp=Sg
-H=2014
-Nm=NVX.Dec0.SysOn.Input.Change
+Nm=Route.Dec0.Enc15.Pulse
 ]
 [
 ObjTp=Sg
 H=2015
 Nm=Source.Messages.Default.OR
-]
-[
-ObjTp=Sg
-H=2016
-Nm=NVX.Dec0.Route.Pulse.Delay
-]
-[
-ObjTp=Sg
-H=2017
-Nm=NVX.Dec0.Route.Pulse
 ]
 [
 ObjTp=Sg
