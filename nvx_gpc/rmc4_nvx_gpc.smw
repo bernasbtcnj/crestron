@@ -14728,43 +14728,71 @@ Mx1=0
 ObjTp=Bw
 H=1
 Lx=0
-Ly=302
-Rx=1450
-Ry=604
+Ly=0
+Rx=725
+Ry=453
 Xm=-1
 Ym=-1
-SH=494
+SH=521
 Z=100
-Ht=1
-Hi=3
+Ht=4
+Hi=2
 ]
 [
 ObjTp=Bw
 H=1
 Lx=0
+Ly=453
+Rx=725
+Ry=906
+Xm=-1
+Ym=-1
+SH=98
+Z=100
+Ht=1
+Hi=1
+]
+[
+ObjTp=Bw
+H=1
+Lx=725
 Ly=0
 Rx=1450
 Ry=302
 Xm=-1
 Ym=-1
-SH=57
+SH=102
 Z=100
 Ht=4
-Hi=5
+Hi=1
 ]
 [
 ObjTp=Bw
 H=1
-Lx=0
+Lx=725
+Ly=302
+Rx=1450
+Ry=604
+Xm=-1
+Ym=-1
+SH=101
+Z=100
+Ht=1
+Hi=1
+]
+[
+ObjTp=Bw
+H=1
+Lx=725
 Ly=604
 Rx=1450
 Ry=906
 Xm=-1
 Ym=-1
-SH=495
+SH=256
 Z=100
 Ht=1
-Hi=1
+Hi=2
 ]
 [
 ObjTp=Et
@@ -17057,36 +17085,14 @@ SmVr=1216
 PrH=4
 CF=2
 Cmn1=Routing\\
-mC=9
-C1=97
-C2=98
-C3=99
-C4=100
-C5=101
-C6=102
-C7=103
-C8=107
-C9=127
-]
-[
-ObjTp=Sm
-H=97
-SmC=32
-Nm=Analog Initialize
-ObjVer=1
-SmVr=1216
-PrH=96
-CF=2
-n1I=1
-n1O=1
-Cmn1=DocCam Audio Source\\
-mI=1
-I1=170
-mO=1
-tO=1
-O1=372
-mP=1
-P1=1d
+mC=7
+C1=98
+C2=100
+C3=101
+C4=102
+C5=103
+C6=107
+C7=127
 ]
 [
 ObjTp=Sm
@@ -17102,29 +17108,10 @@ n1O=1
 Cmn1=Doc Camera Audio Source\\
 mI=2
 I1=370
-I2=372
+I2=1316
 mO=1
 tO=1
-O1=35
-]
-[
-ObjTp=Sm
-H=99
-SmC=20
-Nm=Buffer
-ObjVer=1
-SmVr=1216
-PrH=96
-CF=2
-n1I=2
-n1O=1
-Cmn1=DocCam is Encoder 5\\
-mI=2
-I1=388
-I2=833
-mO=1
-tO=1
-O1=38
+O1=1975
 ]
 [
 ObjTp=Sm
@@ -17140,7 +17127,7 @@ n1O=1
 Cmn1=DocCam Audio is set to follow the source\\
 mI=2
 I1=158
-I2=38
+I2=53
 mO=1
 tO=1
 O1=159
@@ -17178,7 +17165,7 @@ n1O=1
 Cmn1=DocCam should have PC Audio and DocCam is selected\\
 mI=2
 I1=170
-I2=38
+I2=53
 mO=1
 tO=1
 O1=370
@@ -17767,8 +17754,8 @@ I2=1318
 I3=1318
 mO=2
 tO=2
-O1=17
-O2=18
+O1=520
+O2=1975
 ]
 [
 ObjTp=Sm
@@ -20711,7 +20698,7 @@ n1I=3
 n1O=2
 Cmn1=Turn DocCam On When Source is Selected\\
 mI=3
-I1=38
+I1=53
 mO=2
 tO=2
 O1=200
@@ -26851,8 +26838,8 @@ I17=736
 I18=49
 I20=293
 I21=35
-I22=17
-I23=18
+I22=520
+I23=1975
 I25=799
 I29=1019
 I30=273
@@ -27847,7 +27834,6 @@ I2=909
 mO=2
 tO=2
 O1=972
-O2=1012
 ]
 [
 ObjTp=Sm
@@ -29680,9 +29666,9 @@ ObjVer=1
 SmVr=1216
 PrH=522
 CF=2
-n1I=15
+n1I=30
 Cmn1=Encoder Stream Addresses\\
-mI=15
+mI=30
 I1=992
 I2=530
 I3=1117
@@ -29698,6 +29684,21 @@ I12=1160
 I13=1165
 I14=1170
 I15=1175
+I16=993
+I17=1011
+I18=1014
+I19=1016
+I20=1126
+I21=1131
+I22=1136
+I23=1141
+I24=1146
+I25=1151
+I26=1156
+I27=1161
+I28=1166
+I29=1171
+I30=1176
 mP=1
 P1=50d
 ]
@@ -36552,6 +36553,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
+I38=296
 mO=183
 tO=400
 ]
@@ -36570,8 +36572,9 @@ n2I=134
 n1O=39
 Cmn1=DM NAX (AES67) RX
 mI=390
-I22=972
-I27=1012
+I22=1185
+I27=909
+I38=909
 I389=33
 mO=173
 tO=390
@@ -37944,9 +37947,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1059
-I33=636
-I38=642
+I22=1185
 mO=183
 tO=400
 O399=993
@@ -38166,9 +38167,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1060
-I33=638
-I38=643
+I22=1185
 mO=183
 tO=400
 O399=1011
@@ -38392,9 +38391,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1061
-I33=639
-I38=644
+I22=1185
 mO=183
 tO=400
 O399=1014
@@ -38831,9 +38828,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1062
-I33=640
-I38=646
+I22=1185
 mO=183
 tO=400
 O399=1016
@@ -39053,9 +39048,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1063
-I33=641
-I38=645
+I22=1185
 mO=183
 tO=400
 O399=1126
@@ -39275,9 +39268,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1064
-I33=647
-I38=1858
+I22=1185
 mO=183
 tO=400
 O399=1131
@@ -39497,9 +39488,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1065
-I33=1890
-I38=1891
+I22=1185
 mO=183
 tO=400
 O399=1136
@@ -39719,9 +39708,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1066
-I33=1892
-I38=1951
+I22=1185
 mO=183
 tO=400
 O399=1141
@@ -39941,9 +39928,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1067
-I33=1967
-I38=1976
+I22=1185
 mO=183
 tO=400
 O399=1146
@@ -40163,9 +40148,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1068
-I33=1968
-I38=1977
+I22=1185
 mO=183
 tO=400
 O399=1151
@@ -40385,9 +40368,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I22=1185
 mO=183
 tO=400
 O399=1156
@@ -40607,9 +40588,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I22=1185
 mO=183
 tO=400
 O399=1161
@@ -40829,9 +40808,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I22=1185
 mO=183
 tO=400
 O399=1166
@@ -41051,9 +41028,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I22=972
-I33=972
-I38=1012
+I22=1185
 mO=183
 tO=400
 O399=1171
@@ -41273,9 +41248,7 @@ n2I=133
 n1O=50
 Cmn1=DM NAX (AES67) TX
 mI=400
-I27=1073
-I33=1973
-I38=1982
+I22=1185
 mO=183
 tO=400
 O399=1176
@@ -41934,18 +41907,6 @@ Nm=Displays.Power.On.Step
 ]
 [
 ObjTp=Sg
-H=17
-Nm=NVX.Startup.Route.Video
-SgTp=2
-]
-[
-ObjTp=Sg
-H=18
-Nm=NVX.StartupRoute.Audio
-SgTp=2
-]
-[
-ObjTp=Sg
 H=19
 Nm=NVX.Enc2.Sync.Fb
 ]
@@ -42047,11 +42008,6 @@ Nm=NVX.Enc3.Enable.Toggle
 ObjTp=Sg
 H=37
 Nm=NVX.Enc6.Enable.Toggle
-]
-[
-ObjTp=Sg
-H=38
-Nm=Source.DocCam.Fb
 ]
 [
 ObjTp=Sg
@@ -43799,12 +43755,6 @@ SgTp=4
 ]
 [
 ObjTp=Sg
-H=372
-Nm=DocCam.Audio
-SgTp=2
-]
-[
-ObjTp=Sg
 H=373
 Nm=Source.Enc8.Message$
 SgTp=4
@@ -44557,6 +44507,12 @@ Nm=Config.WebCam.Preset.Clear
 ObjTp=Sg
 H=519
 Nm=Route.Dec0.Enc1.Pulse
+]
+[
+ObjTp=Sg
+H=520
+Nm=NVX.Unordered.Route.Video
+SgTp=2
 ]
 [
 ObjTp=Sg
@@ -47147,11 +47103,6 @@ ObjTp=Sg
 H=1011
 Nm=NAX.Enc2.Multicast.Fb$
 SgTp=4
-]
-[
-ObjTp=Sg
-H=1012
-Nm=NVX.Stop.Fb
 ]
 [
 ObjTp=Sg
@@ -52269,6 +52220,12 @@ Nm=NVX.Enc15.Start
 ObjTp=Sg
 H=1974
 Nm=Route.Dec0.Enc7.Pulse
+]
+[
+ObjTp=Sg
+H=1975
+Nm=NVX.Unordered.Route.Audio
+SgTp=2
 ]
 [
 ObjTp=Sg
