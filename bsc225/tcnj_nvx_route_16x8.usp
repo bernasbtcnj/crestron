@@ -1,6 +1,8 @@
 /*
  * TCNJ NVX Switching module
- * Routes up to 32 inputs to 8 outputs with audio breakaway
+ * Matrix capabilties
+ * Routes multiple inputs to multiple outputs with audio breakaway
+ * Change the CONSTANTs below to modify input and output count
  *
  * Programmer: Brian Bernas
  * bernasb@tcnj.edu
