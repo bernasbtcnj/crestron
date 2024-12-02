@@ -1,0 +1,72 @@
+/*
+ * TCNJ Custom message handling
+ * Checks multiple message strings to verify that they aren't blank
+ * If one is blank, replace it with a default string
+ *
+ * Programmer: Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ *
+ */
+
+#SYMBOL_NAME "TCNJ Message Handler"
+
+#CATEGORY "46" "TCNJ"
+
+#DEFAULT_VOLATILE
+
+#DEFINE_CONSTANT COUNT		16	// Number of messages
+
+// IO
+Digital_Input		Process_Messages,
+					_skip_;
+
+String_Input		Message[COUNT][128];
+
+String_Parameter	_skip_,
+					_skip_,
+					Default_Message[COUNT][128];
+
+String_Output		_skip_,
+					_skip_,		
+					Message_Fb[COUNT];
+
+// Functions
+Push Process_Messages
+{
+	Integer f, l; // Integers to track the for loop and message size
+    
+	// Step through each message
+	for (f = 1 to COUNT) {
+		l = len(Message[f]);
+		if (l > 3 && l < 129) {
+			// Pass the input message to the output if it is
+			// longer than 3 characters
+			Message_Fb[f] = Message[f];
+		} else {
+			// Otherwise, assign the default message to the output
+			Message_Fb[f] = Default_Message[f];
+		}
+	}
+}
+
+Change Message
+{
+	Integer i, l;
+
+	i = GetLastModifiedArrayIndex();
+
+	l = len(Message[i]); // Message size
+
+	// Verify that the message has a valid size
+	if (l > 3 && l < 129) {
+		Message_Fb[i] = Message[i];
+	} else {
+		Message_Fb[i] = Default_Message[i];
+	}
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
+}
