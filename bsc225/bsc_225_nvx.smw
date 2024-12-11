@@ -12131,14 +12131,41 @@ ObjTp=Bw
 H=1
 Lx=0
 Ly=0
-Rx=1352
+Rx=1461
+Ry=305
+Xm=-1
+Ym=-1
+SH=30
+Z=100
+Ht=3
+Hi=9
+]
+[
+ObjTp=Bw
+H=1
+Lx=0
+Ly=305
+Rx=1461
+Ry=610
+Xm=-1
+Ym=-1
+SH=119
+Z=100
+P=144
+Ht=1
+Hi=8052
+]
+[
+ObjTp=Bw
+H=1
+Lx=0
+Ly=610
+Rx=1461
 Ry=915
 Xm=-1
 Ym=-1
-SH=46
+SH=242
 Z=100
-Ht=1
-Hi=1
 ]
 [
 ObjTp=Et
@@ -12734,7 +12761,7 @@ I75=1295
 I76=1294
 I79=125
 I80=228
-I99=538
+I99=1385
 I100=1268
 I102=1324
 I103=1325
@@ -12816,7 +12843,7 @@ I67=1334
 I70=661
 I75=1377
 I76=1390
-I99=538
+I99=1387
 I100=1391
 I102=426
 I103=589
@@ -12905,7 +12932,7 @@ I67=1248
 I70=1281
 I75=622
 I76=1142
-I99=538
+I99=1398
 I100=1216
 I102=638
 I103=640
@@ -13188,6 +13215,30 @@ O161=228
 ]
 [
 ObjTp=Sm
+H=29
+SmC=1477
+Nm=Multiple Serial Send
+ObjVer=1
+SmVr=1216
+PrH=248
+CF=2
+n1I=1
+n1O=3
+Cmn1=Separate Mode Text\\
+mI=1
+I1=693
+mO=3
+tO=3
+O1=1385
+O2=1387
+O3=1398
+mP=3
+P1="Separate\x0DMode"
+P2="BSC 225\x0DWest"
+P3="BSC 225\x0DEast"
+]
+[
+ObjTp=Sm
 H=30
 SmC=1477
 Nm=Multiple Serial Send
@@ -13220,7 +13271,7 @@ P5=East Wireless Share
 P6=West Wireless Share
 P7=East Projector
 P8=West Projector
-P9=Image Blank
+P9=None
 ]
 [
 ObjTp=Sm
@@ -13896,26 +13947,26 @@ P10=0d
 [
 ObjTp=Sm
 H=62
-SmC=101
-Nm=Serial I/O
+SmC=1477
+Nm=Multiple Serial Send
 ObjVer=1
 SmVr=1216
-PrH=362
+PrH=248
 CF=2
-n1I=4
-n1O=2
-Cmn1=Room Mode\\
-mI=4
-I3=693
-I4=692
-mO=2
-tO=2
-O1=538
-mP=4
-P1=
-P2=""
-P3="Combined Mode"
-P4=
+n1I=1
+n1O=3
+Cmn1=Combined Mode\\
+mI=1
+I1=692
+mO=3
+tO=3
+O1=1385
+O2=1387
+O3=1398
+mP=3
+P1="Combined\x0DMode"
+P2="Combined\x0DMode"
+P3="Combined\x0DMode"
 ]
 [
 ObjTp=Sm
@@ -14363,7 +14414,7 @@ n1I=1
 n1O=1
 Cmn1=Show Main Page\\
 mI=1
-I1=656
+I1=651
 mO=1
 tO=1
 O1=1363
@@ -14714,10 +14765,10 @@ PrH=86
 CF=2
 n1I=2
 n1O=2
-Cmn1=East Show Passcode\\
+Cmn1=West Show Passcode\\
 mI=2
 I1=1245
-I2=651
+I2=656
 mO=2
 tO=2
 O1=611
@@ -19119,7 +19170,7 @@ SmVr=1216
 PrH=4
 CF=2
 Cmn1=Touch Panels
-mC=9
+mC=11
 C1=250
 C2=76
 C3=85
@@ -19129,6 +19180,8 @@ C6=437
 C7=363
 C8=535
 C9=541
+C10=62
+C11=29
 ]
 [
 ObjTp=Sm
@@ -20423,7 +20476,7 @@ n1I=1
 n1O=1
 Cmn1=Show Main Page\\
 mI=1
-I1=939
+I1=1269
 mO=1
 tO=1
 O1=943
@@ -20649,7 +20702,7 @@ PrH=306
 CF=2
 n1I=3
 n1O=1
-Cmn1=West Passcode Message Display\\
+Cmn1=Rack Passcode Message Display\\
 mI=3
 I1=1269
 I2=1278
@@ -20757,10 +20810,10 @@ PrH=306
 CF=2
 n1I=2
 n1O=2
-Cmn1=East Show Passcode\\
+Cmn1=Rack Show Passcode\\
 mI=2
 I1=1283
-I2=1269
+I2=939
 mO=2
 tO=2
 O1=1285
@@ -21708,7 +21761,7 @@ n1I=1
 n1O=1
 Cmn1=Show Main Page\\
 mI=1
-I1=642
+I1=632
 mO=1
 tO=1
 O1=643
@@ -21727,7 +21780,7 @@ n1O=2
 Cmn1=East Show Passcode\\
 mI=2
 I1=637
-I2=632
+I2=642
 mO=2
 tO=2
 O1=644
@@ -21868,13 +21921,12 @@ SmVr=1216
 PrH=110
 CF=2
 Cmn1=Room Modes
-mC=6
+mC=5
 C1=364
 C2=365
-C3=62
-C4=540
-C5=518
-C6=336
+C3=540
+C4=518
+C5=336
 ]
 [
 ObjTp=Sm
@@ -35034,12 +35086,6 @@ Nm=tp01_dest_output3_fb
 ]
 [
 ObjTp=Sg
-H=538
-Nm=room_mode$
-SgTp=4
-]
-[
-ObjTp=Sg
 H=539
 Nm=nvx_west_back_stream_fb
 SgTp=4
@@ -39495,8 +39541,20 @@ Nm=nvx_custom3_stop_pulse
 ]
 [
 ObjTp=Sg
+H=1385
+Nm=tp01_room_mode$
+SgTp=4
+]
+[
+ObjTp=Sg
 H=1386
 Nm=nax_east_audio_multicast_buf
+SgTp=4
+]
+[
+ObjTp=Sg
+H=1387
+Nm=tp02_room_mode$
 SgTp=4
 ]
 [
@@ -39554,4 +39612,10 @@ Nm=//test_east_master_volume_init
 ObjTp=Sg
 H=1397
 Nm=//test_west_master_volume_init
+]
+[
+ObjTp=Sg
+H=1398
+Nm=tp03_room_mode$
+SgTp=4
 ]
