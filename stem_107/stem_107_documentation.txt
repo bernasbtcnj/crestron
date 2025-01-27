@@ -1,0 +1,22 @@
+STEM 107
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Design Guidelines
+
+EQUIPMENT
+---------
+RMC4
+DM-NVX-E20    E1   PC
+DM-NVX-E20    E2   Laptop
+DM-NVX-E20    E3   AppleTV/Wireless
+DM-NVX-E20    E4   DocCam
+DM-NVX-E20    E5   Spare
+DM-NVX-D20    D1   98" Display Decoder
+DM-NVX-D20    D2   Student Monitor 1
+DM-NVX-D20    D3   Student Monitor 2
+DM-NVX-D20    D4   Student Monitor 3
+DM-NVX-D20    D5   Student Monitor 4
+DM-NVX-D20    D6   Student Monitor 5
+DM-NVX-D20    D7   Student Monitor 6
+DM-NVX-D20    D8   Student Monitor 7
+DM-NVX-D20    D9   Student Monitor 8
