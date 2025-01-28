@@ -20,3 +20,37 @@ DM-NVX-D20    D6   Student Monitor 5
 DM-NVX-D20    D7   Student Monitor 6
 DM-NVX-D20    D8   Student Monitor 7
 DM-NVX-D20    D9   Student Monitor 8
+
+
+SWITCH PORT CONNECTIONS
+-------------------------
+***Switch manages DHCP***
+-------------------------
+OOB: Campus AV (Crestron) Network
+1.  RMC4
+2.  TSW-760 Touch Panel
+3.  FT-TSC600 1
+4.  FT-TSC600 2
+5.  FT-TSC600 3
+6.  FT-TSC600 4
+7.  FT-TSC600 5
+8.  FT-TSC600 6
+9.  FT-TSC600 7
+10. FT-TSC600 8
+11. Document Camera
+12. NVX-Encoder PC
+13. NVX-Encoder Laptop
+14. NVX Encoder Apple TV
+15. NVX Encoder Doc Camera 
+16. NVX-Decoder Main Display
+17. NVX-Decoder Student 1 Display
+18. NVX-Decoder Student 2 Display
+19. NVX-Decoder Student 3 Display
+20. NVX-Decoder Student 4 Display
+21. NVX-Decoder Student 5 Display
+22. NVX-Decoder Student 6 Display
+23. NVX-Decoder Student 7 Display
+24. NVX-Decoder Student 8 Display
+25. Service
+26. --
+
