@@ -1,0 +1,159 @@
+/*
+ * Source usage tracking log
+ * TCNJ
+ * Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ *
+ */
+
+/*********************************
+ * Writes a Log in the following format
+ * ------------------------------------
+ * SOURCE_NAME, PRESS_COUNT[28], TIME[hh:mm]
+ *********************************
+ */
+
+#SYMBOL_NAME "TCNJ Usage Tracking"
+
+#CATEGORY "46" "TCNJ" // Custom
+
+#ENABLE_TRACE
+
+#DEFINE_CONSTANT	SOURCES		16
+#DEFINE_CONSTANT	MAXLENGTH	2048
+
+
+// Data Structures
+Structure SourceStruct
+{
+	String	Name[24];
+	Integer	PressCount;
+    Integer	UsageHours;
+};
+
+// IO
+Digital_Input		Enable_Tracking,	// Run the logging timer
+					_skip_,
+					Clear_Log,			// Clear the log on disk
+					Reload_Log,			// Reload the log file from disk
+					_skip_,
+					Save_Log,			// Save log to disk
+					_skip_;
+
+Digital_Input		Source_Active_Fb[SOURCES],
+					_skip_;
+
+String_Input		Source_Name[SOURCES][24];
+
+Analog_Output		_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					_skip_,
+					Source_Press_Count[SOURCES];
+
+String_Output		_skip_,
+					Source_Usage_Time[SOURCES];
+
+String_Parameter	Log_Filename[48];
+
+// Variables
+String				Full_Log[MAXLENGTH];
+SourceStruct		AllSources[SOURCES];
+
+// Functions
+Function Parse_Source_Log(String source_string)
+{
+}
+
+Function Parse_Log_File()
+{
+	Integer i, cpos, fpos;
+	Integer loglen; // Length of the full log text
+	String cursourcelog[50];
+
+	loglen = len(Full_Log);
+    
+	// If the log isn't at least one line long, quit
+	if (loglen < 4) {
+		return;
+	}
+
+	cpos = 1; // Starting parsing position
+
+	for (i = 1 to SOURCES) {
+		// Find line breaks
+		fpos = find("\x0D", Full_Log, cpos);
+
+		cursourcelog = mid(Full_Log, cpos, (fpos-cpos));
+
+		Parse_Source_Log(cursourcelog);
+		cpos = fpos + 1;
+
+		if (cpos >= loglen) {
+			i = SOURCES;
+		}
+	}		
+}
+
+Function Load_Log_File()
+{
+	Signed_Integer nFileHandle; // Open file reference
+
+	StartFileOperations();
+
+	nFileHandle = FileOpen(Log_Filename, _O_RDONLY | _O_TEXT);
+
+	// Check if the file exists
+	if (nFileHandle >= 0) {
+		ClearBuffer(Full_Log); // Clear any existing logs
+		FileRead(nFileHandle, Full_Log, MAXLENGTH); // Load the text into the log
+
+		// Attempt to close the file
+		if (FileClose(nFileHandle) <> 0) {
+			trace("Error closing source log file.");
+		}
+	} else {
+		trace("Source log file error: %d", nFileHandle);
+	}
+
+	EndFileOperations();
+
+	Parse_Log_File();
+}
+
+Function Save_Log_File()
+{
+	Signed_Integer nFileHandle;
+
+	StartFileOperations();
+
+	// Open the file for writing in text mode
+	// If it doesn't exist, create it
+	nFileHandle = FileOpen(Log_Filename, _O_WRONLY | _O_CREAT | _O_TEXT);
+
+	// If the file opened successfully, write the log
+	if (nFileHandle >= 0) {
+		if (FileWrite(nFileHandle, Full_Log, MAXLENGTH) > 0) {
+			trace("Source log written successfully.");
+		}
+
+		// Attempt to close the file
+		if (FileClose(nFileHandle) <> 0) {
+			trace("Error closing source log file.");
+		}
+	}
+
+	EndFileOperations();
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
+	Full_Log = "\x0D";	// Start with a clear log
+	Load_Log_File();	// Load from disk
+}
+				
