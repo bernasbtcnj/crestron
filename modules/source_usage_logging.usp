@@ -37,7 +37,6 @@ Digital_Input		Enable_Tracking,	// Run the logging timer
 					_skip_,
 					Clear_Log,			// Clear the log on disk
 					Reload_Log,			// Reload the log file from disk
-					_skip_,
 					Save_Log,			// Save log to disk
 					_skip_;
 
@@ -61,12 +60,93 @@ String_Output		_skip_,
 String_Parameter	Log_Filename[48];
 
 // Variables
+Integer				ActiveSource;
 String				Full_Log[MAXLENGTH];
 SourceStruct		AllSources[SOURCES];
 
 // Functions
+Function Rebuild_Log()
+{
+	Integer i;
+	String tmplog[MAXLENGTH];
+	String tmpsrc[64];
+    
+	// Start with a blank temp log
+	tmplog = "";
+
+	// Iterate through each source and add it to the list if there is a source name
+	for (i = 1 to SOURCES) {
+		if (len(AllSources[i].Name) > 1) {
+			MakeString(tmpsrc, "%s, %u, %u\x0D", AllSources[i].Name, AllSources[i].PressCount, AllSources[i].UsageHours);
+
+			tmplog = tmplog + tmpsrc;
+		}
+	}
+
+	// If the tmplog contains data, copy it to the Full_Log
+	if (len(tmplog) > 3) {
+		Full_Log = tmplog;
+	}
+}
+
 Function Parse_Source_Log(String source_string)
 {
+	// Variables for the following...
+	// length of the source string, current string position, find string position,
+	// The index of the matching source when found, `for` iteration
+	// Name of the source in the source_string
+	Integer strlen, cpos, fpos, found_source, i;
+	String found_name[24];
+	
+	// Length of the whole source log
+	// Source logs are like this 'source name, push_count, usage_hours\x0D'
+	strlen = len(source_string);
+    
+	// If the string is too short to contain data, don't waste time
+	if (strlen < 4) {
+		return;
+	}
+    
+	// Starting position of the string parse
+	cpos = 1;
+    
+	// Find the first comma ','
+	fpos = find(",", source_string, cpos);
+    
+	// If found, the first item is the name, otherwise, no useful data
+	if (fpos) {
+		found_name = mid(source_string, cpos, fpos-cpos);		
+	} else {
+		return;
+	}
+
+	// Find the matching source in the AllSources array
+	found_source = 0;
+	for (i = 1 to SOURCES) {
+		if (!CompareStringsNoCase(found_name, AllSources[i].Name)) {
+			found_source = i;
+			break;
+		}		
+	}
+    
+	// If no match found, move on
+	if (!found_source) {
+		return;
+	}
+    
+	// Set the current parsing position to one character after the ','
+	cpos = fpos + 1;
+
+	// Find the next comma ','
+	fpos = find(",", source_string, cpos);
+    
+	// Set the presscount
+	AllSources[found_source].PressCount = atoi(mid(source_string, cpos, fpos - cpos));
+
+	cpos = fpos + 1;
+    
+	// Set usage hours
+	AllSources[found_source].UsageHours = atoi(mid(source_string, cpos, strlen - cpos - 1));			
 }
 
 Function Parse_Log_File()
@@ -129,6 +209,8 @@ Function Save_Log_File()
 {
 	Signed_Integer nFileHandle;
 
+	Rebuild_Log();
+
 	StartFileOperations();
 
 	// Open the file for writing in text mode
@@ -150,10 +232,68 @@ Function Save_Log_File()
 	EndFileOperations();
 }
 
+Push Enable_Tracking
+{
+	// Start the usage timer and add the total time to the source usage
+}
+
+Release Enable_Tracking
+{
+	// Clear the active source
+	ActiveSource = 0;
+}
+
+Push Source_Active_Fb
+{
+	Integer i;
+
+	i = GetLastModifiedArrayIndex();
+
+	// If tracking is enabled, increment the press count by one
+	// and add the timer
+	if (Enable_Tracking) {
+		AllSources[i].PressCount = AllSources[i].PressCount + 1;
+		Source_Press_Count[i] = AllSources[i].PressCount;
+		ActiveSource = i;
+	}
+}
+
+Threadsafe Change Source_Name
+{
+	Integer i;
+
+	i = GetLastModifiedArrayIndex();
+
+	// Set the source name
+	AllSources[i].Name = Source_Name[i];
+
+	// Clear the usage stats
+	AllSources[i].PressCount = 0;
+	AllSources[i].UsageHours = 0;
+}
+
+Push Save_Log
+{
+	Save_Log_File();
+}
+
+Push Clear_Log
+{
+	Integer i;
+
+	ClearBuffer(Full_Log);
+    
+	// Clear the usage stats
+	for (i = 1 to SOURCES) {
+		AllSources[i].PressCount = 0;
+		AllSources[i].UsageHours = 0;
+	}
+}
+
 Function main()
 {
 	WaitForInitializationComplete();
 	Full_Log = "\x0D";	// Start with a clear log
-	Load_Log_File();	// Load from disk
+	ActiveSource = 0;
 }
 				
