@@ -28,7 +28,7 @@
   InputSigType2=Digital
   InputCue3=Clear_Log
   InputSigType3=Digital
-  InputCue4=Reload_Log
+  InputCue4=Load_Log
   InputSigType4=Digital
   InputCue5=Save_Log
   InputSigType5=Digital

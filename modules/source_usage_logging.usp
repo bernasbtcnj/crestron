@@ -27,16 +27,16 @@
 // Data Structures
 Structure SourceStruct
 {
-	String	Name[24];
-	Integer	PressCount;
-    Integer	UsageHours;
+	String			Name[24];
+	Integer			PressCount;
+    Long_Integer	Usage;
 };
 
 // IO
 Digital_Input		Enable_Tracking,	// Run the logging timer
 					_skip_,
 					Clear_Log,			// Clear the log on disk
-					Reload_Log,			// Reload the log file from disk
+					Load_Log,			// Reload the log file from disk
 					Save_Log,			// Save log to disk
 					_skip_;
 
@@ -60,9 +60,10 @@ String_Output		_skip_,
 String_Parameter	Log_Filename[48];
 
 // Variables
-Integer				ActiveSource;
+Integer				ActiveSource;			// Current active source index
+Long_Integer		TrackTimeStart;			// Start time for last tracking event
 String				Full_Log[MAXLENGTH];
-SourceStruct		AllSources[SOURCES];
+SourceStruct		AllSources[SOURCES];	// Array of all sources and tracking status
 
 // Functions
 Function Rebuild_Log()
@@ -77,7 +78,7 @@ Function Rebuild_Log()
 	// Iterate through each source and add it to the list if there is a source name
 	for (i = 1 to SOURCES) {
 		if (len(AllSources[i].Name) > 1) {
-			MakeString(tmpsrc, "%s, %u, %u\x0D", AllSources[i].Name, AllSources[i].PressCount, AllSources[i].UsageHours);
+			MakeString(tmpsrc, "%s, %u, %lu\x0D", AllSources[i].Name, AllSources[i].PressCount, AllSources[i].Usage);
 
 			tmplog = tmplog + tmpsrc;
 		}
@@ -146,7 +147,7 @@ Function Parse_Source_Log(String source_string)
 	cpos = fpos + 1;
     
 	// Set usage hours
-	AllSources[found_source].UsageHours = atoi(mid(source_string, cpos, strlen - cpos - 1));			
+	AllSources[found_source].Usage = atol(mid(source_string, cpos, (strlen - cpos) - 1));			
 }
 
 Function Parse_Log_File()
@@ -234,27 +235,50 @@ Function Save_Log_File()
 
 Push Enable_Tracking
 {
-	// Start the usage timer and add the total time to the source usage
 }
 
 Release Enable_Tracking
 {
 	// Clear the active source
 	ActiveSource = 0;
+	TrackTimeStart = 0;
 }
 
 Push Source_Active_Fb
 {
-	Integer i;
+	Integer i, hour, minutes;
+	Long_Integer marker;
 
 	i = GetLastModifiedArrayIndex();
 
 	// If tracking is enabled, increment the press count by one
 	// and add the timer
 	if (Enable_Tracking) {
+		// Calculate current time marker
+		hour = GetHourNum();
+		minutes = GetMinutesNum();
+        marker = ((hour*60)+minutes);
+		
+		// Current marker should always be greater than the start time
+		// If not, then don't long this time
+		if (TrackTimeStart > marker) {
+			TrackTimeStart = marker;
+		}
+			
+		// Increment button press count
 		AllSources[i].PressCount = AllSources[i].PressCount + 1;
 		Source_Press_Count[i] = AllSources[i].PressCount;
+		
+		// If there is a tracking time, add the difference to the usage log
+		if (TrackTimeStart) {
+			AllSources[i].Usage = AllSources[i].Usage + (marker - TrackTimeStart); 
+		}
+        
+		// Set the active source to the new selection
 		ActiveSource = i;
+        
+		// Set the new tracking time marker
+		TrackTimeStart = marker;
 	}
 }
 
@@ -269,12 +293,17 @@ Threadsafe Change Source_Name
 
 	// Clear the usage stats
 	AllSources[i].PressCount = 0;
-	AllSources[i].UsageHours = 0;
+	AllSources[i].Usage = 0;
 }
 
 Push Save_Log
 {
 	Save_Log_File();
+}
+
+Push Load_Log
+{
+	Load_Log_File();
 }
 
 Push Clear_Log
@@ -286,7 +315,7 @@ Push Clear_Log
 	// Clear the usage stats
 	for (i = 1 to SOURCES) {
 		AllSources[i].PressCount = 0;
-		AllSources[i].UsageHours = 0;
+		AllSources[i].Usage = 0;
 	}
 }
 
@@ -295,5 +324,6 @@ Function main()
 	WaitForInitializationComplete();
 	Full_Log = "\x0D";	// Start with a clear log
 	ActiveSource = 0;
+	TrackTimeStart = 0;
 }
 				
