@@ -51,13 +51,13 @@ Analog_Output		_skip_,
 					_skip_,
 					_skip_,
 					_skip_,
-					_skip_,
 					Source_Press_Count[SOURCES];
 
 String_Output		_skip_,
 					Source_Usage_Time[SOURCES];
 
-String_Parameter	Log_Filename[48];
+String_Parameter	_skip_,
+					Log_Filename[48];
 
 // Variables
 Integer				ActiveSource;			// Current active source index
@@ -66,6 +66,19 @@ String				Full_Log[MAXLENGTH];
 SourceStruct		AllSources[SOURCES];	// Array of all sources and tracking status
 
 // Functions
+Function Recalculate_Usage_Time()
+{
+	Integer i;
+	Long_Integer hours, minutes, hour_div;
+    
+	hour_div = 60;
+
+	for (i = 1 to SOURCES) {
+		// Get hours by dividing by 60
+		MakeString(Source_Usage_Time[i], "%lu:%lu", (AllSources[i].Usage / hour_div), (AllSources[i].Usage umod hour_div)); 
+	}
+}
+
 Function Rebuild_Log()
 {
 	Integer i;
@@ -90,7 +103,7 @@ Function Rebuild_Log()
 	}
 }
 
-Function Parse_Source_Log(String source_string)
+Function Parse_Source_Item(String source_string)
 {
 	// Variables for the following...
 	// length of the source string, current string position, find string position,
@@ -171,7 +184,9 @@ Function Parse_Log_File()
 
 		cursourcelog = mid(Full_Log, cpos, (fpos-cpos));
 
-		Parse_Source_Log(cursourcelog);
+		trace("Parsing line: %s", cursourcelog);
+
+		Parse_Source_Item(cursourcelog);
 		cpos = fpos + 1;
 
 		if (cpos >= loglen) {
@@ -239,9 +254,32 @@ Push Enable_Tracking
 
 Release Enable_Tracking
 {
+	Integer hour, minutes;
+	Long_Integer marker;
+
+	// Store the usage of the last source
+	// Calculate current time marker
+	hour = GetHourNum();
+	minutes = GetMinutesNum();
+    marker = ((hour*60)+minutes);
+
+	// Current marker should always be greater than the start time
+	// If not, then don't long this time
+	if (TrackTimeStart > marker) {
+		TrackTimeStart = marker;
+	}
+
+	// If there is a tracking time, add the difference to the usage log
+	if (TrackTimeStart > 0) {
+		AllSources[ActiveSource].Usage = AllSources[ActiveSource].Usage + (marker - TrackTimeStart); 
+	}
+
 	// Clear the active source
 	ActiveSource = 0;
 	TrackTimeStart = 0;
+    
+	// Update usage time for all sources
+	Recalculate_Usage_Time();
 }
 
 Push Source_Active_Fb
@@ -270,8 +308,8 @@ Push Source_Active_Fb
 		Source_Press_Count[i] = AllSources[i].PressCount;
 		
 		// If there is a tracking time, add the difference to the usage log
-		if (TrackTimeStart) {
-			AllSources[i].Usage = AllSources[i].Usage + (marker - TrackTimeStart); 
+		if (TrackTimeStart > 0) {
+			AllSources[ActiveSource].Usage = AllSources[ActiveSource].Usage + (marker - TrackTimeStart); 
 		}
         
 		// Set the active source to the new selection
@@ -280,6 +318,9 @@ Push Source_Active_Fb
 		// Set the new tracking time marker
 		TrackTimeStart = marker;
 	}
+
+	// Update usage time
+	Recalculate_Usage_Time();
 }
 
 Threadsafe Change Source_Name
