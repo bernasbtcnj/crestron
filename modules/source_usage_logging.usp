@@ -268,7 +268,21 @@ Function Save_Log_File()
 
 Push Enable_Tracking
 {
-	// Intentionally left blank for future code
+	Integer i;
+	Long_Integer marker;
+    
+	// Time marker for right now
+	marker = ((GetHourNum()*60)+GetMinutesNum());
+
+	// Iterate through sources. If one is enabled, set the tracking start time to now
+	for (i = 1 to SOURCES) {
+		if (Source_Active_Fb[i]) {
+			AllSources[i].TrackingStart = marker;
+		} else {
+			// Else, reset it to 0
+			AllSources[i].TrackingStart = 0;
+		}
+	}
 }
 
 Release Enable_Tracking
@@ -337,7 +351,9 @@ Release Source_Active_Fb
 		}
 
 		// Add the new usage time
-		AllSources[i].Usage = AllSources[i].Usage + (marker - AllSources[i].TrackingStart);
+		if (AllSources[i].TrackingStart > 0) {
+			AllSources[i].Usage = AllSources[i].Usage + (marker - AllSources[i].TrackingStart);
+		}
 	}
 
 	// Update usage time
@@ -387,6 +403,9 @@ Push Clear_Log
 		AllSources[i].PressCount = 0;
 		AllSources[i].Usage = 0;
 	}
+    
+	// Update the displayed usage time
+	Recalculate_Usage_Time();
 }
 
 Function main()
