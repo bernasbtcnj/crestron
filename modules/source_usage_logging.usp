@@ -30,6 +30,7 @@ Structure SourceStruct
 	String			Name[24];
 	Integer			PressCount;
     Long_Integer	Usage;
+	Long_Integer	TrackingStart;
 };
 
 // IO
@@ -60,8 +61,6 @@ String_Parameter	_skip_,
 					Log_Filename[48];
 
 // Variables
-Integer				ActiveSource;			// Current active source index
-Long_Integer		TrackTimeStart;			// Start time for last tracking event
 String				Full_Log[MAXLENGTH];
 SourceStruct		AllSources[SOURCES];	// Array of all sources and tracking status
 
@@ -69,13 +68,26 @@ SourceStruct		AllSources[SOURCES];	// Array of all sources and tracking status
 Function Recalculate_Usage_Time()
 {
 	Integer i;
-	Long_Integer hours, minutes, hour_div;
+	Long_Integer long_limit, long_hours, long_minutes;
     
-	hour_div = 60;
+	// Max amount of time that can be calculated reliably.
+	// Roughly 7.48 years
+	long_limit = 4294966000;
 
 	for (i = 1 to SOURCES) {
+		long_hours = 0;
+		long_minutes = 0;
+        
+		// Cap the usage time at long_limit
+		if (AllSources[i].Usage > long_limit) {
+			AllSources[i].Usage = long_limit;
+		}
+
+		long_hours = AllSources[i].Usage / 60;
+		long_minutes = AllSources[i].Usage mod 60;
+
 		// Get hours by dividing by 60
-		MakeString(Source_Usage_Time[i], "%lu:%lu", (AllSources[i].Usage / hour_div), (AllSources[i].Usage umod hour_div)); 
+		MakeString(Source_Usage_Time[i], "%lu:%lu", long_hours, long_minutes); 
 	}
 }
 
@@ -120,6 +132,7 @@ Function Parse_Source_Item(String source_string)
 	if (strlen < 4) {
 		return;
 	}
+	trace("String is %u chars long.", strlen);
     
 	// Starting position of the string parse
 	cpos = 1;
@@ -129,7 +142,8 @@ Function Parse_Source_Item(String source_string)
     
 	// If found, the first item is the name, otherwise, no useful data
 	if (fpos) {
-		found_name = mid(source_string, cpos, fpos-cpos);		
+		found_name = mid(source_string, cpos, fpos-cpos);
+		trace("Source name is %s", found_name);		
 	} else {
 		return;
 	}
@@ -139,12 +153,14 @@ Function Parse_Source_Item(String source_string)
 	for (i = 1 to SOURCES) {
 		if (!CompareStringsNoCase(found_name, AllSources[i].Name)) {
 			found_source = i;
+			trace("Matching source found at index %u, %s", found_source, AllSources[found_source].Name);
 			break;
 		}		
 	}
     
 	// If no match found, move on
 	if (!found_source) {
+		trace("No matching source found.");
 		return;
 	}
     
@@ -156,11 +172,13 @@ Function Parse_Source_Item(String source_string)
     
 	// Set the presscount
 	AllSources[found_source].PressCount = atoi(mid(source_string, cpos, fpos - cpos));
+	trace("Source presscount set to: %u", AllSources[found_source].PressCount);
 
 	cpos = fpos + 1;
     
 	// Set usage hours
-	AllSources[found_source].Usage = atol(mid(source_string, cpos, (strlen - cpos) - 1));			
+	AllSources[found_source].Usage = atol(mid(source_string, cpos, (strlen - cpos)+1));
+	trace("Source usage hours set to: %lu", AllSources[found_source].Usage);			
 }
 
 Function Parse_Log_File()
@@ -250,77 +268,83 @@ Function Save_Log_File()
 
 Push Enable_Tracking
 {
+	// Intentionally left blank for future code
 }
 
 Release Enable_Tracking
 {
-	Integer hour, minutes;
+	Integer i;
 	Long_Integer marker;
 
 	// Store the usage of the last source
 	// Calculate current time marker
-	hour = GetHourNum();
-	minutes = GetMinutesNum();
-    marker = ((hour*60)+minutes);
+    marker = ((GetHourNum()*60)+GetMinutesNum());
 
-	// Current marker should always be greater than the start time
-	// If not, then don't long this time
-	if (TrackTimeStart > marker) {
-		TrackTimeStart = marker;
+	// Iterate through all sources to see if any are actively tracking
+	for (i = 1 to SOURCES) {
+		// Current marker should always be greater than the start time
+		// If not, then don't long this time
+		if (AllSources[i].TrackingStart > marker) {
+			AllSources[i].TrackingStart = marker;
+		}
+
+		// If there is a tracking time, add the difference to the usage log
+		if (AllSources[i].TrackingStart > 0) {
+			AllSources[i].Usage = AllSources[i].Usage + (marker - AllSources[i].TrackingStart); 
+		}
+
+		// Clear the tracking start time
+		AllSources[i].TrackingStart = 0;
 	}
 
-	// If there is a tracking time, add the difference to the usage log
-	if (TrackTimeStart > 0) {
-		AllSources[ActiveSource].Usage = AllSources[ActiveSource].Usage + (marker - TrackTimeStart); 
-	}
-
-	// Clear the active source
-	ActiveSource = 0;
-	TrackTimeStart = 0;
-    
 	// Update usage time for all sources
 	Recalculate_Usage_Time();
 }
 
 Push Source_Active_Fb
 {
-	Integer i, hour, minutes;
-	Long_Integer marker;
+	Integer i;
 
 	i = GetLastModifiedArrayIndex();
 
 	// If tracking is enabled, increment the press count by one
-	// and add the timer
+	// and set the timer
 	if (Enable_Tracking) {
-		// Calculate current time marker
-		hour = GetHourNum();
-		minutes = GetMinutesNum();
-        marker = ((hour*60)+minutes);
-		
-		// Current marker should always be greater than the start time
-		// If not, then don't long this time
-		if (TrackTimeStart > marker) {
-			TrackTimeStart = marker;
-		}
+		// Calculate current time
+        AllSources[i].TrackingStart = ((GetHourNum()*60)+GetMinutesNum());
 			
 		// Increment button press count
 		AllSources[i].PressCount = AllSources[i].PressCount + 1;
 		Source_Press_Count[i] = AllSources[i].PressCount;
-		
-		// If there is a tracking time, add the difference to the usage log
-		if (TrackTimeStart > 0) {
-			AllSources[ActiveSource].Usage = AllSources[ActiveSource].Usage + (marker - TrackTimeStart); 
+	}
+}
+
+Release Source_Active_Fb
+{
+	Integer i;
+	Long_Integer marker;
+
+	// Which source was deselected
+	i = GetLastModifiedArrayIndex();
+
+	if (Enable_Tracking) {
+		// Get the current time marker
+		marker = ((GetHourNum()*60)+GetMinutesNum());
+
+		// Verify that there isnt a time descrepancy
+		if (AllSources[i].TrackingStart > marker) {
+			AllSources[i].TrackingStart = marker;
 		}
-        
-		// Set the active source to the new selection
-		ActiveSource = i;
-        
-		// Set the new tracking time marker
-		TrackTimeStart = marker;
+
+		// Add the new usage time
+		AllSources[i].Usage = AllSources[i].Usage + (marker - AllSources[i].TrackingStart);
 	}
 
 	// Update usage time
 	Recalculate_Usage_Time();
+
+	// Clear the tracking start time
+	AllSources[i].TrackingStart = 0;
 }
 
 Threadsafe Change Source_Name
@@ -335,6 +359,7 @@ Threadsafe Change Source_Name
 	// Clear the usage stats
 	AllSources[i].PressCount = 0;
 	AllSources[i].Usage = 0;
+	AllSources[i].TrackingStart = 0;
 }
 
 Push Save_Log
@@ -344,7 +369,11 @@ Push Save_Log
 
 Push Load_Log
 {
+	// Load the log file from disk
 	Load_Log_File();
+
+	// Update usage time from the log file
+	Recalculate_Usage_Time();
 }
 
 Push Clear_Log
@@ -364,7 +393,5 @@ Function main()
 {
 	WaitForInitializationComplete();
 	Full_Log = "\x0D";	// Start with a clear log
-	ActiveSource = 0;
-	TrackTimeStart = 0;
 }
 				
