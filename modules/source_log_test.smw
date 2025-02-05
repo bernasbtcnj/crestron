@@ -1203,8 +1203,9 @@ Xm=-1
 Ym=-1
 SH=19
 Z=100
-Ht=1
-Hi=1
+P=136
+Ht=3
+Hi=3
 ]
 [
 ObjTp=Sm

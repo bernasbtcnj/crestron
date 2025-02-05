@@ -10,8 +10,12 @@
 /*********************************
  * Writes a Log in the following format
  * ------------------------------------
- * SOURCE_NAME, PRESS_COUNT[28], TIME[hh:mm]
+ * SOURCE_NAME, PRESS_COUNT[28], TIME[minutes]
  *********************************
+ *
+ * Returns source press count as an analog value
+ * And returns the source usage time in hh:mm
+ *
  */
 
 #SYMBOL_NAME "TCNJ Usage Tracking"
@@ -19,6 +23,7 @@
 #CATEGORY "46" "TCNJ" // Custom
 
 #ENABLE_TRACE
+#DEFAULT_VOLATILE
 
 #DEFINE_CONSTANT	SOURCES		16
 #DEFINE_CONSTANT	MAXLENGTH	2048
@@ -36,8 +41,8 @@ Structure SourceStruct
 // IO
 Digital_Input		Enable_Tracking,	// Run the logging timer
 					_skip_,
-					Clear_Log,			// Clear the log on disk
-					Load_Log,			// Reload the log file from disk
+					Clear_Log,			// Clear the log on disk, resets time and press count to zero
+					Load_Log,			// Load or Reload the log file from disk
 					Save_Log,			// Save log to disk
 					_skip_;
 
@@ -406,6 +411,9 @@ Push Clear_Log
     
 	// Update the displayed usage time
 	Recalculate_Usage_Time();
+
+	// Save the cleared log file
+	Save_Log_File();
 }
 
 Function main()
