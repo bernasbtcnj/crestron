@@ -1,0 +1,78 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.04.01
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+  Cmn1=This module will take data from any RoomView usage module\\and time/date||1
+  Cmn2=stamp the information. It will then stack\\the data in a message||1
+  Cmn3=QUEUE and periodically transmit the\\data to RoomView.
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,310,718,756,854,
+  Exclusions_CDS=5
+  Inclusions_CDS=6
+  Name=RoomViewUsageLogQueue v2.0
+  SmplCName=RoomView Usage Log Queue v2.usp
+  Code=1
+  SysRev5=4.006
+  SMWRev=3.00.00
+  InputCue1=RoomView_Online
+  InputSigType1=Digital
+  InputCue2=Do_Housekeeping
+  InputSigType2=Digital
+  InputList2Cue1=Data_From_Module
+  InputList2SigType1=Serial
+  OutputList2Cue1=To_RoomView_Usage_Input
+  OutputList2SigType1=Serial
+  ParamCue1=[Reference Name]
+  MinVariableInputs=2
+  MaxVariableInputs=2
+  MinVariableInputsList2=1
+  MaxVariableInputsList2=1
+  MinVariableOutputs=0
+  MaxVariableOutputs=0
+  MinVariableOutputsList2=1
+  MaxVariableOutputsList2=1
+  MinVariableParams=0
+  MaxVariableParams=0
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  MPp=1
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_RoomView_Usage_Log_Queue_v2
+  SymJam=NonExclusive
+  FileName=RoomView Usage Log Queue v2.ush
+  SIMPLPlusModuleEncoding=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
