@@ -1,0 +1,136 @@
+/*
+ * TCNJ NVX Switching module
+ * Matrix capabilties
+ * Routes multiple inputs to multiple outputs with audio breakaway
+ * Change the CONSTANTs below to modify input and output count
+ *
+ * Programmer: Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ *
+ */
+
+#SYMBOL_NAME "TCNJ NVX Router 16x4"
+
+#CATEGORY "46" "TCNJ"
+
+#DEFAULT_VOLATILE
+
+#DEFINE_CONSTANT SOURCES	16   // Number of input sources
+#DEFINE_CONSTANT DEST		4   // Number of destinations
+
+// IO
+Analog_Input	VideoRoute[DEST],
+				_skip_,
+				AudioRoute[DEST],
+				_skip_;
+
+String_Input	NVXStreamLocation[SOURCES][50],
+				_skip_,
+				NAXMulticastAddress[SOURCES][50],
+				_skip_,
+				InputName[SOURCES][24];
+
+Analog_Output	VideoRoute_Fb[DEST],
+				_skip_,
+				AudioRoute_Fb[DEST],
+				_skip_;
+
+String_Output	NVXDecStreamLocation[DEST],
+				_skip_,
+				NAXDecRXMulticast[DEST],
+				_skip_,
+				DestInputName[DEST];
+
+// Functions
+Change VideoRoute
+{
+	Integer i; // Last modified array index
+
+	i = GetLastModifiedArrayIndex();
+
+	if (VideoRoute[i] = 0) {
+		NVXDecStreamLocation[i] = "";
+		DestInputName[i] = ""; // Clear the name string
+		VideoRoute_Fb[i] = 0;
+		return;
+	}
+    
+	// Bounds checking of the route
+	if (VideoRoute[i] > 0 && VideoRoute[i] <= SOURCES) {
+		NVXDecStreamLocation[i] = NVXStreamLocation[VideoRoute[i]];
+		DestInputName[i] = InputName[VideoRoute[i]]; // Set the name string
+		VideoRoute_Fb[i] = VideoRoute[i];
+	}
+}
+
+Change AudioRoute
+{
+	Integer i; // Last modified array index
+
+	i = GetLastModifiedArrayIndex();
+
+	if (AudioRoute[i] = 0) {
+		NAXDecRXMulticast[i] = "";
+		AudioRoute_Fb[i] = 0;
+		return;
+	}
+    
+	// Bounds checking of the route
+	if (AudioRoute[i] > 0 && AudioRoute[i] <= SOURCES) {
+		NAXDecRXMulticast[i] = NAXMulticastAddress[AudioRoute[i]];
+		AudioRoute_Fb[i] = AudioRoute[i];
+	}
+
+}
+
+Change NVXStreamLocation
+{
+	// Check to see if the modified stream address is actively routed
+	// If it is routed, update the output destination
+
+	Integer i, f;
+
+	i = GetLastModifiedArrayIndex();
+
+	// Ignore if the new string is blank
+	if (NVXStreamLocation[i] = "") {
+		return;
+	}
+
+	// Check to see if it is routed
+	for (f = 1 to DEST) {
+		if (VideoRoute_Fb[f] = i) {
+			// Assign the new stream address to the output
+			NVXDecStreamLocation[f] = NVXStreamLocation[i];
+		}
+	} 
+}
+
+Change NAXMulticastAddress
+{
+	// Check to see if the modified multicast address is actively routed
+	// If it is routed, update the output destination
+
+	Integer i, f;
+
+	i = GetLastModifiedArrayIndex();
+
+	// Ignore if the new address is blank
+	if (NAXMulticastAddress[i] = "") {
+		return;
+	}
+
+	// Check to see if it is routed
+	for (f = 1 to DEST) {
+		if (AudioRoute_Fb[f] = i) {
+			// Assign the new multicast address to the output
+			NAXDecRXMulticast[f] = NAXMulticastAddress[i];
+		}
+	}
+}
+
+Function main()
+{
+	WaitForInitializationComplete();
+}

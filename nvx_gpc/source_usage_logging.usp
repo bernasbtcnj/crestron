@@ -407,6 +407,7 @@ Push Clear_Log
 	for (i = 1 to SOURCES) {
 		AllSources[i].PressCount = 0;
 		AllSources[i].Usage = 0;
+		Source_Press_Count[i] = 0;
 	}
     
 	// Update the displayed usage time
