@@ -1,0 +1,103 @@
+{FileMetadata}
+Schema = "1.0.0.0"
+CreatedByAppHost = "2.101.8.0"
+Created = 2025-02-21 13:42:14.849507-05:00
+LastModifiedByAppHost = "2.101.8.0"
+Modified = 2025-02-21 13:42:14.849502-05:00
+CreatedByProjectApp = "1.3701.9.0"
+LastModifiedByProjectApp = "1.3701.9.0"
+MinimumProjectApp = "1.2600.1"
+MinimumAppHost = "2.0.0"
+
+{Html}
+<ch5-animation startanimating="true" customvstheme="custom" size="x-large" animationstyle="spinner" id="isd5" componentname="Cooling-Anim" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" ccid_themecssset="true">
+              </ch5-animation><html-div componentname="Header-div" id="i39m2gkr3v" devicesvisited="[&quot;TSW-760&quot;]" oldid="ieff"></html-div><ch5-image refreshrate="0" customvstheme="custom" assetid="2755c7d1-a917-44ef-a2de-bb69cb6f2708" id="i0rnlclzda" componentname="TCNJ-Logo" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" oldid="izuf">
+              </ch5-image><html-div componentname="Footer-div" id="ia3bc2l39d" devicesvisited="[&quot;TSW-760&quot;]" oldid="ie7jtzgj46"></html-div><h1 headingtype="h1" data-mytext="myText" componentname="System-Cooling-Text" id="i57f" devicesvisited="[&quot;TSW-760&quot;]" class="gjs-html-header">Please wait while the system powers down</h1>
+
+{Css}
+@media (max-width: 99999px){#isd5 .ch5-animation{animationColor_color:#d4f9ff;color:#d4f9ff;}#isd5{display:block;left:563px;top:416px;position:absolute;animationColor_color:#d4f9ff;width:auto;height:auto;}#i39m2gkr3v{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:120px;left:0px;top:0px;position:absolute;}#i0rnlclzda{width:400px;height:100px;display:block;left:10px;top:10px;position:absolute;}#i0rnlclzda .ch5-image{border-color:black;object-fit:contain;}#wrapper{background-color:#035792;}#ia3bc2l39d{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:30px;left:0px;top:708px;position:absolute;}#i57f{overflow:hidden;font-weight:400;font-size:52px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:137px;top:251px;position:absolute;custom-font-size:52px;text-align:center;}}@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px){#isd5{display:block;left:563px;top:416px;position:absolute;animationColor_color:#d4f9ff;width:auto;height:auto;}#i39m2gkr3v{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:120px;left:0px;top:0px;position:absolute;}#i0rnlclzda{width:400px;height:100px;display:block;left:10px;top:10px;position:absolute;}#ia3bc2l39d{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:30px;left:0px;top:708px;position:absolute;}#i57f{overflow:hidden;font-weight:400;font-size:52px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:137px;top:251px;position:absolute;custom-font-size:52px;text-align:center;}}
+
+{PageAttributes}
+
+[Attributes]
+Name = "Cooling"
+PageMode = "absolute"
+Id = "d46cd523-3212-4aec-916a-52f998ed2cf0"
+StartPage = "False"
+PreloadPage = "True"
+CachePage = "False"
+VisibilityJoin = "14"
+DisplayBackgroundColor = "True"
+BackgroundColor = "#035792"
+
+[[Elements]]
+Type = "Ch5 Animation"
+Editable = true
+
+[[Elements.Components]]
+Type = "textnode"
+Content = "\n              "
+
+[Elements.Attributes]
+startanimating = "true"
+customvstheme = "custom"
+size = "x-large"
+animationstyle = "spinner"
+id = "isd5"
+componentName = "Cooling-Anim"
+ccid_linkSendReceive = "True"
+devicesVisited = "[\"TSW-760\"]"
+ccid_themeCSSSet = "true"
+[[Elements]]
+Type = "html-div"
+
+[Elements.Attributes]
+componentName = "Header-div"
+id = "i39m2gkr3v"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "ieff"
+[[Elements]]
+Type = "Ch5 Image"
+Editable = true
+
+[[Elements.Components]]
+Type = "textnode"
+Content = "\n              "
+
+[Elements.Attributes]
+refreshrate = "0"
+customvstheme = "custom"
+assetid = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
+id = "i0rnlclzda"
+componentName = "TCNJ-Logo"
+ccid_linkSendReceive = "True"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "izuf"
+[[Elements]]
+Type = "html-div"
+
+[Elements.Attributes]
+componentName = "Footer-div"
+id = "ia3bc2l39d"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "ie7jtzgj46"
+[[Elements]]
+Type = "html-header"
+Classes = ["gjs-html-header"]
+
+[[Elements.Components]]
+Type = "textnode"
+Content = "Please wait while the system powers down"
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+_InnerText = false
+
+[Elements.Attributes]
+headingType = "h1"
+data-mytext = "myText"
+componentName = "System-Cooling-Text"
+id = "i57f"
+devicesVisited = "[\"TSW-760\"]"
+

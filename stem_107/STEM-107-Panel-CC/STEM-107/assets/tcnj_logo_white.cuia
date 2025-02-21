@@ -1,0 +1,22 @@
+{FileMetadata}
+Schema = "1.0.0.0"
+CreatedByAppHost = "2.101.8.0"
+Created = 2025-02-06 13:17:20.325564-05:00
+LastModifiedByAppHost = "2.101.8.0"
+Modified = 2025-02-06 13:17:20.325553-05:00
+CreatedByProjectApp = "1.3701.9.0"
+LastModifiedByProjectApp = "1.3701.9.0"
+MinimumProjectApp = ""
+MinimumAppHost = "2.0.0"
+
+{AssetAttributes}
+
+[Attributes]
+Id = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
+Name = "tcnj_logo_white"
+SourceUri = "tcnj_logo_white.png"
+AspectRatio = "3.294776119402985"
+AssetSourceType = "File"
+Username = ""
+Password = ""
+

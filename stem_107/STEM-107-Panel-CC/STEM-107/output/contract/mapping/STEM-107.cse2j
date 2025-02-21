@@ -1,0 +1,112 @@
+{
+  "name": "STEM-107",
+  "timestamp": "2025-02-21T18:43:02.6447779+00:00",
+  "version": "1.0.0.0",
+  "schema_version": 1,
+  "extra_value": "",
+  "signals": {
+    "states": {
+      "boolean": {
+        "4": {
+          "31": "Main.ControlsDocCamera.DocCamZoomBtns.Tab1_Selected",
+          "32": "Main.ControlsDocCamera.DocCamZoomBtns.Tab2_Selected"
+        },
+        "5": {
+          "31": "Main.ControlsDocCamera.DocCamFocusBtns.Tab1_Selected",
+          "32": "Main.ControlsDocCamera.DocCamFocusBtns.Tab2_Selected",
+          "33": "Main.ControlsDocCamera.DocCamFocusBtns.Tab3_Selected"
+        }
+      },
+      "numeric": {
+        "7": {
+          "2": "Main.AdvancedControlsOverlay.AdvSourceSelect.ListNumberOfItems",
+          "14": "Main.AdvancedControlsOverlay.AdvSourceSelect.ItemSelected"
+        },
+        "9": {
+          "37": "Main.SourceSelect.VideoSwitcher.Source1_Feedback",
+          "38": "Main.SourceSelect.VideoSwitcher.Source2_Feedback"
+        }
+      },
+      "string": {
+        "7": {
+          "1": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button1Text",
+          "2": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button2Text",
+          "3": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button3Text",
+          "4": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button4Text",
+          "5": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5Text"
+        },
+        "9": {
+          "1": "Main.SourceSelect.VideoSwitcher.Screen1_Label",
+          "2": "Main.SourceSelect.VideoSwitcher.Screen2_Label",
+          "37": "Main.SourceSelect.VideoSwitcher.Source_1_Label",
+          "38": "Main.SourceSelect.VideoSwitcher.Source_2_Label",
+          "39": "Main.SourceSelect.VideoSwitcher.Source_3_Label",
+          "40": "Main.SourceSelect.VideoSwitcher.Source_4_Label"
+        }
+      }
+    },
+    "events": {
+      "boolean": {
+        "Main.ControlsDocCamera.DocCamZoomBtns.Tab1_Press": {
+          "joinId": 31,
+          "smartObjectId": 4
+        },
+        "Main.ControlsDocCamera.DocCamZoomBtns.Tab2_Press": {
+          "joinId": 32,
+          "smartObjectId": 4
+        },
+        "Main.ControlsDocCamera.DocCamFocusBtns.Tab1_Press": {
+          "joinId": 31,
+          "smartObjectId": 5
+        },
+        "Main.ControlsDocCamera.DocCamFocusBtns.Tab2_Press": {
+          "joinId": 32,
+          "smartObjectId": 5
+        },
+        "Main.ControlsDocCamera.DocCamFocusBtns.Tab3_Press": {
+          "joinId": 33,
+          "smartObjectId": 5
+        },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button1ItemPress": {
+          "joinId": 1001,
+          "smartObjectId": 7
+        },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button2ItemPress": {
+          "joinId": 1002,
+          "smartObjectId": 7
+        },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button3ItemPress": {
+          "joinId": 1003,
+          "smartObjectId": 7
+        },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button4ItemPress": {
+          "joinId": 1004,
+          "smartObjectId": 7
+        },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5ItemPress": {
+          "joinId": 1005,
+          "smartObjectId": 7
+        },
+        "Main.SourceSelect.VideoSwitcher.Screen_1_Changed": {
+          "joinId": 73,
+          "smartObjectId": 9
+        },
+        "Main.SourceSelect.VideoSwitcher.Screen_2_Changed": {
+          "joinId": 74,
+          "smartObjectId": 9
+        }
+      },
+      "numeric": {
+        "Main.SourceSelect.VideoSwitcher.Source1_Selection": {
+          "joinId": 37,
+          "smartObjectId": 9
+        },
+        "Main.SourceSelect.VideoSwitcher.Source2_Selection": {
+          "joinId": 38,
+          "smartObjectId": 9
+        }
+      },
+      "string": {}
+    }
+  }
+}
