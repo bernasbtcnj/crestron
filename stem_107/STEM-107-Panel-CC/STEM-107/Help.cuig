@@ -1,0 +1,66 @@
+{FileMetadata}
+Schema = "1.0.0.0"
+CreatedByAppHost = "2.101.8.0"
+Created = 2025-02-21 14:27:51.31498-05:00
+LastModifiedByAppHost = "2.101.8.0"
+Modified = 2025-02-21 14:27:51.314976-05:00
+CreatedByProjectApp = "1.3701.9.0"
+LastModifiedByProjectApp = "1.3701.9.0"
+MinimumProjectApp = "1.2600.1"
+MinimumAppHost = "2.0.0"
+
+{Html}
+<html-div componentname="Header-div" id="iwoh" devicesvisited="[&quot;TSW-760&quot;]" oldid="ieff"></html-div><ch5-image refreshrate="0" customvstheme="custom" assetid="2755c7d1-a917-44ef-a2de-bb69cb6f2708" id="ihre" componentname="TCNJ-Logo" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" oldid="izuf">
+              </ch5-image><html-div componentname="Footer-div" id="ikzw" devicesvisited="[&quot;TSW-760&quot;]" oldid="ie7jtzgj46"></html-div>
+
+{Css}
+@media (max-width: 99999px) { #ikzw { display: block; background-color: rgba(4,39,72,0.65); border-style: none; border-width: 0; border-color: #1B4B7C; width: 1261px; height: 30px; left: 0px; top: 708px; position: absolute } #ihre .ch5-image { border-color: black; object-fit: contain } #ihre { width: 400px; height: 100px; display: block; left: 10px; top: 10px; position: absolute } #iwoh { display: block; background-color: rgba(4,39,72,0.65); border-style: none; border-width: 0; border-color: #1B4B7C; width: 1261px; height: 120px; left: 0px; top: 0px; position: absolute } #wrapper { background-color: #035792 } }
+@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px) { #ikzw { display: block; background-color: rgba(4,39,72,0.65); border-style: none; border-width: 0; border-color: #1B4B7C; width: 1261px; height: 30px; left: 0px; top: 708px; position: absolute } #ihre { width: 400px; height: 100px; display: block; left: 10px; top: 10px; position: absolute } #iwoh { display: block; background-color: rgba(4,39,72,0.65); border-style: none; border-width: 0; border-color: #1B4B7C; width: 1261px; height: 120px; left: 0px; top: 0px; position: absolute } }
+
+{PageAttributes}
+
+[Attributes]
+Name = "Help"
+PageMode = "absolute"
+Id = "c9469dbb-e41f-4ce6-8d98-27d43ba3efab"
+StartPage = "False"
+PreloadPage = "True"
+CachePage = "False"
+VisibilityJoin = "14"
+DisplayBackgroundColor = "True"
+BackgroundColor = "#035792"
+
+[[Elements]]
+Type = "html-div"
+
+[Elements.Attributes]
+componentName = "Header-div"
+id = "iwoh"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "ieff"
+[[Elements]]
+Type = "Ch5 Image"
+Editable = true
+
+[[Elements.Components]]
+Type = "textnode"
+Content = "\n              "
+
+[Elements.Attributes]
+refreshrate = "0"
+customvstheme = "custom"
+assetid = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
+id = "ihre"
+componentName = "TCNJ-Logo"
+ccid_linkSendReceive = "True"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "izuf"
+[[Elements]]
+Type = "html-div"
+
+[Elements.Attributes]
+componentName = "Footer-div"
+id = "ikzw"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "ie7jtzgj46"
+
