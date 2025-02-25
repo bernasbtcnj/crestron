@@ -199,6 +199,24 @@ namespace STEM107.Main.SourceSelect
         event EventHandler<UIEventArgs> Screen_2_Source_ChangedEvent;
 
         /// <summary>
+        /// Main.SourceSelect.Video Switcher.Number of Screens Feedback
+        /// </summary>
+        /// <param name="callback">The ushort delegate to update the panel.</param>
+        void VideoSwitcher_NumberOfScreens(VideoSwitcherUShortInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.SourceSelect.Video Switcher.Number of Screens Feedback
+        /// </summary>
+        /// <param name="callback">The ushort analog to update the panel.</param>
+        void VideoSwitcher_NumberOfScreens(ushort analog);
+
+        /// <summary>
+        /// Main.SourceSelect.Video Switcher.Number of Screens Feedback
+        /// </summary>
+        /// <param name="callback">The short analog to update the panel.</param>
+        void VideoSwitcher_NumberOfScreens(short analog);
+
+        /// <summary>
         /// Main.SourceSelect.Source1._Feedback Feedback
         /// </summary>
         /// <param name="callback">The ushort delegate to update the panel.</param>
@@ -393,16 +411,22 @@ namespace STEM107.Main.SourceSelect
 
 
                 /// <summary>
+                /// Input or Feedback analog joinInfo from Control System to panel: Main.SourceSelect.VideoSwitcher.NumberOfScreens
+                /// Main.SourceSelect.Video Switcher.Number of Screens
+                /// </summary>
+                public const uint VideoSwitcher_NumberOfScreensState = 1;
+
+                /// <summary>
                 /// Input or Feedback analog joinInfo from Control System to panel: Main.SourceSelect.VideoSwitcher.Source1_Feedback
                 /// Main.SourceSelect.Source1._Feedback
                 /// </summary>
-                public const uint Screen_1_Source_SelectedState = 37;
+                public const uint Screen_1_Source_SelectedState = 3;
 
                 /// <summary>
                 /// Input or Feedback analog joinInfo from Control System to panel: Main.SourceSelect.VideoSwitcher.Source2_Feedback
                 /// Main.SourceSelect.Source2._Feedback
                 /// </summary>
-                public const uint Screen_2_Source_SelectedState = 38;
+                public const uint Screen_2_Source_SelectedState = 4;
 
             }
             /// <summary>
@@ -617,6 +641,26 @@ namespace STEM107.Main.SourceSelect
         public void Screen_2_Source_Selected(short analog)
         {
             Screen_2_Source_Selected((sig, component) => sig.ShortValue = analog);
+        }
+        /// <inheritdoc/>
+        public void VideoSwitcher_NumberOfScreens(VideoSwitcherUShortInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].UShortInput[Joins.Numerics.VideoSwitcher_NumberOfScreensState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void VideoSwitcher_NumberOfScreens(ushort analog)
+        {
+            VideoSwitcher_NumberOfScreens((sig, component) => sig.UShortValue = analog);
+        }
+
+        /// <inheritdoc/>
+        public void VideoSwitcher_NumberOfScreens(short analog)
+        {
+            VideoSwitcher_NumberOfScreens((sig, component) => sig.ShortValue = analog);
         }
 
         /// <inheritdoc/>

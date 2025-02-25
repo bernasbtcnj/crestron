@@ -1,6 +1,6 @@
 {
   "name": "STEM-107",
-  "timestamp": "2025-02-21T19:30:11.2844146+00:00",
+  "timestamp": "2025-02-25T16:47:33.8286177+00:00",
   "version": "1.0.0.0",
   "schema_version": 1,
   "extra_value": "",
@@ -23,8 +23,9 @@
           "14": "Main.AdvancedControlsOverlay.AdvSourceSelect.ItemSelected"
         },
         "9": {
-          "37": "Main.SourceSelect.VideoSwitcher.Source1_Feedback",
-          "38": "Main.SourceSelect.VideoSwitcher.Source2_Feedback"
+          "1": "Main.SourceSelect.VideoSwitcher.NumberOfScreens",
+          "3": "Main.SourceSelect.VideoSwitcher.Source1_Feedback",
+          "4": "Main.SourceSelect.VideoSwitcher.Source2_Feedback"
         }
       },
       "string": {
