@@ -34,7 +34,7 @@ namespace STEM107.Main.SourceSelect
         object UserObject { get; set; }
 
         /// <summary>
-        /// ComplexComponent Video Switcher
+        /// ComplexComponent Video-Switcher
         /// </summary>
         STEM107.Main.SourceSelect.IVideoSwitcher VideoSwitcher { get; }
     }
@@ -142,7 +142,7 @@ namespace STEM107.Main.SourceSelect
         #region CH5 Contract
 
         /// <summary>
-        /// ComplexComponent Video Switcher
+        /// ComplexComponent Video-Switcher
         /// </summary>
         public STEM107.Main.SourceSelect.IVideoSwitcher VideoSwitcher { get; private set; }
 

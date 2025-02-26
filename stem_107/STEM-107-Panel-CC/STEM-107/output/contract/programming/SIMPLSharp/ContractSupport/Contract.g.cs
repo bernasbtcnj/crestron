@@ -51,6 +51,9 @@ namespace STEM107
         public STEM107.Main.IMain Main { get { return (STEM107.Main.IMain)InternalMain; } }
         private STEM107.Main.Main InternalMain { get; set; }
 
+        public STEM107.Diagnostics.IDiagnostics Diagnostics { get { return (STEM107.Diagnostics.IDiagnostics)InternalDiagnostics; } }
+        private STEM107.Diagnostics.Diagnostics InternalDiagnostics { get; set; }
+
         #endregion
 
         #region Construction and Initialization
@@ -74,6 +77,8 @@ namespace STEM107
             ComponentMediator.ConfigureActivityEvent(onActivity);
 
             InternalMain = new STEM107.Main.Main(ComponentMediator, 1);
+
+            InternalDiagnostics = new STEM107.Diagnostics.Diagnostics(ComponentMediator, 10);
 
 
             for (int index = 0; index < devices.Length; index++)
@@ -101,12 +106,14 @@ namespace STEM107
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             InternalMain.AddDevice(device);
+            InternalDiagnostics.AddDevice(device);
 
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             InternalMain.RemoveDevice(device);
+            InternalDiagnostics.RemoveDevice(device);
         }
 
         #endregion
@@ -123,6 +130,7 @@ namespace STEM107
             IsDisposed = true;
 
             InternalMain.Dispose();
+            InternalDiagnostics.Dispose();
 
             ComponentMediator.Dispose(); 
         }

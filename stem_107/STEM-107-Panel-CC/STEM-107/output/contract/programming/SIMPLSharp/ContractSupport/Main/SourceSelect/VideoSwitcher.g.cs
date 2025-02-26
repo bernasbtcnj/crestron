@@ -172,7 +172,7 @@ namespace STEM107.Main.SourceSelect
     }
 
     /// <summary>
-    /// Video Switcher
+    /// Video-Switcher
     /// </summary>
     public partial interface IVideoSwitcher : IVideoSwitcherByItem
     {
@@ -199,19 +199,19 @@ namespace STEM107.Main.SourceSelect
         event EventHandler<UIEventArgs> Screen_2_Source_ChangedEvent;
 
         /// <summary>
-        /// Main.SourceSelect.Video Switcher.Number of Screens Feedback
+        /// Main.SourceSelect.Video-Switcher.Number of Screens Feedback
         /// </summary>
         /// <param name="callback">The ushort delegate to update the panel.</param>
         void VideoSwitcher_NumberOfScreens(VideoSwitcherUShortInputSigDelegate callback);
 
         /// <summary>
-        /// Main.SourceSelect.Video Switcher.Number of Screens Feedback
+        /// Main.SourceSelect.Video-Switcher.Number of Screens Feedback
         /// </summary>
         /// <param name="callback">The ushort analog to update the panel.</param>
         void VideoSwitcher_NumberOfScreens(ushort analog);
 
         /// <summary>
-        /// Main.SourceSelect.Video Switcher.Number of Screens Feedback
+        /// Main.SourceSelect.Video-Switcher.Number of Screens Feedback
         /// </summary>
         /// <param name="callback">The short analog to update the panel.</param>
         void VideoSwitcher_NumberOfScreens(short analog);
@@ -345,7 +345,7 @@ namespace STEM107.Main.SourceSelect
     public delegate void VideoSwitcherStringInputSigDelegate(StringInputSig stringInputSig, IVideoSwitcher videoswitcher);
 
     /// <summary>
-    /// Video Switcher
+    /// Video-Switcher
     /// </summary>
     internal partial class VideoSwitcher : IVideoSwitcher, IDisposable
     {
@@ -412,7 +412,7 @@ namespace STEM107.Main.SourceSelect
 
                 /// <summary>
                 /// Input or Feedback analog joinInfo from Control System to panel: Main.SourceSelect.VideoSwitcher.NumberOfScreens
-                /// Main.SourceSelect.Video Switcher.Number of Screens
+                /// Main.SourceSelect.Video-Switcher.Number of Screens
                 /// </summary>
                 public const uint VideoSwitcher_NumberOfScreensState = 1;
 
