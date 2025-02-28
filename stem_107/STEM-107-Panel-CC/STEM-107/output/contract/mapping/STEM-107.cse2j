@@ -1,6 +1,6 @@
 {
   "name": "STEM-107",
-  "timestamp": "2025-02-27T13:21:05.0190757+00:00",
+  "timestamp": "2025-02-28T16:12:23.919321+00:00",
   "version": "1.0.0.0",
   "schema_version": 1,
   "extra_value": "",
@@ -15,6 +15,13 @@
           "31": "Main.ControlsDocCamera.DocCamFocusBtns.Tab1_Selected",
           "32": "Main.ControlsDocCamera.DocCamFocusBtns.Tab2_Selected",
           "33": "Main.ControlsDocCamera.DocCamFocusBtns.Tab3_Selected"
+        },
+        "7": {
+          "1001": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button1ItemSelected",
+          "1002": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button2ItemSelected",
+          "1003": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button3ItemSelected",
+          "1004": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button4ItemSelected",
+          "1005": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5ItemSelected"
         },
         "11": {
           "1": "Diagnostics.DiagItemsList.List_Item1_Visible",
@@ -189,8 +196,7 @@
       },
       "numeric": {
         "7": {
-          "2": "Main.AdvancedControlsOverlay.AdvSourceSelect.ListNumberOfItems",
-          "14": "Main.AdvancedControlsOverlay.AdvSourceSelect.ItemSelected"
+          "2": "Main.AdvancedControlsOverlay.AdvSourceSelect.ListNumberOfItems"
         },
         "9": {
           "1": "Main.SourceSelect.VideoSwitcher.NumberOfScreens",

@@ -37,6 +37,20 @@ namespace STEM107.Main.AdvancedControlsOverlay
         event EventHandler<IndexedButtonEventArgs> Button_PressEvent;
 
         /// <summary>
+        /// Main.AdvancedControlsOverlay.Button1.ItemSelected Feedback
+        /// </summary>
+        /// <param name="buttonIndex">The index of the button (0 based).</param>
+        /// <param name="callback">The delegate to set the feedback.</param>
+        void Button_Selected(ushort buttonIndex, AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Helper Main.AdvancedControlsOverlay.Button1.ItemSelected Feedback
+        /// </summary>
+        /// <param name="buttonIndex">The index of the button (0 based).</param>
+        /// <param name="digital">The <see="bool"/> value to set on the panel.</param>
+        void Button_Selected(ushort buttonIndex, bool digital);
+
+        /// <summary>
         /// Main.AdvancedControlsOverlay.Button1.Text Feedback
         /// </summary>
         /// <param name="buttonIndex">The index of the button (0 based).</param>
@@ -68,6 +82,20 @@ namespace STEM107.Main.AdvancedControlsOverlay
                 handler(this, new IndexedButtonEventArgs((SmartObjectEventArgs)eventArgs.SigArgs, eventArgs.JoinIndex));
         }
                 
+        /// <inheritdoc/>
+        public void Button_Selected(ushort buttonIndex, AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_1_Button_SelectedState + (uint) buttonIndex], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_Selected(ushort buttonIndex, bool digital)
+        {
+            Button_Selected(buttonIndex, (sig, component) => sig.BoolValue = digital);
+        }
 
 
         /// <inheritdoc/>
@@ -121,6 +149,66 @@ namespace STEM107.Main.AdvancedControlsOverlay
         event EventHandler<UIEventArgs> Button_5_Button_PressEvent;
 
         /// <summary>
+        /// Main.AdvancedControlsOverlay.Button1.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_1_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button1.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_1_Button_Selected(bool digital);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button2.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_2_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button2.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_2_Button_Selected(bool digital);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button3.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_3_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button3.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_3_Button_Selected(bool digital);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button4.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_4_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button4.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_4_Button_Selected(bool digital);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button5.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_5_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button5.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_5_Button_Selected(bool digital);
+
+        /// <summary>
         /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Number Of Items Feedback
         /// </summary>
         /// <param name="callback">The ushort delegate to update the panel.</param>
@@ -137,24 +225,6 @@ namespace STEM107.Main.AdvancedControlsOverlay
         /// </summary>
         /// <param name="callback">The short analog to update the panel.</param>
         void AdvSourceSelect_ListNumberOfItems(short analog);
-
-        /// <summary>
-        /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Item Selected Feedback
-        /// </summary>
-        /// <param name="callback">The ushort delegate to update the panel.</param>
-        void AdvSourceSelect_ItemSelected(AdvSourceSelectUShortInputSigDelegate callback);
-
-        /// <summary>
-        /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Item Selected Feedback
-        /// </summary>
-        /// <param name="callback">The ushort analog to update the panel.</param>
-        void AdvSourceSelect_ItemSelected(ushort analog);
-
-        /// <summary>
-        /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Item Selected Feedback
-        /// </summary>
-        /// <param name="callback">The short analog to update the panel.</param>
-        void AdvSourceSelect_ItemSelected(short analog);
 
         /// <summary>
         /// Main.AdvancedControlsOverlay.Button1.Text Feedback
@@ -301,24 +371,47 @@ namespace STEM107.Main.AdvancedControlsOverlay
                 public const uint Button_5_Button_PressEvent = 1005;
 
 
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button1ItemSelected
+                /// Main.AdvancedControlsOverlay.Button1.ItemSelected
+                /// </summary>
+                public const uint Button_1_Button_SelectedState = 1001;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button2ItemSelected
+                /// Main.AdvancedControlsOverlay.Button2.ItemSelected
+                /// </summary>
+                public const uint Button_2_Button_SelectedState = 1002;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button3ItemSelected
+                /// Main.AdvancedControlsOverlay.Button3.ItemSelected
+                /// </summary>
+                public const uint Button_3_Button_SelectedState = 1003;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button4ItemSelected
+                /// Main.AdvancedControlsOverlay.Button4.ItemSelected
+                /// </summary>
+                public const uint Button_4_Button_SelectedState = 1004;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button5ItemSelected
+                /// Main.AdvancedControlsOverlay.Button5.ItemSelected
+                /// </summary>
+                public const uint Button_5_Button_SelectedState = 1005;
+
             }
             /// <summary>
             /// Analog signals.
             /// </summary>
             internal static class Numerics
             {
-
                 /// <summary>
                 /// Input or Feedback analog joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.ListNumberOfItems
                 /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Number Of Items
                 /// </summary>
                 public const uint AdvSourceSelect_ListNumberOfItemsState = 2;
-
-                /// <summary>
-                /// Input or Feedback analog joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.ItemSelected
-                /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Item Selected
-                /// </summary>
-                public const uint AdvSourceSelect_ItemSelectedState = 14;
 
             }
             /// <summary>
@@ -489,27 +582,77 @@ namespace STEM107.Main.AdvancedControlsOverlay
                 handler(this, UIEventArgs.CreateEventArgs(eventArgs));
         }
 
-
         /// <inheritdoc/>
-        public void AdvSourceSelect_ItemSelected(AdvSourceSelectUShortInputSigDelegate callback)
+        public void Button_1_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
         {
             for (int index = 0; index < Devices.Count; index++)
             {
-                callback(Devices[index].SmartObjects[ControlJoinId].UShortInput[Joins.Numerics.AdvSourceSelect_ItemSelectedState], this);
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_1_Button_SelectedState], this);
             }
         }
 
         /// <inheritdoc/>
-        public void AdvSourceSelect_ItemSelected(ushort analog)
+        public void Button_1_Button_Selected(bool digital)
         {
-            AdvSourceSelect_ItemSelected((sig, component) => sig.UShortValue = analog);
+            Button_1_Button_Selected((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void Button_2_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_2_Button_SelectedState], this);
+            }
         }
 
         /// <inheritdoc/>
-        public void AdvSourceSelect_ItemSelected(short analog)
+        public void Button_2_Button_Selected(bool digital)
         {
-            AdvSourceSelect_ItemSelected((sig, component) => sig.ShortValue = analog);
+            Button_2_Button_Selected((sig, component) => sig.BoolValue = digital);
         }
+        /// <inheritdoc/>
+        public void Button_3_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_3_Button_SelectedState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_3_Button_Selected(bool digital)
+        {
+            Button_3_Button_Selected((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void Button_4_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_4_Button_SelectedState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_4_Button_Selected(bool digital)
+        {
+            Button_4_Button_Selected((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void Button_5_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_5_Button_SelectedState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_5_Button_Selected(bool digital)
+        {
+            Button_5_Button_Selected((sig, component) => sig.BoolValue = digital);
+        }
+
         /// <inheritdoc/>
         public void AdvSourceSelect_ListNumberOfItems(AdvSourceSelectUShortInputSigDelegate callback)
         {
