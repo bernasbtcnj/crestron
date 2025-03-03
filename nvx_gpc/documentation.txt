@@ -5,24 +5,26 @@ Password: (See internal MTSS documentation)
 
 NETWORK SWITCH
 --------------------
-Ports 1 - 18 : Crestron VLAN with DHCP (172.31.1.x IP range)
-Ports 19 - 26 : Campus data VLAN
+Ports 1 - 25 : Crestron VLAN with DHCP (172.31.1.x IP range)
+Port 26 : Campus data VLAN
 
 NVX GPC IP-ID SCHEME
 ---------------------
 
 03 Touch Panel
-04 HTML5 Interface & Configuration page (Under development)
+05 HTML5 Interface & Configuration page (Under development)
 09 Wolfvision Document Camera
 
-D0 Decoder 0 - Local Monitor and Audio out to amplifier
+D0 Decoder 0 - Local Monitor
 D1 Display 1
 D2 Display 2
 D3 Display 3
 D4 Display 4
+D5 Display 5
+D6 Display 6
 
-E1 Encoder 1 - PC
-E2 Encoder 2 - Laptop
+E1 Encoder 1 - In-room Computer
+E2 Encoder 2 - Laptop HDMI
 E3 Encoder 3 - Blu-ray (IR for Blu-ray control)
 E4 Encoder 4 - AppleTV
 E5 Encoder 5 - BYOD / Solstice Pod
@@ -37,3 +39,23 @@ EC Encoder 12 - Custom
 ED Encoder 13 - Custom
 EE Encoder 14 - Custom
 EF Encoder 15 - Custom
+
+
+NVX Multicast Address Scheme
+-----------------------------
+
+E1 Encoder 1 - 239.31.1.10
+E2 Encoder 2 - 239.31.1.20
+E3 Encoder 3 - 239.31.1.30
+E4 Encoder 4 - 239.31.1.40
+E5 Encoder 5 - 239.31.1.50
+E6 Encoder 6 - 239.31.1.60
+E7 Encoder 7 - 239.31.1.70
+E8 Encoder 8  - 239.31.1.80
+E9 Encoder 9  - 239.31.1.90
+EA Encoder 10 - 239.31.1.100
+EB Encoder 11 - 239.31.1.110
+EC Encoder 12 - 239.31.1.120
+ED Encoder 13 - 239.31.1.130
+EE Encoder 14 - 239.31.1.140
+EF Encoder 15 - 239.31.1.150
