@@ -80,6 +80,18 @@ namespace STEM107.Diagnostics.DiagItemsList
         void DiagSync_Selected(bool digital);
 
         /// <summary>
+        /// Diagnostics.DiagItemsList.Items[1].Diag-IP.Indirect Feedback
+        /// </summary>
+        /// <param name="callback">The <see cref="string"/> delegate to update the panel.</param>
+        void DiagIP_Indirect(Items_1_StringInputSigDelegate callback);
+
+        /// <summary>
+        /// Diagnostics.DiagItemsList.Items[1].Diag-IP.Indirect Feedback
+        /// </summary>
+        /// <param name="serial">The <see cref="string"/> to update the panel.</param>
+        void DiagIP_Indirect(string serial);
+
+        /// <summary>
         /// Diagnostics.DiagItemsList.Items[1].Diag-IP-ID.Indirect Feedback
         /// </summary>
         /// <param name="callback">The <see cref="string"/> delegate to update the panel.</param>
@@ -190,15 +202,20 @@ namespace STEM107.Diagnostics.DiagItemsList
             {
 
                 /// <summary>
+                /// Input or Feedback serial joinInfo from Control System to panel: Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagIP.Indirect
+                /// Diagnostics.DiagItemsList.Items[1].Diag-IP.Indirect
+                /// </summary>
+                public const uint DiagIP_IndirectState = 1;
+                /// <summary>
                 /// Input or Feedback serial joinInfo from Control System to panel: Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagIPID.Indirect
                 /// Diagnostics.DiagItemsList.Items[1].Diag-IP-ID.Indirect
                 /// </summary>
-                public const uint DiagIPID_IndirectState = 1;
+                public const uint DiagIPID_IndirectState = 2;
                 /// <summary>
                 /// Input or Feedback serial joinInfo from Control System to panel: Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagName.Indirect
                 /// Diagnostics.DiagItemsList.Items[1].Diag-Name.Indirect
                 /// </summary>
-                public const uint DiagName_IndirectState = 2;
+                public const uint DiagName_IndirectState = 3;
             }
         }
 
@@ -342,6 +359,20 @@ namespace STEM107.Diagnostics.DiagItemsList
         }
 
 
+        /// <inheritdoc/>
+        public void DiagIP_Indirect(Items_1_StringInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].StringInput[Joins.Strings.DiagIP_IndirectState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagIP_Indirect(string serial)
+        {
+            DiagIP_Indirect((sig, component) => sig.StringValue = serial);
+        }
         /// <inheritdoc/>
         public void DiagIPID_Indirect(Items_1_StringInputSigDelegate callback)
         {

@@ -34,9 +34,14 @@ namespace STEM107.Main.SourceSelect
         object UserObject { get; set; }
 
         /// <summary>
-        /// ComplexComponent Video-Switcher
+        /// ComplexComponent Stu-Disp-Source-Select
         /// </summary>
-        STEM107.Main.SourceSelect.IVideoSwitcher VideoSwitcher { get; }
+        STEM107.Main.SourceSelect.IStuDispSourceSelect StuDispSourceSelect { get; }
+
+        /// <summary>
+        /// ComplexComponent Disp1-Source-Select
+        /// </summary>
+        STEM107.Main.SourceSelect.IDisp1SourceSelect Disp1SourceSelect { get; }
     }
 
 
@@ -118,7 +123,8 @@ namespace STEM107.Main.SourceSelect
  
             _devices = new List<BasicTriListWithSmartObject>(); 
  
-            VideoSwitcher = new STEM107.Main.SourceSelect.VideoSwitcher(ComponentMediator, 9);
+            StuDispSourceSelect = new STEM107.Main.SourceSelect.StuDispSourceSelect(ComponentMediator, 9);
+            Disp1SourceSelect = new STEM107.Main.SourceSelect.Disp1SourceSelect(ComponentMediator, 10);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
@@ -126,7 +132,9 @@ namespace STEM107.Main.SourceSelect
             Devices.Add(device);
             ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
 
-            ((STEM107.Main.SourceSelect.VideoSwitcher)VideoSwitcher).AddDevice(device);
+            ((STEM107.Main.SourceSelect.StuDispSourceSelect)StuDispSourceSelect).AddDevice(device);
+
+            ((STEM107.Main.SourceSelect.Disp1SourceSelect)Disp1SourceSelect).AddDevice(device);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
@@ -134,7 +142,9 @@ namespace STEM107.Main.SourceSelect
             Devices.Remove(device);
             ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
 
-            ((STEM107.Main.SourceSelect.VideoSwitcher)VideoSwitcher).RemoveDevice(device);
+            ((STEM107.Main.SourceSelect.StuDispSourceSelect)StuDispSourceSelect).RemoveDevice(device);
+
+            ((STEM107.Main.SourceSelect.Disp1SourceSelect)Disp1SourceSelect).RemoveDevice(device);
         }
 
         #endregion
@@ -142,9 +152,14 @@ namespace STEM107.Main.SourceSelect
         #region CH5 Contract
 
         /// <summary>
-        /// ComplexComponent Video-Switcher
+        /// ComplexComponent Stu-Disp-Source-Select
         /// </summary>
-        public STEM107.Main.SourceSelect.IVideoSwitcher VideoSwitcher { get; private set; }
+        public STEM107.Main.SourceSelect.IStuDispSourceSelect StuDispSourceSelect { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Disp1-Source-Select
+        /// </summary>
+        public STEM107.Main.SourceSelect.IDisp1SourceSelect Disp1SourceSelect { get; private set; }
 
         #endregion
 

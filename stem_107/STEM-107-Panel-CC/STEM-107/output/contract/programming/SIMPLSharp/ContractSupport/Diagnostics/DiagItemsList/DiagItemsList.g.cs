@@ -1225,31 +1225,31 @@ namespace STEM107.Diagnostics.DiagItemsList
  
             _devices = new List<BasicTriListWithSmartObject>(); 
  
-            Items_0_ = new STEM107.Diagnostics.DiagItemsList.Items_0_(ComponentMediator, 12, 24);
-            Items_1_ = new STEM107.Diagnostics.DiagItemsList.Items_1_(ComponentMediator, 13, 24);
-            Items_2_ = new STEM107.Diagnostics.DiagItemsList.Items_2_(ComponentMediator, 14, 24);
-            Items_3_ = new STEM107.Diagnostics.DiagItemsList.Items_3_(ComponentMediator, 15, 24);
-            Items_4_ = new STEM107.Diagnostics.DiagItemsList.Items_4_(ComponentMediator, 16, 24);
-            Items_5_ = new STEM107.Diagnostics.DiagItemsList.Items_5_(ComponentMediator, 17, 24);
-            Items_6_ = new STEM107.Diagnostics.DiagItemsList.Items_6_(ComponentMediator, 18, 24);
-            Items_7_ = new STEM107.Diagnostics.DiagItemsList.Items_7_(ComponentMediator, 19, 24);
-            Items_8_ = new STEM107.Diagnostics.DiagItemsList.Items_8_(ComponentMediator, 20, 24);
-            Items_9_ = new STEM107.Diagnostics.DiagItemsList.Items_9_(ComponentMediator, 21, 24);
-            Items_10_ = new STEM107.Diagnostics.DiagItemsList.Items_10_(ComponentMediator, 22, 24);
-            Items_11_ = new STEM107.Diagnostics.DiagItemsList.Items_11_(ComponentMediator, 23, 24);
-            Items_12_ = new STEM107.Diagnostics.DiagItemsList.Items_12_(ComponentMediator, 24, 24);
-            Items_13_ = new STEM107.Diagnostics.DiagItemsList.Items_13_(ComponentMediator, 25, 24);
-            Items_14_ = new STEM107.Diagnostics.DiagItemsList.Items_14_(ComponentMediator, 26, 24);
-            Items_15_ = new STEM107.Diagnostics.DiagItemsList.Items_15_(ComponentMediator, 27, 24);
-            Items_16_ = new STEM107.Diagnostics.DiagItemsList.Items_16_(ComponentMediator, 28, 24);
-            Items_17_ = new STEM107.Diagnostics.DiagItemsList.Items_17_(ComponentMediator, 29, 24);
-            Items_18_ = new STEM107.Diagnostics.DiagItemsList.Items_18_(ComponentMediator, 30, 24);
-            Items_19_ = new STEM107.Diagnostics.DiagItemsList.Items_19_(ComponentMediator, 31, 24);
-            Items_20_ = new STEM107.Diagnostics.DiagItemsList.Items_20_(ComponentMediator, 32, 24);
-            Items_21_ = new STEM107.Diagnostics.DiagItemsList.Items_21_(ComponentMediator, 33, 24);
-            Items_22_ = new STEM107.Diagnostics.DiagItemsList.Items_22_(ComponentMediator, 34, 24);
-            Items_23_ = new STEM107.Diagnostics.DiagItemsList.Items_23_(ComponentMediator, 35, 24);
-            Item = new STEM107.Diagnostics.DiagItemsList.Item(ComponentMediator, 12, 24);
+            Items_0_ = new STEM107.Diagnostics.DiagItemsList.Items_0_(ComponentMediator, 13, 24);
+            Items_1_ = new STEM107.Diagnostics.DiagItemsList.Items_1_(ComponentMediator, 14, 24);
+            Items_2_ = new STEM107.Diagnostics.DiagItemsList.Items_2_(ComponentMediator, 15, 24);
+            Items_3_ = new STEM107.Diagnostics.DiagItemsList.Items_3_(ComponentMediator, 16, 24);
+            Items_4_ = new STEM107.Diagnostics.DiagItemsList.Items_4_(ComponentMediator, 17, 24);
+            Items_5_ = new STEM107.Diagnostics.DiagItemsList.Items_5_(ComponentMediator, 18, 24);
+            Items_6_ = new STEM107.Diagnostics.DiagItemsList.Items_6_(ComponentMediator, 19, 24);
+            Items_7_ = new STEM107.Diagnostics.DiagItemsList.Items_7_(ComponentMediator, 20, 24);
+            Items_8_ = new STEM107.Diagnostics.DiagItemsList.Items_8_(ComponentMediator, 21, 24);
+            Items_9_ = new STEM107.Diagnostics.DiagItemsList.Items_9_(ComponentMediator, 22, 24);
+            Items_10_ = new STEM107.Diagnostics.DiagItemsList.Items_10_(ComponentMediator, 23, 24);
+            Items_11_ = new STEM107.Diagnostics.DiagItemsList.Items_11_(ComponentMediator, 24, 24);
+            Items_12_ = new STEM107.Diagnostics.DiagItemsList.Items_12_(ComponentMediator, 25, 24);
+            Items_13_ = new STEM107.Diagnostics.DiagItemsList.Items_13_(ComponentMediator, 26, 24);
+            Items_14_ = new STEM107.Diagnostics.DiagItemsList.Items_14_(ComponentMediator, 27, 24);
+            Items_15_ = new STEM107.Diagnostics.DiagItemsList.Items_15_(ComponentMediator, 28, 24);
+            Items_16_ = new STEM107.Diagnostics.DiagItemsList.Items_16_(ComponentMediator, 29, 24);
+            Items_17_ = new STEM107.Diagnostics.DiagItemsList.Items_17_(ComponentMediator, 30, 24);
+            Items_18_ = new STEM107.Diagnostics.DiagItemsList.Items_18_(ComponentMediator, 31, 24);
+            Items_19_ = new STEM107.Diagnostics.DiagItemsList.Items_19_(ComponentMediator, 32, 24);
+            Items_20_ = new STEM107.Diagnostics.DiagItemsList.Items_20_(ComponentMediator, 33, 24);
+            Items_21_ = new STEM107.Diagnostics.DiagItemsList.Items_21_(ComponentMediator, 34, 24);
+            Items_22_ = new STEM107.Diagnostics.DiagItemsList.Items_22_(ComponentMediator, 35, 24);
+            Items_23_ = new STEM107.Diagnostics.DiagItemsList.Items_23_(ComponentMediator, 36, 24);
+            Item = new STEM107.Diagnostics.DiagItemsList.Item(ComponentMediator, 13, 24);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)

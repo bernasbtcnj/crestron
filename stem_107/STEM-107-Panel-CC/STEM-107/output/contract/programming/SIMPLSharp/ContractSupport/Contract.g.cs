@@ -78,7 +78,7 @@ namespace STEM107
 
             InternalMain = new STEM107.Main.Main(ComponentMediator, 1);
 
-            InternalDiagnostics = new STEM107.Diagnostics.Diagnostics(ComponentMediator, 10);
+            InternalDiagnostics = new STEM107.Diagnostics.Diagnostics(ComponentMediator, 11);
 
 
             for (int index = 0; index < devices.Length; index++)
