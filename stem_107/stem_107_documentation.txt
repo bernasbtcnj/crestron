@@ -27,7 +27,7 @@ SWITCH PORT CONNECTIONS
 ***Switch manages DHCP***
 -------------------------
 OOB: Campus AV (Crestron) Network
-1.  RMC4
+1.  RMC4  (172.31.1.201)
 2.  TSW-760 Touch Panel
 3.  FT-TSC600 1
 4.  FT-TSC600 2
