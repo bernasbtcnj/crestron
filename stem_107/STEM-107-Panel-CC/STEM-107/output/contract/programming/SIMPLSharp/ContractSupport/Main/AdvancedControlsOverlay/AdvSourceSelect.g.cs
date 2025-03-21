@@ -149,6 +149,16 @@ namespace STEM107.Main.AdvancedControlsOverlay
         event EventHandler<UIEventArgs> Button_5_Button_PressEvent;
 
         /// <summary>
+        /// Event Main.AdvancedControlsOverlay.Button6.ItemPress (from panel to Control System)
+        /// </summary>
+        event EventHandler<UIEventArgs> Button_6_Button_PressEvent;
+
+        /// <summary>
+        /// Event Main.AdvancedControlsOverlay.Button7.ItemPress (from panel to Control System)
+        /// </summary>
+        event EventHandler<UIEventArgs> Button_7_Button_PressEvent;
+
+        /// <summary>
         /// Main.AdvancedControlsOverlay.Button1.ItemSelected Feedback
         /// </summary>
         /// <param name="callback">The bool delegate to update the panel.</param>
@@ -207,6 +217,30 @@ namespace STEM107.Main.AdvancedControlsOverlay
         /// </summary>
         /// <param name="digital">The bool to update the panel.</param>
         void Button_5_Button_Selected(bool digital);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button6.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_6_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button6.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_6_Button_Selected(bool digital);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button7.ItemSelected Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void Button_7_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button7.ItemSelected Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void Button_7_Button_Selected(bool digital);
 
         /// <summary>
         /// Main.AdvancedControlsOverlay.Adv-Source-Select.List Number Of Items Feedback
@@ -285,6 +319,30 @@ namespace STEM107.Main.AdvancedControlsOverlay
         /// </summary>
         /// <param name="serial">The <see cref="string"/> to update the panel.</param>
         void Button_5_Button_Text(string serial);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button6.Text Feedback
+        /// </summary>
+        /// <param name="callback">The <see cref="string"/> delegate to update the panel.</param>
+        void Button_6_Button_Text(AdvSourceSelectStringInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button6.Text Feedback
+        /// </summary>
+        /// <param name="serial">The <see cref="string"/> to update the panel.</param>
+        void Button_6_Button_Text(string serial);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button7.Text Feedback
+        /// </summary>
+        /// <param name="callback">The <see cref="string"/> delegate to update the panel.</param>
+        void Button_7_Button_Text(AdvSourceSelectStringInputSigDelegate callback);
+
+        /// <summary>
+        /// Main.AdvancedControlsOverlay.Button7.Text Feedback
+        /// </summary>
+        /// <param name="serial">The <see cref="string"/> to update the panel.</param>
+        void Button_7_Button_Text(string serial);
     }
 
     /// <summary>
@@ -370,6 +428,18 @@ namespace STEM107.Main.AdvancedControlsOverlay
                 /// </summary>
                 public const uint Button_5_Button_PressEvent = 1005;
 
+                /// <summary>
+                /// Output or Event digital joinInfo from panel to Control System: Main.AdvancedControlsOverlay.AdvSourceSelect.Button6ItemPress
+                /// Main.AdvancedControlsOverlay.Button6.ItemPress
+                /// </summary>
+                public const uint Button_6_Button_PressEvent = 1006;
+
+                /// <summary>
+                /// Output or Event digital joinInfo from panel to Control System: Main.AdvancedControlsOverlay.AdvSourceSelect.Button7ItemPress
+                /// Main.AdvancedControlsOverlay.Button7.ItemPress
+                /// </summary>
+                public const uint Button_7_Button_PressEvent = 1007;
+
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button1ItemSelected
@@ -400,6 +470,18 @@ namespace STEM107.Main.AdvancedControlsOverlay
                 /// Main.AdvancedControlsOverlay.Button5.ItemSelected
                 /// </summary>
                 public const uint Button_5_Button_SelectedState = 1005;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button6ItemSelected
+                /// Main.AdvancedControlsOverlay.Button6.ItemSelected
+                /// </summary>
+                public const uint Button_6_Button_SelectedState = 1006;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button7ItemSelected
+                /// Main.AdvancedControlsOverlay.Button7.ItemSelected
+                /// </summary>
+                public const uint Button_7_Button_SelectedState = 1007;
 
             }
             /// <summary>
@@ -445,6 +527,16 @@ namespace STEM107.Main.AdvancedControlsOverlay
                 /// Main.AdvancedControlsOverlay.Button5.Text
                 /// </summary>
                 public const uint Button_5_Button_TextState = 5;
+                /// <summary>
+                /// Input or Feedback serial joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button6Text
+                /// Main.AdvancedControlsOverlay.Button6.Text
+                /// </summary>
+                public const uint Button_6_Button_TextState = 6;
+                /// <summary>
+                /// Input or Feedback serial joinInfo from Control System to panel: Main.AdvancedControlsOverlay.AdvSourceSelect.Button7Text
+                /// Main.AdvancedControlsOverlay.Button7.Text
+                /// </summary>
+                public const uint Button_7_Button_TextState = 7;
             }
         }
 
@@ -501,6 +593,8 @@ namespace STEM107.Main.AdvancedControlsOverlay
             ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.Button_3_Button_PressEvent, onButton_3_Button_Press);
             ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.Button_4_Button_PressEvent, onButton_4_Button_Press);
             ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.Button_5_Button_PressEvent, onButton_5_Button_Press);
+            ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.Button_6_Button_PressEvent, onButton_6_Button_Press);
+            ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.Button_7_Button_PressEvent, onButton_7_Button_Press);
         }
 
         /// <summary>
@@ -513,7 +607,7 @@ namespace STEM107.Main.AdvancedControlsOverlay
         {
             if (controlJoinId == ControlJoinId &&
                 join >= Joins.Booleans.Button_1_Button_PressEvent &&
-                join <= 1005)
+                join <= 1007)
             {
                 return new Indexes(0, (ushort)(join - Joins.Booleans.Button_1_Button_PressEvent), false);
             }
@@ -578,6 +672,24 @@ namespace STEM107.Main.AdvancedControlsOverlay
         private void onButton_5_Button_Press(SmartObjectEventArgs eventArgs)
         {
             EventHandler<UIEventArgs> handler = Button_5_Button_PressEvent;
+            if (handler != null)
+                handler(this, UIEventArgs.CreateEventArgs(eventArgs));
+        }
+
+        /// <inheritdoc/>
+        public event EventHandler<UIEventArgs> Button_6_Button_PressEvent;
+        private void onButton_6_Button_Press(SmartObjectEventArgs eventArgs)
+        {
+            EventHandler<UIEventArgs> handler = Button_6_Button_PressEvent;
+            if (handler != null)
+                handler(this, UIEventArgs.CreateEventArgs(eventArgs));
+        }
+
+        /// <inheritdoc/>
+        public event EventHandler<UIEventArgs> Button_7_Button_PressEvent;
+        private void onButton_7_Button_Press(SmartObjectEventArgs eventArgs)
+        {
+            EventHandler<UIEventArgs> handler = Button_7_Button_PressEvent;
             if (handler != null)
                 handler(this, UIEventArgs.CreateEventArgs(eventArgs));
         }
@@ -651,6 +763,34 @@ namespace STEM107.Main.AdvancedControlsOverlay
         public void Button_5_Button_Selected(bool digital)
         {
             Button_5_Button_Selected((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void Button_6_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_6_Button_SelectedState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_6_Button_Selected(bool digital)
+        {
+            Button_6_Button_Selected((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void Button_7_Button_Selected(AdvSourceSelectBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.Button_7_Button_SelectedState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_7_Button_Selected(bool digital)
+        {
+            Button_7_Button_Selected((sig, component) => sig.BoolValue = digital);
         }
 
         /// <inheritdoc/>
@@ -744,6 +884,34 @@ namespace STEM107.Main.AdvancedControlsOverlay
         {
             Button_5_Button_Text((sig, component) => sig.StringValue = serial);
         }
+        /// <inheritdoc/>
+        public void Button_6_Button_Text(AdvSourceSelectStringInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].StringInput[Joins.Strings.Button_6_Button_TextState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_6_Button_Text(string serial)
+        {
+            Button_6_Button_Text((sig, component) => sig.StringValue = serial);
+        }
+        /// <inheritdoc/>
+        public void Button_7_Button_Text(AdvSourceSelectStringInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].StringInput[Joins.Strings.Button_7_Button_TextState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void Button_7_Button_Text(string serial)
+        {
+            Button_7_Button_Text((sig, component) => sig.StringValue = serial);
+        }
 
         #endregion
 
@@ -778,6 +946,8 @@ namespace STEM107.Main.AdvancedControlsOverlay
             Button_3_Button_PressEvent = null;
             Button_4_Button_PressEvent = null;
             Button_5_Button_PressEvent = null;
+            Button_6_Button_PressEvent = null;
+            Button_7_Button_PressEvent = null;
         }
 
         #endregion

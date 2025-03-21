@@ -118,7 +118,7 @@ namespace STEM107.Diagnostics
  
             _devices = new List<BasicTriListWithSmartObject>(); 
  
-            DiagItemsList = new STEM107.Diagnostics.DiagItemsList.DiagItemsList(ComponentMediator, 13);
+            DiagItemsList = new STEM107.Diagnostics.DiagItemsList.DiagItemsList(ComponentMediator, 14);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)

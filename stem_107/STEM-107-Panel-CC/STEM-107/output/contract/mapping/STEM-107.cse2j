@@ -1,6 +1,6 @@
 {
   "name": "STEM-107",
-  "timestamp": "2025-03-12T18:59:34.8126419+00:00",
+  "timestamp": "2025-03-21T12:31:30.0634536+00:00",
   "version": "1.0.0.0",
   "schema_version": 1,
   "extra_value": "",
@@ -21,21 +21,23 @@
           "1002": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button2ItemSelected",
           "1003": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button3ItemSelected",
           "1004": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button4ItemSelected",
-          "1005": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5ItemSelected"
+          "1005": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5ItemSelected",
+          "1006": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button6ItemSelected",
+          "1007": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button7ItemSelected"
         },
-        "9": {
+        "10": {
           "1001": "Main.SourceSelect.StuDispSourceSelect.Button1ItemSelected",
           "1002": "Main.SourceSelect.StuDispSourceSelect.Button2ItemSelected",
           "1003": "Main.SourceSelect.StuDispSourceSelect.Button3ItemSelected",
           "1004": "Main.SourceSelect.StuDispSourceSelect.Button4ItemSelected"
         },
-        "10": {
+        "11": {
           "1001": "Main.SourceSelect.Disp1SourceSelect.Button1ItemSelected",
           "1002": "Main.SourceSelect.Disp1SourceSelect.Button2ItemSelected",
           "1003": "Main.SourceSelect.Disp1SourceSelect.Button3ItemSelected",
           "1004": "Main.SourceSelect.Disp1SourceSelect.Button4ItemSelected"
         },
-        "13": {
+        "14": {
           "1": "Diagnostics.DiagItemsList.List_Item1_Visible",
           "2": "Diagnostics.DiagItemsList.List_Item2_Visible",
           "3": "Diagnostics.DiagItemsList.List_Item3_Visible",
@@ -85,122 +87,122 @@
           "47": "Diagnostics.DiagItemsList.List_Item23_Enable",
           "48": "Diagnostics.DiagItemsList.List_Item24_Enable"
         },
-        "14": {
+        "15": {
           "1": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "15": {
+        "16": {
           "1": "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "16": {
+        "17": {
           "1": "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "17": {
+        "18": {
           "1": "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "18": {
+        "19": {
           "1": "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "19": {
+        "20": {
           "1": "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "20": {
+        "21": {
           "1": "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "21": {
+        "22": {
           "1": "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "22": {
+        "23": {
           "1": "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "23": {
+        "24": {
           "1": "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "24": {
+        "25": {
           "1": "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "25": {
+        "26": {
           "1": "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "26": {
+        "27": {
           "1": "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "27": {
+        "28": {
           "1": "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "28": {
+        "29": {
           "1": "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "29": {
+        "30": {
           "1": "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "30": {
+        "31": {
           "1": "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "31": {
+        "32": {
           "1": "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "32": {
+        "33": {
           "1": "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "33": {
+        "34": {
           "1": "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "34": {
+        "35": {
           "1": "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "35": {
+        "36": {
           "1": "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "36": {
+        "37": {
           "1": "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagSync.Selected"
         },
-        "37": {
+        "38": {
           "1": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagSync.Selected"
@@ -210,7 +212,7 @@
         "7": {
           "2": "Main.AdvancedControlsOverlay.AdvSourceSelect.ListNumberOfItems"
         },
-        "13": {
+        "14": {
           "2": "Diagnostics.DiagItemsList.Set_Number_Of_Items"
         }
       },
@@ -220,136 +222,138 @@
           "2": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button2Text",
           "3": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button3Text",
           "4": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button4Text",
-          "5": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5Text"
+          "5": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button5Text",
+          "6": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button6Text",
+          "7": "Main.AdvancedControlsOverlay.AdvSourceSelect.Button7Text"
         },
-        "9": {
+        "10": {
           "1": "Main.SourceSelect.StuDispSourceSelect.Button1Text",
           "2": "Main.SourceSelect.StuDispSourceSelect.Button2Text",
           "3": "Main.SourceSelect.StuDispSourceSelect.Button3Text",
           "4": "Main.SourceSelect.StuDispSourceSelect.Button4Text"
         },
-        "10": {
+        "11": {
           "1": "Main.SourceSelect.Disp1SourceSelect.Button1Text",
           "2": "Main.SourceSelect.Disp1SourceSelect.Button2Text",
           "3": "Main.SourceSelect.Disp1SourceSelect.Button3Text",
           "4": "Main.SourceSelect.Disp1SourceSelect.Button4Text"
         },
-        "14": {
+        "15": {
           "1": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "15": {
+        "16": {
           "1": "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "16": {
+        "17": {
           "1": "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "17": {
+        "18": {
           "1": "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "18": {
+        "19": {
           "1": "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "19": {
+        "20": {
           "1": "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "20": {
+        "21": {
           "1": "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "21": {
+        "22": {
           "1": "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "22": {
+        "23": {
           "1": "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "23": {
+        "24": {
           "1": "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "24": {
+        "25": {
           "1": "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "25": {
+        "26": {
           "1": "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "26": {
+        "27": {
           "1": "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "27": {
+        "28": {
           "1": "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "28": {
+        "29": {
           "1": "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "29": {
+        "30": {
           "1": "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "30": {
+        "31": {
           "1": "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "31": {
+        "32": {
           "1": "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "32": {
+        "33": {
           "1": "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "33": {
+        "34": {
           "1": "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "34": {
+        "35": {
           "1": "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "35": {
+        "36": {
           "1": "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "36": {
+        "37": {
           "1": "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagName.Indirect"
         },
-        "37": {
+        "38": {
           "1": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagName.Indirect"
@@ -398,229 +402,237 @@
           "joinId": 1005,
           "smartObjectId": 7
         },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button6ItemPress": {
+          "joinId": 1006,
+          "smartObjectId": 7
+        },
+        "Main.AdvancedControlsOverlay.AdvSourceSelect.Button7ItemPress": {
+          "joinId": 1007,
+          "smartObjectId": 7
+        },
         "Main.SourceSelect.StuDispSourceSelect.Button1ItemPress": {
           "joinId": 1001,
-          "smartObjectId": 9
+          "smartObjectId": 10
         },
         "Main.SourceSelect.StuDispSourceSelect.Button2ItemPress": {
           "joinId": 1002,
-          "smartObjectId": 9
+          "smartObjectId": 10
         },
         "Main.SourceSelect.StuDispSourceSelect.Button3ItemPress": {
           "joinId": 1003,
-          "smartObjectId": 9
+          "smartObjectId": 10
         },
         "Main.SourceSelect.StuDispSourceSelect.Button4ItemPress": {
           "joinId": 1004,
-          "smartObjectId": 9
+          "smartObjectId": 10
         },
         "Main.SourceSelect.Disp1SourceSelect.Button1ItemPress": {
           "joinId": 1001,
-          "smartObjectId": 10
+          "smartObjectId": 11
         },
         "Main.SourceSelect.Disp1SourceSelect.Button2ItemPress": {
           "joinId": 1002,
-          "smartObjectId": 10
+          "smartObjectId": 11
         },
         "Main.SourceSelect.Disp1SourceSelect.Button3ItemPress": {
           "joinId": 1003,
-          "smartObjectId": 10
+          "smartObjectId": 11
         },
         "Main.SourceSelect.Disp1SourceSelect.Button4ItemPress": {
           "joinId": 1004,
-          "smartObjectId": 10
+          "smartObjectId": 11
         },
         "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 14
+          "smartObjectId": 15
         },
         "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 14
+          "smartObjectId": 15
         },
         "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 15
+          "smartObjectId": 16
         },
         "Diagnostics.DiagItemsList.Items[1].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 15
+          "smartObjectId": 16
         },
         "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 16
+          "smartObjectId": 17
         },
         "Diagnostics.DiagItemsList.Items[2].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 16
+          "smartObjectId": 17
         },
         "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 17
+          "smartObjectId": 18
         },
         "Diagnostics.DiagItemsList.Items[3].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 17
+          "smartObjectId": 18
         },
         "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 18
+          "smartObjectId": 19
         },
         "Diagnostics.DiagItemsList.Items[4].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 18
+          "smartObjectId": 19
         },
         "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 19
+          "smartObjectId": 20
         },
         "Diagnostics.DiagItemsList.Items[5].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 19
+          "smartObjectId": 20
         },
         "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 20
+          "smartObjectId": 21
         },
         "Diagnostics.DiagItemsList.Items[6].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 20
+          "smartObjectId": 21
         },
         "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 21
+          "smartObjectId": 22
         },
         "Diagnostics.DiagItemsList.Items[7].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 21
+          "smartObjectId": 22
         },
         "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 22
+          "smartObjectId": 23
         },
         "Diagnostics.DiagItemsList.Items[8].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 22
+          "smartObjectId": 23
         },
         "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 23
+          "smartObjectId": 24
         },
         "Diagnostics.DiagItemsList.Items[9].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 23
+          "smartObjectId": 24
         },
         "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 24
+          "smartObjectId": 25
         },
         "Diagnostics.DiagItemsList.Items[10].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 24
+          "smartObjectId": 25
         },
         "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 25
+          "smartObjectId": 26
         },
         "Diagnostics.DiagItemsList.Items[11].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 25
+          "smartObjectId": 26
         },
         "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 26
+          "smartObjectId": 27
         },
         "Diagnostics.DiagItemsList.Items[12].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 26
+          "smartObjectId": 27
         },
         "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 27
+          "smartObjectId": 28
         },
         "Diagnostics.DiagItemsList.Items[13].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 27
+          "smartObjectId": 28
         },
         "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 28
+          "smartObjectId": 29
         },
         "Diagnostics.DiagItemsList.Items[14].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 28
+          "smartObjectId": 29
         },
         "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 29
+          "smartObjectId": 30
         },
         "Diagnostics.DiagItemsList.Items[15].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 29
+          "smartObjectId": 30
         },
         "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 30
+          "smartObjectId": 31
         },
         "Diagnostics.DiagItemsList.Items[16].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 30
+          "smartObjectId": 31
         },
         "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 31
+          "smartObjectId": 32
         },
         "Diagnostics.DiagItemsList.Items[17].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 31
+          "smartObjectId": 32
         },
         "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 32
+          "smartObjectId": 33
         },
         "Diagnostics.DiagItemsList.Items[18].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 32
+          "smartObjectId": 33
         },
         "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 33
+          "smartObjectId": 34
         },
         "Diagnostics.DiagItemsList.Items[19].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 33
+          "smartObjectId": 34
         },
         "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 34
+          "smartObjectId": 35
         },
         "Diagnostics.DiagItemsList.Items[20].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 34
+          "smartObjectId": 35
         },
         "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 35
+          "smartObjectId": 36
         },
         "Diagnostics.DiagItemsList.Items[21].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 35
+          "smartObjectId": 36
         },
         "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 36
+          "smartObjectId": 37
         },
         "Diagnostics.DiagItemsList.Items[22].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 36
+          "smartObjectId": 37
         },
         "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagOnline.Press": {
           "joinId": 601,
-          "smartObjectId": 37
+          "smartObjectId": 38
         },
         "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
-          "smartObjectId": 37
+          "smartObjectId": 38
         }
       },
       "numeric": {},

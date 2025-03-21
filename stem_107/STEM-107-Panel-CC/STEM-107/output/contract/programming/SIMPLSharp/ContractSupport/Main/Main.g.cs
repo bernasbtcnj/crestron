@@ -130,7 +130,7 @@ namespace STEM107.Main
  
             ControlsDocCamera = new STEM107.Main.ControlsDocCamera.ControlsDocCamera(ComponentMediator, 3);
             AdvancedControlsOverlay = new STEM107.Main.AdvancedControlsOverlay.AdvancedControlsOverlay(ComponentMediator, 6);
-            SourceSelect = new STEM107.Main.SourceSelect.SourceSelect(ComponentMediator, 8);
+            SourceSelect = new STEM107.Main.SourceSelect.SourceSelect(ComponentMediator, 9);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
