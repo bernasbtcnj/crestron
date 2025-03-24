@@ -1,6 +1,6 @@
 {
   "name": "STEM-107",
-  "timestamp": "2025-03-21T16:26:38.4333182+00:00",
+  "timestamp": "2025-03-24T14:31:53.2120241+00:00",
   "version": "1.0.0.0",
   "schema_version": 1,
   "extra_value": "",
@@ -62,30 +62,46 @@
           "22": "Diagnostics.DiagItemsList.List_Item22_Visible",
           "23": "Diagnostics.DiagItemsList.List_Item23_Visible",
           "24": "Diagnostics.DiagItemsList.List_Item24_Visible",
-          "25": "Diagnostics.DiagItemsList.List_Item1_Enable",
-          "26": "Diagnostics.DiagItemsList.List_Item2_Enable",
-          "27": "Diagnostics.DiagItemsList.List_Item3_Enable",
-          "28": "Diagnostics.DiagItemsList.List_Item4_Enable",
-          "29": "Diagnostics.DiagItemsList.List_Item5_Enable",
-          "30": "Diagnostics.DiagItemsList.List_Item6_Enable",
-          "31": "Diagnostics.DiagItemsList.List_Item7_Enable",
-          "32": "Diagnostics.DiagItemsList.List_Item8_Enable",
-          "33": "Diagnostics.DiagItemsList.List_Item9_Enable",
-          "34": "Diagnostics.DiagItemsList.List_Item10_Enable",
-          "35": "Diagnostics.DiagItemsList.List_Item11_Enable",
-          "36": "Diagnostics.DiagItemsList.List_Item12_Enable",
-          "37": "Diagnostics.DiagItemsList.List_Item13_Enable",
-          "38": "Diagnostics.DiagItemsList.List_Item14_Enable",
-          "39": "Diagnostics.DiagItemsList.List_Item15_Enable",
-          "40": "Diagnostics.DiagItemsList.List_Item16_Enable",
-          "41": "Diagnostics.DiagItemsList.List_Item17_Enable",
-          "42": "Diagnostics.DiagItemsList.List_Item18_Enable",
-          "43": "Diagnostics.DiagItemsList.List_Item19_Enable",
-          "44": "Diagnostics.DiagItemsList.List_Item20_Enable",
-          "45": "Diagnostics.DiagItemsList.List_Item21_Enable",
-          "46": "Diagnostics.DiagItemsList.List_Item22_Enable",
-          "47": "Diagnostics.DiagItemsList.List_Item23_Enable",
-          "48": "Diagnostics.DiagItemsList.List_Item24_Enable"
+          "25": "Diagnostics.DiagItemsList.List_Item25_Visible",
+          "26": "Diagnostics.DiagItemsList.List_Item26_Visible",
+          "27": "Diagnostics.DiagItemsList.List_Item27_Visible",
+          "28": "Diagnostics.DiagItemsList.List_Item28_Visible",
+          "29": "Diagnostics.DiagItemsList.List_Item29_Visible",
+          "30": "Diagnostics.DiagItemsList.List_Item30_Visible",
+          "31": "Diagnostics.DiagItemsList.List_Item31_Visible",
+          "32": "Diagnostics.DiagItemsList.List_Item32_Visible",
+          "33": "Diagnostics.DiagItemsList.List_Item1_Enable",
+          "34": "Diagnostics.DiagItemsList.List_Item2_Enable",
+          "35": "Diagnostics.DiagItemsList.List_Item3_Enable",
+          "36": "Diagnostics.DiagItemsList.List_Item4_Enable",
+          "37": "Diagnostics.DiagItemsList.List_Item5_Enable",
+          "38": "Diagnostics.DiagItemsList.List_Item6_Enable",
+          "39": "Diagnostics.DiagItemsList.List_Item7_Enable",
+          "40": "Diagnostics.DiagItemsList.List_Item8_Enable",
+          "41": "Diagnostics.DiagItemsList.List_Item9_Enable",
+          "42": "Diagnostics.DiagItemsList.List_Item10_Enable",
+          "43": "Diagnostics.DiagItemsList.List_Item11_Enable",
+          "44": "Diagnostics.DiagItemsList.List_Item12_Enable",
+          "45": "Diagnostics.DiagItemsList.List_Item13_Enable",
+          "46": "Diagnostics.DiagItemsList.List_Item14_Enable",
+          "47": "Diagnostics.DiagItemsList.List_Item15_Enable",
+          "48": "Diagnostics.DiagItemsList.List_Item16_Enable",
+          "49": "Diagnostics.DiagItemsList.List_Item17_Enable",
+          "50": "Diagnostics.DiagItemsList.List_Item18_Enable",
+          "51": "Diagnostics.DiagItemsList.List_Item19_Enable",
+          "52": "Diagnostics.DiagItemsList.List_Item20_Enable",
+          "53": "Diagnostics.DiagItemsList.List_Item21_Enable",
+          "54": "Diagnostics.DiagItemsList.List_Item22_Enable",
+          "55": "Diagnostics.DiagItemsList.List_Item23_Enable",
+          "56": "Diagnostics.DiagItemsList.List_Item24_Enable",
+          "57": "Diagnostics.DiagItemsList.List_Item25_Enable",
+          "58": "Diagnostics.DiagItemsList.List_Item26_Enable",
+          "59": "Diagnostics.DiagItemsList.List_Item27_Enable",
+          "60": "Diagnostics.DiagItemsList.List_Item28_Enable",
+          "61": "Diagnostics.DiagItemsList.List_Item29_Enable",
+          "62": "Diagnostics.DiagItemsList.List_Item30_Enable",
+          "63": "Diagnostics.DiagItemsList.List_Item31_Enable",
+          "64": "Diagnostics.DiagItemsList.List_Item32_Enable"
         },
         "15": {
           "1": "Diagnostics.DiagItemsList.Items[0].DiagItemCONTRACT.DiagSync.Visibility_fb",
@@ -206,6 +222,46 @@
           "1": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagSync.Visibility_fb",
           "602": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagOnline.Selected",
           "603": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "39": {
+          "1": "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "40": {
+          "1": "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "41": {
+          "1": "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "42": {
+          "1": "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "43": {
+          "1": "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "44": {
+          "1": "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "45": {
+          "1": "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagSync.Selected"
+        },
+        "46": {
+          "1": "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagSync.Visibility_fb",
+          "602": "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagOnline.Selected",
+          "603": "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagSync.Selected"
         }
       },
       "numeric": {
@@ -357,6 +413,46 @@
           "1": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagIP.Indirect",
           "2": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagIPID.Indirect",
           "3": "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "39": {
+          "1": "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "40": {
+          "1": "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "41": {
+          "1": "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "42": {
+          "1": "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "43": {
+          "1": "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "44": {
+          "1": "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "45": {
+          "1": "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagName.Indirect"
+        },
+        "46": {
+          "1": "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagIP.Indirect",
+          "2": "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagIPID.Indirect",
+          "3": "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagName.Indirect"
         }
       }
     },
@@ -633,6 +729,70 @@
         "Diagnostics.DiagItemsList.Items[23].DiagItemCONTRACT.DiagSync.Press": {
           "joinId": 602,
           "smartObjectId": 38
+        },
+        "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 39
+        },
+        "Diagnostics.DiagItemsList.Items[24].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 39
+        },
+        "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 40
+        },
+        "Diagnostics.DiagItemsList.Items[25].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 40
+        },
+        "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 41
+        },
+        "Diagnostics.DiagItemsList.Items[26].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 41
+        },
+        "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 42
+        },
+        "Diagnostics.DiagItemsList.Items[27].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 42
+        },
+        "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 43
+        },
+        "Diagnostics.DiagItemsList.Items[28].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 43
+        },
+        "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 44
+        },
+        "Diagnostics.DiagItemsList.Items[29].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 44
+        },
+        "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 45
+        },
+        "Diagnostics.DiagItemsList.Items[30].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 45
+        },
+        "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagOnline.Press": {
+          "joinId": 601,
+          "smartObjectId": 46
+        },
+        "Diagnostics.DiagItemsList.Items[31].DiagItemCONTRACT.DiagSync.Press": {
+          "joinId": 602,
+          "smartObjectId": 46
         }
       },
       "numeric": {},

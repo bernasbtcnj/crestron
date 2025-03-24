@@ -397,6 +397,102 @@ namespace STEM107.Diagnostics.DiagItemsList
         void DiagItemsList_List_Item24_Visible(bool digital);
 
         /// <summary>
+        /// Diag-Items-List.List_Item25_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item25_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item25_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item25_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item26_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item26_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item26_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item26_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item27_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item27_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item27_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item27_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item28_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item28_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item28_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item28_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item29_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item29_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item29_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item29_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item30_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item30_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item30_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item30_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item31_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item31_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item31_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item31_Visible(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item32_Visible Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item32_Visible(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item32_Visible Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item32_Visible(bool digital);
+
+        /// <summary>
         /// Diag-Items-List.List_Item1_Enable Feedback
         /// </summary>
         /// <param name="callback">The bool delegate to update the panel.</param>
@@ -685,6 +781,102 @@ namespace STEM107.Diagnostics.DiagItemsList
         void DiagItemsList_List_Item24_Enable(bool digital);
 
         /// <summary>
+        /// Diag-Items-List.List_Item25_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item25_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item25_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item25_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item26_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item26_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item26_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item26_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item27_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item27_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item27_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item27_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item28_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item28_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item28_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item28_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item29_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item29_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item29_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item29_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item30_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item30_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item30_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item30_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item31_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item31_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item31_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item31_Enable(bool digital);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item32_Enable Feedback
+        /// </summary>
+        /// <param name="callback">The bool delegate to update the panel.</param>
+        void DiagItemsList_List_Item32_Enable(DiagItemsListBoolInputSigDelegate callback);
+
+        /// <summary>
+        /// Diag-Items-List.List_Item32_Enable Feedback
+        /// </summary>
+        /// <param name="digital">The bool to update the panel.</param>
+        void DiagItemsList_List_Item32_Enable(bool digital);
+
+        /// <summary>
         /// Diag-Items-List.List Number Of Items Feedback
         /// </summary>
         /// <param name="callback">The ushort delegate to update the panel.</param>
@@ -821,6 +1013,46 @@ namespace STEM107.Diagnostics.DiagItemsList
         /// ComplexComponent Diag-Item.Items[{0}]s[23]
         /// </summary>
         STEM107.Diagnostics.DiagItemsList.IItems_23_ Items_23_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[24]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_24_ Items_24_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[25]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_25_ Items_25_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[26]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_26_ Items_26_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[27]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_27_ Items_27_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[28]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_28_ Items_28_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[29]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_29_ Items_29_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[30]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_30_ Items_30_ { get; }
+
+        /// <summary>
+        /// ComplexComponent Diag-Item.Items[{0}]s[31]
+        /// </summary>
+        STEM107.Diagnostics.DiagItemsList.IItems_31_ Items_31_ { get; }
 
         /// <summary>
         /// ComplexComponent Diag-Item.Items[{0}]
@@ -1020,148 +1252,244 @@ namespace STEM107.Diagnostics.DiagItemsList
                 public const uint DiagItemsList_List_Item24_VisibleState = 24;
 
                 /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item25_Visible
+                /// Diag-Items-List.List_Item25_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item25_VisibleState = 25;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item26_Visible
+                /// Diag-Items-List.List_Item26_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item26_VisibleState = 26;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item27_Visible
+                /// Diag-Items-List.List_Item27_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item27_VisibleState = 27;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item28_Visible
+                /// Diag-Items-List.List_Item28_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item28_VisibleState = 28;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item29_Visible
+                /// Diag-Items-List.List_Item29_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item29_VisibleState = 29;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item30_Visible
+                /// Diag-Items-List.List_Item30_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item30_VisibleState = 30;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item31_Visible
+                /// Diag-Items-List.List_Item31_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item31_VisibleState = 31;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item32_Visible
+                /// Diag-Items-List.List_Item32_Visible
+                /// </summary>
+                public const uint DiagItemsList_List_Item32_VisibleState = 32;
+
+                /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item1_Enable
                 /// Diag-Items-List.List_Item1_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item1_EnableState = 25;
+                public const uint DiagItemsList_List_Item1_EnableState = 33;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item2_Enable
                 /// Diag-Items-List.List_Item2_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item2_EnableState = 26;
+                public const uint DiagItemsList_List_Item2_EnableState = 34;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item3_Enable
                 /// Diag-Items-List.List_Item3_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item3_EnableState = 27;
+                public const uint DiagItemsList_List_Item3_EnableState = 35;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item4_Enable
                 /// Diag-Items-List.List_Item4_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item4_EnableState = 28;
+                public const uint DiagItemsList_List_Item4_EnableState = 36;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item5_Enable
                 /// Diag-Items-List.List_Item5_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item5_EnableState = 29;
+                public const uint DiagItemsList_List_Item5_EnableState = 37;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item6_Enable
                 /// Diag-Items-List.List_Item6_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item6_EnableState = 30;
+                public const uint DiagItemsList_List_Item6_EnableState = 38;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item7_Enable
                 /// Diag-Items-List.List_Item7_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item7_EnableState = 31;
+                public const uint DiagItemsList_List_Item7_EnableState = 39;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item8_Enable
                 /// Diag-Items-List.List_Item8_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item8_EnableState = 32;
+                public const uint DiagItemsList_List_Item8_EnableState = 40;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item9_Enable
                 /// Diag-Items-List.List_Item9_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item9_EnableState = 33;
+                public const uint DiagItemsList_List_Item9_EnableState = 41;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item10_Enable
                 /// Diag-Items-List.List_Item10_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item10_EnableState = 34;
+                public const uint DiagItemsList_List_Item10_EnableState = 42;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item11_Enable
                 /// Diag-Items-List.List_Item11_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item11_EnableState = 35;
+                public const uint DiagItemsList_List_Item11_EnableState = 43;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item12_Enable
                 /// Diag-Items-List.List_Item12_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item12_EnableState = 36;
+                public const uint DiagItemsList_List_Item12_EnableState = 44;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item13_Enable
                 /// Diag-Items-List.List_Item13_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item13_EnableState = 37;
+                public const uint DiagItemsList_List_Item13_EnableState = 45;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item14_Enable
                 /// Diag-Items-List.List_Item14_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item14_EnableState = 38;
+                public const uint DiagItemsList_List_Item14_EnableState = 46;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item15_Enable
                 /// Diag-Items-List.List_Item15_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item15_EnableState = 39;
+                public const uint DiagItemsList_List_Item15_EnableState = 47;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item16_Enable
                 /// Diag-Items-List.List_Item16_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item16_EnableState = 40;
+                public const uint DiagItemsList_List_Item16_EnableState = 48;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item17_Enable
                 /// Diag-Items-List.List_Item17_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item17_EnableState = 41;
+                public const uint DiagItemsList_List_Item17_EnableState = 49;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item18_Enable
                 /// Diag-Items-List.List_Item18_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item18_EnableState = 42;
+                public const uint DiagItemsList_List_Item18_EnableState = 50;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item19_Enable
                 /// Diag-Items-List.List_Item19_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item19_EnableState = 43;
+                public const uint DiagItemsList_List_Item19_EnableState = 51;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item20_Enable
                 /// Diag-Items-List.List_Item20_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item20_EnableState = 44;
+                public const uint DiagItemsList_List_Item20_EnableState = 52;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item21_Enable
                 /// Diag-Items-List.List_Item21_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item21_EnableState = 45;
+                public const uint DiagItemsList_List_Item21_EnableState = 53;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item22_Enable
                 /// Diag-Items-List.List_Item22_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item22_EnableState = 46;
+                public const uint DiagItemsList_List_Item22_EnableState = 54;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item23_Enable
                 /// Diag-Items-List.List_Item23_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item23_EnableState = 47;
+                public const uint DiagItemsList_List_Item23_EnableState = 55;
 
                 /// <summary>
                 /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item24_Enable
                 /// Diag-Items-List.List_Item24_Enable
                 /// </summary>
-                public const uint DiagItemsList_List_Item24_EnableState = 48;
+                public const uint DiagItemsList_List_Item24_EnableState = 56;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item25_Enable
+                /// Diag-Items-List.List_Item25_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item25_EnableState = 57;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item26_Enable
+                /// Diag-Items-List.List_Item26_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item26_EnableState = 58;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item27_Enable
+                /// Diag-Items-List.List_Item27_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item27_EnableState = 59;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item28_Enable
+                /// Diag-Items-List.List_Item28_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item28_EnableState = 60;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item29_Enable
+                /// Diag-Items-List.List_Item29_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item29_EnableState = 61;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item30_Enable
+                /// Diag-Items-List.List_Item30_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item30_EnableState = 62;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item31_Enable
+                /// Diag-Items-List.List_Item31_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item31_EnableState = 63;
+
+                /// <summary>
+                /// Input or Feedback digital joinInfo from Control System to panel: Diagnostics.DiagItemsList.List_Item32_Enable
+                /// Diag-Items-List.List_Item32_Enable
+                /// </summary>
+                public const uint DiagItemsList_List_Item32_EnableState = 64;
 
             }
             /// <summary>
@@ -1225,31 +1553,39 @@ namespace STEM107.Diagnostics.DiagItemsList
  
             _devices = new List<BasicTriListWithSmartObject>(); 
  
-            Items_0_ = new STEM107.Diagnostics.DiagItemsList.Items_0_(ComponentMediator, 15, 24);
-            Items_1_ = new STEM107.Diagnostics.DiagItemsList.Items_1_(ComponentMediator, 16, 24);
-            Items_2_ = new STEM107.Diagnostics.DiagItemsList.Items_2_(ComponentMediator, 17, 24);
-            Items_3_ = new STEM107.Diagnostics.DiagItemsList.Items_3_(ComponentMediator, 18, 24);
-            Items_4_ = new STEM107.Diagnostics.DiagItemsList.Items_4_(ComponentMediator, 19, 24);
-            Items_5_ = new STEM107.Diagnostics.DiagItemsList.Items_5_(ComponentMediator, 20, 24);
-            Items_6_ = new STEM107.Diagnostics.DiagItemsList.Items_6_(ComponentMediator, 21, 24);
-            Items_7_ = new STEM107.Diagnostics.DiagItemsList.Items_7_(ComponentMediator, 22, 24);
-            Items_8_ = new STEM107.Diagnostics.DiagItemsList.Items_8_(ComponentMediator, 23, 24);
-            Items_9_ = new STEM107.Diagnostics.DiagItemsList.Items_9_(ComponentMediator, 24, 24);
-            Items_10_ = new STEM107.Diagnostics.DiagItemsList.Items_10_(ComponentMediator, 25, 24);
-            Items_11_ = new STEM107.Diagnostics.DiagItemsList.Items_11_(ComponentMediator, 26, 24);
-            Items_12_ = new STEM107.Diagnostics.DiagItemsList.Items_12_(ComponentMediator, 27, 24);
-            Items_13_ = new STEM107.Diagnostics.DiagItemsList.Items_13_(ComponentMediator, 28, 24);
-            Items_14_ = new STEM107.Diagnostics.DiagItemsList.Items_14_(ComponentMediator, 29, 24);
-            Items_15_ = new STEM107.Diagnostics.DiagItemsList.Items_15_(ComponentMediator, 30, 24);
-            Items_16_ = new STEM107.Diagnostics.DiagItemsList.Items_16_(ComponentMediator, 31, 24);
-            Items_17_ = new STEM107.Diagnostics.DiagItemsList.Items_17_(ComponentMediator, 32, 24);
-            Items_18_ = new STEM107.Diagnostics.DiagItemsList.Items_18_(ComponentMediator, 33, 24);
-            Items_19_ = new STEM107.Diagnostics.DiagItemsList.Items_19_(ComponentMediator, 34, 24);
-            Items_20_ = new STEM107.Diagnostics.DiagItemsList.Items_20_(ComponentMediator, 35, 24);
-            Items_21_ = new STEM107.Diagnostics.DiagItemsList.Items_21_(ComponentMediator, 36, 24);
-            Items_22_ = new STEM107.Diagnostics.DiagItemsList.Items_22_(ComponentMediator, 37, 24);
-            Items_23_ = new STEM107.Diagnostics.DiagItemsList.Items_23_(ComponentMediator, 38, 24);
-            Item = new STEM107.Diagnostics.DiagItemsList.Item(ComponentMediator, 15, 24);
+            Items_0_ = new STEM107.Diagnostics.DiagItemsList.Items_0_(ComponentMediator, 15, 32);
+            Items_1_ = new STEM107.Diagnostics.DiagItemsList.Items_1_(ComponentMediator, 16, 32);
+            Items_2_ = new STEM107.Diagnostics.DiagItemsList.Items_2_(ComponentMediator, 17, 32);
+            Items_3_ = new STEM107.Diagnostics.DiagItemsList.Items_3_(ComponentMediator, 18, 32);
+            Items_4_ = new STEM107.Diagnostics.DiagItemsList.Items_4_(ComponentMediator, 19, 32);
+            Items_5_ = new STEM107.Diagnostics.DiagItemsList.Items_5_(ComponentMediator, 20, 32);
+            Items_6_ = new STEM107.Diagnostics.DiagItemsList.Items_6_(ComponentMediator, 21, 32);
+            Items_7_ = new STEM107.Diagnostics.DiagItemsList.Items_7_(ComponentMediator, 22, 32);
+            Items_8_ = new STEM107.Diagnostics.DiagItemsList.Items_8_(ComponentMediator, 23, 32);
+            Items_9_ = new STEM107.Diagnostics.DiagItemsList.Items_9_(ComponentMediator, 24, 32);
+            Items_10_ = new STEM107.Diagnostics.DiagItemsList.Items_10_(ComponentMediator, 25, 32);
+            Items_11_ = new STEM107.Diagnostics.DiagItemsList.Items_11_(ComponentMediator, 26, 32);
+            Items_12_ = new STEM107.Diagnostics.DiagItemsList.Items_12_(ComponentMediator, 27, 32);
+            Items_13_ = new STEM107.Diagnostics.DiagItemsList.Items_13_(ComponentMediator, 28, 32);
+            Items_14_ = new STEM107.Diagnostics.DiagItemsList.Items_14_(ComponentMediator, 29, 32);
+            Items_15_ = new STEM107.Diagnostics.DiagItemsList.Items_15_(ComponentMediator, 30, 32);
+            Items_16_ = new STEM107.Diagnostics.DiagItemsList.Items_16_(ComponentMediator, 31, 32);
+            Items_17_ = new STEM107.Diagnostics.DiagItemsList.Items_17_(ComponentMediator, 32, 32);
+            Items_18_ = new STEM107.Diagnostics.DiagItemsList.Items_18_(ComponentMediator, 33, 32);
+            Items_19_ = new STEM107.Diagnostics.DiagItemsList.Items_19_(ComponentMediator, 34, 32);
+            Items_20_ = new STEM107.Diagnostics.DiagItemsList.Items_20_(ComponentMediator, 35, 32);
+            Items_21_ = new STEM107.Diagnostics.DiagItemsList.Items_21_(ComponentMediator, 36, 32);
+            Items_22_ = new STEM107.Diagnostics.DiagItemsList.Items_22_(ComponentMediator, 37, 32);
+            Items_23_ = new STEM107.Diagnostics.DiagItemsList.Items_23_(ComponentMediator, 38, 32);
+            Items_24_ = new STEM107.Diagnostics.DiagItemsList.Items_24_(ComponentMediator, 39, 32);
+            Items_25_ = new STEM107.Diagnostics.DiagItemsList.Items_25_(ComponentMediator, 40, 32);
+            Items_26_ = new STEM107.Diagnostics.DiagItemsList.Items_26_(ComponentMediator, 41, 32);
+            Items_27_ = new STEM107.Diagnostics.DiagItemsList.Items_27_(ComponentMediator, 42, 32);
+            Items_28_ = new STEM107.Diagnostics.DiagItemsList.Items_28_(ComponentMediator, 43, 32);
+            Items_29_ = new STEM107.Diagnostics.DiagItemsList.Items_29_(ComponentMediator, 44, 32);
+            Items_30_ = new STEM107.Diagnostics.DiagItemsList.Items_30_(ComponentMediator, 45, 32);
+            Items_31_ = new STEM107.Diagnostics.DiagItemsList.Items_31_(ComponentMediator, 46, 32);
+            Item = new STEM107.Diagnostics.DiagItemsList.Item(ComponentMediator, 15, 32);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
@@ -1304,6 +1640,22 @@ namespace STEM107.Diagnostics.DiagItemsList
             ((STEM107.Diagnostics.DiagItemsList.Items_22_)Items_22_).AddDevice(device);
 
             ((STEM107.Diagnostics.DiagItemsList.Items_23_)Items_23_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_24_)Items_24_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_25_)Items_25_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_26_)Items_26_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_27_)Items_27_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_28_)Items_28_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_29_)Items_29_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_30_)Items_30_).AddDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_31_)Items_31_).AddDevice(device);
 
             ((STEM107.Diagnostics.DiagItemsList.Item)Item).AddDevice(device);
         }
@@ -1360,6 +1712,22 @@ namespace STEM107.Diagnostics.DiagItemsList
             ((STEM107.Diagnostics.DiagItemsList.Items_22_)Items_22_).RemoveDevice(device);
 
             ((STEM107.Diagnostics.DiagItemsList.Items_23_)Items_23_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_24_)Items_24_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_25_)Items_25_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_26_)Items_26_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_27_)Items_27_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_28_)Items_28_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_29_)Items_29_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_30_)Items_30_).RemoveDevice(device);
+
+            ((STEM107.Diagnostics.DiagItemsList.Items_31_)Items_31_).RemoveDevice(device);
 
             ((STEM107.Diagnostics.DiagItemsList.Item)Item).RemoveDevice(device);
         }
@@ -1845,6 +2213,146 @@ namespace STEM107.Diagnostics.DiagItemsList
             DiagItemsList_List_Item24_Visible((sig, component) => sig.BoolValue = digital);
         }
         /// <inheritdoc/>
+        public void DiagItemsList_List_Item25_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item25_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item25_Enable(bool digital)
+        {
+            DiagItemsList_List_Item25_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item25_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item25_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item25_Visible(bool digital)
+        {
+            DiagItemsList_List_Item25_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item26_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item26_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item26_Enable(bool digital)
+        {
+            DiagItemsList_List_Item26_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item26_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item26_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item26_Visible(bool digital)
+        {
+            DiagItemsList_List_Item26_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item27_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item27_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item27_Enable(bool digital)
+        {
+            DiagItemsList_List_Item27_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item27_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item27_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item27_Visible(bool digital)
+        {
+            DiagItemsList_List_Item27_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item28_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item28_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item28_Enable(bool digital)
+        {
+            DiagItemsList_List_Item28_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item28_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item28_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item28_Visible(bool digital)
+        {
+            DiagItemsList_List_Item28_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item29_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item29_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item29_Enable(bool digital)
+        {
+            DiagItemsList_List_Item29_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item29_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item29_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item29_Visible(bool digital)
+        {
+            DiagItemsList_List_Item29_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
         public void DiagItemsList_List_Item3_Enable(DiagItemsListBoolInputSigDelegate callback)
         {
             for (int index = 0; index < Devices.Count; index++)
@@ -1871,6 +2379,90 @@ namespace STEM107.Diagnostics.DiagItemsList
         public void DiagItemsList_List_Item3_Visible(bool digital)
         {
             DiagItemsList_List_Item3_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item30_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item30_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item30_Enable(bool digital)
+        {
+            DiagItemsList_List_Item30_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item30_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item30_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item30_Visible(bool digital)
+        {
+            DiagItemsList_List_Item30_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item31_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item31_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item31_Enable(bool digital)
+        {
+            DiagItemsList_List_Item31_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item31_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item31_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item31_Visible(bool digital)
+        {
+            DiagItemsList_List_Item31_Visible((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item32_Enable(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item32_EnableState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item32_Enable(bool digital)
+        {
+            DiagItemsList_List_Item32_Enable((sig, component) => sig.BoolValue = digital);
+        }
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item32_Visible(DiagItemsListBoolInputSigDelegate callback)
+        {
+            for (int index = 0; index < Devices.Count; index++)
+            {
+                callback(Devices[index].SmartObjects[ControlJoinId].BooleanInput[Joins.Booleans.DiagItemsList_List_Item32_VisibleState], this);
+            }
+        }
+
+        /// <inheritdoc/>
+        public void DiagItemsList_List_Item32_Visible(bool digital)
+        {
+            DiagItemsList_List_Item32_Visible((sig, component) => sig.BoolValue = digital);
         }
         /// <inheritdoc/>
         public void DiagItemsList_List_Item4_Enable(DiagItemsListBoolInputSigDelegate callback)
@@ -2181,6 +2773,46 @@ namespace STEM107.Diagnostics.DiagItemsList
         /// ComplexComponent Items[23]
         /// </summary>
         public STEM107.Diagnostics.DiagItemsList.IItems_23_ Items_23_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[24]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_24_ Items_24_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[25]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_25_ Items_25_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[26]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_26_ Items_26_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[27]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_27_ Items_27_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[28]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_28_ Items_28_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[29]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_29_ Items_29_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[30]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_30_ Items_30_ { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Items[31]
+        /// </summary>
+        public STEM107.Diagnostics.DiagItemsList.IItems_31_ Items_31_ { get; private set; }
 
         /// <summary>
         /// ComplexComponent Items[{0}]
