@@ -37,6 +37,11 @@ namespace STEM107.Main.AdvancedControlsOverlay
         /// ComplexComponent Adv-Source-Select
         /// </summary>
         STEM107.Main.AdvancedControlsOverlay.IAdvSourceSelect AdvSourceSelect { get; }
+
+        /// <summary>
+        /// ComplexComponent Adv-Power
+        /// </summary>
+        STEM107.Main.AdvancedControlsOverlay.IAdvPower AdvPower { get; }
     }
 
 
@@ -119,6 +124,7 @@ namespace STEM107.Main.AdvancedControlsOverlay
             _devices = new List<BasicTriListWithSmartObject>(); 
  
             AdvSourceSelect = new STEM107.Main.AdvancedControlsOverlay.AdvSourceSelect(ComponentMediator, 7);
+            AdvPower = new STEM107.Main.AdvancedControlsOverlay.AdvPower(ComponentMediator, 8);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
@@ -127,6 +133,8 @@ namespace STEM107.Main.AdvancedControlsOverlay
             ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
 
             ((STEM107.Main.AdvancedControlsOverlay.AdvSourceSelect)AdvSourceSelect).AddDevice(device);
+
+            ((STEM107.Main.AdvancedControlsOverlay.AdvPower)AdvPower).AddDevice(device);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
@@ -135,6 +143,8 @@ namespace STEM107.Main.AdvancedControlsOverlay
             ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
 
             ((STEM107.Main.AdvancedControlsOverlay.AdvSourceSelect)AdvSourceSelect).RemoveDevice(device);
+
+            ((STEM107.Main.AdvancedControlsOverlay.AdvPower)AdvPower).RemoveDevice(device);
         }
 
         #endregion
@@ -145,6 +155,11 @@ namespace STEM107.Main.AdvancedControlsOverlay
         /// ComplexComponent Adv-Source-Select
         /// </summary>
         public STEM107.Main.AdvancedControlsOverlay.IAdvSourceSelect AdvSourceSelect { get; private set; }
+
+        /// <summary>
+        /// ComplexComponent Adv-Power
+        /// </summary>
+        public STEM107.Main.AdvancedControlsOverlay.IAdvPower AdvPower { get; private set; }
 
         #endregion
 

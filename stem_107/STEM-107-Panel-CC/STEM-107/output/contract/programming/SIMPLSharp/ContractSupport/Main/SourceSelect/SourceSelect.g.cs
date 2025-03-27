@@ -123,8 +123,8 @@ namespace STEM107.Main.SourceSelect
  
             _devices = new List<BasicTriListWithSmartObject>(); 
  
-            StuDispSourceSelect = new STEM107.Main.SourceSelect.StuDispSourceSelect(ComponentMediator, 10);
-            Disp1SourceSelect = new STEM107.Main.SourceSelect.Disp1SourceSelect(ComponentMediator, 11);
+            StuDispSourceSelect = new STEM107.Main.SourceSelect.StuDispSourceSelect(ComponentMediator, 11);
+            Disp1SourceSelect = new STEM107.Main.SourceSelect.Disp1SourceSelect(ComponentMediator, 12);
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
