@@ -220,6 +220,7 @@ Function Parse_Log_File()
 
 Function Load_Log_File()
 {
+	Integer i;
 	Signed_Integer nFileHandle; // Open file reference
 
 	StartFileOperations();
@@ -242,6 +243,12 @@ Function Load_Log_File()
 	EndFileOperations();
 
 	Parse_Log_File();
+
+	// Sync press counts
+	for (i = 1 to SOURCES) {
+		Source_Press_Count[i] = AllSources[i].PressCount;
+	}
+
 }
 
 Function Save_Log_File()
@@ -279,6 +286,8 @@ Push Enable_Tracking
 	// Time marker for right now
 	marker = ((GetHourNum()*60)+GetMinutesNum());
 
+	trace("Marker time created: %lu", marker);
+
 	// Iterate through sources. If one is enabled, set the tracking start time to now
 	for (i = 1 to SOURCES) {
 		if (Source_Active_Fb[i]) {
@@ -298,6 +307,8 @@ Release Enable_Tracking
 	// Store the usage of the last source
 	// Calculate current time marker
     marker = ((GetHourNum()*60)+GetMinutesNum());
+
+	trace("Marker time created: %lu", marker);
 
 	// Iterate through all sources to see if any are actively tracking
 	for (i = 1 to SOURCES) {
@@ -376,11 +387,6 @@ Threadsafe Change Source_Name
 
 	// Set the source name
 	AllSources[i].Name = Source_Name[i];
-
-	// Clear the usage stats
-	AllSources[i].PressCount = 0;
-	AllSources[i].Usage = 0;
-	AllSources[i].TrackingStart = 0;
 }
 
 Push Save_Log

@@ -1,0 +1,456 @@
+/*
+ * TCNJ NVX Switching Module with Custom Order
+ * Routes up to 16 sources to 4 outputs for NVX video with 1 NAX audio breakaway
+ * Sources can be in a custom order
+ * Number of sources and destinations can be modified and recompiled for custom systems
+ *
+ * Because analog values are easier to work with than serials / strings
+ * and managing input order and multicast addresses is a headache
+ * 
+ *
+ * Programmer: Brian Bernas
+ * bernasb@tcnj.edu
+ * brianbernas@gmail.com
+ *
+ */
+
+#SYMBOL_NAME "TCNJ NVX Router 16 x 4 x 1"
+
+#CATEGORY "46" "TCNJ"
+
+#DEFINE_CONSTANT SOURCES 16 // Number of input sources
+#DEFINE_CONSTANT DEST	 4	// Number of destinations
+
+#DEFAULT_VOLATILE
+
+#ENABLE_TRACE
+
+// This is needed to keep data together
+Structure NVXDevice
+{
+	String	Name[24];
+	Integer	Icon;
+	Integer	Enabled;
+	String	Stream[50];
+	String	Multicast[16];
+	Integer	InputIndex;
+};
+
+// IO
+Digital_Input	Refresh_Order, _skip_;				// Recalculate any order changes
+
+String_Input	InputOrder[64],						// Set the sort order of the inputs
+				_skip_;
+
+Analog_Input	OrderedAudioRoute,					// Route audio source based on order
+				UnorderedAudioRoute,				// Route audio source unordered
+				_skip_;
+
+Analog_Input	_skip_,
+				_skip_,
+				OrderedVideoRoute[DEST],			// Set the video route based on the ordered list
+				UnorderedVideoRoute[DEST];			// Set the video route based on the unordered list
+
+Digital_Input	InputEnabled[SOURCES], 				// Defines whether inputs are enabled
+				_skip_;
+	
+Analog_Input	_skip_,
+				InputIcon[SOURCES];					// Set Input Icons
+
+String_Input	_skip_,
+				InputName[SOURCES][24];				// Names of the Inputs (24 char max)
+String_Input	_skip_,
+				NVXEncStreamLocation[SOURCES][50]; 	// NVX Stream Address
+String_Input	_skip_,
+				NAXMulticastAddress[SOURCES][16];	// NAX Audio Multicast Address
+
+Analog_Output	_skip_,
+				_skip_,
+				_skip_,
+				OrderedAudioRoute_Fb,
+				UnorderedAudioRoute_Fb;
+
+String_Output	_skip_,
+				NAXDecRXMulticast;					// NAX Route Address
+
+Analog_Output	_skip_,
+				OrderedVideoRoute_Fb[DEST],			// Current video and audio route in order
+				UnorderedVideoRoute_Fb[DEST];
+
+Digital_Output	_skip_,
+				_skip_,
+				OrderedInputEnabled[SOURCES]; 		// Input Enabled in sort order
+
+Analog_Output	_skip_,
+				OrderedInputIcon[SOURCES];			// Input Icon in sort order
+
+String_Output	_skip_,
+				OrderedInputName[SOURCES];			// Input names in sort order
+
+String_Output	_skip_,
+				NVXDecStreamLocation[DEST];			// NVX Route address
+
+Integer_Parameter 	_skip_,
+					Debug;							// Enable debugging traces
+#Begin_Parameter_Properties Debug
+	PropList={0d, "Debug Off"}, {1d, "Debug On"};
+#End_Parameter_Properties
+
+// Create these as a global variable so multiple functions can access them
+// Array of NVX devices
+NVXDevice devices[SOURCES];
+
+// Functions
+  
+// Find the device in the ordered list by it's origin index
+Integer_Function FindDevice(Integer index)
+{
+	Integer s;
+
+	// Iterate through the list of sources, checking InputIndex
+	for (s = 1 to SOURCES) {
+		if (devices[s].InputIndex = index) {
+			// Return the first match
+			return (s);
+		}
+	}
+
+	// If nothing is found, return 0
+	return (0);
+}
+
+// Create a default order string
+String_Function CreateOrder()
+{
+	Integer i;
+	String order[40], tmporder[40];
+	
+	for (i = 1 to SOURCES) {
+		if (i = 1) {
+			// Start at the beginning, just the first number
+			MakeString(order, "%u", i);
+		} else {
+			// Set the tmp order to the same as order
+			tmporder = order;
+			// Add a comma ',' and the number
+			MakeString(order, "%s,%u", tmporder, i);
+		}
+	}
+
+	if (Debug) {
+    	trace("Order created: %s", order);
+	}
+
+	return(order);
+}
+
+// Sets the attributes of a device index
+Function SetDevice(Integer index, Integer insert)
+{
+	devices[index].Name		 = InputName[insert];
+	devices[index].Icon		 = InputIcon[insert];
+	devices[index].Enabled	 = InputEnabled[insert];
+	devices[index].Stream	 = NVXEncStreamLocation[insert];
+	devices[index].Multicast = NAXMulticastAddress[insert];
+	devices[index].InputIndex = insert; // Where did I come from
+}
+
+// Set output attributes
+Function EvaluateOutputs()
+{
+	Integer i;
+
+	For (i = 1 to SOURCES) {
+		OrderedInputEnabled[i] = devices[i].Enabled;
+		OrderedInputIcon[i] = devices[i].Icon;
+		OrderedInputName[i] = devices[i].Name;
+	}
+}
+
+// Calculates the order of devices
+Function CalculateOrder()
+{
+	String tmporder[40];
+	Integer loc, cur;
+	Integer index, insert;
+
+	loc = 0;
+	cur = 1;
+	insert = 1;
+
+	// Check the length of the InputOrder string
+	// Should be longer than 5
+	if (len(InputOrder) < 5) {
+		// Create a default order
+		tmporder = CreateOrder();
+	} else {
+		tmporder = InputOrder;
+	}
+    
+	// Append an extra ',' to make parsing easier
+	tmporder = tmporder + ",";
+
+	if (Debug) {
+		trace("Calculate Order started: %s", tmporder);
+	}
+
+	// Otherwise continue
+	for (index = 1 to SOURCES) {
+		loc = Find(",", tmporder, cur);
+		
+		if (loc > cur) {
+			insert = atoi(Mid(tmporder, cur, loc - cur)); // Get the number and convert to integer
+			
+			if (Debug) {
+				trace("Index found: %u", insert);
+			}
+
+			// Assign the device to the correct order
+			if (insert > 0 && insert <= SOURCES) {
+				SetDevice(index, insert);
+			}
+
+			cur = loc + 1; // Set the cursor to the end of the location
+		}
+	}
+
+	// Set the outputs
+	EvaluateOutputs();
+}
+
+Function RefreshDestinations()
+{
+	// Iterate through the routing and
+	// resend destination addresses
+
+	Integer d, s;
+
+	// Set the output streams to the current encoder stream address
+	for (d = 1 to DEST) {
+		NVXDecStreamLocation[d] = NVXEncStreamLocation[UnorderedVideoRoute_Fb[d]];
+	}
+
+	// Don't forget audio
+	NAXDecRXMulticast = NAXMulticastAddress[UnorderedAudioRoute_Fb];		
+}
+
+Push Refresh_Order
+{
+	// Figure out the new input order
+	CalculateOrder();	
+}
+
+Change InputEnabled
+{
+	Integer i, s;
+
+	i = GetLastModifiedArrayIndex();
+
+	// Find the matching device in the order
+	s = FindDevice(i);
+
+	if (!s) {
+		return;
+	}
+    
+	// Set the enabled state
+	devices[s].Enabled = InputEnabled[i];
+
+	// Refresh the outputs
+	EvaluateOutputs();	
+}
+
+Change InputName
+{
+	Integer i, s;
+
+	i = GetLastModifiedArrayIndex();
+
+	// Find the matching device in the order
+	s = FindDevice(i);
+
+	if (!s) {
+		return;
+	}
+    
+	// Set the new name
+	devices[s].Name = InputName[i];
+
+	// Refresh the outputs
+	EvaluateOutputs();
+}
+
+Change InputIcon
+{
+	Integer i, s;
+
+	i = GetLastModifiedArrayIndex();
+
+	// Find the matching device in the order
+	s = FindDevice(i);
+
+	if (!s) {
+		return;
+	}
+    
+	// Set the new icon value
+	devices[s].Icon = InputIcon[i];
+
+	// Refresh the outputs
+	EvaluateOutputs();
+}
+
+Change NVXEncStreamLocation
+{
+	// This exists for very specific scenarios
+	// When the stream is started after the route has been set
+	// Only evaluate if the stream location being changed
+	// is currently routed to the output
+	Integer i, s, d;
+
+	i = GetLastModifiedArrayIndex();
+
+	if (NVXEncStreamLocation[i] = "") {
+		// If the string is blank, don't set it
+		return;
+	}
+
+	for (s = 1 to SOURCES) {
+		if (devices[s].InputIndex = i) {
+			devices[s].Stream = NVXEncStreamLocation[i];
+			break;	// Exit the loop
+		}
+	}
+	
+	// Update the destination if it is actively routed
+	for (d = 1 to DEST) {
+		if (UnorderedVideoRoute_Fb[d] = i) {
+			NVXDecStreamLocation[d] = NVXEncStreamLocation[i];
+		}
+	}
+}
+
+Change NAXMulticastAddress
+{
+	// This exists for very specific scenarios
+	// When the stream is started after the route has been set
+	// Only evaluate if the stream location being changed
+	// is currently routed to the output
+	Integer i, s, d;
+
+	i = GetLastModifiedArrayIndex();
+
+	if (NAXMulticastAddress[i] = "") {
+		// If the string is blank, don't set it
+		return;
+	}
+    
+	// Update the affected sources
+	for (s = 1 to SOURCES) {
+		if (devices[s].InputIndex = i) {
+			devices[s].Multicast = NAXMulticastAddress[i];
+			break; // Exit the loop
+		}
+	}
+
+	// Update the destination if it is actively routed
+	if (UnorderedAudioRoute_Fb = i) {
+		NAXDecRXMulticast = NAXMulticastAddress[i];
+	}
+}
+
+Change OrderedVideoRoute
+{
+	Integer i;
+
+	i = GetLastModifiedArrayIndex();
+
+	if (OrderedVideoRoute[i] = 0) {
+		NVXDecStreamLocation[i] = ""; // Clear if 0
+		UnorderedVideoRoute_Fb[i] = 0;
+		OrderedVideoRoute_Fb[i] = 0;
+	} else {
+		// Set the stream location
+		NVXDecStreamLocation[i] = devices[OrderedVideoRoute[i]].Stream;
+		OrderedVideoRoute_Fb[i] = OrderedVideoRoute[i];
+		UnorderedVideoRoute_Fb[i] = devices[OrderedVideoRoute[i]].InputIndex;
+	}
+}
+
+Change OrderedAudioRoute
+{
+	if (OrderedAudioRoute = 0) {
+		NAXDecRXMulticast = "";
+		UnorderedAudioRoute_Fb = 0;
+		OrderedAudioRoute_Fb = 0;
+	} else {
+		NAXDecRXMulticast = devices[OrderedAudioRoute].Multicast;
+		OrderedAudioRoute_Fb = OrderedAudioRoute;
+		UnorderedAudioRoute_Fb = devices[OrderedAudioRoute].InputIndex;
+	}
+}
+
+Change UnorderedVideoRoute
+{
+	Integer i, s;
+
+	i = GetLastModifiedArrayIndex();
+
+	if (UnorderedVideoRoute[i] = 0) {
+		NVXDecStreamLocation[i] = ""; // Clear if 0
+		UnorderedVideoRoute_Fb[i] = 0;
+		OrderedVideoRoute_Fb[i] = 0;
+	} else {
+		// Set the stream location
+		for (s = 1 to SOURCES) {
+			if (devices[s].InputIndex = UnorderedVideoRoute[i]) {
+				NVXDecStreamLocation[i] = devices[s].Stream;
+				OrderedVideoRoute_Fb[i] = s;
+				UnorderedVideoRoute_Fb[i] = UnorderedVideoRoute[i];
+				break;
+			}
+		}
+	}
+}
+
+Change UnorderedAudioRoute
+{
+	Integer s;
+
+	if (UnorderedAudioRoute = 0) {
+		NAXDecRXMulticast = ""; // Clear if 0
+		UnorderedAudioRoute_Fb = 0;
+		OrderedAudioRoute_Fb = 0;
+	} else {
+		// Set the stream location
+		for (s = 1 to SOURCES) {
+			if (devices[s].InputIndex = UnorderedAudioRoute) {
+				NAXDecRXMulticast = devices[s].Multicast;
+				OrderedAudioRoute_Fb = s;
+				UnorderedAudioRoute_Fb = UnorderedAudioRoute;
+				break;
+			}
+		}
+	}
+}
+
+Function main()
+{
+	Integer i;
+
+	WaitForInitializationComplete();
+
+	// Initialize device list
+
+	for (i = 1 to SOURCES) {
+		devices[i].Name = "[None]";
+		devices[i].Icon = 1;
+		devices[i].Enabled = 0;
+		devices[i].Stream = "";
+		devices[i].Multicast = "";
+		devices[i].InputIndex = 0;
+	}
+
+	// Calculate the initial order
+	CalculateOrder();		
+}
