@@ -289,9 +289,12 @@ Push Enable_Tracking
 	trace("Marker time created: %lu", marker);
 
 	// Iterate through sources. If one is enabled, set the tracking start time to now
+	// Increment the source press count
 	for (i = 1 to SOURCES) {
 		if (Source_Active_Fb[i]) {
 			AllSources[i].TrackingStart = marker;
+			AllSources[i].PressCount = AllSources[i].PressCount + 1;
+			Source_Press_Count[i] = AllSources[i].PressCount;
 		} else {
 			// Else, reset it to 0
 			AllSources[i].TrackingStart = 0;
