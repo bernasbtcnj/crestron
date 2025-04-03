@@ -1,56 +1,94 @@
 STEM 107
 -------------------------------------------------------------------------
+NETWORK TECH DOCUMENTATION
 -------------------------------------------------------------------------
-Design Guidelines
 
-EQUIPMENT
----------
+EQUIPMENT     IP-ID  NAME
+---------     -----  ----
 RMC4
-DM-NVX-E20    E1   PC
-DM-NVX-E20    E2   Laptop
-DM-NVX-E20    E3   AppleTV/Wireless
-DM-NVX-E20    E4   DocCam
-DM-NVX-E20    E5   Spare
-DM-NVX-D20    D1   98" Display Decoder
-DM-NVX-D20    D2   Student Monitor 1
-DM-NVX-D20    D3   Student Monitor 2
-DM-NVX-D20    D4   Student Monitor 3
-DM-NVX-D20    D5   Student Monitor 4
-DM-NVX-D20    D6   Student Monitor 5
-DM-NVX-D20    D7   Student Monitor 6
-DM-NVX-D20    D8   Student Monitor 7
-DM-NVX-D20    D9   Student Monitor 8
+TSW-760-B-S    03   Main Touch Panel
+EYE-14         07   Wolfvision Document Camera
+TSW-750-B-S    08   Student Station 8 Touch Panel
+FT-TSC600      11   Student Station 1 Touch Panel
+FT-TSC600      12   Student Station 2 Touch Panel
+FT-TSC600      13   Student Station 3 Touch Panel
+FT-TSC600      14   Student Station 4 Touch Panel
+FT-TSC600      15   Student Station 5 Touch Panel
+FT-TSC600      16   Student Station 6 Touch Panel
+FT-TSC600      17   Student Station 7 Touch Panel
+HD-MD4x1-4K-E  21   Student Station 1 HD-MD Switcher
+HD-MD4x1-4K-E  22   Student Station 2 HD-MD Switcher
+HD-MD4x1-4K-E  23   Student Station 3 HD-MD Switcher
+HD-MD4x1-4K-E  24   Student Station 4 HD-MD Switcher
+HD-MD4x1-4K-E  25   Student Station 5 HD-MD Switcher
+HD-MD4x1-4K-E  26   Student Station 6 HD-MD Switcher
+HD-MD4x1-4K-E  27   Student Station 7 HD-MD Switcher
+HD-MD4x1-4K-E  28   Student Station 8 HD-MD Switcher
+DM-NVX-E20     E1   Encoder - PC
+DM-NVX-E20     E2   Encoder - AppleTV
+DM-NVX-E20     E3   Encoder - Aux HDMI
+DM-NVX-E20     E4   Encoder - DocCam
+DM-NVX-D20     D1   Main Display Decoder
+DM-NVX-D20     D2   Student Monitor 1
+DM-NVX-D20     D3   Student Monitor 2
+DM-NVX-D20     D4   Student Monitor 3
+DM-NVX-D20     D5   Student Monitor 4
+DM-NVX-D20     D6   Student Monitor 5
+DM-NVX-D20     D7   Student Monitor 6
+DM-NVX-D20     D8   Student Monitor 7
+DM-NVX-D20     D9   Student Monitor 8
 
 
 SWITCH PORT CONNECTIONS
 -------------------------
 ***Switch manages DHCP***
 -------------------------
-OOB: Campus AV (Crestron) Network
-1.  RMC4  (172.31.1.201)
-2.  TSW-760 Touch Panel
-3.  FT-TSC600 1
-4.  FT-TSC600 2
-5.  FT-TSC600 3
-6.  FT-TSC600 4
-7.  FT-TSC600 5
-8.  FT-TSC600 6
-9.  FT-TSC600 7
-10. FT-TSC600 8
-11. Document Camera
-12. NVX-Encoder PC
-13. NVX-Encoder Laptop
-14. NVX Encoder Apple TV
-15. NVX Encoder Doc Camera 
-16. NVX-Decoder Main Display
-17. NVX-Decoder Student 1 Display
-18. NVX-Decoder Student 2 Display
-19. NVX-Decoder Student 3 Display
-20. NVX-Decoder Student 4 Display
-21. NVX-Decoder Student 5 Display
-22. NVX-Decoder Student 6 Display
-23. NVX-Decoder Student 7 Display
-24. NVX-Decoder Student 8 Display
-25. Service
-26. --
+No IP Assignment means that the address is auto assigned by
+the network switch at random. NVX, RMC4, and FT-TSC600 devices
+establish connections via Hostname.
+
+DEVICE                                    IP Assignment
+------                                    -------------
+1.  RMC4                                  172.31.1.201
+2.  TSW-760 Touch Panel       
+3.  DM-NVX-D20  Main Display
+4.  (EMPTY)
+5.  (EMPTY)
+6.  DM-NVX-D20  Student 8 Display
+7.  DM-NVX-D20  Student 5 Display
+8.  DM-NVX-D20  Student 3 Display
+9.  Subswitch - Student 2 / 4 Station
+   -Student 2 Touch Panel
+   -Student 4 Touch Panel
+   -Student 2 HD-MD4x1                    172.31.1.192
+   -Student 4 HD-MD4x1                    172.31.1.194 
+10. DM-NVX-D20 Student 1 Display
+11. Wolfvision EYE-14 Document Camera     172.31.1.204
+12. DM-NVX-E20  Encoder - PC
+13. DM-NVX-E20  Encoder - AppleTV
+14. DM-NVX-E20  Encoder - Aux HDMI
+15. DM-NVX-E20  Encoder - Doc Camera 
+16. DM-NVX-D20  Student 4 Display
+17. Subswitch - Student 5 / 7 Station
+   -Student 5 Touch Panel
+   -Student 7 Touch Panel
+   -Student 5 HD-MD4x1                   172.31.1.195
+   -Student 7 HD-MD4x1                   172.31.1.197
+18. Subswitch - Student 1 / 3 Station
+   -Student 1 Touch Panel
+   -Student 3 Touch Panel
+   -Student 1 HD-MD4x1                   172.31.1.191
+   -Student 3 HD-MD4x1                   172.31.1.193
+19. DM-NVX-D20  Student 2 Display
+20. DM-NVX-D20  Student 7 Display
+21. (EMPTY)
+22. DM-NVX-D20  Student 6 Display
+23. Subswitch - Student 6 / 8 Station
+   -Student 6 Touch Panel
+   -Student 8 Touch Panel
+   -Student 6 HD-MD4x1                   172.31.1.196
+   -Student 8 HD-MD4x1                   172.31.1.198
+24. (EMPTY)
+25. RESERVED - MTSS Service
+26. RESERVED - Campus AV
 
