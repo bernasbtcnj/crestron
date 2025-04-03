@@ -70,14 +70,30 @@ String				Full_Log[MAXLENGTH];
 SourceStruct		AllSources[SOURCES];	// Array of all sources and tracking status
 
 // Functions
+Long_Integer_Function MakeMarker()
+{
+	// Create a long integer coresponding to the current time
+	// Calculated with the following formula
+	// ((DAY * 24) * 60) + (HOURS * 60) + Minutes
+
+	Long_Integer marker;
+
+	marker = (((GetDateNum() * 24) * 60)+(GetHourNum() * 60) + GetMinutesNum());
+    
+	// For debug purposes
+	trace("Marker time created: %lu", marker);
+
+	return (marker);
+}
+
 Function Recalculate_Usage_Time()
 {
 	Integer i;
 	Long_Integer long_limit, long_hours, long_minutes;
     
 	// Max amount of time that can be calculated reliably.
-	// Roughly 7.48 years
-	long_limit = 4294966000;
+	// Roughly 8171 years
+	long_limit = 4294921000;
 
 	for (i = 1 to SOURCES) {
 		long_hours = 0;
@@ -284,9 +300,7 @@ Push Enable_Tracking
 	Long_Integer marker;
     
 	// Time marker for right now
-	marker = ((GetHourNum()*60)+GetMinutesNum());
-
-	trace("Marker time created: %lu", marker);
+	marker = MakeMarker();
 
 	// Iterate through sources. If one is enabled, set the tracking start time to now
 	// Increment the source press count
@@ -309,9 +323,7 @@ Release Enable_Tracking
 
 	// Store the usage of the last source
 	// Calculate current time marker
-    marker = ((GetHourNum()*60)+GetMinutesNum());
-
-	trace("Marker time created: %lu", marker);
+    marker = MakeMarker();
 
 	// Iterate through all sources to see if any are actively tracking
 	for (i = 1 to SOURCES) {
@@ -344,7 +356,7 @@ Push Source_Active_Fb
 	// and set the timer
 	if (Enable_Tracking) {
 		// Calculate current time
-        AllSources[i].TrackingStart = ((GetHourNum()*60)+GetMinutesNum());
+        AllSources[i].TrackingStart = MakeMarker();
 			
 		// Increment button press count
 		AllSources[i].PressCount = AllSources[i].PressCount + 1;
@@ -362,7 +374,7 @@ Release Source_Active_Fb
 
 	if (Enable_Tracking) {
 		// Get the current time marker
-		marker = ((GetHourNum()*60)+GetMinutesNum());
+		marker = MakeMarker();
 
 		// Verify that there isnt a time descrepancy
 		if (AllSources[i].TrackingStart > marker) {
