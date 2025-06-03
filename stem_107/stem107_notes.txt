@@ -1,0 +1,18 @@
+STEM 107 Notes
+-------------
+-------------
+* All Device credentials are as follows:
+  Username: admin
+  Password: Tussle123
+
+* Samsung Displays must be set to RS232C communication
+  Device ID must be set to 1
+
+Known Issues
+-------------
+* After a system reboot or power cycle of a HD-MD4x1 -
+  The affected 4x1 can become stuck in a NULL state in which
+  it will not switch to HDMI 1 until another input is selected first.
+  This could possibly be caused by the excesive number of
+  HD-MD4x1's that are all on the same network being managed
+  by the same processor.

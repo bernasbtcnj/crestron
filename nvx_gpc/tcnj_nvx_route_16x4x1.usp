@@ -97,6 +97,10 @@ Integer_Parameter 	_skip_,
 #End_Parameter_Properties
 
 // Create these as a global variable so multiple functions can access them
+
+// Store the source order as an integer array.
+Integer			SourceOrder[SOURCES];
+
 // Array of NVX devices
 NVXDevice devices[SOURCES];
 
@@ -125,6 +129,7 @@ String_Function CreateOrder()
 	Integer i;
 	String order[40], tmporder[40];
 	
+	// This could possibly go away later
 	for (i = 1 to SOURCES) {
 		if (i = 1) {
 			// Start at the beginning, just the first number
@@ -137,8 +142,13 @@ String_Function CreateOrder()
 		}
 	}
 
+	// Set the SourceOrder index to match
+	for (i = 1 to SOURCES) {
+		SourceOrder[i] = i;
+	}
+
 	if (Debug) {
-    	trace("Order created: %s", order);
+    	trace("Order set to default");
 	}
 
 	return(order);
@@ -208,6 +218,8 @@ Function CalculateOrder()
 			// Assign the device to the correct order
 			if (insert > 0 && insert <= SOURCES) {
 				SetDevice(index, insert);
+				SourceOrder[index] = insert;
+
 			}
 
 			cur = loc + 1; // Set the cursor to the end of the location

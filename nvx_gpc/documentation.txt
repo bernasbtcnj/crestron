@@ -43,7 +43,6 @@ EF Encoder 15 - Custom
 
 NVX Multicast Address Scheme
 -----------------------------
-
 E1 Encoder 1 - 239.31.1.10
 E2 Encoder 2 - 239.31.1.20
 E3 Encoder 3 - 239.31.1.30
