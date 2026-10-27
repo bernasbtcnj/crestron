@@ -1,23 +1,22 @@
 {FileMetadata}
 Schema = "1.0.0.0"
-CreatedByAppHost = "2.101.8.0"
-Created = 2025-03-21 07:28:59.608672-04:00
-LastModifiedByAppHost = "2.101.8.0"
-Modified = 2025-03-21 07:28:59.608668-04:00
-CreatedByProjectApp = "1.3701.9.0"
-LastModifiedByProjectApp = "1.3701.9.0"
+CreatedByAppHost = "2.1701.12.0"
+Created = 2026-10-27 12:45:27.707127-04:00
+LastModifiedByAppHost = "2.1701.12.0"
+Modified = 2026-10-27 12:45:27.707119-04:00
+CreatedByProjectApp = "1.4901.18.0"
+LastModifiedByProjectApp = "1.4901.18.0"
 MinimumProjectApp = "1.2600.1"
-MinimumAppHost = "2.0.0"
+MinimumAppHost = "2.1700.0"
 
 {Html}
-<ch5-image refreshrate="0" customvstheme="custom" assetid="2755c7d1-a917-44ef-a2de-bb69cb6f2708" id="iq2q" componentname="TCNJ-Logo" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]">
-              </ch5-image><ch5-text clearlabel="false" labelmodeadvncomponent="simple" horizontalalignment="center" verticalalignment="middle" multilinesupport="false" truncatetext="false" labelinnerhtml="Press screen to start..." id="ieym" componentname="press-screen-btn" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" ccid_themecssset="true">
-              </ch5-text><ch5-text clearlabel="false" labelmodeadvncomponent="simple" horizontalalignment="left" verticalalignment="middle" multilinesupport="false" truncatetext="false" id="icve" componentname="Control-System-Offline-Txt" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" ccid_themecssset="true" labelinnerhtml="Control system is offline..." pd-receivestateshow="Csig.Control_Systems_Offline_fb">
-              </ch5-text><ch5-button type="default" halignlabel="center" valignlabel="middle" checkboxshow="false" checkboxposition="left" disabled="false" orientation="horizontal" pageflipattributename="pageflip" clearlabel="true" ccid_imageicontype="iconclass" ccid_linksendreceive="True" iconurlfilltype="initial" customclass="ccid-custom" affectedbypreviewstate="True" shape="rectangle" size="custom" previewstate="normal" iconposition="first" tagname="ch5-button" ccid_syncproperties="syncEnabled" ccid_lastsizeselected="regular" ccid_componenttype="button" ccid_ch5type="button" customvstheme="custom" id="iqp8" componentname="System-On-Btn" assetid="0" pageflip="0" ccid_themecssset="true" devicesvisited="[&quot;TSW-760&quot;]" ccid_sync_normal_labelsector_color="syncEnabled" ccid_sync_pressed_labelsector_color="syncEnabled" ccid_sync_selected_labelsector_color="syncEnabled" ccid_sync_normal_labelsector_font-family="syncEnabled" ccid_sync_pressed_labelsector_font-family="syncEnabled" ccid_sync_selected_labelsector_font-family="syncEnabled" ccid_sync_normal_labelsector_font-size="syncEnabled" ccid_sync_pressed_labelsector_font-size="syncEnabled" ccid_sync_selected_labelsector_font-size="syncEnabled" ccid_sync_normal_labelsector_font-weight="syncEnabled" ccid_sync_pressed_labelsector_font-weight="syncEnabled" ccid_sync_selected_labelsector_font-weight="syncEnabled" ccid_sync_normal_labelsector_text-decoration="syncEnabled" ccid_sync_pressed_labelsector_text-decoration="syncEnabled" ccid_sync_selected_labelsector_text-decoration="syncEnabled" ccid_sync_normal_labelsector_letter-spacing="syncEnabled" ccid_sync_pressed_labelsector_letter-spacing="syncEnabled" ccid_sync_selected_labelsector_letter-spacing="syncEnabled" ccid_sync_normal_labelsector_margin-left="syncEnabled" ccid_sync_pressed_labelsector_margin-left="syncEnabled" ccid_sync_selected_labelsector_margin-left="syncEnabled" ccid_sync_normal_labelsector_margin-top="syncEnabled" ccid_sync_pressed_labelsector_margin-top="syncEnabled" ccid_sync_selected_labelsector_margin-top="syncEnabled" ccid_sync_normal_iconsector_color="syncEnabled" ccid_sync_pressed_iconsector_color="syncEnabled" ccid_sync_selected_iconsector_color="syncEnabled" ccid_sync_normal_iconsector_font-size="syncEnabled" ccid_sync_pressed_iconsector_font-size="syncEnabled" ccid_sync_selected_iconsector_font-size="syncEnabled" ccid_sync_normal_iconsector_margin-left="syncEnabled" ccid_sync_pressed_iconsector_margin-left="syncEnabled" ccid_sync_selected_iconsector_margin-left="syncEnabled" ccid_sync_normal_iconsector_margin-top="syncEnabled" ccid_sync_pressed_iconsector_margin-top="syncEnabled" ccid_sync_selected_iconsector_margin-top="syncEnabled" ccid_sync_normal_appearancesector_border-width="syncEnabled" ccid_sync_pressed_appearancesector_border-width="syncEnabled" ccid_sync_selected_appearancesector_border-width="syncEnabled" ccid_sync_normal_appearancesector_border-style="syncEnabled" ccid_sync_pressed_appearancesector_border-style="syncEnabled" ccid_sync_selected_appearancesector_border-style="syncEnabled" ccid_sync_normal_appearancesector_border-color="syncEnabled" ccid_sync_pressed_appearancesector_border-color="syncEnabled" ccid_sync_selected_appearancesector_border-color="syncEnabled" ccid_sync_normal_appearancesector_background-color="syncDisabled" ccid_sync_normal_appearancesector_background-color_toggle="0" ccid_sync_pressed_appearancesector_background-color="syncDisabled" ccid_sync_pressed_appearancesector_background-color_toggle="0" ccid_sync_selected_appearancesector_background-color="syncDisabled" ccid_sync_selected_appearancesector_background-color_toggle="0" ccid_sync_normal_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-width_toggle="1" ccid_sync_normal_appearancesector_border-style_toggle="1" ccid_sync_normal_appearancesector_border-color_toggle="1" ccid_sync_normal_appearancesector_border-top-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-top-right-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-right-radius_toggle="1" ccid_sync_normal_labelsector_color_toggle="1" ccid_sync_normal_labelsector_font-family_toggle="1" ccid_sync_normal_labelsector_font-size_toggle="1" ccid_sync_normal_labelsector_font-weight_toggle="1" ccid_sync_normal_labelsector_text-decoration_toggle="1" ccid_sync_normal_labelsector_letter-spacing_toggle="1" ccid_sync_normal_labelsector_margin-left_toggle="1" ccid_sync_normal_labelsector_margin-top_toggle="1" ccid_sync_normal_iconsector_color_toggle="1" ccid_sync_normal_iconsector_font-size_toggle="1" ccid_sync_normal_iconsector_margin-left_toggle="1" ccid_sync_normal_iconsector_margin-top_toggle="1" ccid_sync_pressed_labelsector_color_toggle="1" ccid_sync_pressed_labelsector_font-family_toggle="1" ccid_sync_pressed_labelsector_font-size_toggle="1" ccid_sync_pressed_labelsector_font-weight_toggle="1" ccid_sync_pressed_labelsector_text-decoration_toggle="1" ccid_sync_pressed_labelsector_letter-spacing_toggle="1" ccid_sync_pressed_labelsector_margin-left_toggle="1" ccid_sync_pressed_labelsector_margin-top_toggle="1" ccid_sync_pressed_iconsector_color_toggle="1" ccid_sync_pressed_iconsector_font-size_toggle="1" ccid_sync_pressed_iconsector_margin-left_toggle="1" ccid_sync_pressed_iconsector_margin-top_toggle="1" ccid_sync_pressed_appearancesector_border-width_toggle="1" ccid_sync_pressed_appearancesector_border-style_toggle="1" ccid_sync_pressed_appearancesector_border-color_toggle="1" ccid_sync_pressed_appearancesector_border-top-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-top-right-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-right-radius_toggle="1" labelinnerhtml="" sendeventontouch="1" pd-receivestateselected="1">
-              </ch5-button>
+<ch5-template transitionduration="1s" transitiondelay="0s" templateid="w8e674b83-3741-4917-9d4f-56b47eecb6fe" id="i13r" componentname="Offline" ccid_componenttype="Widget" ccid_widgetname="Offline" devicesvisited="[&quot;TSW-760&quot;]" pd-receivestateshow="Csig.Control_Systems_Offline_fb"></ch5-template><ch5-button orientation="horizontal" size="custom" shape="rectangle" previewstate="normal" type="default" halignlabel="center" valignlabel="middle" checkboxshow="false" checkboxposition="left" disabled="false" pageflipattributename="pageflip" clearlabel="true" ccid_imageicontype="iconclass" ccid_linksendreceive="True" iconurlfilltype="initial" customclass="ccid-custom" affectedbypreviewstate="True" iconposition="first" tagname="ch5-button" ccid_syncproperties="syncEnabled" ccid_lastsizeselected="regular" ccid_componenttype="button" ccid_ch5type="button" truncatetext="true" customvstheme="custom" id="iqp8" componentname="System-On-Btn" assetid="0" pageflip="0" ccid_themecssset="true" devicesvisited="[&quot;TSW-760&quot;]" ccid_sync_normal_labelsector_color="syncEnabled" ccid_sync_pressed_labelsector_color="syncEnabled" ccid_sync_selected_labelsector_color="syncEnabled" ccid_sync_normal_labelsector_font-family="syncEnabled" ccid_sync_pressed_labelsector_font-family="syncEnabled" ccid_sync_selected_labelsector_font-family="syncEnabled" ccid_sync_normal_labelsector_font-size="syncEnabled" ccid_sync_pressed_labelsector_font-size="syncEnabled" ccid_sync_selected_labelsector_font-size="syncEnabled" ccid_sync_normal_labelsector_font-weight="syncEnabled" ccid_sync_pressed_labelsector_font-weight="syncEnabled" ccid_sync_selected_labelsector_font-weight="syncEnabled" ccid_sync_normal_labelsector_text-decoration="syncEnabled" ccid_sync_pressed_labelsector_text-decoration="syncEnabled" ccid_sync_selected_labelsector_text-decoration="syncEnabled" ccid_sync_normal_labelsector_letter-spacing="syncEnabled" ccid_sync_pressed_labelsector_letter-spacing="syncEnabled" ccid_sync_selected_labelsector_letter-spacing="syncEnabled" ccid_sync_normal_labelsector_margin-left="syncEnabled" ccid_sync_pressed_labelsector_margin-left="syncEnabled" ccid_sync_selected_labelsector_margin-left="syncEnabled" ccid_sync_normal_labelsector_margin-top="syncEnabled" ccid_sync_pressed_labelsector_margin-top="syncEnabled" ccid_sync_selected_labelsector_margin-top="syncEnabled" ccid_sync_normal_iconsector_color="syncEnabled" ccid_sync_pressed_iconsector_color="syncEnabled" ccid_sync_selected_iconsector_color="syncEnabled" ccid_sync_normal_iconsector_font-size="syncEnabled" ccid_sync_pressed_iconsector_font-size="syncEnabled" ccid_sync_selected_iconsector_font-size="syncEnabled" ccid_sync_normal_iconsector_margin-left="syncEnabled" ccid_sync_pressed_iconsector_margin-left="syncEnabled" ccid_sync_selected_iconsector_margin-left="syncEnabled" ccid_sync_normal_iconsector_margin-top="syncEnabled" ccid_sync_pressed_iconsector_margin-top="syncEnabled" ccid_sync_selected_iconsector_margin-top="syncEnabled" ccid_sync_normal_appearancesector_border-width="syncEnabled" ccid_sync_pressed_appearancesector_border-width="syncEnabled" ccid_sync_selected_appearancesector_border-width="syncEnabled" ccid_sync_normal_appearancesector_border-style="syncEnabled" ccid_sync_pressed_appearancesector_border-style="syncEnabled" ccid_sync_selected_appearancesector_border-style="syncEnabled" ccid_sync_normal_appearancesector_border-color="syncEnabled" ccid_sync_pressed_appearancesector_border-color="syncEnabled" ccid_sync_selected_appearancesector_border-color="syncEnabled" ccid_sync_normal_appearancesector_background-color="syncDisabled" ccid_sync_normal_appearancesector_background-color_toggle="0" ccid_sync_pressed_appearancesector_background-color="syncDisabled" ccid_sync_pressed_appearancesector_background-color_toggle="0" ccid_sync_selected_appearancesector_background-color="syncDisabled" ccid_sync_selected_appearancesector_background-color_toggle="0" ccid_sync_normal_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-width_toggle="1" ccid_sync_normal_appearancesector_border-style_toggle="1" ccid_sync_normal_appearancesector_border-color_toggle="1" ccid_sync_normal_appearancesector_border-top-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-top-right-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-right-radius_toggle="1" ccid_sync_normal_labelsector_color_toggle="1" ccid_sync_normal_labelsector_font-family_toggle="1" ccid_sync_normal_labelsector_font-size_toggle="1" ccid_sync_normal_labelsector_font-weight_toggle="1" ccid_sync_normal_labelsector_text-decoration_toggle="1" ccid_sync_normal_labelsector_letter-spacing_toggle="1" ccid_sync_normal_labelsector_margin-left_toggle="1" ccid_sync_normal_labelsector_margin-top_toggle="1" ccid_sync_normal_iconsector_color_toggle="1" ccid_sync_normal_iconsector_font-size_toggle="1" ccid_sync_normal_iconsector_margin-left_toggle="1" ccid_sync_normal_iconsector_margin-top_toggle="1" ccid_sync_pressed_labelsector_color_toggle="1" ccid_sync_pressed_labelsector_font-family_toggle="1" ccid_sync_pressed_labelsector_font-size_toggle="1" ccid_sync_pressed_labelsector_font-weight_toggle="1" ccid_sync_pressed_labelsector_text-decoration_toggle="1" ccid_sync_pressed_labelsector_letter-spacing_toggle="1" ccid_sync_pressed_labelsector_margin-left_toggle="1" ccid_sync_pressed_labelsector_margin-top_toggle="1" ccid_sync_pressed_iconsector_color_toggle="1" ccid_sync_pressed_iconsector_font-size_toggle="1" ccid_sync_pressed_iconsector_margin-left_toggle="1" ccid_sync_pressed_iconsector_margin-top_toggle="1" ccid_sync_pressed_appearancesector_border-width_toggle="1" ccid_sync_pressed_appearancesector_border-style_toggle="1" ccid_sync_pressed_appearancesector_border-color_toggle="1" ccid_sync_pressed_appearancesector_border-top-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-top-right-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-right-radius_toggle="1" labelinnerhtml="" sendeventonclick="1" pd-receivestateselected="1" ccid_componenttype="Button" ccid_activefont="'Roboto'" ccid_label="">
+              </ch5-button><ch5-text clearlabel="false" labelmodeadvncomponent="simple" horizontalalignment="center" verticalalignment="middle" multilinesupport="false" truncatetext="false" labelinnerhtml="Press screen to start..." id="ieym" componentname="press-screen-btn" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" ccid_themecssset="true" ccid_componenttype="Formatted-Text" ccid_label="Press screen to start..." ccid_activefont="'Roboto'">
+              </ch5-text><ch5-image numberofmodes="0" refreshrate="0" customvstheme="custom" assetid="2755c7d1-a917-44ef-a2de-bb69cb6f2708" id="iq2q" componentname="TCNJ-Logo" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" ccid_componenttype="Image" allowpositiondatatobesent="false" allowvaluesonmove="false">
+              </ch5-image>
 
 {Css}
-@media (max-width: 99999px){#iq2q .ch5-image{border-color:black;object-fit:contain;}#iq2q{width:900px;height:500px;display:block;left:181px;top:80px;position:absolute;}#ieym .ch5-text{width:579px;height:48px;min-height:10px;min-width:10px;padding:0px;font-size:40px;custom-font-size:40px;color:#ffffff;}#ieym{width:579px;height:48px;font-family:Roboto;display:block;left:341px;top:646px;position:absolute;}#iqp8{width:1234px;height:688px;display:block;left:10px;top:86px;position:absolute;}#iqp8 .ch5-button--default{border-style:none;border-color:rgba(0,145,234,0);background-color:rgba(0,153,255,0);border-width:0;max-height:100%;max-width:100%;display:flex;align-items:center;}#iqp8 .ch5-button--default .ch5-button--label{font-family:Roboto;font-size:14px;font-weight:400;letter-spacing:0;text-decoration:none;margin-left:0;margin-top:0;custom-font-size:14px;color:#ffffff;buttonDefaultLabel_font-size:14px;buttonDefaultLabel_color:#ffffff;buttonDefaultLabel_font-weight:400;buttonDefaultLabel_letter-spacing:0;buttonDefaultLabel_text-decoration:none;buttonDefaultLabel_margin-left:0;buttonDefaultLabel_margin-top:0;margin-right:0;margin-bottom:0;}#iqp8 .ch5-button--default .ch5-button--icon{color:#ffffff;font-size:14px;custom-font-size:14px;margin-left:0;margin-top:0;buttonDefaultIcon_font-size:14px;buttonDefaultIcon_color:#ffffff;buttonDefaultIcon_margin-left:0;buttonDefaultIcon_margin-top:0;margin-right:0;margin-bottom:0;}#iqp8 .ch5-button--default .cb-checkbox-icon{color:#ffffff;buttonDefaultCheckbox_color:#ffffff;}#iqp8 .ccid-custom.ch5-button--default .ch5-button--img{width:21px;height:21px;buttonDefaultImage_width:21px;buttonDefaultImage_height:21px;}#iqp8 .ch5-button--default.ch5-button--pressed{border-style:none;border-color:rgba(0,145,234,0);background-color:rgba(255,255,255,0.01);border-width:0;}#iqp8 .ch5-button--default.ch5-button--pressed .ch5-button--label{font-family:Roboto;font-size:14px;font-weight:400;letter-spacing:0;text-decoration:none;margin-left:0;margin-top:0;custom-font-size:14px;color:#f0fff0;buttonDefaultPressedLabel_font-size:14px;buttonDefaultPressedLabel_color:#f0fff0;buttonDefaultPressedLabel_font-weight:400;buttonDefaultPressedLabel_letter-spacing:0;buttonDefaultPressedLabel_text-decoration:none;buttonDefaultPressedLabel_margin-left:0;buttonDefaultPressedLabel_margin-top:0;margin-right:0;margin-bottom:0;}#iqp8 .ch5-button--default.ch5-button--pressed .ch5-button--icon{color:#f0fff0;font-size:14px;custom-font-size:14px;margin-left:0;margin-top:0;buttonDefaultPressedIcon_font-size:14px;buttonDefaultPressedIcon_color:#f0fff0;buttonDefaultPressedIcon_margin-left:0;buttonDefaultPressedIcon_margin-top:0;margin-right:0;margin-bottom:0;}#iqp8 .ch5-button--default.ch5-button--pressed .cb-checkbox-icon{color:#f0fff0;buttonDefaultPressedCheckbox_color:#f0fff0;}#iqp8 .ccid-custom.ch5-button--default.ch5-button--pressed .ch5-button--img{width:21px;height:21px;buttonDefaultPressedImage_width:21px;buttonDefaultPressedImage_height:21px;}#iqp8 .ch5-button--default.ch5-button--selected{border-style:none;border-color:rgba(0,145,234,0);background-color:#0073bf;border-width:0;}#iqp8 .ch5-button--default.ch5-button--selected .ch5-button--label{font-family:Roboto;font-size:14px;font-weight:400;letter-spacing:0;text-decoration:none;margin-left:0;margin-top:0;custom-font-size:14px;color:#f0fff0;buttonDefaultSelectedLabel_font-size:14px;buttonDefaultSelectedLabel_color:#f0fff0;buttonDefaultSelectedLabel_font-weight:400;buttonDefaultSelectedLabel_letter-spacing:0;buttonDefaultSelectedLabel_text-decoration:none;buttonDefaultSelectedLabel_margin-left:0;buttonDefaultSelectedLabel_margin-top:0;margin-right:0;margin-bottom:0;}#iqp8 .ch5-button--default.ch5-button--selected .ch5-button--icon{color:#f0fff0;font-size:14px;custom-font-size:14px;margin-left:0;margin-top:0;buttonDefaultSelectedIcon_font-size:14px;buttonDefaultSelectedIcon_color:#f0fff0;buttonDefaultSelectedIcon_margin-left:0;buttonDefaultSelectedIcon_margin-top:0;margin-right:0;margin-bottom:0;}#iqp8 .ch5-button--default.ch5-button--selected .cb-checkbox-icon{color:#f0fff0;buttonDefaultSelectedCheckbox_color:#f0fff0;}#iqp8 .ccid-custom.ch5-button--default.ch5-button--selected .ch5-button--img{width:21px;height:21px;buttonDefaultSelectedImage_width:21px;buttonDefaultSelectedImage_height:21px;}#iqp8 .ch5-button--size-regular .cb-btn{width:1234px;height:688px;}#icve .ch5-text{width:396px;height:48px;min-height:10px;min-width:10px;padding:0px;font-size:24px;custom-font-size:24px;color:#ff4545;font-weight:700;}#icve{width:396px;height:48px;font-family:Roboto;display:block;left:20px;top:11px;position:absolute;}#wrapper{background-color:#00426f;}}@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px){#iq2q{width:900px;height:500px;display:block;left:181px;top:80px;position:absolute;}#ieym{width:579px;height:48px;font-family:Roboto;display:block;left:341px;top:646px;position:absolute;}#iqp8{width:1234px;height:688px;display:block;left:10px;top:21px;position:absolute;}#iqp8 .ch5-button--vertical .cx-button-checkbox-pos-left{padding-left:0px;}#iqp8 .ch5-button--vertical .cx-button-checkbox-pos-right{padding-right:0px;}#icve{width:396px;height:48px;font-family:Roboto;display:block;left:20px;top:11px;position:absolute;font-weight:700;}}
+@media (max-width: 99999px){#iqp8{width:1245px;--ch5-button--regular-width:1245px;height:715px;--ch5-button--regular-height:715px;display:block;left:5px;top:5px;position:absolute;z-index:4;Appearance_background-color:rgba(0, 153, 255, 0);--ch5-button--default-background-color:rgba(0, 153, 255, 0);Label_font-size:14px;--ch5-button--regular-font-size:14px;Label_font-weight:400;--ch5-button--regular-font-weight:400;Label_letter-spacing:0;--ch5-button--label-letter-spacing:0;Label_margin-left:0;--ch5-button--label-margin-left:0;Label_margin-top:0;--ch5-button--label-margin-top:0;custom-normal-label-font-size:14px;Label_color:#ffffff;--ch5-button--default-label-font-color:rgb(255, 255, 255);--ch5-button--label-margin-right:0;--ch5-button--label-margin-bottom:0;Icon_color:#ffffff;--ch5-button--default-icon-color:rgb(255, 255, 255);Icon_font-size:14px;--ch5-button--regular-icon-size:14px;custom-normal-icon-font-size:14px;Icon_margin-left:0;--ch5-button--icon-margin-left:0;Icon_margin-top:0;--ch5-button--icon-margin-top:0;--ch5-button--icon-margin-right:0;--ch5-button--icon-margin-bottom:0;Checkbox_color:#ffffff;--ch5-button--default-checkbox-color:rgb(255, 255, 255);Image_width:21px;--ch5-button--regular-image-width:21px;Image_height:21px;--ch5-button--regular-image-height:21px;pressedAppearance_background-color:rgba(255, 255, 255, 0.01);--ch5-button--default-pressed-background-color:rgba(255, 255, 255, 0.01);pressedLabel_font-size:14px;--ch5-button--regular-pressed-font-size:14px;pressedLabel_font-weight:400;--ch5-button--regular-pressed-font-weight:400;pressedLabel_letter-spacing:0;--ch5-button--pressed-label-letter-spacing:0;pressedLabel_margin-left:0;--ch5-button--pressed-label-margin-left:0;pressedLabel_margin-top:0;--ch5-button--pressed-label-margin-top:0;custom-pressed-label-font-size:14px;pressedLabel_color:#f0fff0;--ch5-button--default-pressed-label-font-color:rgb(240, 255, 240);--ch5-button--pressed-label-margin-right:0;--ch5-button--pressed-label-margin-bottom:0;pressedIcon_color:#f0fff0;--ch5-button--default-pressed-icon-color:rgb(240, 255, 240);pressedIcon_font-size:14px;--ch5-button--regular-pressed-icon-size:14px;custom-pressed-icon-font-size:14px;pressedIcon_margin-left:0;--ch5-button--pressed-icon-margin-left:0;pressedIcon_margin-top:0;--ch5-button--pressed-icon-margin-top:0;--ch5-button--pressed-icon-margin-right:0;--ch5-button--pressed-icon-margin-bottom:0;pressedCheckbox_color:#f0fff0;--ch5-button--default-pressed-checkbox-color:rgb(240, 255, 240);pressedImage_width:21px;--ch5-button--regular-pressed-image-width:21px;pressedImage_height:21px;--ch5-button--regular-pressed-image-height:21px;selectedAppearance_background-color:rgb(0, 115, 191);--ch5-button--default-selected-background-color:rgb(0, 115, 191);selectedLabel_font-size:14px;--ch5-button--regular-selected-font-size:14px;selectedLabel_font-weight:400;--ch5-button--regular-selected-font-weight:400;selectedLabel_letter-spacing:0;--ch5-button--selected-label-letter-spacing:0;selectedLabel_margin-left:0;--ch5-button--selected-label-margin-left:0;selectedLabel_margin-top:0;--ch5-button--selected-label-margin-top:0;custom-selected-label-font-size:14px;selectedLabel_color:#f0fff0;--ch5-button--default-selected-label-font-color:rgb(240, 255, 240);--ch5-button--selected-label-margin-right:0;--ch5-button--selected-label-margin-bottom:0;selectedIcon_color:#f0fff0;--ch5-button--default-selected-icon-color:rgb(240, 255, 240);selectedIcon_font-size:14px;--ch5-button--regular-selected-icon-size:14px;custom-selected-icon-font-size:14px;selectedIcon_margin-left:0;--ch5-button--selected-icon-margin-left:0;selectedIcon_margin-top:0;--ch5-button--selected-icon-margin-top:0;--ch5-button--selected-icon-margin-right:0;--ch5-button--selected-icon-margin-bottom:0;selectedCheckbox_color:#f0fff0;--ch5-button--default-selected-checkbox-color:rgb(240, 255, 240);selectedImage_width:21px;--ch5-button--regular-selected-image-width:21px;selectedImage_height:21px;--ch5-button--regular-selected-image-height:21px;--ch5-button--default-border-width:0px;Appearance_border-width:0px;--ch5-button--default-pressed-border-width:0px;pressedAppearance_border-width:0px;--ch5-button--default-selected-border-width:0px;selectedAppearance_border-width:0px;--ch5-button--default-border-style:none;Appearance_border-style:none;--ch5-button--default-pressed-border-style:none;pressedAppearance_border-style:none;--ch5-button--default-selected-border-style:none;selectedAppearance_border-style:none;}#ieym{Label_font-size:40px;--ch5-text--font-size:40px;Label_color:rgb(255, 255, 255);--ch5-text--font-color:rgb(255, 255, 255);width:579px;--ch5-text--width:579px;height:48px;--ch5-text--height:48px;display:block;left:341px;top:646px;position:absolute;z-index:2;}#iq2q{Appearance_object-fit:contain;--ch5-image--object-fit:contain;width:900px;--ch5-image--width:900px;height:500px;--ch5-image--height:500px;display:block;left:181px;top:80px;position:absolute;z-index:1;}#iqp8 .ch5-button :not(i):not(svg){font-family:"Roboto";}#ieym .ch5-text :not(i):not(svg){font-family:"Roboto";}#ieym .ch5-text{padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;min-height:10;min-width:10;padding:0px;}#i13r{display:none;left:0;top:0;position:absolute;z-index:5;}#i8g4{background-color:#00426f;}}@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px){#iqp8{top:5px;left:5px;--ch5-button--default-border-width:0px;--ch5-button--default-pressed-border-width:0px;--ch5-button--default-selected-border-width:0px;--ch5-button--default-border-style:none;--ch5-button--default-pressed-border-style:none;--ch5-button--default-selected-border-style:none;width:1245px;--ch5-button--regular-width:1245px;height:715px;--ch5-button--regular-height:715px;}#i13r{display:none;left:0;top:0;position:absolute;}}
 
 {PageAttributes}
 
@@ -26,70 +25,23 @@ Name = "Start"
 PageMode = "absolute"
 Id = "c4d64c28-c14f-4d2e-9411-c6f582650198"
 StartPage = "True"
-PreloadPage = "False"
+PreloadPage = "True"
 CachePage = "False"
 VisibilityJoin = "11"
-DisplayBackgroundColor = "True"
-BackgroundColor = "#00426f"
+DisplayBackgroundColor = "False"
 
 [[Elements]]
-Type = "Ch5 Image"
-Editable = true
-
-[[Elements.Components]]
-Type = "textnode"
-Content = "\n              "
+Type = "Ch5 Template"
 
 [Elements.Attributes]
-refreshrate = "0"
-customvstheme = "custom"
-assetid = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
-id = "iq2q"
-componentName = "TCNJ-Logo"
-ccid_linkSendReceive = "True"
+transitionduration = "1s"
+transitiondelay = "0s"
+templateid = "w8e674b83-3741-4917-9d4f-56b47eecb6fe"
+id = "i13r"
+componentName = "Offline"
+ccid_ComponentType = "Widget"
+ccid_WidgetName = "Offline"
 devicesVisited = "[\"TSW-760\"]"
-[[Elements]]
-Type = "Ch5 Text"
-Editable = true
-
-[[Elements.Components]]
-Type = "textnode"
-Content = "\n              "
-
-[Elements.Attributes]
-clearLabel = "false"
-labelmodeadvncomponent = "simple"
-horizontalalignment = "center"
-verticalalignment = "middle"
-multilinesupport = "false"
-truncatetext = "false"
-labelinnerhtml = "Press screen to start..."
-id = "ieym"
-componentName = "press-screen-btn"
-ccid_linkSendReceive = "True"
-devicesVisited = "[\"TSW-760\"]"
-ccid_themeCSSSet = "true"
-[[Elements]]
-Type = "Ch5 Text"
-Editable = true
-
-[[Elements.Components]]
-Type = "textnode"
-Content = "\n              "
-
-[Elements.Attributes]
-clearLabel = "false"
-labelmodeadvncomponent = "simple"
-horizontalalignment = "left"
-verticalalignment = "middle"
-multilinesupport = "false"
-truncatetext = "false"
-id = "icve"
-componentName = "Control-System-Offline-Txt"
-ccid_linkSendReceive = "True"
-devicesVisited = "[\"TSW-760\"]"
-ccid_themeCSSSet = "true"
-labelinnerhtml = "Control system is offline..."
 pd-receivestateshow = "Csig.Control_Systems_Offline_fb"
 [[Elements]]
 Type = "Ch5 Button"
@@ -100,13 +52,16 @@ Type = "textnode"
 Content = "\n              "
 
 [Elements.Attributes]
+orientation = "horizontal"
+size = "custom"
+shape = "rectangle"
+previewstate = "normal"
 type = "default"
 halignlabel = "center"
 valignlabel = "middle"
 checkboxshow = "false"
 checkboxposition = "left"
 disabled = "false"
-orientation = "horizontal"
 pageFlipAttributeName = "pageflip"
 clearLabel = "true"
 ccid_imageIconType = "iconclass"
@@ -114,15 +69,13 @@ ccid_linkSendReceive = "True"
 iconurlfilltype = "initial"
 customclass = "ccid-custom"
 affectedByPreviewState = "True"
-shape = "rectangle"
-size = "custom"
-previewstate = "normal"
 iconposition = "first"
 tagName = "ch5-button"
 ccid_syncproperties = "syncEnabled"
 ccid_lastSizeSelected = "regular"
 ccid_componenttype = "button"
 ccid_ch5Type = "button"
+truncatetext = "true"
 customvstheme = "custom"
 id = "iqp8"
 componentName = "System-On-Btn"
@@ -232,6 +185,53 @@ ccid_sync_pressed_appearancesector_border-top-right-radius_toggle = "1"
 ccid_sync_pressed_appearancesector_border-bottom-left-radius_toggle = "1"
 ccid_sync_pressed_appearancesector_border-bottom-right-radius_toggle = "1"
 labelinnerhtml = ""
-sendeventontouch = "1"
+sendeventonclick = "1"
 pd-receivestateselected = "1"
+ccid_ComponentType = "Button"
+ccid_ActiveFont = "'Roboto'"
+ccid_Label = ""
+[[Elements]]
+Type = "Ch5 Text"
+Editable = true
+
+[[Elements.Components]]
+Type = "textnode"
+Content = "\n              "
+
+[Elements.Attributes]
+clearLabel = "false"
+labelmodeadvncomponent = "simple"
+horizontalalignment = "center"
+verticalalignment = "middle"
+multilinesupport = "false"
+truncatetext = "false"
+labelinnerhtml = "Press screen to start..."
+id = "ieym"
+componentName = "press-screen-btn"
+ccid_linkSendReceive = "True"
+devicesVisited = "[\"TSW-760\"]"
+ccid_themeCSSSet = "true"
+ccid_ComponentType = "Formatted-Text"
+ccid_Label = "Press screen to start..."
+ccid_ActiveFont = "'Roboto'"
+[[Elements]]
+Type = "Ch5 Image"
+Editable = true
+
+[[Elements.Components]]
+Type = "textnode"
+Content = "\n              "
+
+[Elements.Attributes]
+numberofmodes = "0"
+refreshrate = "0"
+customvstheme = "custom"
+assetid = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
+id = "iq2q"
+componentName = "TCNJ-Logo"
+ccid_linkSendReceive = "True"
+devicesVisited = "[\"TSW-760\"]"
+ccid_ComponentType = "Image"
+allowpositiondatatobesent = "false"
+allowvaluesonmove = "false"
 

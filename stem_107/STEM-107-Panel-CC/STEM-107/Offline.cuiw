@@ -1,0 +1,113 @@
+{FileMetadata}
+Schema = "1.0.0.0"
+CreatedByAppHost = "2.1701.12.0"
+Created = 2026-10-27 11:43:30.108366-04:00
+LastModifiedByAppHost = "2.1701.12.0"
+Modified = 2026-10-27 11:43:30.108358-04:00
+CreatedByProjectApp = "1.4901.18.0"
+LastModifiedByProjectApp = "1.4901.18.0"
+MinimumProjectApp = "1.2600.1"
+MinimumAppHost = "2.1700.0"
+
+{Html}
+<div categoryname="Widget Components" ccid_ComponentType="Widget Canvas" id="i0ldawzziy" devicesVisited="[&quot;TSW-760&quot;]" defaultWidth="1261px" defaultHeight="739px" class="widget-container"><h1 headingType="h1" data-mytext="myText" componentName="PleaseWaitText" id="irmo" ccid_ComponentType="Html-header" ccid_ActiveFont="'Roboto'" devicesVisited="[&quot;TSW-760&quot;]">Please wait while the system is initializing.<br/><br/>This may take several minutes. If the problem<br/><br/>persists, please contact the IT Help Desk:<br/><br/>609-771-2660&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;helpdesk@tcnj.edu</h1><h1 headingType="h1" data-mytext="myText" componentName="OfflineHeader" id="ieyq" ccid_ComponentType="Html-header" ccid_ActiveFont="'Roboto'" devicesVisited="[&quot;TSW-760&quot;]">Touch Panel Offline</h1><ch5-animation startanimating="true" customvstheme="custom" size="x-large" animationstyle="ring" id="i9y9" componentName="Animation" ccid_linkSendReceive="True" ccid_ComponentType="Animation" devicesVisited="[&quot;TSW-760&quot;]">
+              </ch5-animation><div labelmode="advanced" ccid_lteHTMLOnly componentName="OfflineDiv" id="isrb" ccid_ComponentType="Html-div" devicesVisited="[&quot;TSW-760&quot;]"></div></div>
+
+{Css}
+@media (max-width: 99999px){#i0ldawzziy{width:1261px;height:739px;left:0;top:0;position:absolute;background-color:#000000ff;}#iumb{background-color:#ffffff;}.widget-container{z-index:0;}#isrb{display:block;background-color:#d8e9f9;border-style:solid;border-width:2px;border-color:#d20404;width:940px;height:369px;white-space:normal;left:160px;top:185px;position:absolute;z-index:1;border-radius:25px 25px 25px 25px;}#i9y9{display:block;left:187px;top:301px;position:absolute;z-index:2;--ch5-animation--color:#ff0000;Appearance_background-color:#ff0000;}#ieyq{overflow:hidden;font-weight:400;font-size:48px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;font-family:'Roboto';display:block;color:#760000;border-color:black;background-color:rgba(255,255,255,0);margin:0;left:424px;top:192px;position:absolute;z-index:3;custom-font-size:48px;font-style:normal;}#irmo{overflow:hidden;font-weight:400;font-size:32px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;font-family:'Roboto';display:block;color:black;border-color:black;background-color:rgba(255,255,255,0);margin:0;left:411px;top:302px;position:absolute;z-index:4;custom-font-size:32px;font-style:normal;letter-spacing:0px;line-height:30px;}}@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px){#i0ldawzziy{width:1261px;height:739px;left:0;top:0;position:absolute;}#isrb{display:block;background-color:#d8e9f9;border-style:solid;border-width:2px;border-color:#d20404;width:940px;height:369px;white-space:normal;left:160px;top:185px;position:absolute;z-index:1;border-radius:25px 25px 25px 25px;}#i9y9{display:block;left:187px;top:301px;position:absolute;Appearance_background-color:#ff0000;--ch5-animation--color:#ff0000;}#ieyq{overflow:hidden;font-weight:400;font-size:48px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;font-family:'Roboto';display:block;color:#760000;border-color:black;background-color:rgba(255,255,255,0);margin:0;left:424px;top:192px;position:absolute;z-index:3;custom-font-size:48px;font-style:normal;}#irmo{overflow:hidden;font-weight:400;font-size:32px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;font-family:'Roboto';display:block;color:black;border-color:black;background-color:rgba(255,255,255,0);margin:0;left:411px;top:302px;position:absolute;z-index:4;custom-font-size:32px;font-style:normal;letter-spacing:0px;line-height:30px;}}
+
+{PageAttributes}
+
+[Attributes]
+Name = "Offline"
+PageMode = "absolute"
+Id = "8e674b83-3741-4917-9d4f-56b47eecb6fe"
+DisplayBackgroundColor = "True"
+BackgroundColor = "#000000ff"
+
+[[Elements]]
+Type = "widgetContainer"
+Classes = ["widget-container"]
+
+[[Elements.Components]]
+Type = "html-header"
+
+[[Elements.Components.Components]]
+Type = "textnode"
+Content = "Please wait while the system is initializing."
+[[Elements.Components.Components]]
+[[Elements.Components.Components]]
+[[Elements.Components.Components]]
+Type = "textnode"
+Content = "This may take several minutes. If the problem"
+[[Elements.Components.Components]]
+[[Elements.Components.Components]]
+[[Elements.Components.Components]]
+Type = "textnode"
+Content = "persists, please contact the IT Help Desk:"
+[[Elements.Components.Components]]
+[[Elements.Components.Components]]
+[[Elements.Components.Components]]
+Type = "textnode"
+Content = "609-771-2660&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;helpdesk@tcnj.edu"
+
+[Elements.Components.Attributes]
+headingType = "h1"
+data-mytext = "myText"
+componentName = "PleaseWaitText"
+id = "irmo"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
+devicesVisited = "[\"TSW-760\"]"
+[[Elements.Components]]
+Type = "html-header"
+
+[[Elements.Components.Components]]
+Type = "textnode"
+Content = "Touch Panel Offline"
+
+[Elements.Components.Attributes]
+headingType = "h1"
+data-mytext = "myText"
+componentName = "OfflineHeader"
+id = "ieyq"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
+devicesVisited = "[\"TSW-760\"]"
+[[Elements.Components]]
+Type = "Ch5 Animation"
+Editable = true
+
+[[Elements.Components.Components]]
+Type = "textnode"
+Content = "\n              "
+
+[Elements.Components.Attributes]
+startanimating = "true"
+customvstheme = "custom"
+size = "x-large"
+animationstyle = "ring"
+id = "i9y9"
+componentName = "Animation"
+ccid_linkSendReceive = "True"
+ccid_ComponentType = "Animation"
+devicesVisited = "[\"TSW-760\"]"
+[[Elements.Components]]
+Type = "html-div"
+
+[Elements.Components.Attributes]
+labelmode = "advanced"
+ccid_lteHTMLOnly = "true"
+componentName = "OfflineDiv"
+id = "isrb"
+ccid_ComponentType = "Html-div"
+devicesVisited = "[\"TSW-760\"]"
+
+[Elements.Attributes]
+categoryname = "Widget Components"
+ccid_ComponentType = "Widget Canvas"
+id = "i0ldawzziy"
+devicesVisited = "[\"TSW-760\"]"
+defaultWidth = "1261px"
+defaultHeight = "739px"
+

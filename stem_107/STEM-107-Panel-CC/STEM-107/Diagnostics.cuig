@@ -1,22 +1,25 @@
 {FileMetadata}
 Schema = "1.0.0.0"
-CreatedByAppHost = "2.101.8.0"
-Created = 2025-03-24 10:29:48.849628-04:00
-LastModifiedByAppHost = "2.101.8.0"
-Modified = 2025-03-24 10:29:48.849619-04:00
-CreatedByProjectApp = "1.3701.9.0"
-LastModifiedByProjectApp = "1.3701.9.0"
+CreatedByAppHost = "2.1701.12.0"
+Created = 2026-10-27 11:28:50.467653-04:00
+LastModifiedByAppHost = "2.1701.12.0"
+Modified = 2026-10-27 11:28:50.467646-04:00
+CreatedByProjectApp = "1.4901.18.0"
+LastModifiedByProjectApp = "1.4901.18.0"
 MinimumProjectApp = "1.2600.1"
-MinimumAppHost = "2.0.0"
+MinimumAppHost = "2.1700.0"
 
 {Html}
-<html-div componentname="Header-div" id="ikt0" devicesvisited="[&quot;TSW-760&quot;]" oldid="ieff"></html-div><ch5-image refreshrate="0" customvstheme="custom" assetid="2755c7d1-a917-44ef-a2de-bb69cb6f2708" id="ilqk" componentname="TCNJ-Logo" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" oldid="izuf">
-              </ch5-image><html-div componentname="Footer-div" id="ij2c" devicesvisited="[&quot;TSW-760&quot;]" oldid="ie7jtzgj46"></html-div><ch5-subpage-reference-list orientation="vertical" columns="1" rows="1" centeritems="false" numberofitems="32" scrolltoposition="0" scrollbar="true" endless="false" indexid="idx" usecontractforcustomstyle="false" usecontractforcustomclass="false" usecontractforenable="false" usecontractforshow="false" usecontractfornumitems="true" usecontractforitemenable="true" usecontractforitemshow="true" customvstheme="custom" loaditems="visible-only" id="ixcx" componentname="Diag-Items-List" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" pd-receivestatenumberofitems="Contract Enabled" pd-subpagereceivestateshow="Contract Enabled" pd-subpagereceivestateenable="Contract Enabled" widgetid="wa0f1cd13-5869-402e-bc7c-482410225c9f">
-              </ch5-subpage-reference-list><ch5-button type="default" halignlabel="center" valignlabel="middle" checkboxshow="false" checkboxposition="left" disabled="false" orientation="horizontal" pageflipattributename="pageflip" clearlabel="true" ccid_imageicontype="iconclass" ccid_linksendreceive="True" iconurlfilltype="initial" customclass="ccid-custom" affectedbypreviewstate="True" shape="circle" size="regular" previewstate="normal" iconposition="first" tagname="ch5-button" ccid_syncproperties="syncEnabled" ccid_lastsizeselected="regular" ccid_componenttype="button" ccid_ch5type="button" customvstheme="custom" id="irwydfizzi" componentname="Diagnotics-Btn" assetid="0" pageflip="c9469dbb-e41f-4ce6-8d98-27d43ba3efab" ccid_themecssset="true" devicesvisited="[&quot;TSW-760&quot;]" ccid_sync_normal_labelsector_color="syncEnabled" ccid_sync_pressed_labelsector_color="syncEnabled" ccid_sync_selected_labelsector_color="syncEnabled" ccid_sync_normal_labelsector_font-family="syncEnabled" ccid_sync_pressed_labelsector_font-family="syncEnabled" ccid_sync_selected_labelsector_font-family="syncEnabled" ccid_sync_normal_labelsector_font-size="syncEnabled" ccid_sync_pressed_labelsector_font-size="syncEnabled" ccid_sync_selected_labelsector_font-size="syncEnabled" ccid_sync_normal_labelsector_font-weight="syncEnabled" ccid_sync_pressed_labelsector_font-weight="syncEnabled" ccid_sync_selected_labelsector_font-weight="syncEnabled" ccid_sync_normal_labelsector_text-decoration="syncEnabled" ccid_sync_pressed_labelsector_text-decoration="syncEnabled" ccid_sync_selected_labelsector_text-decoration="syncEnabled" ccid_sync_normal_labelsector_letter-spacing="syncEnabled" ccid_sync_pressed_labelsector_letter-spacing="syncEnabled" ccid_sync_selected_labelsector_letter-spacing="syncEnabled" ccid_sync_normal_labelsector_margin-left="syncEnabled" ccid_sync_pressed_labelsector_margin-left="syncEnabled" ccid_sync_selected_labelsector_margin-left="syncEnabled" ccid_sync_normal_labelsector_margin-top="syncEnabled" ccid_sync_pressed_labelsector_margin-top="syncEnabled" ccid_sync_selected_labelsector_margin-top="syncEnabled" ccid_sync_normal_iconsector_color="syncEnabled" ccid_sync_pressed_iconsector_color="syncEnabled" ccid_sync_selected_iconsector_color="syncEnabled" ccid_sync_normal_iconsector_font-size="syncEnabled" ccid_sync_pressed_iconsector_font-size="syncEnabled" ccid_sync_selected_iconsector_font-size="syncEnabled" ccid_sync_normal_iconsector_margin-left="syncEnabled" ccid_sync_pressed_iconsector_margin-left="syncEnabled" ccid_sync_selected_iconsector_margin-left="syncEnabled" ccid_sync_normal_iconsector_margin-top="syncEnabled" ccid_sync_pressed_iconsector_margin-top="syncEnabled" ccid_sync_selected_iconsector_margin-top="syncEnabled" ccid_sync_normal_appearancesector_border-width="syncEnabled" ccid_sync_pressed_appearancesector_border-width="syncEnabled" ccid_sync_selected_appearancesector_border-width="syncEnabled" ccid_sync_normal_appearancesector_border-style="syncEnabled" ccid_sync_pressed_appearancesector_border-style="syncEnabled" ccid_sync_selected_appearancesector_border-style="syncEnabled" ccid_sync_normal_appearancesector_border-color="syncEnabled" ccid_sync_pressed_appearancesector_border-color="syncEnabled" ccid_sync_selected_appearancesector_border-color="syncEnabled" ccid_sync_normal_appearancesector_background-color="syncDisabled" ccid_sync_normal_appearancesector_background-color_toggle="0" ccid_sync_pressed_appearancesector_background-color="syncDisabled" ccid_sync_pressed_appearancesector_background-color_toggle="0" ccid_sync_selected_appearancesector_background-color="syncDisabled" ccid_sync_selected_appearancesector_background-color_toggle="0" ccid_sync_normal_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-width_toggle="1" ccid_sync_normal_appearancesector_border-style_toggle="1" ccid_sync_normal_appearancesector_border-color_toggle="1" ccid_sync_normal_appearancesector_border-top-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-top-right-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-right-radius_toggle="1" ccid_sync_normal_labelsector_color_toggle="1" ccid_sync_normal_labelsector_font-family_toggle="1" ccid_sync_normal_labelsector_font-size_toggle="1" ccid_sync_normal_labelsector_font-weight_toggle="1" ccid_sync_normal_labelsector_text-decoration_toggle="1" ccid_sync_normal_labelsector_letter-spacing_toggle="1" ccid_sync_normal_labelsector_margin-left_toggle="1" ccid_sync_normal_labelsector_margin-top_toggle="1" ccid_sync_normal_iconsector_color_toggle="1" ccid_sync_normal_iconsector_font-size_toggle="1" ccid_sync_normal_iconsector_margin-left_toggle="1" ccid_sync_normal_iconsector_margin-top_toggle="1" labelinnerhtml="" oldid="iwgk" iconclass="fas fa-reply" ccid_sync_selected_labelsector_color_toggle="1" ccid_sync_selected_labelsector_font-family_toggle="1" ccid_sync_selected_labelsector_font-size_toggle="1" ccid_sync_selected_labelsector_font-weight_toggle="1" ccid_sync_selected_labelsector_text-decoration_toggle="1" ccid_sync_selected_labelsector_letter-spacing_toggle="1" ccid_sync_selected_labelsector_margin-left_toggle="1" ccid_sync_selected_labelsector_margin-top_toggle="1" ccid_sync_selected_iconsector_color_toggle="1" ccid_sync_selected_iconsector_font-size_toggle="1" ccid_sync_selected_iconsector_margin-left_toggle="1" ccid_sync_selected_iconsector_margin-top_toggle="1" ccid_sync_selected_appearancesector_border-width_toggle="1" ccid_sync_selected_appearancesector_border-style_toggle="1" ccid_sync_selected_appearancesector_border-color_toggle="1" ccid_sync_selected_appearancesector_border-top-left-radius_toggle="1" ccid_sync_selected_appearancesector_border-top-right-radius_toggle="1" ccid_sync_selected_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_selected_appearancesector_border-bottom-right-radius_toggle="1" ccid_sync_pressed_labelsector_color_toggle="1" ccid_sync_pressed_labelsector_font-family_toggle="1" ccid_sync_pressed_labelsector_font-size_toggle="1" ccid_sync_pressed_labelsector_font-weight_toggle="1" ccid_sync_pressed_labelsector_text-decoration_toggle="1" ccid_sync_pressed_labelsector_letter-spacing_toggle="1" ccid_sync_pressed_labelsector_margin-left_toggle="1" ccid_sync_pressed_labelsector_margin-top_toggle="1" ccid_sync_pressed_iconsector_color_toggle="1" ccid_sync_pressed_iconsector_font-size_toggle="1" ccid_sync_pressed_iconsector_margin-left_toggle="1" ccid_sync_pressed_iconsector_margin-top_toggle="1" ccid_sync_pressed_appearancesector_border-width_toggle="1" ccid_sync_pressed_appearancesector_border-style_toggle="1" ccid_sync_pressed_appearancesector_border-color_toggle="1" ccid_sync_pressed_appearancesector_border-top-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-top-right-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-right-radius_toggle="1">
-              </ch5-button><h1 class="gjs-html-header" headingtype="h1" data-mytext="myText" componentname="Html-header" id="i89cs" devicesvisited="[&quot;TSW-760&quot;]">IP-ID</h1><h1 class="gjs-html-header" headingtype="h1" data-mytext="myText" componentname="Html-header_1" id="i5nbnjnoastxw" devicesvisited="[&quot;TSW-760&quot;]" oldid="i89cs">Device Name</h1><h1 class="gjs-html-header" headingtype="h1" data-mytext="myText" componentname="Html-header_2" id="i6hnwdc7dwvkj" devicesvisited="[&quot;TSW-760&quot;]" oldid="i5nbnjnoastxw">Online</h1><h1 class="gjs-html-header" headingtype="h1" data-mytext="myText" componentname="Html-header_3" id="isnmgz7rwe7ma" devicesvisited="[&quot;TSW-760&quot;]" oldid="i6hnwdc7dwvkj">Sync</h1><h1 headingtype="h1" data-mytext="myText" componentname="Html-header_4" id="iivh40tahkh9q" devicesvisited="[&quot;TSW-760&quot;]" oldid="isnmgz7rwe7ma" class="gjs-html-header">IP Address<br></h1>
+<h1 headingtype="h1" data-mytext="myText" componentname="Html-header_4" id="iivh40tahkh9q" devicesvisited="[&quot;TSW-760&quot;]" oldid="isnmgz7rwe7ma" ccid_componenttype="Html-header" ccid_activefont="'Roboto'">IP Address<div></div></h1><h1 headingtype="h1" data-mytext="myText" componentname="Html-header_3" id="isnmgz7rwe7ma" devicesvisited="[&quot;TSW-760&quot;]" oldid="i6hnwdc7dwvkj" ccid_componenttype="Html-header" ccid_activefont="'Roboto'">Sync</h1><h1 headingtype="h1" data-mytext="myText" componentname="Html-header_2" id="i6hnwdc7dwvkj" devicesvisited="[&quot;TSW-760&quot;]" oldid="i5nbnjnoastxw" ccid_componenttype="Html-header" ccid_activefont="'Roboto'">Online</h1><h1 headingtype="h1" data-mytext="myText" componentname="Html-header_1" id="i5nbnjnoastxw" devicesvisited="[&quot;TSW-760&quot;]" oldid="i89cs" ccid_componenttype="Html-header" ccid_activefont="'Roboto'">Device Name</h1><h1 headingtype="h1" data-mytext="myText" componentname="Html-header" id="i89cs" devicesvisited="[&quot;TSW-760&quot;]" ccid_componenttype="Html-header" ccid_activefont="'Roboto'">IP-ID</h1><ch5-button type="default" halignlabel="center" valignlabel="middle" checkboxshow="false" checkboxposition="left" disabled="false" orientation="horizontal" pageflipattributename="pageflip" clearlabel="true" ccid_imageicontype="iconclass" ccid_linksendreceive="True" iconurlfilltype="initial" customclass="ccid-custom" affectedbypreviewstate="True" shape="circle" size="regular" previewstate="normal" iconposition="first" tagname="ch5-button" ccid_syncproperties="syncEnabled" ccid_lastsizeselected="regular" ccid_componenttype="button" ccid_ch5type="button" customvstheme="custom" id="irwydfizzi" componentname="Diagnotics-Btn" assetid="0" pageflip="c9469dbb-e41f-4ce6-8d98-27d43ba3efab" ccid_themecssset="true" devicesvisited="[&quot;TSW-760&quot;]" ccid_sync_normal_labelsector_color="syncEnabled" ccid_sync_pressed_labelsector_color="syncEnabled" ccid_sync_selected_labelsector_color="syncEnabled" ccid_sync_normal_labelsector_font-family="syncEnabled" ccid_sync_pressed_labelsector_font-family="syncEnabled" ccid_sync_selected_labelsector_font-family="syncEnabled" ccid_sync_normal_labelsector_font-size="syncEnabled" ccid_sync_pressed_labelsector_font-size="syncEnabled" ccid_sync_selected_labelsector_font-size="syncEnabled" ccid_sync_normal_labelsector_font-weight="syncEnabled" ccid_sync_pressed_labelsector_font-weight="syncEnabled" ccid_sync_selected_labelsector_font-weight="syncEnabled" ccid_sync_normal_labelsector_text-decoration="syncEnabled" ccid_sync_pressed_labelsector_text-decoration="syncEnabled" ccid_sync_selected_labelsector_text-decoration="syncEnabled" ccid_sync_normal_labelsector_letter-spacing="syncEnabled" ccid_sync_pressed_labelsector_letter-spacing="syncEnabled" ccid_sync_selected_labelsector_letter-spacing="syncEnabled" ccid_sync_normal_labelsector_margin-left="syncEnabled" ccid_sync_pressed_labelsector_margin-left="syncEnabled" ccid_sync_selected_labelsector_margin-left="syncEnabled" ccid_sync_normal_labelsector_margin-top="syncEnabled" ccid_sync_pressed_labelsector_margin-top="syncEnabled" ccid_sync_selected_labelsector_margin-top="syncEnabled" ccid_sync_normal_iconsector_color="syncEnabled" ccid_sync_pressed_iconsector_color="syncEnabled" ccid_sync_selected_iconsector_color="syncEnabled" ccid_sync_normal_iconsector_font-size="syncEnabled" ccid_sync_pressed_iconsector_font-size="syncEnabled" ccid_sync_selected_iconsector_font-size="syncEnabled" ccid_sync_normal_iconsector_margin-left="syncEnabled" ccid_sync_pressed_iconsector_margin-left="syncEnabled" ccid_sync_selected_iconsector_margin-left="syncEnabled" ccid_sync_normal_iconsector_margin-top="syncEnabled" ccid_sync_pressed_iconsector_margin-top="syncEnabled" ccid_sync_selected_iconsector_margin-top="syncEnabled" ccid_sync_normal_appearancesector_border-width="syncEnabled" ccid_sync_pressed_appearancesector_border-width="syncEnabled" ccid_sync_selected_appearancesector_border-width="syncEnabled" ccid_sync_normal_appearancesector_border-style="syncEnabled" ccid_sync_pressed_appearancesector_border-style="syncEnabled" ccid_sync_selected_appearancesector_border-style="syncEnabled" ccid_sync_normal_appearancesector_border-color="syncEnabled" ccid_sync_pressed_appearancesector_border-color="syncEnabled" ccid_sync_selected_appearancesector_border-color="syncEnabled" ccid_sync_normal_appearancesector_background-color="syncDisabled" ccid_sync_normal_appearancesector_background-color_toggle="0" ccid_sync_pressed_appearancesector_background-color="syncDisabled" ccid_sync_pressed_appearancesector_background-color_toggle="0" ccid_sync_selected_appearancesector_background-color="syncDisabled" ccid_sync_selected_appearancesector_background-color_toggle="0" ccid_sync_normal_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-top-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-left-radius="syncEnabled" ccid_sync_normal_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_pressed_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_selected_appearancesector_border-bottom-right-radius="syncEnabled" ccid_sync_normal_appearancesector_border-width_toggle="1" ccid_sync_normal_appearancesector_border-style_toggle="1" ccid_sync_normal_appearancesector_border-color_toggle="1" ccid_sync_normal_appearancesector_border-top-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-top-right-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_normal_appearancesector_border-bottom-right-radius_toggle="1" ccid_sync_normal_labelsector_color_toggle="1" ccid_sync_normal_labelsector_font-family_toggle="1" ccid_sync_normal_labelsector_font-size_toggle="1" ccid_sync_normal_labelsector_font-weight_toggle="1" ccid_sync_normal_labelsector_text-decoration_toggle="1" ccid_sync_normal_labelsector_letter-spacing_toggle="1" ccid_sync_normal_labelsector_margin-left_toggle="1" ccid_sync_normal_labelsector_margin-top_toggle="1" ccid_sync_normal_iconsector_color_toggle="1" ccid_sync_normal_iconsector_font-size_toggle="1" ccid_sync_normal_iconsector_margin-left_toggle="1" ccid_sync_normal_iconsector_margin-top_toggle="1" labelinnerhtml="" oldid="iwgk" iconclass="fa-solid fa-reply" ccid_sync_selected_labelsector_color_toggle="1" ccid_sync_selected_labelsector_font-family_toggle="1" ccid_sync_selected_labelsector_font-size_toggle="1" ccid_sync_selected_labelsector_font-weight_toggle="1" ccid_sync_selected_labelsector_text-decoration_toggle="1" ccid_sync_selected_labelsector_letter-spacing_toggle="1" ccid_sync_selected_labelsector_margin-left_toggle="1" ccid_sync_selected_labelsector_margin-top_toggle="1" ccid_sync_selected_iconsector_color_toggle="1" ccid_sync_selected_iconsector_font-size_toggle="1" ccid_sync_selected_iconsector_margin-left_toggle="1" ccid_sync_selected_iconsector_margin-top_toggle="1" ccid_sync_selected_appearancesector_border-width_toggle="1" ccid_sync_selected_appearancesector_border-style_toggle="1" ccid_sync_selected_appearancesector_border-color_toggle="1" ccid_sync_selected_appearancesector_border-top-left-radius_toggle="1" ccid_sync_selected_appearancesector_border-top-right-radius_toggle="1" ccid_sync_selected_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_selected_appearancesector_border-bottom-right-radius_toggle="1" ccid_sync_pressed_labelsector_color_toggle="1" ccid_sync_pressed_labelsector_font-family_toggle="1" ccid_sync_pressed_labelsector_font-size_toggle="1" ccid_sync_pressed_labelsector_font-weight_toggle="1" ccid_sync_pressed_labelsector_text-decoration_toggle="1" ccid_sync_pressed_labelsector_letter-spacing_toggle="1" ccid_sync_pressed_labelsector_margin-left_toggle="1" ccid_sync_pressed_labelsector_margin-top_toggle="1" ccid_sync_pressed_iconsector_color_toggle="1" ccid_sync_pressed_iconsector_font-size_toggle="1" ccid_sync_pressed_iconsector_margin-left_toggle="1" ccid_sync_pressed_iconsector_margin-top_toggle="1" ccid_sync_pressed_appearancesector_border-width_toggle="1" ccid_sync_pressed_appearancesector_border-style_toggle="1" ccid_sync_pressed_appearancesector_border-color_toggle="1" ccid_sync_pressed_appearancesector_border-top-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-top-right-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-left-radius_toggle="1" ccid_sync_pressed_appearancesector_border-bottom-right-radius_toggle="1" ccid_componenttype="Button" ccid_activefont="'Roboto'" ccid_iconlibrary="FA Classic Solid">
+              </ch5-button><ch5-subpage-reference-list orientation="vertical" columns="1" rows="1" centeritems="false" numberofitems="32" scrolltoposition="0" scrollbar="true" endless="false" indexid="idx" usecontractforcustomstyle="false" usecontractforcustomclass="false" usecontractforenable="false" usecontractforshow="false" usecontractfornumitems="false" usecontractforitemenable="true" usecontractforitemshow="true" customvstheme="custom" loaditems="visible-only" id="ixcx" componentname="Diag-Items-List" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" pd-subpagereceivestateshow="Contract Enabled" pd-subpagereceivestateenable="Contract Enabled" ccid_componenttype="Widget List" widgetid="wa0f1cd13-5869-402e-bc7c-482410225c9f">
+              </ch5-subpage-reference-list><html-div labelmode="advanced" ccid_ltehtmlonly="true" componentname="Footer-div" id="ij2c" devicesvisited="[&quot;TSW-760&quot;]" oldid="ie7jtzgj46" ccid_componenttype="Html-div"></html-div><ch5-image refreshrate="0" customvstheme="custom" assetid="2755c7d1-a917-44ef-a2de-bb69cb6f2708" id="ilqk" componentname="TCNJ-Logo" ccid_linksendreceive="True" devicesvisited="[&quot;TSW-760&quot;]" oldid="izuf" ccid_componenttype="Image">
+              </ch5-image><html-div labelmode="advanced" ccid_ltehtmlonly="true" componentname="Header-div" id="ikt0" devicesvisited="[&quot;TSW-760&quot;]" oldid="ieff" ccid_componenttype="Html-div"></html-div>
+
+
 
 {Css}
-@media (max-width: 99999px){#ij2c{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:30px;left:0px;top:708px;position:absolute;}#ilqk{width:400px;height:100px;display:block;left:10px;top:10px;position:absolute;}#ilqk .ch5-image{border-color:black;object-fit:contain;}#ikt0{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:120px;left:0px;top:0px;position:absolute;}#ixcx{width:auto;height:515px;display:block;left:122px;top:173px;position:absolute;listStyles_column-gap:0;listStyles_row-gap:0;en:1;}#ixcx .ch5-subpage-reference-list{listStyles_column-gap:0;column-gap:0;listStyles_row-gap:0;row-gap:0;}#irwydfizzi{width:84px;height:84px;display:block;left:1165px;top:18px;position:absolute;}#irwydfizzi .ch5-button--default{border-style:solid;border-color:#ffffff;background-color:rgba(255,255,255,0);border-width:1px;}#irwydfizzi .ch5-button--default .ch5-button--label{font-family:Roboto;font-size:14px;font-weight:400;letter-spacing:0;text-decoration:none;margin-left:0;margin-top:0;custom-font-size:14px;color:#ffffff;buttonDefaultLabel_font-size:14px;buttonDefaultLabel_color:#ffffff;buttonDefaultLabel_font-weight:400;buttonDefaultLabel_letter-spacing:0;buttonDefaultLabel_text-decoration:none;buttonDefaultLabel_margin-left:0;buttonDefaultLabel_margin-top:0;margin-right:0;margin-bottom:0;}#irwydfizzi .ch5-button--default .ch5-button--icon{color:#ffffff;font-size:28px;custom-font-size:28px;margin-left:0;margin-top:0;buttonDefaultIcon_font-size:28px;buttonDefaultIcon_color:#ffffff;buttonDefaultIcon_margin-left:0;buttonDefaultIcon_margin-top:0;margin-right:0;margin-bottom:0;}#irwydfizzi .ch5-button--default .cb-checkbox-icon{color:#ffffff;buttonDefaultCheckbox_color:#ffffff;}#irwydfizzi .ccid-custom.ch5-button--default .ch5-button--img{width:21px;height:21px;buttonDefaultImage_width:21px;buttonDefaultImage_height:21px;}#irwydfizzi .ch5-button--default.ch5-button--pressed{border-style:solid;border-color:#ffffff;background-color:#ff8b8b;border-width:1px;}#irwydfizzi .ch5-button--default.ch5-button--pressed .ch5-button--label{font-family:Roboto;font-size:14px;font-weight:400;letter-spacing:0;text-decoration:none;margin-left:0;margin-top:0;custom-font-size:14px;color:#f0fff0;buttonDefaultPressedLabel_font-size:14px;buttonDefaultPressedLabel_color:#f0fff0;buttonDefaultPressedLabel_font-weight:400;buttonDefaultPressedLabel_letter-spacing:0;buttonDefaultPressedLabel_text-decoration:none;buttonDefaultPressedLabel_margin-left:0;buttonDefaultPressedLabel_margin-top:0;margin-right:0;margin-bottom:0;}#irwydfizzi .ch5-button--default.ch5-button--pressed .ch5-button--icon{color:#f0fff0;font-size:28px;custom-font-size:28px;margin-left:0;margin-top:0;buttonDefaultPressedIcon_font-size:28px;buttonDefaultPressedIcon_color:#f0fff0;buttonDefaultPressedIcon_margin-left:0;buttonDefaultPressedIcon_margin-top:0;margin-right:0;margin-bottom:0;}#irwydfizzi .ch5-button--default.ch5-button--pressed .cb-checkbox-icon{color:#f0fff0;buttonDefaultPressedCheckbox_color:#f0fff0;}#irwydfizzi .ccid-custom.ch5-button--default.ch5-button--pressed .ch5-button--img{width:21px;height:21px;buttonDefaultPressedImage_width:21px;buttonDefaultPressedImage_height:21px;}#irwydfizzi .ch5-button--default.ch5-button--selected{border-style:solid;border-color:#ffffff;background-color:#0073bf;border-width:1px;}#irwydfizzi .ch5-button--default.ch5-button--selected .ch5-button--label{font-family:Roboto;font-size:14px;font-weight:400;letter-spacing:0;text-decoration:none;margin-left:0;margin-top:0;custom-font-size:14px;color:#f0fff0;buttonDefaultSelectedLabel_font-size:14px;buttonDefaultSelectedLabel_color:#f0fff0;buttonDefaultSelectedLabel_font-weight:400;buttonDefaultSelectedLabel_letter-spacing:0;buttonDefaultSelectedLabel_text-decoration:none;buttonDefaultSelectedLabel_margin-left:0;buttonDefaultSelectedLabel_margin-top:0;margin-right:0;margin-bottom:0;}#irwydfizzi .ch5-button--default.ch5-button--selected .ch5-button--icon{color:#f0fff0;font-size:28px;custom-font-size:28px;margin-left:0;margin-top:0;buttonDefaultSelectedIcon_font-size:28px;buttonDefaultSelectedIcon_color:#f0fff0;buttonDefaultSelectedIcon_margin-left:0;buttonDefaultSelectedIcon_margin-top:0;margin-right:0;margin-bottom:0;}#irwydfizzi .ch5-button--default.ch5-button--selected .cb-checkbox-icon{color:#f0fff0;buttonDefaultSelectedCheckbox_color:#f0fff0;}#irwydfizzi .ccid-custom.ch5-button--default.ch5-button--selected .ch5-button--img{width:21px;height:21px;buttonDefaultSelectedImage_width:21px;buttonDefaultSelectedImage_height:21px;}#wrapper{background-color:#00426f;}#i89cs{overflow:hidden;font-weight:400;font-size:26px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:124px;top:132px;position:absolute;custom-font-size:26px;}#i5nbnjnoastxw{overflow:hidden;font-weight:400;font-size:26px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:191px;top:132px;position:absolute;custom-font-size:26px;width:auto;height:auto;}#i6hnwdc7dwvkj{overflow:hidden;font-weight:400;font-size:26px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:422px;top:132px;position:absolute;custom-font-size:26px;width:auto;height:auto;}#isnmgz7rwe7ma{overflow:hidden;font-weight:400;font-size:26px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:501px;top:132px;position:absolute;custom-font-size:32px;width:auto;height:auto;}#iivh40tahkh9q{overflow:hidden;font-weight:400;font-size:26px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:581px;top:132px;position:absolute;custom-font-size:26px;width:auto;height:auto;}}@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px){#ij2c{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:30px;left:0px;top:708px;position:absolute;}#ilqk{width:400px;height:100px;display:block;left:10px;top:10px;position:absolute;}#ikt0{display:block;background-color:rgba(4,39,72,0.65);border-style:none;border-width:0;border-color:#1B4B7C;width:1261px;height:120px;left:0px;top:0px;position:absolute;}#ixcx{width:auto;height:515px;display:block;left:122px;top:173px;position:absolute;listStyles_column-gap:0;listStyles_row-gap:0;}#irwydfizzi{width:84px;height:84px;left:1165px;top:18px;position:absolute;}#i89cs{overflow:hidden;font-weight:400;font-size:26px;min-width:1em;min-height:1.5em;text-underline-offset:0.3em;display:block;color:#ffffff;border-color:black;background-color:rgba(255,255,255,0);font-family:Roboto;margin:0;left:124px;top:132px;position:absolute;custom-font-size:26px;}#i5nbnjnoastxw{left:191px;top:132px;position:absolute;width:auto;height:auto;custom-font-size:32px;}#i6hnwdc7dwvkj{left:422px;top:132px;position:absolute;width:auto;height:auto;custom-font-size:32px;}#isnmgz7rwe7ma{left:501px;top:132px;position:absolute;width:auto;height:auto;custom-font-size:32px;}#iivh40tahkh9q{left:581px;top:132px;position:absolute;width:auto;height:auto;}}
+@media (max-width: 99999px) { #ij2c { display: block; background-color: rgba(4, 39, 72, 0.65); border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-color: rgb(27, 75, 124); border-right-color: rgb(27, 75, 124); border-bottom-color: rgb(27, 75, 124); border-left-color: rgb(27, 75, 124); width: 1261px; height: 30px; left: 0; top: 708px; position: absolute; z-index: 3 } #ikt0 { display: block; background-color: rgba(4, 39, 72, 0.65); border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-color: rgb(27, 75, 124); border-right-color: rgb(27, 75, 124); border-bottom-color: rgb(27, 75, 124); border-left-color: rgb(27, 75, 124); width: 1261px; height: 120px; left: 0; top: 0; position: absolute; z-index: 1 } #i89cs { overflow: hidden; font-weight: 400; font-size: 26px; min-width: 1em; min-height: 1.5em; text-underline-offset: 0.3em; display: block; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; left: 124px; top: 132px; position: absolute; custom-font-size: 26px; z-index: 6; font-style: normal; font-family: "Roboto" } #i5nbnjnoastxw { overflow: hidden; font-weight: 400; font-size: 26px; min-width: 1em; min-height: 1.5em; text-underline-offset: 0.3em; display: block; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; left: 191px; top: 132px; position: absolute; custom-font-size: 26px; width: auto; height: auto; z-index: 7; font-style: normal; font-family: "Roboto" } #i6hnwdc7dwvkj { overflow: hidden; font-weight: 400; font-size: 26px; min-width: 1em; min-height: 1.5em; text-underline-offset: 0.3em; display: block; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; left: 422px; top: 132px; position: absolute; custom-font-size: 26px; width: auto; height: auto; z-index: 8; font-style: normal; font-family: "Roboto" } #isnmgz7rwe7ma { overflow: hidden; font-weight: 400; font-size: 26px; min-width: 1em; min-height: 1.5em; text-underline-offset: 0.3em; display: block; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; left: 501px; top: 132px; position: absolute; custom-font-size: 32px; width: auto; height: auto; z-index: 9; font-style: normal; font-family: "Roboto" } #iivh40tahkh9q { overflow: hidden; font-weight: 400; font-size: 26px; min-width: 1em; min-height: 1.5em; text-underline-offset: 0.3em; display: block; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; left: 581px; top: 132px; position: absolute; custom-font-size: 26px; width: auto; height: auto; z-index: 10; font-style: normal; font-family: "Roboto" } #ivgl { background-color: rgb(0, 66, 111) } #irwydfizzi { width: 84px; --ch5-button--regular-width: 84px; height: 84px; --ch5-button--regular-height: 84px; display: block; left: 1165px; top: 18px; position: absolute; z-index: 5; Appearance_background-color: rgba(255, 255, 255, 0); --ch5-button--default-background-color: rgba(255, 255, 255, 0); Label_font-size: 14px; --ch5-button--regular-font-size: 14px; Label_font-weight: 400; --ch5-button--regular-font-weight: 400; Label_letter-spacing: 0; --ch5-button--label-letter-spacing: 0; Label_margin-left: 0; --ch5-button--label-margin-left: 0; Label_margin-top: 0; --ch5-button--label-margin-top: 0; custom-normal-label-font-size: 14px; Label_color: #ffffff; --ch5-button--default-label-font-color: rgb(255, 255, 255); --ch5-button--label-margin-right: 0; --ch5-button--label-margin-bottom: 0; Icon_color: #ffffff; --ch5-button--default-icon-color: rgb(255, 255, 255); Icon_font-size: 28px; --ch5-button--regular-icon-size: 28px; custom-normal-icon-font-size: 28px; Icon_margin-left: 0; --ch5-button--icon-margin-left: 0; Icon_margin-top: 0; --ch5-button--icon-margin-top: 0; --ch5-button--icon-margin-right: 0; --ch5-button--icon-margin-bottom: 0; Checkbox_color: #ffffff; --ch5-button--default-checkbox-color: rgb(255, 255, 255); Image_width: 21px; --ch5-button--regular-image-width: 21px; Image_height: 21px; --ch5-button--regular-image-height: 21px; pressedAppearance_background-color: rgb(255, 139, 139); --ch5-button--default-pressed-background-color: rgb(255, 139, 139); pressedLabel_font-size: 14px; --ch5-button--regular-pressed-font-size: 14px; pressedLabel_font-weight: 400; --ch5-button--regular-pressed-font-weight: 400; pressedLabel_letter-spacing: 0; --ch5-button--pressed-label-letter-spacing: 0; pressedLabel_margin-left: 0; --ch5-button--pressed-label-margin-left: 0; pressedLabel_margin-top: 0; --ch5-button--pressed-label-margin-top: 0; custom-pressed-label-font-size: 14px; pressedLabel_color: #f0fff0; --ch5-button--default-pressed-label-font-color: rgb(240, 255, 240); --ch5-button--pressed-label-margin-right: 0; --ch5-button--pressed-label-margin-bottom: 0; pressedIcon_color: #f0fff0; --ch5-button--default-pressed-icon-color: rgb(240, 255, 240); pressedIcon_font-size: 28px; --ch5-button--regular-pressed-icon-size: 28px; custom-pressed-icon-font-size: 28px; pressedIcon_margin-left: 0; --ch5-button--pressed-icon-margin-left: 0; pressedIcon_margin-top: 0; --ch5-button--pressed-icon-margin-top: 0; --ch5-button--pressed-icon-margin-right: 0; --ch5-button--pressed-icon-margin-bottom: 0; pressedCheckbox_color: #f0fff0; --ch5-button--default-pressed-checkbox-color: rgb(240, 255, 240); pressedImage_width: 21px; --ch5-button--regular-pressed-image-width: 21px; pressedImage_height: 21px; --ch5-button--regular-pressed-image-height: 21px; selectedAppearance_background-color: rgb(0, 115, 191); --ch5-button--default-selected-background-color: rgb(0, 115, 191); selectedLabel_font-size: 14px; --ch5-button--regular-selected-font-size: 14px; selectedLabel_font-weight: 400; --ch5-button--regular-selected-font-weight: 400; selectedLabel_letter-spacing: 0; --ch5-button--selected-label-letter-spacing: 0; selectedLabel_margin-left: 0; --ch5-button--selected-label-margin-left: 0; selectedLabel_margin-top: 0; --ch5-button--selected-label-margin-top: 0; custom-selected-label-font-size: 14px; selectedLabel_color: #f0fff0; --ch5-button--default-selected-label-font-color: rgb(240, 255, 240); --ch5-button--selected-label-margin-right: 0; --ch5-button--selected-label-margin-bottom: 0; selectedIcon_color: #f0fff0; --ch5-button--default-selected-icon-color: rgb(240, 255, 240); selectedIcon_font-size: 28px; --ch5-button--regular-selected-icon-size: 28px; custom-selected-icon-font-size: 28px; selectedIcon_margin-left: 0; --ch5-button--selected-icon-margin-left: 0; selectedIcon_margin-top: 0; --ch5-button--selected-icon-margin-top: 0; --ch5-button--selected-icon-margin-right: 0; --ch5-button--selected-icon-margin-bottom: 0; selectedCheckbox_color: #f0fff0; --ch5-button--default-selected-checkbox-color: rgb(240, 255, 240); selectedImage_width: 21px; --ch5-button--regular-selected-image-width: 21px; selectedImage_height: 21px; --ch5-button--regular-selected-image-height: 21px } #ixcx { width: auto; height: 515px; display: block; left: 122px; top: 173px; position: absolute; listStyles_column-gap: 0; listStyles_row-gap: 0; en: 1; z-index: 4; listSpacing_item-spacing: 0; --ch5-subpage-reference-list--item-padding: 0 } #ilqk { width: 400px; --ch5-image--width: 400px; height: 100px; --ch5-image--height: 100px; display: block; left: 10px; top: 10px; position: absolute; z-index: 2; Appearance_object-fit: contain; --ch5-image--object-fit: contain } #irwydfizzi .ch5-button :not(i):not(svg) { font-family: "Roboto" } #wrapper { background-color: rgb(0, 66, 111) } }
+@media (orientation: landscape) and (max-width: 1263px) and (max-height: 741px), (orientation: landscape) and (max-width: 1261px) { #ij2c { display: block; background-color: rgba(4, 39, 72, 0.65); border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-color: rgb(27, 75, 124); border-right-color: rgb(27, 75, 124); border-bottom-color: rgb(27, 75, 124); border-left-color: rgb(27, 75, 124); width: 1261px; height: 30px; left: 0; top: 708px; position: absolute } #ikt0 { display: block; background-color: rgba(4, 39, 72, 0.65); border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-color: rgb(27, 75, 124); border-right-color: rgb(27, 75, 124); border-bottom-color: rgb(27, 75, 124); border-left-color: rgb(27, 75, 124); width: 1261px; height: 120px; left: 0; top: 0; position: absolute } #i89cs { overflow: hidden; font-weight: 400; font-size: 26px; min-width: 1em; min-height: 1.5em; text-underline-offset: 0.3em; display: block; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; left: 124px; top: 132px; position: absolute; custom-font-size: 26px; font-style: normal } #i5nbnjnoastxw { left: 191px; top: 132px; position: absolute; width: auto; height: auto; custom-font-size: 32px; font-style: normal } #i6hnwdc7dwvkj { left: 422px; top: 132px; position: absolute; width: auto; height: auto; custom-font-size: 32px; font-style: normal } #isnmgz7rwe7ma { left: 501px; top: 132px; position: absolute; width: auto; height: auto; custom-font-size: 32px; font-style: normal } #iivh40tahkh9q { left: 581px; top: 132px; position: absolute; width: auto; height: auto; custom-font-size: 32px; font-style: normal } #irwydfizzi { width: 84px; --ch5-button--regular-width: 84px; height: 84px; --ch5-button--regular-height: 84px; left: 1165px; top: 18px; position: absolute } #ixcx { width: auto; height: 515px; display: block; left: 122px; top: 173px; position: absolute; listStyles_column-gap: 0; listStyles_row-gap: 0 } #ilqk { width: 400px; --ch5-image--width: 400px; height: 100px; --ch5-image--height: 100px; display: block; left: 10px; top: 10px; position: absolute } }
 
 {PageAttributes}
 
@@ -28,83 +31,160 @@ StartPage = "False"
 PreloadPage = "False"
 CachePage = "False"
 VisibilityJoin = "15"
-DisplayBackgroundColor = "True"
-BackgroundColor = "#00426f"
+DisplayBackgroundColor = "False"
 
 [[Elements]]
-Type = "html-div"
-
-[Elements.Attributes]
-componentName = "Header-div"
-id = "ikt0"
-devicesVisited = "[\"TSW-760\"]"
-oldID = "ieff"
-[[Elements]]
-Type = "Ch5 Image"
-Editable = true
+Name = ""
+Type = "html-header"
+Status = ""
+Content = ""
 
 [[Elements.Components]]
+Name = ""
 Type = "textnode"
-Content = "\n              "
+Status = ""
+Content = "IP Address"
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+_InnerText = false
+[[Elements.Components]]
+Name = ""
+Type = ""
+Status = ""
+Content = ""
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+Selectable = false
+Hoverable = false
+_InnerText = true
 
 [Elements.Attributes]
-refreshrate = "0"
-customvstheme = "custom"
-assetid = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
-id = "ilqk"
-componentName = "TCNJ-Logo"
-ccid_linkSendReceive = "True"
+headingType = "h1"
+data-mytext = "myText"
+componentName = "Html-header_4"
+id = "iivh40tahkh9q"
 devicesVisited = "[\"TSW-760\"]"
-oldID = "izuf"
+oldID = "isnmgz7rwe7ma"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
 [[Elements]]
-Type = "html-div"
-
-[Elements.Attributes]
-componentName = "Footer-div"
-id = "ij2c"
-devicesVisited = "[\"TSW-760\"]"
-oldID = "ie7jtzgj46"
-[[Elements]]
-Type = "Ch5 Subpage Reference List"
-Editable = true
+Name = ""
+Type = "html-header"
+Status = ""
+Content = ""
 
 [[Elements.Components]]
+Name = ""
 Type = "textnode"
-Content = "\n              "
+Status = ""
+Content = "Sync"
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+_InnerText = false
 
 [Elements.Attributes]
-orientation = "vertical"
-columns = "1"
-rows = "1"
-centeritems = "false"
-numberofitems = "32"
-scrolltoposition = "0"
-scrollbar = "true"
-endless = "false"
-indexid = "idx"
-useContractForCustomStyle = "false"
-useContractForCustomClass = "false"
-useContractForEnable = "false"
-useContractForShow = "false"
-useContractForNumItems = "true"
-useContractForItemEnable = "true"
-useContractForItemShow = "true"
-customvstheme = "custom"
-loaditems = "visible-only"
-id = "ixcx"
-componentName = "Diag-Items-List"
-ccid_linkSendReceive = "True"
+headingType = "h1"
+data-mytext = "myText"
+componentName = "Html-header_3"
+id = "isnmgz7rwe7ma"
 devicesVisited = "[\"TSW-760\"]"
-pd-receivestatenumberofitems = "Contract Enabled"
-pd-subpagereceivestateshow = "Contract Enabled"
-pd-subpagereceivestateenable = "Contract Enabled"
-widgetid = "wa0f1cd13-5869-402e-bc7c-482410225c9f"
+oldID = "i6hnwdc7dwvkj"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
 [[Elements]]
+Name = ""
+Type = "html-header"
+Status = ""
+Content = ""
+
+[[Elements.Components]]
+Name = ""
+Type = "textnode"
+Status = ""
+Content = "Online"
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+_InnerText = false
+
+[Elements.Attributes]
+headingType = "h1"
+data-mytext = "myText"
+componentName = "Html-header_2"
+id = "i6hnwdc7dwvkj"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "i5nbnjnoastxw"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
+[[Elements]]
+Name = ""
+Type = "html-header"
+Status = ""
+Content = ""
+
+[[Elements.Components]]
+Name = ""
+Type = "textnode"
+Status = ""
+Content = "Device Name"
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+_InnerText = false
+
+[Elements.Attributes]
+headingType = "h1"
+data-mytext = "myText"
+componentName = "Html-header_1"
+id = "i5nbnjnoastxw"
+devicesVisited = "[\"TSW-760\"]"
+oldID = "i89cs"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
+[[Elements]]
+Name = ""
+Type = "html-header"
+Status = ""
+Content = ""
+
+[[Elements.Components]]
+Name = ""
+Type = "textnode"
+Status = ""
+Content = "IP-ID"
+Removable = false
+Draggable = false
+Highlightable = 0
+Copyable = false
+_InnerText = false
+
+[Elements.Attributes]
+headingType = "h1"
+data-mytext = "myText"
+componentName = "Html-header"
+id = "i89cs"
+devicesVisited = "[\"TSW-760\"]"
+ccid_ComponentType = "Html-header"
+ccid_ActiveFont = "'Roboto'"
+[[Elements]]
+Name = ""
 Type = "Ch5 Button"
+Status = ""
+Content = ""
 Editable = true
 
 [[Elements.Components]]
+Name = ""
 Type = "textnode"
+Status = ""
 Content = "\n              "
 
 [Elements.Attributes]
@@ -222,7 +302,7 @@ ccid_sync_normal_iconsector_margin-left_toggle = "1"
 ccid_sync_normal_iconsector_margin-top_toggle = "1"
 labelinnerhtml = ""
 oldID = "iwgk"
-iconclass = "fas fa-reply"
+iconclass = "fa-solid fa-reply"
 ccid_sync_selected_labelsector_color_toggle = "1"
 ccid_sync_selected_labelsector_font-family_toggle = "1"
 ccid_sync_selected_labelsector_font-size_toggle = "1"
@@ -261,111 +341,98 @@ ccid_sync_pressed_appearancesector_border-top-left-radius_toggle = "1"
 ccid_sync_pressed_appearancesector_border-top-right-radius_toggle = "1"
 ccid_sync_pressed_appearancesector_border-bottom-left-radius_toggle = "1"
 ccid_sync_pressed_appearancesector_border-bottom-right-radius_toggle = "1"
+ccid_ComponentType = "Button"
+ccid_ActiveFont = "'Roboto'"
+ccid_iconlibrary = "FA Classic Solid"
 [[Elements]]
-Type = "html-header"
-Classes = ["gjs-html-header"]
+Name = ""
+Type = "Ch5 Subpage Reference List"
+Status = ""
+Content = ""
+Editable = true
 
 [[Elements.Components]]
+Name = ""
 Type = "textnode"
-Content = "IP-ID"
-Removable = false
-Draggable = false
-Highlightable = 0
-Copyable = false
-_InnerText = false
+Status = ""
+Content = "\n              "
 
 [Elements.Attributes]
-headingType = "h1"
-data-mytext = "myText"
-componentName = "Html-header"
-id = "i89cs"
+orientation = "vertical"
+columns = "1"
+rows = "1"
+centeritems = "false"
+numberofitems = "32"
+scrolltoposition = "0"
+scrollbar = "true"
+endless = "false"
+indexid = "idx"
+useContractForCustomStyle = "false"
+useContractForCustomClass = "false"
+useContractForEnable = "false"
+useContractForShow = "false"
+useContractForNumItems = "false"
+useContractForItemEnable = "true"
+useContractForItemShow = "true"
+customvstheme = "custom"
+loaditems = "visible-only"
+id = "ixcx"
+componentName = "Diag-Items-List"
+ccid_linkSendReceive = "True"
 devicesVisited = "[\"TSW-760\"]"
+pd-subpagereceivestateshow = "Contract Enabled"
+pd-subpagereceivestateenable = "Contract Enabled"
+ccid_ComponentType = "Widget List"
+widgetid = "wa0f1cd13-5869-402e-bc7c-482410225c9f"
 [[Elements]]
-Type = "html-header"
-Classes = ["gjs-html-header"]
-
-[[Elements.Components]]
-Type = "textnode"
-Content = "Device Name"
-Removable = false
-Draggable = false
-Highlightable = 0
-Copyable = false
-_InnerText = false
+Name = ""
+Type = "html-div"
+Status = ""
+Content = ""
 
 [Elements.Attributes]
-headingType = "h1"
-data-mytext = "myText"
-componentName = "Html-header_1"
-id = "i5nbnjnoastxw"
+labelmode = "advanced"
+ccid_lteHTMLOnly = "true"
+componentName = "Footer-div"
+id = "ij2c"
 devicesVisited = "[\"TSW-760\"]"
-oldID = "i89cs"
+oldID = "ie7jtzgj46"
+ccid_ComponentType = "Html-div"
 [[Elements]]
-Type = "html-header"
-Classes = ["gjs-html-header"]
+Name = ""
+Type = "Ch5 Image"
+Status = ""
+Content = ""
+Editable = true
 
 [[Elements.Components]]
+Name = ""
 Type = "textnode"
-Content = "Online"
-Removable = false
-Draggable = false
-Highlightable = 0
-Copyable = false
-_InnerText = false
+Status = ""
+Content = "\n              "
 
 [Elements.Attributes]
-headingType = "h1"
-data-mytext = "myText"
-componentName = "Html-header_2"
-id = "i6hnwdc7dwvkj"
+refreshrate = "0"
+customvstheme = "custom"
+assetid = "2755c7d1-a917-44ef-a2de-bb69cb6f2708"
+id = "ilqk"
+componentName = "TCNJ-Logo"
+ccid_linkSendReceive = "True"
 devicesVisited = "[\"TSW-760\"]"
-oldID = "i5nbnjnoastxw"
+oldID = "izuf"
+ccid_ComponentType = "Image"
 [[Elements]]
-Type = "html-header"
-Classes = ["gjs-html-header"]
-
-[[Elements.Components]]
-Type = "textnode"
-Content = "Sync"
-Removable = false
-Draggable = false
-Highlightable = 0
-Copyable = false
-_InnerText = false
+Name = ""
+Type = "html-div"
+Status = ""
+Content = ""
 
 [Elements.Attributes]
-headingType = "h1"
-data-mytext = "myText"
-componentName = "Html-header_3"
-id = "isnmgz7rwe7ma"
+labelmode = "advanced"
+ccid_lteHTMLOnly = "true"
+componentName = "Header-div"
+id = "ikt0"
 devicesVisited = "[\"TSW-760\"]"
-oldID = "i6hnwdc7dwvkj"
-[[Elements]]
-Type = "html-header"
-Classes = ["gjs-html-header"]
-
-[[Elements.Components]]
-Type = "textnode"
-Content = "IP Address"
-Removable = false
-Draggable = false
-Highlightable = 0
-Copyable = false
-_InnerText = false
-[[Elements.Components]]
-Removable = false
-Draggable = false
-Highlightable = 0
-Copyable = false
-Selectable = false
-Hoverable = false
-_InnerText = true
-
-[Elements.Attributes]
-headingType = "h1"
-data-mytext = "myText"
-componentName = "Html-header_4"
-id = "iivh40tahkh9q"
-devicesVisited = "[\"TSW-760\"]"
-oldID = "isnmgz7rwe7ma"
+oldID = "ieff"
+ccid_ComponentType = "Html-div"
 

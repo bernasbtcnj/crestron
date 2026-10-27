@@ -2,12 +2,12 @@
 Schema = "1.0.0.0"
 CreatedByAppHost = "2.101.8.0"
 Created = 2025-01-31 10:53:56.246459-05:00
-LastModifiedByAppHost = "2.101.8.0"
-Modified = 2025-01-31 10:53:56.246453-05:00
+LastModifiedByAppHost = "2.1701.12.0"
+Modified = 2026-10-27 13:01:23.877991-04:00
 CreatedByProjectApp = "1.3701.9.0"
-LastModifiedByProjectApp = "1.3701.9.0"
+LastModifiedByProjectApp = "1.4901.18.0"
 MinimumProjectApp = "1.2600.1"
-MinimumAppHost = "2.0.0"
+MinimumAppHost = "2.1700.0"
 
 {DeviceResolutionSource}
 []
@@ -18,10 +18,18 @@ MinimumAppHost = "2.0.0"
 ComponentKey = "UiEditor"
 Name = "STEM-107"
 ThemeId = "light-theme.css"
-ThemePageColor = "#ffffff"
-SdkId = "CH5:2.11.1.2"
+ProjectThemeIds = "light-theme.css"
+ThemePageColor = "#00426f"
+IncludeUnusedAsset = "False"
+OverrideThemeColor = "True"
+SdkId = "CH5:2.19.1"
 Id = "518acf62-c597-4ac8-b7b1-d7416c1dec96"
+RuntimeThemeJoin = "0"
+RuntimeLanguageJoin = "0"
+DefaultComponentMode = "custom"
+DefaultFontFamily = "Roboto"
 DeviceResolutionIds = "D-L-TSW0760-1262-0740"
-ipId = "03"
-ProjectSchemaVersion = "6"
+ipId = "04"
+ProjectSchemaVersion = "13"
+ContractIsStale = "true"
 
